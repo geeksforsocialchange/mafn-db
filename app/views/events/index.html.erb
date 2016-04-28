@@ -2,6 +2,14 @@
 
 <h1>Listing Events</h1>
 
+
+<p>
+  Download:
+  <%= link_to "CSV", events_path(format: "csv") %> |
+  <%= link_to "Excel", events_path(format: "xls") %>
+</p>
+
+
 <table>
   <thead>
     <tr>
@@ -31,9 +39,3 @@
 <br>
 
 <%= link_to 'New Event', new_event_path %>
-
-<p>
-  Download:
-  <%= link_to "CSV", events_path(format: "csv") %> |
-  <%= link_to "Excel", events_path(format: "xls") %>
-</p>
