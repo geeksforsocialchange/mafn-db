@@ -4,6 +4,11 @@ class EventsController < ApplicationController
   # GET /events
   def index
     @events = Event.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @events.to_csv }
+      format.xls # { send_data @products.to_csv(col_sep: "\t") }
+    end
   end
 
   # GET /events/1
@@ -53,6 +58,6 @@ class EventsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def event_params
-      params.require(:event).permit(:name, :type, :date, :lat, :lng, :description)
+      params.require(:event).permit(:name, :category, :date, :lat, :lng, :description)
     end
 end

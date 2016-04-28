@@ -16,8 +16,8 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :type %><br>
-    <%= f.select :type, Event.types.keys.to_a %>
+    <%= f.label :category %><br>
+    <%= f.select :category, Event.categories.keys.to_a %>
   </div>
   <div class="field">
     <%= f.label :date %><br>
