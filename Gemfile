@@ -6,5 +6,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'sqlite3', group: :development
-gem 'pg', group: :production # For heroku
+gem 'pg'
+gem 'icalendar'
+
+group :production do
+  gem 'rails_12factor'
+end
