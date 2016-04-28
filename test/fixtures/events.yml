@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 1
+  date: 2016-04-28 12:46:35
+  lat: 1.5
+  lng: 1.5
+  description: MyString
+
+two:
+  name: MyString
+  type: 1
+  date: 2016-04-28 12:46:35
+  lat: 1.5
+  lng: 1.5
+  description: MyString
