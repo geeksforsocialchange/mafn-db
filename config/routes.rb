@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :question_responses
+
+  resources :question_sets
+
+  resources :questions
+
   resources :addresses
 
   resources :events

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428120228) do
+ActiveRecord::Schema.define(version: 20160517144330) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,11 @@ ActiveRecord::Schema.define(version: 20160428120228) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "entities", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.integer  "category"
@@ -36,7 +41,10 @@ ActiveRecord::Schema.define(version: 20160428120228) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "entity_id"
   end
+
+  add_index "events", ["entity_id"], name: "index_events_on_entity_id", using: :btree
 
   create_table "members", force: :cascade do |t|
     t.string   "name"
@@ -47,6 +55,42 @@ ActiveRecord::Schema.define(version: 20160428120228) do
     t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "entity_id"
   end
 
+  add_index "members", ["entity_id"], name: "index_members_on_entity_id", using: :btree
+
+  create_table "question_responses", force: :cascade do |t|
+    t.string   "response"
+    t.integer  "entity_id"
+    t.integer  "member_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "question_responses", ["entity_id"], name: "index_question_responses_on_entity_id", using: :btree
+  add_index "question_responses", ["member_id"], name: "index_question_responses_on_member_id", using: :btree
+
+  create_table "question_sets", force: :cascade do |t|
+    t.string   "title",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "question_sets_questions", id: false, force: :cascade do |t|
+    t.integer "question_id",     null: false
+    t.integer "question_set_id", null: false
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string   "question",   null: false
+    t.string   "response"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "events", "entities"
+  add_foreign_key "members", "entities"
+  add_foreign_key "question_responses", "entities"
+  add_foreign_key "question_responses", "members"
 end
