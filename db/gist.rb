@@ -2,27 +2,34 @@ Member
   has_many :question_responses
   has_many :locations, :through => :member_locations
   has_many :event_attendances
-  has_many :question_responses
-  has_many :questions, :as => :questionable
+  belongs_to :entity
+  has_and_belongs_to_many :projects
 MemberLocation
+  # Members can move and we want to store the change
   belongs_to :member
-  belongs_to :location, :as => :locatable
+  belongs_to :location
 Question
+  # Subject of the question
+  has_one :entity
   has_and_belongs_to_many :question_sets
-  belongs_to :questionable, :polymorphic => true
 QuestionSet
   has_and_belongs_to_many :questions
 QuestionResponse
-  has_one :member
-  has_one :question
+  belongs_to :member
+  belongs_to :question
 Location
-  belongs_to :locateable, :polymorphic => true
-  has_many :questions, :as => :questionable
+  belongs_to :entity
 Event
-  has_one :location, :as => :locateable
+  has_one :location
   has_many :event_attendances
-  has_many :questions, :as => :questionable
+  belongs_to :entity
+  belongs_to :project
 EventAttendance
-  has_one :event
-  has_one :member
-
+  belongs_to :event
+  belongs_to :member
+Project
+  has_and_belongs_to_many :members
+  has_many :events
+Entity
+  # Index that just stores a member, location, or event
+  # Effectively "has_one :member, :location, or :event"
