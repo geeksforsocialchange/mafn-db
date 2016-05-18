@@ -11,23 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160517162308) do
+ActiveRecord::Schema.define(version: 20160518134715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "addresses", force: :cascade do |t|
-    t.string   "name"
-    t.boolean  "public"
-    t.string   "street"
-    t.string   "address1"
-    t.string   "address2"
-    t.string   "postcode"
-    t.float    "lat"
-    t.float    "lng"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "entities", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -45,6 +32,18 @@ ActiveRecord::Schema.define(version: 20160517162308) do
   end
 
   add_index "events", ["entity_id"], name: "index_events_on_entity_id", using: :btree
+
+  create_table "locations", force: :cascade do |t|
+    t.string   "name"
+    t.string   "line1"
+    t.string   "line2"
+    t.string   "city"
+    t.string   "postcode"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "members", force: :cascade do |t|
     t.string   "name"

@@ -12,3 +12,7 @@ gem 'icalendar'
 group :production do
   gem 'rails_12factor'
 end
+
+group :test do
+  gem 'sqlite3'
+end
