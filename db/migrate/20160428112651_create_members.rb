@@ -3,7 +3,7 @@ class CreateMembers < ActiveRecord::Migration
     create_table :members do |t|
       t.string :first_name
       t.string :last_name
-      t.integer :age
+      t.date :dob
       t.string :gender
       t.string :tel
       t.string :mob

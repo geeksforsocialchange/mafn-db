@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20160518134715) do
   create_table "members", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.integer  "age"
+    t.date     "dob"
     t.string   "gender"
     t.string   "tel"
     t.string   "mob"
