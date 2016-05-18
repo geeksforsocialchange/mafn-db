@@ -20,7 +20,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'spring'
   gem 'quiet_assets'
-  gem 'ffaker'
+  gem 'faker'
   gem 'guard'
 end
 
