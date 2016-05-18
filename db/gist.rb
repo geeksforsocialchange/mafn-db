@@ -10,13 +10,13 @@ MemberLocation
   belongs_to :location
 Question
   # Subject of the question
-  has_one :entity
   has_and_belongs_to_many :question_sets
 QuestionSet
   has_and_belongs_to_many :questions
 QuestionResponse
   belongs_to :member
   belongs_to :question
+  belongs_to :entity
 Location
   belongs_to :entity
 Event
