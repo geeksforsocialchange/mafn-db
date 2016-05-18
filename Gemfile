@@ -13,6 +13,23 @@ group :production do
   gem 'rails_12factor'
 end
 
+group :development, :test do
+  gem 'byebug'
+  gem 'factory_girl_rails'
+  gem 'better_errors'
+  gem 'database_cleaner'
+  gem 'spring'
+  gem 'quiet_assets'
+  gem 'ffaker'
+end
+
+group :development do
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
+end
+
 group :test do
   gem 'sqlite3'
+  gem 'guard'
+  gem 'guard-minitest'
 end
