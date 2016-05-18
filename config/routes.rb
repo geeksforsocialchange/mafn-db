@@ -1,14 +1,10 @@
 Rails.application.routes.draw do
+  
   resources :locations
-
   resources :question_responses
-
   resources :question_sets
-
   resources :questions
-
   resources :events
-
   resources :members
 
   get 'welcome/index'

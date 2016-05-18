@@ -27,8 +27,9 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  gem 'livereload'
-  gem 'guard-livereload'
+  # gem 'livereload'
+  # gem 'rack-livereload'
+  # gem 'guard-livereload'
 end
 
 group :test do

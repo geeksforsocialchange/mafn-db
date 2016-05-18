@@ -53,6 +53,6 @@ class MembersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def member_params
-      params.require(:member).permit(:name, :age, :gender, :tel, :mob, :email)
+      params.require(:member).permit(:first_name, :last_name, :dob, :gender, :tel, :mob, :email)
     end
 end
