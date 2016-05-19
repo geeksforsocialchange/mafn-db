@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :category %><br>
+    <%= f.select :category, Question.categories.keys.to_a %>
+  </div>
+  <div class="field">
     <%= f.label :question %><br>
     <%= f.text_field :question %>
   </div>
