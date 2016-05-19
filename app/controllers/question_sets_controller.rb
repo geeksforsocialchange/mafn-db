@@ -8,6 +8,7 @@ class QuestionSetsController < ApplicationController
 
   # GET /question_sets/1
   def show
+    @questions = @question_set.questions
   end
 
   # GET /question_sets/new

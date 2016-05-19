@@ -37,3 +37,7 @@ member_questions.each do |q|
                     category: 0,
                   )
 end
+
+# Create question set for these
+member_set = QuestionSet.create!(title: "Community Audit")
+member_set.questions = Question.where(category: 0)

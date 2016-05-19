@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160519102237) do
+ActiveRecord::Schema.define(version: 20160519110039) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,6 +83,8 @@ ActiveRecord::Schema.define(version: 20160519102237) do
     t.integer "question_id",     null: false
     t.integer "question_set_id", null: false
   end
+
+  add_index "question_sets_questions", ["question_id", "question_set_id"], name: "question_sets_to_questions", unique: true, using: :btree
 
   create_table "questions", force: :cascade do |t|
     t.string   "question",   null: false
