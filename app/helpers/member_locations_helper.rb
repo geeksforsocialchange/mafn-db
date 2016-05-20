@@ -1,0 +1,2 @@
+module MemberLocationsHelper
+end

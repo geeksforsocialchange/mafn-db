@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @member_location.member %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @member_location.location %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @member_location.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @member_location.to %>
+</p>
+
+<%= link_to 'Edit', edit_member_location_path(@member_location) %> |
+<%= link_to 'Back', member_locations_path %>

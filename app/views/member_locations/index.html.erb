@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Member Locations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Member</th>
+      <th>Location</th>
+      <th>From</th>
+      <th>To</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @member_locations.each do |member_location| %>
+      <tr>
+        <td><%= member_location.member.full_name %></td>
+        <td><%= member_location.location.line1 %>, <%= member_location.location.city %>, <%= member_location.location.postcode %></td>
+        <td><%= member_location.from %></td>
+        <td><%= member_location.to %></td>
+        <td><%= link_to 'Show', member_location %></td>
+        <td><%= link_to 'Edit', edit_member_location_path(member_location) %></td>
+        <td><%= link_to 'Destroy', member_location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Member location', new_member_location_path %>

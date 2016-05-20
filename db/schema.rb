@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160520120137) do
+ActiveRecord::Schema.define(version: 20160520122220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,18 @@ ActiveRecord::Schema.define(version: 20160520120137) do
   end
 
   add_index "locations", ["entity_id"], name: "index_locations_on_entity_id", using: :btree
+
+  create_table "member_locations", force: :cascade do |t|
+    t.integer  "member_id"
+    t.integer  "location_id"
+    t.date     "from"
+    t.date     "to"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "member_locations", ["location_id"], name: "index_member_locations_on_location_id", using: :btree
+  add_index "member_locations", ["member_id"], name: "index_member_locations_on_member_id", using: :btree
 
   create_table "members", force: :cascade do |t|
     t.string   "first_name"
@@ -99,6 +111,8 @@ ActiveRecord::Schema.define(version: 20160520120137) do
 
   add_foreign_key "events", "entities"
   add_foreign_key "locations", "entities"
+  add_foreign_key "member_locations", "locations"
+  add_foreign_key "member_locations", "members"
   add_foreign_key "members", "entities"
   add_foreign_key "question_responses", "entities"
   add_foreign_key "question_responses", "members"

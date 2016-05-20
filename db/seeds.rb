@@ -76,3 +76,11 @@ end
     longitude: longitude
   )
 end
+
+Member.all.each_with_index do |member, idx|
+  MemberLocation.create!(
+    member: member,
+    location: Location.find(idx + 1),
+    from: Faker::Date.between(20.years.ago, 0.years.ago)
+  )
+end

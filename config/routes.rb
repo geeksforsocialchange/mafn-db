@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :member_locations
+
   resources :locations
   resources :question_responses
   resources :question_sets
