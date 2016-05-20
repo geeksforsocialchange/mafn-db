@@ -20,6 +20,10 @@ class QuestionSetsController < ApplicationController
   def edit
   end
 
+  # Remove a question from a question set
+  def remove_question
+  end
+
   # POST /question_sets
   def create
     @question_set = QuestionSet.new(question_set_params)

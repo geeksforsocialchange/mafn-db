@@ -53,6 +53,10 @@ class QuestionResponsesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def question_response_params
-      params.require(:question_response).permit(:response, :entity_id, :member_id)
+      p = params.require(:question_response).permit(:response, :subject, :responder, :question)
+      p[:subject] = Entity.find(p[:subject])
+      p[:responder] = Member.find(p[:responder])
+      p[:question] = Question.find(p[:question])
+      p
     end
 end

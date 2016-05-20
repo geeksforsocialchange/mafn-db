@@ -41,3 +41,17 @@ end
 # Create question set for these
 member_set = QuestionSet.create!(title: "Community Audit")
 member_set.questions = Question.where(category: 0)
+
+# Answer some random questions
+100.times do |n|
+  response = Faker::Lorem.sentence
+  question = Question.order("RANDOM()").limit(1).first
+  responder = Member.order("RANDOM()").limit(1).first
+  subject =  Entity.order("RANDOM()").limit(1).first
+  QuestionResponse.create!(
+    response: response,
+    question: question,
+    responder: responder,
+    subject: subject,
+  )
+end

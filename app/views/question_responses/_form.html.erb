@@ -12,17 +12,28 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :question %><br>
+    <%= f.select :question do %>
+      <% options_from_collection_for_select Question.all, :id, :question %>
+    <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :subject %><br>
+    <%= f.select :subject do %>
+      <%= options_from_collection_for_select Member.all, :entity_id, :full_name %>
+    <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :responder %><br>
+    <%= f.select :responder do %>
+      <% options_from_collection_for_select Member.all, :entity_id, :full_name %>
+    <% end %>
+  </div>
+  <div class="field">
     <%= f.label :response %><br>
     <%= f.text_field :response %>
   </div>
-  <div class="field">
-    <%= f.label :entity_id %><br>
-    <%= f.text_field :entity_id %>
-  </div>
-  <div class="field">
-    <%= f.label :member_id %><br>
-    <%= f.text_field :member_id %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

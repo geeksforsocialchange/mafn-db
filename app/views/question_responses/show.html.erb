@@ -1,19 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Member:</strong>
+  <%= @question_response.responder.full_name %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @question_response.question.question %>
+</p>
+
+<p>
   <strong>Response:</strong>
   <%= @question_response.response %>
 </p>
 
 <p>
-  <strong>Entity:</strong>
-  <%= @question_response.entity %>
+  <strong>Subject:</strong>
+  <%= @question_response.subject %>
 </p>
 
-<p>
-  <strong>Member:</strong>
-  <%= @question_response.member %>
-</p>
+
 
 <%= link_to 'Edit', edit_question_response_path(@question_response) %> |
 <%= link_to 'Back', question_responses_path %>
