@@ -8,24 +8,25 @@
 
 require 'faker'
 
+Faker::Config.locale = 'en-GB'
+
 # Seed users with dummy data
-if Member.all.length < 5
-  50.times do |n|
-    first_name = Faker::Name.first_name
-    last_name = Faker::Name.last_name
-    email = Faker::Internet.email
-    dob = Faker::Date.between(100.years.ago, 18.years.ago)
-    tel = Faker::PhoneNumber.phone_number
-    mob = Faker::PhoneNumber.cell_phone
-    Member.create!( first_name: first_name,
-                    last_name: last_name,
-                    email: email,
-                    dob: dob,
-                    tel: tel,
-                    mob: mob,
-                  )
-  end
+50.times do |n|
+  first_name = Faker::Name.first_name
+  last_name = Faker::Name.last_name
+  email = Faker::Internet.email
+  dob = Faker::Date.between(100.years.ago, 18.years.ago)
+  tel = Faker::PhoneNumber.phone_number
+  mob = Faker::PhoneNumber.cell_phone
+  Member.create!( first_name: first_name,
+                  last_name: last_name,
+                  email: email,
+                  dob: dob,
+                  tel: tel,
+                  mob: mob,
+                )
 end
+
 
 # Seed questions with actual data
 member_questions = YAML.load_file "db/questions/member.yml"
@@ -53,5 +54,25 @@ member_set.questions = Question.where(category: 0)
     question: question,
     responder: responder,
     subject: subject,
+  )
+end
+
+# Create locations
+50.times do |n|
+  name = Faker::Company.name
+  line1 = Faker::Address.street_name
+  line2 = Faker::Address.street_name
+  city = Faker::Address.city
+  postcode = Faker::Address.postcode
+  latitude = Faker::Address.latitude
+  longitude = Faker::Address.longitude
+  Location.create!(
+    name: name,
+    line1: line1,
+    line2: line2,
+    city: city,
+    postcode: postcode,
+    latitude: latitude,
+    longitude: longitude
   )
 end
