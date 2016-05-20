@@ -20,9 +20,9 @@ class QuestionResponsesControllerTest < ActionController::TestCase
   test "should create question_response" do
     @new_response.response = "Another title"
     assert_difference('QuestionResponse.count') do
-      post :create, question_response: {  entity_id: @new_response.entity_id,
-                                          member_id: @new_response.member_id,
-                                          question_id: @new_response.question_id,
+      post :create, question_response: {  subject: @new_response.subject,
+                                          responder: @new_response.responder,
+                                          question: @new_response.question,
                                           response: @new_response.response }
     end
 
@@ -40,9 +40,9 @@ class QuestionResponsesControllerTest < ActionController::TestCase
   end
 
   test "should update question_response" do
-    patch :update, id: @question_response, question_response: {   entity_id: @question_response.entity_id,
-                                                                  member_id: @question_response.member_id,
-                                                                  question_id: @question_response.question_id,
+    patch :update, id: @question_response, question_response: {   subject: @question_response.subject,
+                                                                  responder: @question_response.responder,
+                                                                  question: @question_response.question,
                                                                   response: @question_response.response }
     assert_redirected_to question_response_path(assigns(:question_response))
   end
