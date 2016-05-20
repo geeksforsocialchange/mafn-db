@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'pg'
 gem 'icalendar'
+gem 'faker'
 
 group :production do
   gem 'rails_12factor'
@@ -20,7 +21,6 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'spring'
   gem 'quiet_assets'
-  gem 'faker'
   gem 'guard'
 end
 
