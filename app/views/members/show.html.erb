@@ -30,5 +30,13 @@
   <%= @member.email %>
 </p>
 
+<h2>Locations</h2>
+<ul>
+  <% MemberLocation.where(member: @member).each do |l| %>
+    <% location = l.location %>
+    <li><%= location.full_address %> (<%= l.from %> -- <%= l.to || "now" %>)</li>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_member_path(@member) %> |
 <%= link_to 'Back', members_path %>
