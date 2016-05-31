@@ -6,5 +6,6 @@
  * libsass with Gulp.
  *
  * Pull compiled from /public/assets/stylesheets
- * require global
+ *= require global
+ *= require formtastic
  */

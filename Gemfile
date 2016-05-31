@@ -9,6 +9,9 @@ gem 'turbolinks'
 gem 'pg'
 gem 'icalendar'
 gem 'faker'
+# Nicer forms
+gem 'formtastic', '~> 3.0'
+gem "cocoon"
 
 group :production do
   gem 'rails_12factor'

@@ -17,6 +17,7 @@ class MembersController < ApplicationController
 
   # GET /members/1/edit
   def edit
+    @questions = QuestionSet.first.questions
   end
 
   # POST /members
