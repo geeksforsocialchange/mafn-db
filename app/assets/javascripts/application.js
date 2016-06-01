@@ -8,5 +8,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //
+//= require cocoon
 // Pull compiled from /public/assets/javascripts
 // require global

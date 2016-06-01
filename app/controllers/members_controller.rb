@@ -17,7 +17,8 @@ class MembersController < ApplicationController
 
   # GET /members/1/edit
   def edit
-    @questions = QuestionSet.first.questions
+    # All the questions that the user needs to answer initially
+    #@questions = QuestionSet.first.questions
   end
 
   # POST /members
@@ -54,6 +55,6 @@ class MembersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def member_params
-      params.require(:member).permit(:first_name, :last_name, :dob, :gender, :tel, :mob, :email)
+      params.require(:member).permit(:first_name, :last_name, :dob, :gender, :tel, :mob, :email, question_responses_attributes: [:id, :question, :responder, :subject, :_destroy])
     end
 end

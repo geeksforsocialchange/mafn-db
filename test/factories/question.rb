@@ -9,4 +9,5 @@ FactoryGirl.define do
     question "I feel like I belong to this neighbourhood"
     response ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]
   end
+
 end

@@ -4,7 +4,7 @@ class Member < ActiveRecord::Base
   has_many :question_responses
   belongs_to :entity
 
-  accepts_nested_attributes_for :question_responses
+  accepts_nested_attributes_for :question_responses, allow_destroy: true
 
   after_create do
     self.update(entity_id: Entity.create.id)
