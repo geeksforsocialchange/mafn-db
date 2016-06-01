@@ -1,8 +1,9 @@
 <%= semantic_form_for(@member) do |f| %>
 
   <%= f.inputs do %>
-    <%= f.input :first_name %><br>
-    <%= f.input :last_name %><br>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :region %>
     <%= f.input :dob, :as => :date_picker %>
     <%= f.input :gender %>
     <%= f.input :tel %>

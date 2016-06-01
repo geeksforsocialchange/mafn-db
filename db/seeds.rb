@@ -24,6 +24,7 @@ Faker::Config.locale = 'en-GB'
                   dob: dob,
                   tel: tel,
                   mob: mob,
+                  region: rand(0..2)
                 )
 end
 

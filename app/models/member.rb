@@ -7,9 +7,9 @@ class Member < ActiveRecord::Base
   accepts_nested_attributes_for :question_responses, allow_destroy: true
 
   enum region: {
-    hulme_ms: 0,
-    burnage: 1,
-    moston: 2,
+    "Hulme & Moss Side": 0,
+    "Burnage": 1,
+    "Moston": 2,
   }
 
   after_create do
@@ -27,5 +27,24 @@ class Member < ActiveRecord::Base
 
   def full_name
     self.last_name + ", " + self.first_name
+  end
+
+  def initials
+    self.first_name.first + self.last_name.first
+  end
+
+  def region_code
+    return case self.region
+    when "Hulme & Moss Side"
+      'HM'
+    when "Burnage"
+      'BU'
+    when "Moston"
+      'MO'
+    end
+  end
+
+  def membership_code
+    "AFN-#{self.region_code}-#{self.id.to_s.rjust(4, '0')}-#{self.initials}"
   end
 end
