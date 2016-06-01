@@ -1,10 +1,16 @@
 class Member < ActiveRecord::Base
-  validates_presence_of :first_name, :last_name, :dob
+  validates_presence_of :first_name, :last_name, :dob, :region
   has_many :locations, :through => :member_locations
   has_many :question_responses
   belongs_to :entity
 
   accepts_nested_attributes_for :question_responses, allow_destroy: true
+
+  enum region: {
+    hulme_ms: 0,
+    burnage: 1,
+    moston: 2,
+  }
 
   after_create do
     self.update(entity_id: Entity.create.id)
