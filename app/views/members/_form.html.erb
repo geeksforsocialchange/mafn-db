@@ -1,5 +1,4 @@
 <%= semantic_form_for(@member) do |f| %>
-
   <%= f.inputs do %>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
@@ -9,11 +8,6 @@
     <%= f.input :tel %>
     <%= f.input :mob %>
     <%= f.input :email %>
-    <h3>Question Responses</h3>
-    <%# f.semantic_fields_for :question_responses do |response| %>
-      <%# render 'question_fields', f: question %>
-      <%# end %>
-    <%# link_to_add_association 'Add response', f, :question_responses %>
   <% end %>
   <%= f.actions do %>
      <%= f.action :submit, :as => :button %>

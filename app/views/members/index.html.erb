@@ -2,9 +2,12 @@
 
 <h1>Listing Members</h1>
 
+<p><%= link_to 'New Member', new_member_path %></p>
+
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Name</th>
       <th>DoB</th>
       <th>Region</th>
@@ -19,7 +22,8 @@
   <tbody>
     <% @members.each do |member| %>
       <tr>
-        <td><%= member.last_name %>, <%= member.first_name %></td>
+        <td><tt><%= member.membership_code %></tt></td>
+        <td><%= member.full_name %></td>
         <td><%= member.dob %></td>
         <td><%= member.region %></td>
         <td><%= member.gender %></td>
@@ -35,5 +39,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Member', new_member_path %>
