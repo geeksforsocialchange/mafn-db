@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   resources :member_locations
 
   resources :locations
@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   resources :question_sets
   resources :questions
   resources :events
-  resources :members
+  resources :members do
+    resources :question_sets do
+      resources :questions
+    end
+  end
 
   get 'welcome/index'
 

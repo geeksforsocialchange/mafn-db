@@ -1,6 +1,6 @@
 class Member < ActiveRecord::Base
   validates_presence_of :first_name, :last_name, :dob, :region
-  has_many :locations, :through => :member_locations
+  has_many :locations, through: :member_locations
   has_many :question_responses
   belongs_to :entity
 

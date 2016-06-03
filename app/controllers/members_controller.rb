@@ -8,6 +8,7 @@ class MembersController < ApplicationController
 
   # GET /members/1
   def show
+    @question_sets = QuestionSet.all
   end
 
   # GET /members/new
@@ -55,7 +56,7 @@ class MembersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def member_params
-      params.require(:member).permit( :first_name, 
+      params.require(:member).permit( :first_name,
                                       :last_name,
                                       :dob,
                                       :region,

@@ -12,5 +12,6 @@ class MemberFormLinksTest < ActionDispatch::IntegrationTest
     assert_select "dl.question-responses"
     assert_select "dt", "Is there anything specific preventing you from taking part which you would like to change?"
     assert_select "dd a", "I struggle with mobility issues getting into some of the venues"
+    assert_select "ul.question-sets"
   end
 end

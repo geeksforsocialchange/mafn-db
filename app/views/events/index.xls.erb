@@ -10,7 +10,7 @@
         <Cell><Data ss:Type="String">ID</Data></Cell>
         <Cell><Data ss:Type="String">Name</Data></Cell>
         <Cell><Data ss:Type="String">Category</Data></Cell>
-        <Cell><Data ss:Type="String">Date</Data></Cell>
+        <Cell><Data ss:Type="String">Start</Data></Cell>
         <Cell><Data ss:Type="String">Description</Data></Cell>
       </Row>
     <% @events.each do |event| %>
@@ -18,7 +18,7 @@
         <Cell><Data ss:Type="Number"><%= event.id %></Data></Cell>
         <Cell><Data ss:Type="String"><%= event.category %></Data></Cell>
         <Cell><Data ss:Type="String"><%= event.name %></Data></Cell>
-        <Cell><Data ss:Type="String"><%= event.date %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= event.start %></Data></Cell>
         <Cell><Data ss:Type="String"><%= event.description %></Data></Cell>
       </Row>
     <% end %>

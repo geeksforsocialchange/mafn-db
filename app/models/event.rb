@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  validates_presence_of :name
+  validates_presence_of :name, :start, :finish, :location 
   enum category: [ :research, :project, :neighbourhood ]
 
   def self.to_csv(options = {})

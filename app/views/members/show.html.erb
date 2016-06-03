@@ -43,11 +43,20 @@
   <% end %>
 </ul>
 
-<h2>Question Responses</h2>
+<h2>Questions</h2>
+
+<h3>Complete a survey</h3>
+<ul class="question-sets">
+  <% @question_sets.each do |qs| %>
+    <li><%= link_to qs.title, member_question_set_path(@member, qs) %></li>
+  <% end %>
+</ul>
+
+<h3>Recent responses</h3>
 <dl class="question-responses">
-  <% @member.date_sorted_responses.each do |q| %>
-    <dt><%= q.question.question %></dt>
-    <dd><%= link_to q.response, question_response_path(q.id) %> <em>(<%= time_ago_in_words(q.created_at) %> ago)</em></dt>
+  <% @member.date_sorted_responses.each do |r| %>
+    <dt><%= r.question.question %></dt>
+    <dd><%= link_to r.response, question_response_path(r.id) %> <em>(<%= time_ago_in_words(r.created_at) %> ago)</em></dt>
   <% end %>
 </dl>
 
