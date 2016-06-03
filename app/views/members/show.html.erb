@@ -11,7 +11,7 @@
 </p>
 
 <p>
-  <strong>Age:</strong>
+  <strong>DoB:</strong>
   <%= @member.dob %>
 </p>
 
@@ -42,6 +42,14 @@
     <li><%= location.full_address %> (<%= l.from %> -- <%= l.to || "now" %>)</li>
   <% end %>
 </ul>
+
+<h2>Question Responses</h2>
+<dl class="question-responses">
+  <% @member.date_sorted_responses.each do |q| %>
+    <dt><%= q.question.question %></dt>
+    <dd><%= link_to q.response, question_response_path(q.id) %> <em>(<%= time_ago_in_words(q.created_at) %> ago)</em></dt>
+  <% end %>
+</dl>
 
 <%= link_to 'Edit', edit_member_path(@member) %> |
 <%= link_to 'Back', members_path %>

@@ -44,6 +44,10 @@ class Member < ActiveRecord::Base
     end
   end
 
+  def date_sorted_responses
+    self.question_responses.order(:created_at).reverse
+  end
+
   def membership_code
     "AFN-#{self.region_code}-#{self.id.to_s.rjust(4, '0')}-#{self.initials}"
   end

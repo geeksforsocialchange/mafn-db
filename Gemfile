@@ -12,6 +12,8 @@ gem 'faker'
 # Nicer forms
 gem 'formtastic', '~> 3.0'
 gem "cocoon"
+# Group responses by date
+gem 'groupdate'
 
 group :production do
   gem 'rails_12factor'
