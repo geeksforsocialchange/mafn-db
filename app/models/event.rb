@@ -1,6 +1,20 @@
 class Event < ActiveRecord::Base
-  validates_presence_of :name, :start, :finish, :location 
-  enum category: [ :research, :project, :neighbourhood ]
+  validates_presence_of :name, :start, :finish, :location
+  validates_uniqueness_of :google_id, :allow_blank => true, :allow_nil => true
+  enum category: [ :research, :project, :partnership ]
+
+  POSTCODE_REGEX = "(GIR 0AA)|((([A-Z-[QVX]][0-9][0-9]?)|(([A-Z-[QVX]][A-Z-[IJZ]][0-9][0-9]?)|(([A-Z-[QVX]][0-9][A-HJKPSTUW])|([A-Z-[QVX]][A-Z-[IJZ]][0-9][ABEHMNPRVWXY])))) [0-9][A-Z-[CIKMOV]]{2})"
+
+  def geolocate
+    # Get the postcode from the location string
+    postcode = self.location.match(POSTCODE_REGEX)[0].delete("\s")
+    # Get a lat/lng from postcodes.io
+    response = RestClient.get "http://api.postcodes.io/postcodes/#{postcode}"
+    result = JSON.parse(response)
+    self.latitude = result['result']['latitude']
+    self.longitude = result['result']['latitude']
+    self.save!
+  end
 
   def self.to_csv(options = {})
     CSV.generate(options) do |csv|

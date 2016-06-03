@@ -25,7 +25,8 @@ class EventsControllerTest < ActionController::TestCase
                               description: @event.description,
                               latitude: @event.latitude,
                               longitude: @event.longitude,
-                              category: @event.category
+                              category: @event.category,
+                              google_id: @event.google_id
                            }
     end
     assert_redirected_to event_path(assigns(:event))

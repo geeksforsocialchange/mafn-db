@@ -13,7 +13,11 @@ gem 'faker'
 gem 'formtastic', '~> 3.0'
 gem "cocoon"
 # Group responses by date
-gem 'groupdate'
+# gem 'groupdate'
+# To access geolocation API
+gem 'rest-client'
+# Nice colours for output
+gem 'colorize'
 
 group :production do
   gem 'rails_12factor'

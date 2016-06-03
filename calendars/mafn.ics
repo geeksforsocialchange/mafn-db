@@ -25,10 +25,595 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160608T130000
+DTEND;TZID=Europe/London:20160608T140000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+DTSTAMP:20160603T144251Z
+UID:4m4spa75ds0loljkd8lfig1eo0_R20160608T120000@google.com
+CREATED:20160526T093621Z
+DESCRIPTION:Dementia Friendly Swimming session for people affected by demen
+ tia - either as a carer or someone living with the condition.\n\nThe sessio
+ n is £1 for anyone under 60 or from outside of the City of Manchester bound
+ aries – otherwise the session is free (thanks to the free swimming for Over
+  60s offer and the centre’s Carers Scheme) - please bring proof of age and 
+ address.\n\nThe group offer support with Transport in partnership with Manc
+ hester Community Transport. So please do get in touch if you require transp
+ ort in order to get to the session.\n\nContact Catriona Sudlow for queries/
+  to arrange transport: 07583 134810
+LAST-MODIFIED:20160602T144906Z
+LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
+ 5NN\, UK
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Dementia Friendly Swimming
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160601T130000
+DTEND;TZID=Europe/London:20160601T140000
+RRULE:FREQ=WEEKLY;UNTIL=20160608T115959Z;BYDAY=WE
+DTSTAMP:20160603T144251Z
+UID:4m4spa75ds0loljkd8lfig1eo0@google.com
+CREATED:20160526T093621Z
+DESCRIPTION:Dementia Friendly Swimming session for people with dementia and
+  carers.
+LAST-MODIFIED:20160602T143349Z
+LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
+ 5NN\, UK
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Dementia Friendly Swimming
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160210T120000
+DTEND;TZID=Europe/London:20160210T130000
+RRULE:FREQ=WEEKLY;UNTIL=20160525T110000Z;BYDAY=WE
+DTSTAMP:20160603T144251Z
+UID:iacqc0jlgl5nppp9gpa2s6e6j4@google.com
+CREATED:20160205T135145Z
+DESCRIPTION:Contact Anne for more information:\nCall: 0161 226 8254\nEmail:
+  anne389@btinternet.com
+LAST-MODIFIED:20160531T143655Z
+LOCATION:Aquarius
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Aquarius 50+ Allotment Group
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160215T120000
+DTEND;TZID=Europe/London:20160215T130000
+RRULE:FREQ=WEEKLY;UNTIL=20160509T110000Z;BYDAY=MO
+DTSTAMP:20160603T144251Z
+UID:9o4ds033al43jt3nvt4iups3f0@google.com
+CREATED:20160209T112918Z
+DESCRIPTION:Contact Anne for more information:\nCall: 0161 226 8254\nEmail:
+  anne389@btinternet.com
+LAST-MODIFIED:20160531T143636Z
+LOCATION:Aqarius Centre\, 21 Eden Close\, M15 6AX
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chair Assisted Exercise
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160215T130000
+DTEND;TZID=Europe/London:20160215T134500
+RRULE:FREQ=WEEKLY;UNTIL=20160523T120000Z;BYDAY=MO
+DTSTAMP:20160603T144251Z
+UID:fro63veov8mqgv5cimhgeenfac@google.com
+CREATED:20160209T113747Z
+DESCRIPTION:Contact Anne for more information:\n0161 226 8254\nanne389@btin
+ ternet.com
+LAST-MODIFIED:20160531T143631Z
+LOCATION:Aqarius Centre\, 21 Eden Close\, M15 6AX
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Tea Break Club
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160209T110000
+DTEND;TZID=Europe/London:20160209T130000
+RRULE:FREQ=WEEKLY;UNTIL=20160524T100000Z;BYDAY=TU
+DTSTAMP:20160603T144251Z
+UID:4tnq09db23i8vgim0uf3vfqjo4@google.com
+CREATED:20160209T113855Z
+DESCRIPTION:Contact Anne for more information:\n0161 226 8254\nanne389@btin
+ ternet.com
+LAST-MODIFIED:20160531T143602Z
+LOCATION:Aqarius Centre\, 21 Eden Close\, M15 6AX
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Art Class
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20161016T120000Z
+DTEND:20161016T150000Z
+DTSTAMP:20160603T144251Z
+UID:h29b18095v4c463gok5kphmin4@google.com
+CREATED:20160531T093724Z
+DESCRIPTION:The course Includes discussion\, practical remedy making\, hand
+ outs and freebies\; the course will help you to assess your health and diet
+  and to make positive changes and healthier food choices for you and your f
+ amily. \nAll sessions assume no prior knowledge and are open to anyone who 
+ is interested in improving their health choices and knowledge of traditiona
+ l plant medicine and nutrition. \n\nThis course will be held on every third
+  Sunday of the month\, June to October from 1-4pm. \n\nfor more Info contac
+ t Jane Placca 07944 916196 themanchesterherbalist@yahoo.com \nFacebook: Liv
+ ing Medicine Manchester 
+LAST-MODIFIED:20160531T093724Z
+LOCATION:Hulme Community Garden Centre\, 28 Old Birley St\, St. George's\, 
+ Manchester M15 5RG\, UK
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Living Medicine - Self Care With Food & Herbs: Coughs\, Colds & All
+ ergies
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160918T120000Z
+DTEND:20160918T150000Z
+DTSTAMP:20160603T144251Z
+UID:ngd2fv2lnasrj41e7vg17nc6ts@google.com
+CREATED:20160531T093520Z
+DESCRIPTION:The course Includes discussion\, practical remedy making\, hand
+ outs and freebies\; the course will help you to assess your health and diet
+  and to make positive changes and healthier food choices for you and your f
+ amily. \nAll sessions assume no prior knowledge and are open to anyone who 
+ is interested in improving their health choices and knowledge of traditiona
+ l plant medicine and nutrition. \n\nThis course will be held on every third
+  Sunday of the month\, June to October from 1-4pm. \n\nfor more Info contac
+ t Jane Placca 07944 916196 themanchesterherbalist@yahoo.com \nFacebook: Liv
+ ing Medicine Manchester 
+LAST-MODIFIED:20160531T093520Z
+LOCATION:Hulme Community Garden Centre\, 28 Old Birley St\, St. George's\, 
+ Manchester M15 5RG\, UK
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Living Medicine - Self Care With Food & Herbs: Skin & First Aid
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160821T120000Z
+DTEND:20160821T150000Z
+DTSTAMP:20160603T144251Z
+UID:5b711gari6f4ta74phatg9q6b0@google.com
+CREATED:20160531T093332Z
+DESCRIPTION:The course Includes discussion\, practical remedy making\, hand
+ outs and freebies\; the course will help you to assess your health and diet
+  and to make positive changes and healthier food choices for you and your f
+ amily. \nAll sessions assume no prior knowledge and are open to anyone who 
+ is interested in improving their health choices and knowledge of traditiona
+ l plant medicine and nutrition. \n\nThis course will be held on every third
+  Sunday of the month\, June to October from 1-4pm. \n\nfor more Info contac
+ t Jane Placca 07944 916196 themanchesterherbalist@yahoo.com \nFacebook: Liv
+ ing Medicine Manchester 
+LAST-MODIFIED:20160531T093332Z
+LOCATION:Hulme Community Garden Centre\, 28 Old Birley St\, St. George's\, 
+ Manchester M15 5RG\, UK
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Living Medicine - Self Care With Food & Herbs: Sleep\, Anxiety & Fa
+ tigue
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160717T120000Z
+DTEND:20160717T150000Z
+DTSTAMP:20160603T144251Z
+UID:c829tkand8je0mjv4euthm3pqk@google.com
+CREATED:20160531T093118Z
+DESCRIPTION:The course Includes discussion\, practical remedy making\, hand
+ outs and freebies\; the course will help you to assess your health and diet
+  and to make positive changes and healthier food choices for you and your f
+ amily. \nAll sessions assume no prior knowledge and are open to anyone who 
+ is interested in improving their health choices and knowledge of traditiona
+ l plant medicine and nutrition. \n\nThis course will be held on every third
+  Sunday of the month\, June to October from 1-4pm. \n\nfor more Info contac
+ t Jane Placca 07944 916196 themanchesterherbalist@yahoo.com \nFacebook: Liv
+ ing Medicine Manchester 
+LAST-MODIFIED:20160531T093118Z
+LOCATION:Hulme Community Garden Centre\, 28 Old Birley St\, St. George's\, 
+ Manchester M15 5RG\, UK
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Living Medicine - Self Care With Food & Herbs: Digestion Discomfort
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160619T120000Z
+DTEND:20160619T150000Z
+DTSTAMP:20160603T144251Z
+UID:hgusihru1oqcceot64llt3ldao@google.com
+CREATED:20160531T092841Z
+DESCRIPTION:The course Includes discussion\, practical remedy making\, hand
+ outs and freebies\; the course will help you to assess your health and diet
+  and to make positive changes and healthier food choices for you and your f
+ amily. \nAll sessions assume no prior knowledge and are open to anyone who 
+ is interested in improving their health choices and knowledge of traditiona
+ l plant medicine and nutrition. \n\nThis course will be held on every third
+  Sunday of the month\, June to October from 1-4pm. \n\nfor more Info contac
+ t Jane Placca 07944 916196 themanchesterherbalist@yahoo.com \nFacebook: Liv
+ ing Medicine Manchester 
+LAST-MODIFIED:20160531T092841Z
+LOCATION:Hulme Community Garden Centre\, 28 Old Birley St\, St. George's\, 
+ Manchester M15 5RG\, UK
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Living Medicine- Self Care With Food & Herbs: Self Care
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160630T083000Z
+DTEND:20160630T150000Z
+DTSTAMP:20160603T144251Z
+UID:qf5fc9dg568av72idmsde44ki0@google.com
+CREATED:20160527T151902Z
+DESCRIPTION:Thursday 30th June 2016 9.30 - 4.00pm\nHome Business Workshop\n
+ Venue: St Wilfred's Enterprise Centre\n(FirmStart) Royce Road Hulme M15 4BJ
+ \n\nFor further details contact: Richard at ABS (Amazin Business Solutions)
+  on 07590425644 or 079271 43531\nemail: info@amazinbusinesssolutions.com\n
+LAST-MODIFIED:20160527T151902Z
+LOCATION:St Wilfred's Enterprose Centre
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Home Business Workshop
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160530T063000
+DTEND;TZID=Europe/London:20160530T100000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+DTSTAMP:20160603T144251Z
+UID:lm7ish2sov1mjovp61aujepf8g@google.com
+CREATED:20160526T092854Z
+DESCRIPTION:This is a swimming session adults only\, aged 16 and over. \n\n
+ You can swim for free if you are over 60 and a resident of Manchester. Take
+  along a document with proof of date of birth and a utilities bill showing 
+ you are a Manchester resident.\n\nPrice: £2.50 or with a Manchester Leisure
+  Pass £2 (peak) £1.70 (off peak 9am-12 and 2-5pm). Free if over 60.\n\nNo B
+ ooking required. Just come along at the times listed and enjoy your swim in
+  our pool - note that swim safely rules do apply.\n\nSee here for more: htt
+ p://www.better.org.uk/venues/moss-side/timetable/pool
+LAST-MODIFIED:20160526T092854Z
+LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
+ 5NN\, UK
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Swim for Adults
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160529T160000
+DTEND;TZID=Europe/London:20160529T170000
+RRULE:FREQ=WEEKLY;BYDAY=SU,SA
+DTSTAMP:20160603T144251Z
+UID:qbjpoujo1qkc70bjgjdf8q8qro@google.com
+CREATED:20160526T092658Z
+DESCRIPTION:This is a swimming session adults only\, aged 16 and over. \n\n
+ You can swim for free if you are over 60 and a resident of Manchester. Take
+  along a document with proof of date of birth and a utilities bill showing 
+ you are a Manchester resident.\n\nPrice: £2.50 or with a Manchester Leisure
+  Pass £2 (peak times) £1.70 (off peak times: 9am-12 and 2-5pm). Free if ove
+ r 60.\n\nNo Booking required. Just come along at the times listed and enjoy
+  your swim in our pool - note that swim safely rules do apply.\n\nSee here 
+ for more: http://www.better.org.uk/venues/moss-side/timetable/pool
+LAST-MODIFIED:20160526T092724Z
+LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
+ 5NN\, UK
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Swim for Adults
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160522T090000
+DTEND;TZID=Europe/London:20160522T100000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+DTSTAMP:20160603T144251Z
+UID:r5b0df1l32l7vng8a5755ngv14@google.com
+CREATED:20160526T092451Z
+DESCRIPTION:This is a swimming session adults only\, aged 16 and over. \n\n
+ You can swim for free if you are over 60 and a resident of Manchester. Take
+  along a document with proof of date of birth and a utilities bill showing 
+ you are a Manchester resident.\n\nPrice: £2.50 or with a Manchester Leisure
+  Pass £2 (peak times) £1.70 (off peak times: 9am-12 and 2-5pm). Free if ove
+ r 60.\n\nNo Booking required. Just come along at the times listed and enjoy
+  your swim in our pool - note that swim safely rules do apply.\n\nSee here 
+ for more: http://www.better.org.uk/venues/moss-side/timetable/pool
+LAST-MODIFIED:20160526T092613Z
+LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
+ 5NN\, UK
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Swim for Adults
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160526T063000
+DTEND;TZID=Europe/London:20160526T090000
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
+DTSTAMP:20160603T144251Z
+UID:bdrspt61u2ebmv2p8m5iu39r2g@google.com
+CREATED:20160526T092356Z
+DESCRIPTION:This is a swimming session adults only\, aged 16 and over. \n\n
+ You can swim for free if you are over 60 and a resident of Manchester. Take
+  along a document with proof of date of birth and a utilities bill showing 
+ you are a Manchester resident.\n\nPrice: £2.50 or with a Manchester Leisure
+  Pass £2 (peak) £1.70 (off peak 9am-12 and 2-5pm). Free if over 60.\n\nNo B
+ ooking required. Just come along at the times listed and enjoy your swim in
+  our pool - note that swim safely rules do apply.\n\nSee here for more: htt
+ p://www.better.org.uk/venues/moss-side/timetable/pool
+LAST-MODIFIED:20160526T092356Z
+LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
+ 5NN\, UK
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Swim For Adults
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20160713
+DTEND;VALUE=DATE:20160714
+DTSTAMP:20160603T144251Z
+UID:0r86qjcd190176gve9mp7sga8s@google.com
+CREATED:20160524T145013Z
+DESCRIPTION:11am - 2pm\n\nContact Emily Crompton if you want to host a stal
+ l\, attend or get involved\n0161 247 5960 / 07973973814
+LAST-MODIFIED:20160524T145122Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:AGE FRIENDLY COMMUNITY FORUM
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20160710
+DTEND;VALUE=DATE:20160711
+DTSTAMP:20160603T144251Z
+UID:h56pf4ai304oq33gv1o24bmnlg@google.com
+CREATED:20160518T085614Z
+DESCRIPTION:Contact Manchester and District Orienteering Club for more deta
+ ils: http://www.mdoc.org.uk/ \n\ntwinpeak2016@mdoc.org.uk \n\nVenue\nSouthe
+ rn and Central Manchester\n\nTravel\nPublic Transport: 2km from Piccadilly 
+ to Assembly. Frequent bus services with walk of about 200m from nearest sto
+ ps.\n\nAssembly\nManchester Metropolitan University\, MMU Birley Campus\, n
+ ear A5103 Princess Road\, Hulme. Postcode M15 6GX. GR SJ836965.\n\nParking\
+ nWithin 200m of Assembly.\n\nDogs\nDogs will not be welcome on the Campus. 
+ Nearby public parking is available\n\nFacilities\nToilets\, showers\, locke
+ rs\, snack bar. Traders (possibly)\n\nEntry\nEnter online via SI Entries - 
+ open from April 14th. Enter by course letter\, A to G.\n\nSelect Edit entri
+ es to amend your entry\, or Entry list to view current entries.\n\nAll pre-
+ entered competitors will use SI Air Cards\, with contactless punching.\nFor
+  those entering Day 2 only\, cards will be available for collection at Asse
+ mbly at MMU\n\nClosing Date\nJune 26th. Possible late entry until July 3rd.
+  Limited EOD available.\n\nFees\nStandard fee: Seniors £10\, Juniors and fu
+ ll time students £5\nLate fee and EOD: Seniors £12\, Juniors and full time 
+ students £5\n\nAn automatic discount will be applied through the SI Entries
+  system for competitors who have their own SIAC.\n\nEOD Entry\nRegister fro
+ m 10:00 to 11:30\, while maps and start slots available.\nA limited number 
+ of SI Air Cards will be available for EOD competitors.\nEOD competitors wil
+ l be able to use standard SI Cards for conventional punching if all availab
+ le SI Air Cards have been issued.\n\nStarts\n10:30 to 12:30. Starts within 
+ 400m of Assembly.\n\nCourses\nStandard urban courses. Longest course will b
+ e about 8Km.\n \nUKOL points\nYou only get UKOL points if you run the corre
+ ct course for your age class.\n\nUK Urban League\nYou get points in the cat
+ egory you have chosen to run\, as long as it is valid for your age class\n\
+ nTwin Peak Competition\nPrizes for the winners of all age classes.\nTo be c
+ ompetitive\, enter the same age class each day (e.g. a W50 will enter Cours
+ e 6 on Saturday and C on Sunday)\, You can choose to run “up”.\nYou will no
+ t be competitive if you choose to run “down”\, but you can\, of course\, do
+  so.\n\nBoth times on Saturday and time on Sunday will be added together to
+  give final Twin Peak placing.\n(For M/W 10 to 14\, add together the single
+  time on Saturday and the time on Sunday) 
+LAST-MODIFIED:20160524T100228Z
+LOCATION:Brooks\, MMU Birley Bonsall Street
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Manchester & District Orienteering Club event
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160526T160000Z
+DTEND:20160526T180000Z
+DTSTAMP:20160603T144251Z
+UID:m4hvmbbopmrod014pvf89fq9q4@google.com
+CREATED:20160524T095617Z
+DESCRIPTION:On Thursday 26th May\, from 5-7pm\, Manchester Met’s Environmen
+ t Team are hosting a film screening of Just Eat It and a talk about food wa
+ ste. \nJust Eat It is a documentary exploring the subject of food waste\, a
+ n issue becoming increasingly important in the UK\, as well as in other nat
+ ions. \nAfter the screening\, there will be a short talk by Haleh Moravej\,
+  Nutritional Scientist & MetMUnch founder\, and discussion about the issues
+  raised. \n\n"We all love food. As a society\, we devour countless cooking 
+ shows\, culinary magazines and foodie blogs. So how could we possibly be th
+ rowing nearly 50% of it in the trash?" - Just Eat It. \n\nAll are welcome t
+ o attend. \nTo sign up\, please click here: https://justeatitmmu.eventbrite
+ .co.uk \n
+LAST-MODIFIED:20160524T095617Z
+LOCATION: Lecture Theatre 6\, Manchester Met Business School 
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Film Screening: Just Eat It
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160603T084500Z
+DTEND:20160603T110000Z
+DTSTAMP:20160603T144251Z
+UID:3bsivkij8er2fu0ldvbso6fefg@google.com
+CREATED:20160524T094224Z
+DESCRIPTION:We will be arriving at 9.45am and sing at 10.30am\nWe are singi
+ ng Put a Little Love In Your Heart voices only \nDress code blue and white\
+ n\nContact Sally Ferris\,  Together Dementia Support\n07854 335890\n
+LAST-MODIFIED:20160524T094224Z
+LOCATION:EPPING WALK BRIDGE located at MMU Bonsall St Hulme Manchester M15 
+ 6GX
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Sing Along BBC MUSIC DAY
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20160723
+DTEND;VALUE=DATE:20160821
+DTSTAMP:20160603T144251Z
+UID:90p7ccilqtvco3akf0kkkmtaj4@google.com
+CREATED:20160518T085717Z
+DESCRIPTION:
+LAST-MODIFIED:20160518T090322Z
+LOCATION:Brooks\, Birley\, 53 Bonsall Street Manchester M15 6GX
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Summer Community Games
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20160612
+DTEND;VALUE=DATE:20160613
+DTSTAMP:20160603T144251Z
+UID:rdibmc8jc9k33iu03iat93bb14@google.com
+CREATED:20160422T111851Z
+DESCRIPTION:On Sunday 12th June\, we will be hosting a community picnic at 
+ Birley as part of the national Big Lunch\, an annual event aimed at bringin
+ g people together and celebrating community.\nThe event will be linked to M
+ anchester’s status as European City of Science 2016 and will have avery spe
+ cial science theme.\nIn partnership with the Faculty of Science and Enginee
+ ring\, MetMUnch\, the University’s Environment Team\, and local community p
+ artners we’ll be showcasing fermented foods made out of microbes and invite
+  you to take part and bring your own picnic. There’ll be plenty of family-f
+ riendly activities and you can find out more about the Birley Community Orc
+ hard and herb garden.  \nFor more information on how to get involved contac
+ t: engagement@mmu.ac.uk or 0161 247 3393
+LAST-MODIFIED:20160518T085516Z
+LOCATION:Birley Fields\, Bonsall St\, Manchester M15\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:World Family Picnic European City of Science 
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160611T140000Z
+DTEND:20160611T160000Z
+DTSTAMP:20160603T144251Z
+UID:8l5fr4vv5to10t0toggs1om3bk@google.com
+CREATED:20160511T093959Z
+DESCRIPTION:Dementia friendly gospel choir for African and Caribbean people
+  with memory difficulties/dementia to enjoy and spend time together with re
+ latives or friends.\n\nEveryone welcome.\n\nContact: Dorothy Allen Dorothy@
+ togetherdementiasupport.org\, Sally Ferris 07854 335890 or Dawn Edge dawn.e
+ dge@manchester.ac.uk 07796 202806
+LAST-MODIFIED:20160511T094544Z
+LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
+ h Rd\, Manchester M16 7HU\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Together in Song
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160514T140000Z
+DTEND:20160514T160000Z
+DTSTAMP:20160603T144251Z
+UID:bbsr0u24i384jp5uuk7j3gdijg@google.com
+CREATED:20160511T093856Z
+DESCRIPTION:Dementia friendly gospel choir for African and Caribbean people
+  with memory difficulties/dementia to enjoy and spend time together with re
+ latives or friends.\n\nEveryone welcome.\n\nContact: Dorothy Allen Dorothy@
+ togetherdementiasupport.org\, Sally Ferris 07854 335890 or Dawn Edge dawn.e
+ dge@manchester.ac.uk 07796 202806
+LAST-MODIFIED:20160511T094519Z
+LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
+ h Rd\, Manchester M16 7HU\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Together in Song
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20161015T140000Z
+DTEND:20161015T160000Z
+DTSTAMP:20160603T144251Z
+UID:20i9p5qdohcfn6crsptu9nf33g@google.com
+CREATED:20160511T094453Z
+DESCRIPTION:Dementia friendly gospel choir for African and Caribbean people
+  with memory difficulties/dementia to enjoy and spend time together with re
+ latives or friends.\n\nEveryone welcome.\n\nContact: Dorothy Allen Dorothy@
+ togetherdementiasupport.org\, Sally Ferris 07854 335890 or Dawn Edge dawn.e
+ dge@manchester.ac.uk 07796 202806
+LAST-MODIFIED:20160511T094453Z
+LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
+ h Rd\, Manchester M16 7HU\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Together in Song
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160917T140000Z
+DTEND:20160917T160000Z
+DTSTAMP:20160603T144251Z
+UID:17b0apo0hj3ruoih6t1r6ngo04@google.com
+CREATED:20160511T094349Z
+DESCRIPTION:Dementia friendly gospel choir for African and Caribbean people
+  with memory difficulties/dementia to enjoy and spend time together with re
+ latives or friends.\n\nEveryone welcome.\n\nContact: Dorothy Allen Dorothy@
+ togetherdementiasupport.org\, Sally Ferris 07854 335890 or Dawn Edge dawn.e
+ dge@manchester.ac.uk 07796 202806
+LAST-MODIFIED:20160511T094349Z
+LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
+ h Rd\, Manchester M16 7HU\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Together in Song
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160813T140000Z
+DTEND:20160813T150000Z
+DTSTAMP:20160603T144251Z
+UID:r5q1733g2bvresv3mhq6prsii4@google.com
+CREATED:20160511T094244Z
+DESCRIPTION:Dementia friendly gospel choir for African and Caribbean people
+  with memory difficulties/dementia to enjoy and spend time together with re
+ latives or friends.\n\nEveryone welcome.\n\nContact: Dorothy Allen Dorothy@
+ togetherdementiasupport.org\, Sally Ferris 07854 335890 or Dawn Edge dawn.e
+ dge@manchester.ac.uk 07796 202806
+LAST-MODIFIED:20160511T094244Z
+LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
+ h Rd\, Manchester M16 7HU\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Together in Song
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160709T140000Z
+DTEND:20160709T160000Z
+DTSTAMP:20160603T144251Z
+UID:qug0u0p9mao9b5r1bjhb7p2i0g@google.com
+CREATED:20160511T094125Z
+DESCRIPTION:Dementia friendly gospel choir for African and Caribbean people
+  with memory difficulties/dementia to enjoy and spend time together with re
+ latives or friends.\n\nEveryone welcome.\n\nContact: Dorothy Allen Dorothy@
+ togetherdementiasupport.org\, Sally Ferris 07854 335890 or Dawn Edge dawn.e
+ dge@manchester.ac.uk 07796 202806
+LAST-MODIFIED:20160511T094125Z
+LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
+ h Rd\, Manchester M16 7HU\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Together in Song
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160420T130000
 DTEND;TZID=Europe/London:20160420T200000
 RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:uvj7ciu79208kssph3rfap6qv4@google.com
 CREATED:20160422T112917Z
 DESCRIPTION:Hulme had the very first branch library of Manchester’s free li
@@ -52,7 +637,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160423T140000
 DTEND;TZID=Europe/London:20160423T170000
 RRULE:FREQ=WEEKLY;BYDAY=SA
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:dful56j9cu09kdnofscgs7ffeg@google.com
 CREATED:20160422T112843Z
 DESCRIPTION:Hulme had the very first branch library of Manchester’s free li
@@ -76,7 +661,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160419T090000
 DTEND;TZID=Europe/London:20160419T130000
 RRULE:FREQ=WEEKLY;BYDAY=TU,TH,SA
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:isbg5oeqfhrrq22k7nn48363ak@google.com
 CREATED:20160422T112751Z
 DESCRIPTION:Hulme had the very first branch library of Manchester’s free li
@@ -100,7 +685,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160422T130000
 DTEND;TZID=Europe/London:20160422T170000
 RRULE:FREQ=WEEKLY;BYDAY=MO,FR
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:v551f81seite6h1hsdn5k9i8j8@google.com
 CREATED:20160422T112320Z
 DESCRIPTION:Hulme had the very first branch library of Manchester’s free li
@@ -123,7 +708,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20160726
 DTEND;VALUE=DATE:20160730
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:tnu98on6c865jp309g4ir5spto@google.com
 CREATED:20160422T112108Z
 DESCRIPTION:This Community Learning Festival consists of four days of works
@@ -147,33 +732,9 @@ SUMMARY:Community Learning Festival
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20160612
-DTEND;VALUE=DATE:20160613
-DTSTAMP:20160428T143158Z
-UID:rdibmc8jc9k33iu03iat93bb14@google.com
-CREATED:20160422T111851Z
-DESCRIPTION:On Sunday 12th June\, we will be hosting a community picnic at 
- Birley as part of the national Big Lunch\, an annual event aimed at bringin
- g people together and celebrating community.\nThe event will be linked to M
- anchester’s status as European City of Science 2016 and will have avery spe
- cial science theme.\nIn partnership with the Faculty of Science and Enginee
- ring\, MetMUnch\, the University’s Environment Team\, and local community p
- artners we’ll be showcasing fermented foods made out of microbes and invite
-  you to take part and bring your own picnic. There’ll be plenty of family-f
- riendly activities and you can find out more about the Birley Community Orc
- hard and herb garden.  \nFor more information on how to get involved contac
- t: engagement@mmu.ac.uk or 0161 247 3393
-LAST-MODIFIED:20160422T111952Z
-LOCATION:Birley Fields\, Bonsall St\, Manchester M15\, United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:European City of Science Community Picnic
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;VALUE=DATE:20160517
 DTEND;VALUE=DATE:20160518
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:jd6k81ms9e591tca3c72nq3rdo@google.com
 CREATED:20160422T111731Z
 DESCRIPTION:
@@ -187,7 +748,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART:20160603T110000Z
 DTEND:20160603T140000Z
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:fe1bpddo56210crdqjcbeebmqo@google.com
 CREATED:20160422T110328Z
 DESCRIPTION:Event to celebrate the re-opening of Trinity House!\nMore detai
@@ -205,7 +766,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160308T100000
 DTEND;TZID=Europe/London:20160308T120000
 RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:830tjus3mgbrd673412lus6pvg@google.com
 CREATED:20160307T132845Z
 DESCRIPTION:The So Sew group is run by Linda Puttick and takes place on a T
@@ -224,7 +785,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160514T120000
 DTEND;TZID=Europe/London:20160514T170000
 RRULE:FREQ=WEEKLY;BYDAY=SA
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:o4h6rnctnhes5sh4f27kmrruvs_R20160514T110000@google.com
 CREATED:20160307T115940Z
 DESCRIPTION:Monday: 11am-2pm \nTuesday: 11am-2pm\nWednesday: 11am-2pm\nThur
@@ -242,7 +803,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160312T120000
 DTEND;TZID=Europe/London:20160312T170000
 RRULE:FREQ=WEEKLY;UNTIL=20160514T105959Z;BYDAY=SA
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:o4h6rnctnhes5sh4f27kmrruvs@google.com
 CREATED:20160307T115940Z
 DESCRIPTION:Monday: 11am-2pm\; 3-7pm\nTuesday: 11am-2pm\; 3-7pm\nWednesday:
@@ -260,7 +821,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160421T110000
 DTEND;TZID=Europe/London:20160421T140000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:c9ahuoa9lnl137ntm008rtgtrc@google.com
 CREATED:20160307T115414Z
 DESCRIPTION:Monday: 11am-2pm \nTuesday: 11am-2pm\nWednesday: 11am-2pm\nThur
@@ -278,7 +839,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160307T110000
 DTEND;TZID=Europe/London:20160307T140000
 RRULE:FREQ=WEEKLY;UNTIL=20160420T225959Z;BYDAY=MO,TU,WE,TH,SA
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:3b8kpamiap7kb9pkt4mfmfigv4@google.com
 CREATED:20160307T115414Z
 DESCRIPTION:Monday: 11am-2pm \nTuesday: 11am-2pm\nWednesday: 11am-2pm\nThur
@@ -296,7 +857,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160307T110000
 DTEND;TZID=Europe/London:20160307T140000
 RRULE:FREQ=WEEKLY;UNTIL=20160420T225959Z;BYDAY=MO,TU,WE,TH,FR
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:545po409sj4csr736q6i7rc1q4@google.com
 CREATED:20160307T115414Z
 DESCRIPTION:Monday: 11am-2pm\; 3-7pm\nTuesday: 11am-2pm\; 3-7pm\nWednesday:
@@ -313,7 +874,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20160515
 DTEND;VALUE=DATE:20160522
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:9q961po2br8fjqgm6um164437g@google.com
 CREATED:20160412T154814Z
 DESCRIPTION:This year's Dementia Awareness Week\, 15 – 21 May\, will encour
@@ -337,7 +898,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160308T130000
 DTEND;TZID=Europe/London:20160308T150000
 RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:ajmngp86a2h662ifdsgqa19g1o@google.com
 CREATED:20160307T134716Z
 DESCRIPTION:Advice\, information\, discussion\, support\nTel: 0161 226-9562
@@ -354,7 +915,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART:20160326T100000Z
 DTEND:20160326T160000Z
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:ifeetj2bjl27070mucp9eljc5s@google.com
 CREATED:20160323T162810Z
 DESCRIPTION:Manchester Community Games Day \nSaturday 26th March at the Act
@@ -377,7 +938,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART:20160404T093000Z
 DTEND:20160404T120000Z
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:svbh3dhsvcn1drr56flocpnuio@google.com
 CREATED:20160321T173826Z
 DESCRIPTION:Manchester Children’s Book Festival FREE Trailblazer Event\n\nJ
@@ -413,7 +974,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160419T140000
 DTEND;TZID=Europe/London:20160419T160000
 RRULE:FREQ=WEEKLY;COUNT=6;BYDAY=TU
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:4ggifho7fb6qu90khrahpckprs@google.com
 CREATED:20160224T093234Z
 DESCRIPTION:Are you interested in learning new life skills to help you age 
@@ -441,7 +1002,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160315T200000
 DTEND;TZID=Europe/London:20160315T210000
 RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:m0dgjnna49tn5v65jjnv3e8c4c@google.com
 CREATED:20160310T175332Z
 DESCRIPTION:For all levels of ability\, from beginners and improvers throug
@@ -462,7 +1023,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160308T120000
 DTEND;TZID=Europe/London:20160308T130000
 RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:qf5vgun6447fcf89vm3ajcs25g@google.com
 CREATED:20160307T162132Z
 DESCRIPTION:Flex It @ 50\n12:00pm – 1:00pm\nPrice: £3\nKath Locke Centre\n1
@@ -480,7 +1041,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160310T100000
 DTEND;TZID=Europe/London:20160310T110000
 RRULE:FREQ=WEEKLY;BYDAY=TH
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:q3o04umeujrq63qpmm01aj8obg@google.com
 CREATED:20160307T161939Z
 DESCRIPTION:Zumba Gold\n(for active older people)\n10:00am – 11.00am\nPrice
@@ -498,7 +1059,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160307T130000
 DTEND;TZID=Europe/London:20160307T160000
 RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:bhm5sp3kbb3ceq1043b97p6qpc@google.com
 CREATED:20160307T161756Z
 DESCRIPTION:Manchester Advice Drop In\n( Manchester residents only)\n1:00pm
@@ -516,7 +1077,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160310T163000
 DTEND;TZID=Europe/London:20160310T193000
 RRULE:FREQ=WEEKLY;BYDAY=TH
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:rsoh6g03g1u19rh7iroerji5mc@google.com
 CREATED:20160307T161608Z
 DESCRIPTION:Barnados Womens Group\n4:30pm – 7:30pm\nFree\nZion Centre\n339 
@@ -534,7 +1095,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160312T100000
 DTEND;TZID=Europe/London:20160312T113000
 RRULE:FREQ=WEEKLY;BYDAY=SA
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:oimq0had02u6imhl59a7b9jqak@google.com
 CREATED:20160307T161413Z
 DESCRIPTION:Flex it @ 50\n10.15am – 11.15pm\n£3.00\nZion Centre\n339 Stretf
@@ -551,7 +1112,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160308T100000
 DTEND;TZID=Europe/London:20160308T130000
 RRULE:FREQ=WEEKLY;BYDAY=TU,FR
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:1eohc249omjvbjmvn5droq7k5o@google.com
 CREATED:20160307T160759Z
 DESCRIPTION:IT drop in (cafe suite)\nFree\n10am -1pm\nZion Centre\n339 Stre
@@ -568,7 +1129,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160311T133000
 DTEND;TZID=Europe/London:20160311T153000
 RRULE:FREQ=WEEKLY;BYDAY=FR
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:c5pee7m8oedmdijorioqnj0v4s@google.com
 CREATED:20160307T161150Z
 DESCRIPTION:Art Group\n1:30pm – 3:30pm Free\nZion Centre\n339 Stretford Roa
@@ -585,7 +1146,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160314T100000
 DTEND;TZID=Europe/London:20160314T120000
 RRULE:FREQ=WEEKLY;BYDAY=MO,FR
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:d96plvr7dk2t3vf1svv5beasq0@google.com
 CREATED:20160307T160456Z
 DESCRIPTION:Coffee Morning (Food\nvoucher service)\n10:00am – 12:00pm\nZion
@@ -603,7 +1164,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160309T140000
 DTEND;TZID=Europe/London:20160309T160000
 RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:l0llfohqcu9ql3iakfs0oqert0@google.com
 CREATED:20160307T160310Z
 DESCRIPTION:Bingo\n2:00pm – 4:00pm\nPrice: £3.00 per session\nZion Centre\n
@@ -621,7 +1182,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160308T173000
 DTEND;TZID=Europe/London:20160308T183000
 RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:opm2teom22fqpne2mb17fur2c8@google.com
 CREATED:20160307T153704Z
 DESCRIPTION:cllr.e.rowles@manchester.gov.uk 07852 306 957\ncllr.a.cox@manch
@@ -640,7 +1201,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160307T180000
 DTEND;TZID=Europe/London:20160307T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:k2hr9ugtjva43f8ik1i9vqcokk@google.com
 CREATED:20160307T153337Z
 DESCRIPTION:cllr.l.igbon@manchester.gov.uk 07908 759 042\ncllr.a.lone@manch
@@ -660,7 +1221,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160208T100000
 DTEND;TZID=Europe/London:20160208T130000
 RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:l2r1186d5748afqtec31n17glc@google.com
 CREATED:20160212T155908Z
 DESCRIPTION:For more information please contact:\nTelephone: 0161 2265045  
@@ -677,7 +1238,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160407T113000
 DTEND;TZID=Europe/London:20160407T170000
 RRULE:FREQ=MONTHLY;BYDAY=1TH
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:m49bh1kfp1lad70icrh0egqotg@google.com
 CREATED:20160307T135137Z
 DESCRIPTION:\n 11.30am at the Windrush Millennium Centre\nSupport\, trips\,
@@ -695,7 +1256,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160212T130000
 DTEND;TZID=Europe/London:20160212T160000
 RRULE:FREQ=WEEKLY;BYDAY=FR
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:7dl8aji6mprcv6nqqfh551d9qo@google.com
 CREATED:20160205T140129Z
 DESCRIPTION:For more information call Anysie on:\nTelephone: 0161 2265045  
@@ -712,7 +1273,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160210T093000
 DTEND;TZID=Europe/London:20160210T123000
 RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:g8be1mc0qgg2p7ogrhg5v05m14@google.com
 CREATED:20160212T160017Z
 DESCRIPTION:For more information please contact Anysie on:\nTelephone: 0161
@@ -730,7 +1291,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160304T093000
 DTEND;TZID=Europe/London:20160304T123000
 RRULE:FREQ=WEEKLY;BYDAY=FR
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:rrdioupeip6f4go2i0np3g6p90@google.com
 CREATED:20160302T151303Z
 DESCRIPTION:Tea and cake for all to enjoy.\nCall: 07734414449
@@ -745,7 +1306,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160211T190000
 DTEND;TZID=Europe/London:20160211T210000
 RRULE:FREQ=MONTHLY;BYDAY=2TH
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:37orv3fgcb6h2p7bj8gsipcc6o_R20160211T190000@google.com
 CREATED:20160205T155242Z
 DESCRIPTION:tel:01612261912\nhttp://www.z-arts.org/about-us/contact-us/
@@ -760,7 +1321,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160211T190000
 DTEND;TZID=Europe/London:20160211T210000
 RRULE:FREQ=MONTHLY;UNTIL=20160211T185959Z;BYDAY=2TH
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:37orv3fgcb6h2p7bj8gsipcc6o@google.com
 CREATED:20160205T155242Z
 DESCRIPTION:tel:01612261912\nhttp://www.z-arts.org/about-us/contact-us/
@@ -775,7 +1336,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160203T140000
 DTEND;TZID=Europe/London:20160203T160000
 RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:hj8meebequh74b3kelkuqq9sfo@google.com
 CREATED:20160205T135455Z
 DESCRIPTION:Based in Hibiscus Court the cafe has different activities to ge
@@ -793,7 +1354,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160309T110000
 DTEND;TZID=Europe/London:20160309T130000
 RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:g8rj73669j0bfmqtsoh7eu977c@google.com
 CREATED:20160302T143306Z
 DESCRIPTION:Session run by Together Dementia Support call Sally on: 0161 28
@@ -810,7 +1371,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160309T140000
 DTEND;TZID=Europe/London:20160309T160000
 RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:jggatvdg0cs6ispfna1banjmlg@google.com
 CREATED:20160302T144521Z
 DESCRIPTION:Over 50s informal computer class for beginners\, for more infor
@@ -824,42 +1385,10 @@ SUMMARY:Coffee and Computing
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160210T120000
-DTEND;TZID=Europe/London:20160210T130000
-RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160428T143158Z
-UID:iacqc0jlgl5nppp9gpa2s6e6j4@google.com
-CREATED:20160205T135145Z
-DESCRIPTION:Contact Anne for more information:\nCall: 0161 226 8254\nEmail:
-  anne389@btinternet.com
-LAST-MODIFIED:20160307T120426Z
-LOCATION:Aquarius
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Aquarius 50+ Allotment Group
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160215T120000
-DTEND;TZID=Europe/London:20160215T130000
-RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160428T143158Z
-UID:9o4ds033al43jt3nvt4iups3f0@google.com
-CREATED:20160209T112918Z
-DESCRIPTION:Contact Anne for more information:\nCall: 0161 226 8254\nEmail:
-  anne389@btinternet.com
-LAST-MODIFIED:20160307T120414Z
-LOCATION:Aqarius Centre\, 21 Eden Close\, M15 6AX
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Chair Assisted Exercise
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160309T103000
 DTEND;TZID=Europe/London:20160309T120000
 RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:6tdpus8n0els7bqsj42r1m4cqo@google.com
 CREATED:20160302T142629Z
 DESCRIPTION:Coffee Morning\, for more details please contact Anysie on: any
@@ -877,7 +1406,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160308T193000
 DTEND;TZID=Europe/London:20160308T213000
 RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:pusscdh821n8fq8jlatd6vnkt0@google.com
 CREATED:20160302T142218Z
 DESCRIPTION:Run by Together Dementia Support a group primarily for carers o
@@ -894,7 +1423,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160309T100000
 DTEND;TZID=Europe/London:20160309T120000
 RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:tprhp383sghvn470pcl8ergae8@google.com
 CREATED:20160302T144057Z
 DESCRIPTION:For more information please contact: 0161 8737335
@@ -910,7 +1439,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160308T140000
 DTEND;TZID=Europe/London:20160308T160000
 RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:fb7gf208q5gc4amcchn093a63c@google.com
 CREATED:20160302T141504Z
 DESCRIPTION:Different speakers each week.\nCall 0161 2241123
@@ -926,7 +1455,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160209T110000
 DTEND;TZID=Europe/London:20160209T130000
 RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:172i90f6f0itk25m9ng76do3vk@google.com
 CREATED:20160212T114936Z
 DESCRIPTION:Computer club and other activities based in the Powerhouse Libr
@@ -943,26 +1472,10 @@ SUMMARY:Power rangers
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160209T110000
-DTEND;TZID=Europe/London:20160209T130000
-RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160428T143158Z
-UID:4tnq09db23i8vgim0uf3vfqjo4@google.com
-CREATED:20160209T113855Z
-DESCRIPTION:Contact Anne for more information:\n0161 226 8254\nanne389@btin
- ternet.com
-LAST-MODIFIED:20160307T114918Z
-LOCATION:Aqarius Centre\, 21 Eden Close\, M15 6AX
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Art Class
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160308T100000
 DTEND;TZID=Europe/London:20160308T120000
 RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:i3snmqrqhs7bosjqk4014ka72s@google.com
 CREATED:20160302T141304Z
 DESCRIPTION:Supporting women with a range of different activities. \nEmail:
@@ -979,7 +1492,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160208T140000
 DTEND;TZID=Europe/London:20160208T160000
 RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:73pc4cvq0spsk29dvhaam83m04_R20160208T140000@google.com
 CREATED:20160205T100122Z
 DESCRIPTION:Run by Together Dementia Support. For people living with dement
@@ -998,7 +1511,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160208T140000
 DTEND;TZID=Europe/London:20160208T160000
 RRULE:FREQ=WEEKLY;UNTIL=20160208T135959Z;BYDAY=MO
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:73pc4cvq0spsk29dvhaam83m04@google.com
 CREATED:20160205T100122Z
 DESCRIPTION:Run by Together Dementia Support. For people living with dement
@@ -1014,26 +1527,10 @@ SUMMARY:Dementia Cafe
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160215T130000
-DTEND;TZID=Europe/London:20160215T134500
-RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160428T143158Z
-UID:fro63veov8mqgv5cimhgeenfac@google.com
-CREATED:20160209T113747Z
-DESCRIPTION:Contact Anne for more information:\n0161 226 8254\nanne389@btin
- ternet.com
-LAST-MODIFIED:20160307T114727Z
-LOCATION:Aqarius Centre\, 21 Eden Close\, M15 6AX
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Tea Break Club
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160308T140000
 DTEND;TZID=Europe/London:20160308T170000
 RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:5hil0k0bsik9fvr6ud2orjmnso@google.com
 CREATED:20160307T114155Z
 DESCRIPTION:Fair share food delivery\, for more information please contact:
@@ -1051,7 +1548,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160306T103000
 DTEND;TZID=Europe/London:20160306T120000
 RRULE:FREQ=WEEKLY;BYDAY=SU
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:i78dcpt96ccnephj8jj5tpihhs@google.com
 CREATED:20160302T153543Z
 DESCRIPTION:
@@ -1066,7 +1563,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160311T110000
 DTEND;TZID=Europe/London:20160311T130000
 RRULE:FREQ=WEEKLY;BYDAY=FR
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:0o4out0c7ep1vrdui0bpas75fk@google.com
 CREATED:20160302T153147Z
 DESCRIPTION:Call 0161 2262702 for more details
@@ -1081,7 +1578,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160303T113000
 DTEND;TZID=Europe/London:20160303T143000
 RRULE:FREQ=WEEKLY;BYDAY=TH
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:t5fsiavsi00j43q9nn9qpj8i9s@google.com
 CREATED:20160302T150145Z
 DESCRIPTION:Contact Amy Murtha Sha 07528 817039
@@ -1097,7 +1594,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160304T140000
 DTEND;TZID=Europe/London:20160304T160000
 RRULE:FREQ=WEEKLY;BYDAY=FR
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:f3gajlu0ckm4dqkmnskdg7cfn0@google.com
 CREATED:20160302T152433Z
 DESCRIPTION:People First activity session contact 0161 8737335
@@ -1113,7 +1610,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160304T110000
 DTEND;TZID=Europe/London:20160304T130000
 RRULE:FREQ=WEEKLY;BYDAY=FR
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:cblkarsa7dv73sdhgrc5magh38@google.com
 CREATED:20160302T151524Z
 DESCRIPTION:Luncheon club for the over 50s\, will be based at the church un
@@ -1130,7 +1627,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160309T110000
 DTEND;TZID=Europe/London:20160309T153000
 RRULE:FREQ=WEEKLY;BYDAY=SU,WE,SA
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:98fmc82fb9uclacq9e5dim6v0c@google.com
 CREATED:20160302T143111Z
 DESCRIPTION:Call 0161 2278198
@@ -1146,7 +1643,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160303T190000
 DTEND;TZID=Europe/London:20160303T210000
 RRULE:FREQ=WEEKLY;BYDAY=TH
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:np524vmhmregcrhtbnu92mj4fs@google.com
 CREATED:20160302T150920Z
 DESCRIPTION:Ki-Aikido 0161 2267696
@@ -1161,7 +1658,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160308T110000
 DTEND;TZID=Europe/London:20160308T130000
 RRULE:FREQ=WEEKLY;BYDAY=TU,FR
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:l5u6s4dnluh7ff8ms9r1uju4v4@google.com
 CREATED:20160302T150540Z
 DESCRIPTION:Call 0161 2269012
@@ -1177,7 +1674,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160310T110000
 DTEND;TZID=Europe/London:20160310T140000
 RRULE:FREQ=WEEKLY;BYDAY=TH
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:b9rptd5mitvloehfrqqjf9p89c@google.com
 CREATED:20160302T145319Z
 DESCRIPTION:Call Anysie for more details Telephone: 0161 2265045  Mobile: 0
@@ -1194,7 +1691,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160330T150000
 DTEND;TZID=Europe/London:20160330T160000
 RRULE:FREQ=WEEKLY;COUNT=8;BYDAY=WE
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:hivrll9n03ktc9vrk22ker1fc8@google.com
 CREATED:20160302T143716Z
 DESCRIPTION:For families living with dementia\, starting for 8 weeks on the
@@ -1210,7 +1707,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160309T110000
 DTEND;TZID=Europe/London:20160309T150000
 RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:ukacgtjt3lj1hb6q6siijmvlg4@google.com
 CREATED:20160302T142935Z
 DESCRIPTION:Call 0161 2261291 for more details
@@ -1225,7 +1722,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160307T130000
 DTEND;TZID=Europe/London:20160307T150000
 RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:uhdl0ipd7a15qhqtc2tlpvo4v8@google.com
 CREATED:20160302T140803Z
 DESCRIPTION:Diabetes support group for people with the illness and their ca
@@ -1242,7 +1739,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160307T100000
 DTEND;TZID=Europe/London:20160307T170000
 RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:iq0tt2vpgh4hsceqnr4sfq8qt4@google.com
 CREATED:20160302T135926Z
 DESCRIPTION:Call 0161 226 4335 for more information
@@ -1258,7 +1755,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160229T133000
 DTEND;TZID=Europe/London:20160229T143000
 RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:8hepbt7egl0aj85qhpmijck2d8@google.com
 CREATED:20160301T124118Z
 DESCRIPTION:A gentle all-over body workout designed to improve mobility\, s
@@ -1277,7 +1774,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160304T130000
 DTEND;TZID=Europe/London:20160304T140000
 RRULE:FREQ=WEEKLY;BYDAY=FR
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:gdv37123s1t96ps2ofi1rpg0i4@google.com
 CREATED:20160301T124011Z
 DESCRIPTION:A gentle all-over body workout designed to improve mobility\, s
@@ -1296,7 +1793,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160302T120000
 DTEND;TZID=Europe/London:20160302T130000
 RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:r5l6c80are2taqivse57jbd4f8@google.com
 CREATED:20160301T123715Z
 DESCRIPTION:A gentle all-over body workout designed to improve mobility\, s
@@ -1314,7 +1811,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART:20160507T130000Z
 DTEND:20160507T150000Z
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:e88e148ts9v4rum5iib27jvhhk@google.com
 CREATED:20160301T104050Z
 DESCRIPTION:Exhibition of artwork created at a workshop held at two worksho
@@ -1337,7 +1834,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160306T120000
 DTEND;TZID=Europe/London:20160306T140000
 RRULE:FREQ=WEEKLY;UNTIL=20160403T110000Z;INTERVAL=4;BYDAY=SU
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:nbgu5dcs8jbjs6gbfn6b6s0k8g@google.com
 CREATED:20160301T104324Z
 DESCRIPTION:Rebels & Rollers is a free workshop\, taking place as part of A
@@ -1367,7 +1864,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160211T120000
 DTEND;TZID=Europe/London:20160211T130000
 RRULE:FREQ=WEEKLY;BYDAY=TH
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:c8shegdd6aqv95lfnp955opkpg@google.com
 CREATED:20160212T115737Z
 DESCRIPTION:A low impact circuits based class suitable for older people or 
@@ -1388,7 +1885,7 @@ DTEND;TZID=Europe/London:20160212T160000
 RRULE:FREQ=WEEKLY;BYDAY=FR
 EXDATE;TZID=Europe/London:20160325T140000
 EXDATE;TZID=Europe/London:20160219T140000
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:d5om4b985oat5i2st9oqthnsg8@google.com
 CREATED:20160205T140018Z
 DESCRIPTION:Enjoy a cup of tea and a chat\, and try your hand at a range of
@@ -1410,7 +1907,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160213T100000
 DTEND;TZID=Europe/London:20160213T120000
 RRULE:FREQ=WEEKLY;BYDAY=SA
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:a4alfmno6rglodpcifge9nk20k@google.com
 CREATED:20160210T093828Z
 DESCRIPTION:In the multi-purpose hall\n0161 247 2646
@@ -1425,7 +1922,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART:20160310T123000Z
 DTEND:20160310T150000Z
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:j6v8ng4mepk89pt5fp1htsm6mg@google.com
 CREATED:20160210T091605Z
 DESCRIPTION:World Cafe\, with food.
@@ -1440,7 +1937,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160211T103000
 DTEND;TZID=Europe/London:20160211T113000
 RRULE:FREQ=WEEKLY;UNTIL=20160427T225959Z;BYDAY=TH
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:5cr001f3kjbhbuf0qvq9ak63mc_R20160211T103000@google.com
 CREATED:20160209T124843Z
 DESCRIPTION:Drinks and Toast - everyone welcome!
@@ -1455,7 +1952,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160428T103000
 DTEND;TZID=Europe/London:20160428T120000
 RRULE:FREQ=WEEKLY;UNTIL=20160505T093000Z;BYDAY=TH
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:3asg00tcgps8jke94eeqlcg28s@google.com
 CREATED:20160209T124843Z
 DESCRIPTION:Drinks and Toast - everyone welcome!
@@ -1470,7 +1967,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160211T103000
 DTEND;TZID=Europe/London:20160211T113000
 RRULE:FREQ=WEEKLY;UNTIL=20160211T102959Z;BYDAY=TH
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:5cr001f3kjbhbuf0qvq9ak63mc@google.com
 CREATED:20160209T124843Z
 DESCRIPTION:
@@ -1485,7 +1982,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160210T140000
 DTEND;TZID=Europe/London:20160210T153000
 RRULE:FREQ=MONTHLY;BYDAY=2WE
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:aoe2bdp07nh3kph77vqiouhj9c@google.com
 CREATED:20160209T120333Z
 DESCRIPTION:‘Coffee\, Cake and Culture’ is designed to support those at ris
@@ -1503,7 +2000,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART:20160225T113000Z
 DTEND:20160225T140000Z
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:ska0op0avcpt7qq58onecrvki4@google.com
 CREATED:20160113T093125Z
 DESCRIPTION:
@@ -1518,7 +2015,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART:20160121T110000Z
 DTEND:20160121T130000Z
-DTSTAMP:20160428T143158Z
+DTSTAMP:20160603T144251Z
 UID:pesdbkf7iqs44t1f491u9ic47s@google.com
 CREATED:20160113T092935Z
 DESCRIPTION:
