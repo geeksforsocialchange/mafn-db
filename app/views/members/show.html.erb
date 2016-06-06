@@ -45,10 +45,10 @@
 
 <h2>Questions</h2>
 
-<h3>Complete a survey</h3>
+<h3>Complete a survey as this user</h3>
 <ul class="question-sets">
   <% @question_sets.each do |qs| %>
-    <li><%= link_to qs.title %></li>
+    <li><%= link_to qs.title, "/question_sets/#{qs.id}/respond/#{@member.id}" %></li>
   <% end %>
 </ul>
 
@@ -56,7 +56,7 @@
 <dl class="question-responses">
   <% @member.date_sorted_responses.each do |r| %>
     <dt><strong><%= r.question.question %></strong></dt>
-    <dd><%= link_to r.response, question_response_path(r.id) %> <em>(<%= time_ago_in_words(r.created_at) %> ago, <%= link_to "edit", edit_question_response_path(r.id) %>)</em></dt>
+    <dd><%= link_to r.formatted_response, question_response_path(r.id) %> <em>(<%= time_ago_in_words(r.created_at) %> ago, <%= link_to "edit", edit_question_response_path(r.id) %>)</em></dt>
   <% end %>
 </dl>
 
