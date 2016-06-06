@@ -20,6 +20,7 @@ class QuestionSetsController < ApplicationController
   def edit
   end
 
+
   # Answer a question set
   def respond
     @member = Member.find(params[:member])
@@ -39,6 +40,28 @@ class QuestionSetsController < ApplicationController
       render :new
     end
   end
+
+  def batch_create
+    responder = Member.find(params[:responder].to_i)
+    subject = Entity.find(params[:subject].to_i)
+    responses = params["question_set"]["question_response"]
+
+    responses.each do |q,r|
+      question = Question.find(q)
+      next unless question && r.length > 0
+      @response = QuestionResponse.new( responder: responder,
+                                        subject: subject,
+                                        question: question,
+                                        response: r )
+      if @response.save!
+        puts "Saved!".colorize(:green)
+      else
+        puts "Not saved!".colorize(:red)
+      end
+    end
+    redirect_to member_path(params[:member])
+  end
+
 
   # PATCH/PUT /question_sets/1
   def update
@@ -66,6 +89,7 @@ class QuestionSetsController < ApplicationController
       params.require(:question_set).permit(
                                       :title,
                                       :member,
+                                      :subject,
                                       question_attributes: [
                                         :id, :question, :category,
                                         question_responses_attributes: [

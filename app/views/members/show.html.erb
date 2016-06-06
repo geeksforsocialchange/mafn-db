@@ -55,8 +55,8 @@
 <h3>Recent responses</h3>
 <dl class="question-responses">
   <% @member.date_sorted_responses.each do |r| %>
-    <dt><%= r.question.question %></dt>
-    <dd><%= link_to r.response, question_response_path(r.id) %> <em>(<%= time_ago_in_words(r.created_at) %> ago)</em></dt>
+    <dt><strong><%= r.question.question %></strong></dt>
+    <dd><%= link_to r.response, question_response_path(r.id) %> <em>(<%= time_ago_in_words(r.created_at) %> ago, <%= link_to "edit", edit_question_response_path(r.id) %>)</em></dt>
   <% end %>
 </dl>
 

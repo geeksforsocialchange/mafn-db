@@ -1,21 +1,19 @@
 <h1>Respond to <%= @question_set.title %> as <%= @member.full_name %> (<%= @member.membership_code %>)</h1>
 
-<%= form_for @question_set do |f| %>
+<%= form_for @question_set, :url => {:action => "batch_create", params: {responder: @member.entity_id, subject: @member.entity_id}}, method: "post" do |f| %>
   <%= f.fields_for :questions do |question| %>
-    <%= hidden_field_tag "responder", @member.id %>
-    <!-- TODO: fix this to allow selection -->
-    <%= hidden_field_tag "subject", @member.id %>
     <h3><%= question.object.question %></h3>
     <%= f.fields_for :question_response do |response| %>
-      <!-- If there's a string here, then it's an array of acceptable answers -->
+      <%# If there's a string here, then it's an array of acceptable answers %>
       <% if question.object.response %>
         <% JSON.parse(question.object.response).each_with_index do |option, idx| %>
-          <%= radio_button_tag("response_#{question.object.id}", idx) %>
-          <%= label_tag("response_#{question.object.id}_#{idx}", option) %>
+          <%= response.radio_button "#{question.object.id}", idx %>
+          <%= response.label "#{question.object.id}_#{idx}", option %>
         <% end %>
       <% else %>
-        <%= response.text_area :response, cols: "80", rows: "5" %>
+        <%= response.text_area "#{question.object.id}", cols: "80", rows: "5" %>
       <% end %>
     <% end %>
   <% end %>
+  <%= f.submit %>
 <% end %>
