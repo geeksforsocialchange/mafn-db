@@ -4,14 +4,15 @@ Rails.application.routes.draw do
 
   resources :locations
   resources :question_responses
-  resources :question_sets
-  resources :questions
-  resources :events
-  resources :members do
-    resources :question_sets do
-      resources :questions
+  resources :question_sets do
+    member do
+      get 'respond/:member', to: 'question_sets#respond'
+      get 'respond', to: 'question_sets#show'
     end
   end
+  resources :questions
+  resources :events
+  resources :members
 
   get 'welcome/index'
 

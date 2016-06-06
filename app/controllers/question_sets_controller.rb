@@ -1,5 +1,5 @@
 class QuestionSetsController < ApplicationController
-  before_action :set_question_set, only: [:show, :edit, :update, :destroy]
+  before_action :set_question_set, only: [:show, :edit, :update, :destroy, :respond]
 
   # GET /question_sets
   def index
@@ -18,6 +18,11 @@ class QuestionSetsController < ApplicationController
 
   # GET /question_sets/1/edit
   def edit
+  end
+
+  # Answer a question set
+  def respond
+    @member = Member.find(params[:member])
   end
 
   # Remove a question from a question set
@@ -60,6 +65,7 @@ class QuestionSetsController < ApplicationController
     def question_set_params
       params.require(:question_set).permit(
                                       :title,
+                                      :member,
                                       question_attributes: [
                                         :id, :question, :category,
                                         question_responses_attributes: [

@@ -48,7 +48,7 @@
 <h3>Complete a survey</h3>
 <ul class="question-sets">
   <% @question_sets.each do |qs| %>
-    <li><%= link_to qs.title, member_question_set_path(@member, qs) %></li>
+    <li><%= link_to qs.title %></li>
   <% end %>
 </ul>
 
