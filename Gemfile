@@ -36,6 +36,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  gem "rails-erd"
   # gem 'livereload'
   # gem 'rack-livereload'
   # gem 'guard-livereload'
@@ -45,4 +46,6 @@ group :test do
   gem 'sqlite3'
   gem 'guard-minitest'
   gem 'minitest-reporters'
+  gem 'minitest-rails-capybara'
+  gem 'simplecov', :require => false
 end
