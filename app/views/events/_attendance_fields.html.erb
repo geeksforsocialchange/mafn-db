@@ -1,6 +1,10 @@
 <div class="nested-fields">
   <%= f.inputs do %>
-    <%= f.input :member, :as => "select" %>
+    <% if f.object.member %>
+      <%= link_to f.object.member.membership_code + " " + f.object.member.full_name, f.object.member  %>
+    <% else %>
+      <%= f.input :member %>
+    <% end %>
     <%= link_to_remove_association "remove attendance", f %>
   <% end %>
 </div>

@@ -5,7 +5,9 @@
         <%= render 'attendance_fields', f: attendance %>
       <% end %>
       <div class="links">
-        <%= link_to_add_association 'add member', f, :attendances %>
+        <p>
+          <%= link_to_add_association 'add member', f, :attendances %>
+        </p>
       </div>
     </div>
   <% end %>

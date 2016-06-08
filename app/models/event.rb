@@ -23,6 +23,19 @@ class Event < ActiveRecord::Base
     update_column(:longitude, result['result']['longitude'])
   end
 
+  def pretty_start
+    self.start.strftime("%d %b %Y, %H:%M")
+  end
+
+  def pretty_finish
+    self.finish.strftime("%H:%M")
+  end
+
+  def duration
+    time = ((self.finish - self.start) / 60 ).to_i
+    time.to_s + "mins"
+  end
+
   def self.to_csv(options = {})
     CSV.generate(options) do |csv|
       csv << column_names

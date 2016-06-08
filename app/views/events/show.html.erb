@@ -28,14 +28,4 @@
 
 <h2>Attendance</h2>
 
-<h3>Add Attendees</h3>
-
 <%= render partial: 'attendance', locals: { event: @event } %>
-
-<h3>Attended By</h3>
-
-<ul>
-  <% @event.members.each do |member| %>
-    <li><%= "#{member.membership_code}: #{member.full_name}"%></li>
-  <% end %>
-</ul>

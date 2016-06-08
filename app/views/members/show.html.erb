@@ -62,3 +62,11 @@
 
 <%= link_to 'Edit', edit_member_path(@member) %> |
 <%= link_to 'Back', members_path %>
+
+<h2>Attendances</h2>
+
+<ul>
+  <% @member.events.each do |e| %>
+    <li><%= "#{e.pretty_start} (#{e.duration}). #{e.name}, #{e.location}." %></li>
+  <% end %>
+</ul>
