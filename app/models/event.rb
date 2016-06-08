@@ -1,8 +1,10 @@
 class Event < ActiveRecord::Base
+  has_many :attendances
   has_many :members, through: :attendances
   validates_presence_of :name, :start, :finish, :location
   validates_uniqueness_of :google_id, :allow_blank => true, :allow_nil => true
   enum category: [ :research, :project, :partnership ]
+  accepts_nested_attributes_for :attendances, allow_destroy: true
 
   # after_save :geolocate
 

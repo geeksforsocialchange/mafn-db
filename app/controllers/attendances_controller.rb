@@ -28,6 +28,12 @@ class AttendancesController < ApplicationController
     else
       render :new
     end
+    # @event = Event.find(params[:event_id])
+    # current_user.events.push(@user_event)
+    # respond_to do |format|
+    #   format.html { redirect_to event_path(@user_event) }
+    #   format.js
+    # end
   end
 
   # PATCH/PUT /attendances/1
@@ -53,6 +59,7 @@ class AttendancesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def attendance_params
-      params.require(:attendance).permit(:member_id, :event_id)
+      params.require(:attendance).permit( :member_id,
+                                          :event_id)
     end
 end

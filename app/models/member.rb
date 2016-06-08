@@ -1,11 +1,14 @@
 class Member < ActiveRecord::Base
   validates_presence_of :first_name, :last_name, :dob, :region
+  has_many :member_locations
   has_many :locations, through: :member_locations
   has_many :question_responses
+  has_many :attendances
   has_many :events, through: :attendances
   belongs_to :entity
 
   accepts_nested_attributes_for :question_responses, allow_destroy: true
+  default_scope { order('last_name') } 
 
   enum region: {
     "Hulme & Moss Side": 0,
