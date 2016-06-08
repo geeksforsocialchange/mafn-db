@@ -18,6 +18,8 @@ gem "cocoon"
 gem 'rest-client'
 # Nice colours for output
 gem 'colorize'
+# Geo maths
+gem 'geokit-rails'
 
 group :production do
   gem 'rails_12factor'

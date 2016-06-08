@@ -82,6 +82,10 @@ GEM
     formatador (0.2.5)
     formtastic (3.1.4)
       actionpack (>= 3.2.13)
+    geokit (1.10.0)
+    geokit-rails (2.1.0)
+      geokit (~> 1.5)
+      rails (>= 3.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     guard (2.13.0)
@@ -250,6 +254,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   formtastic (~> 3.0)
+  geokit-rails
   guard
   guard-minitest
   icalendar

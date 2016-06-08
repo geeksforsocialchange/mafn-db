@@ -16,7 +16,7 @@ namespace :calendar do
                       start: e.dtstart,
                       finish: e.dtend,
                       description: e.description,
-                      location: e.location
+                      location: e.location.html_safe
                     )
       else
         # Otherwise add it to the DB
@@ -24,7 +24,7 @@ namespace :calendar do
                       start: e.dtstart,
                       finish: e.dtend,
                       description: e.description,
-                      location: e.location,
+                      location: e.location.html_safe,
                       category: :partnership,
                       google_id: e.uid
                     )

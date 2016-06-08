@@ -6,21 +6,23 @@ class Event < ActiveRecord::Base
   enum category: [ :research, :project, :partnership ]
   accepts_nested_attributes_for :attendances, allow_destroy: true
 
-  # after_save :geolocate
+  after_save :geolocate, if: :location_changed?
 
-  POSTCODE_REGEX = "(GIR 0AA)|((([A-Z-[QVX]][0-9][0-9]?)|(([A-Z-[QVX]][A-Z-[IJZ]][0-9][0-9]?)|(([A-Z-[QVX]][0-9][A-HJKPSTUW])|([A-Z-[QVX]][A-Z-[IJZ]][0-9][ABEHMNPRVWXY])))) [0-9][A-Z-[CIKMOV]]{2})"
+  POSTCODE_REGEX = /(GIR 0AA)|((([A-Z-[QVX]][0-9][0-9]?)|(([A-Z-[QVX]][A-Z-[IJZ]][0-9][0-9]?)|(([A-Z-[QVX]][0-9][A-HJKPSTUW])|([A-Z-[QVX]][A-Z-[IJZ]][0-9][ABEHMNPRVWXY])))) [0-9][A-Z-[CIKMOV]]{2})/
 
   def geolocate
-    # Get the postcode from the location string
-    postcode = self.location.match(POSTCODE_REGEX)[0].delete("\s")
-    return false unless postcode
-    # Get a lat/lng from postcodes.io
-    response = RestClient.get "http://api.postcodes.io/postcodes/#{postcode}"
-    result = JSON.parse(response)
-    puts result
-    return false unless result['result']['latitude']
-    update_column(:latitude, result['result']['latitude'])
-    update_column(:longitude, result['result']['longitude'])
+    unless ENV['RAILS_ENV'] = "test"
+      # Get the postcode from the location string
+      postcode = self.location.match(POSTCODE_REGEX)[0].delete("\s")
+      return false unless postcode
+      # Get a lat/lng from postcodes.io
+      response = RestClient.get "http://api.postcodes.io/postcodes/#{postcode}"
+      result = JSON.parse(response)
+      puts result
+      return false unless result['result']['latitude']
+      update_column(:latitude, result['result']['latitude'])
+      update_column(:longitude, result['result']['longitude'])
+    end
   end
 
   def pretty_start
