@@ -5,7 +5,6 @@ class QuestionResponse < ActiveRecord::Base
 
   validates_presence_of :responder, :question, :subject, :response
 
-
   def formatted_response
     response_options = self.question.response
     if response_options && response_options.length > 0
