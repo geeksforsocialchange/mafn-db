@@ -38,6 +38,6 @@ class ExportEventTest < ActionDispatch::IntegrationTest
 
     # TODO: add some more members to bump this up a bit
     assert_equal head[6], "No of attendees"
-    assert_equal content[6], 1
+    assert_equal content[6], 0
   end
 end
