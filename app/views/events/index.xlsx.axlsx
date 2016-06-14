@@ -1,0 +1,14 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Events") do |sheet|
+  sheet.add_row [ "Project External ID",
+                  "Event Name",
+                  "Event External ID",
+                  "Date Of Event",
+                  "Type of Event",
+                  "Other Event",
+                  "No of attendees"
+                ]
+  @events.each do |event|
+    sheet.add_row ["", event.name, event.id, event.ydm, "", "", "1"]
+  end
+end
