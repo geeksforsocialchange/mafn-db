@@ -32,7 +32,7 @@ wb.add_worksheet(name: "Members") do |sheet|
     sheet.add_row [
       "",
       "",
-      1,
+      member.id,
       member.first_name,
       member.last_name,
       member.created_at,
