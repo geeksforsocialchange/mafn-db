@@ -7,10 +7,7 @@ class ExportEventTest < ActionDispatch::IntegrationTest
   end
 
   test "event spreadsheet export" do
-    visit '/events.xlsx'
-    File.open('/tmp/events.xlsx', 'w') {|f| f.write(page.source) }
-    wb = Roo::Excelx.new('/tmp/events.xlsx')
-    sheet = wb.sheet(0)
+    sheet = load_spreadsheet "events"
 
     # We're just testing that the one event works
     head = sheet.row(1)

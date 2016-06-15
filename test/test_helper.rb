@@ -18,5 +18,12 @@ class ActiveSupport::TestCase
   # fixtures :all
   include FactoryGirl::Syntax::Methods
   # Add more helper methods to be used by all tests here...
-  include Capybara::DSL 
+  include Capybara::DSL
+
+  def load_spreadsheet spreadsheet
+    visit "/#{spreadsheet}.xlsx"
+    File.open("/tmp/#{spreadsheet}.xlsx", 'w') {|f| f.write(page.source) }
+    wb = Roo::Excelx.new("/tmp/#{spreadsheet}.xlsx")
+    wb.sheet(0)
+  end
 end
