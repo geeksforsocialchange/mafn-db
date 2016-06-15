@@ -68,6 +68,8 @@ class MembersController < ApplicationController
                                       :tel,
                                       :mob,
                                       :email,
+                                      :is_resident,
+                                      :notes,
                                       question_responses_attributes: [
                                         :id,
                                         :question,

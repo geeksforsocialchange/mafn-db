@@ -3,6 +3,8 @@ require 'test_helper'
 class EventsControllerTest < ActionController::TestCase
   setup do
     @event = create(:event)
+    @future_event = create(:event)
+    @past_event = create(:event)
   end
 
   test "should get index" do

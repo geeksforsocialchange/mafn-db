@@ -16,6 +16,12 @@
 </p>
 
 <p>
+  <strong>Region:</strong>
+  <%= @member.region %>
+  <strong>Resident:</strong>
+  <%= @member.is_resident ? "Yes" : "No" %>
+
+<p>
   <strong>Gender:</strong>
   <%= @member.gender %>
 </p>
@@ -34,6 +40,12 @@
   <strong>Email:</strong>
   <%= @member.email %>
 </p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @member.notes %>
+</p>
+
 
 <h2>Locations</h2>
 <ul>
