@@ -29,6 +29,33 @@ wb.add_worksheet(name: "Members") do |sheet|
     "What do you think makes an age friendly neighbourhood"
   ]
   @members.each do |member|
-    sheet.add_row [ "" ]
+    sheet.add_row [
+      "",
+      "",
+      1,
+      member.first_name,
+      member.last_name,
+      member.created_at,
+      member.tel,
+      member.email,
+      member.dob.year,
+      member.gender,
+      "Other Gender Please State",
+      "Gender same as at Birth",
+      "Do you live in an Ambition for Ageing Ward",
+      "How long have you lived in your ward",
+      "Current Employment status",
+      "Prefer not to say",
+      "Ethnic Background: Asian/ Asian British	Asian/ Asian British Other",
+      "Ethnic Background: Black/ Black British	Black Black British Other",
+      "Ethnic Background: White British",
+      "White Other",
+      "Any Other Background",
+      "Any mixed Background",
+      "Religion",
+      "Other religion",
+      "Sexual Orientation",
+      "What do you think makes an age friendly neighbourhood"
+    ]
   end
 end
