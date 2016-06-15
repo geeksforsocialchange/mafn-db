@@ -20,6 +20,10 @@ gem 'rest-client'
 gem 'colorize'
 # Geo maths
 gem 'geokit-rails'
+# Excel
+gem 'rubyzip', '~> 1.1.0'
+gem 'axlsx', '2.1.0.pre'
+gem 'axlsx_rails'
 
 group :production do
   gem 'rails_12factor'
@@ -33,6 +37,8 @@ group :development, :test do
   gem 'spring'
   gem 'quiet_assets'
   gem 'guard'
+  # Spreadsheet parser for tests
+  gem 'roo'
 end
 
 group :development do

@@ -38,6 +38,15 @@ class Event < ActiveRecord::Base
     time.to_s + "mins"
   end
 
+  def ydm
+    d = self.start
+    "#{d.year.to_s.rjust(2, '0')}-#{d.month.to_s.rjust(2, '0')}-#{d.day.to_s.rjust(2, '0')}"
+  end
+
+  def attendees
+    self.members.count
+  end
+
   def self.to_csv(options = {})
     CSV.generate(options) do |csv|
       csv << column_names
