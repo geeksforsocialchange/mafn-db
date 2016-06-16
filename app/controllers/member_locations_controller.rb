@@ -53,6 +53,15 @@ class MemberLocationsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def member_location_params
-      params.require(:member_location).permit(:member_id, :location_id, :from, :to)
+      params.require(:member_location).permit(:member_id, :location_id, :from, :to,
+                                                locations_attributes: [
+                                                  :id,
+                                                  :__destroy,
+                                                  :line1,
+                                                  :line2,
+                                                  :city,
+                                                  :postcode
+                                                ],
+                                              )
     end
 end

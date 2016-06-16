@@ -10,6 +10,12 @@
     <%= f.input :mob %>
     <%= f.input :email %>
     <%= f.input :notes, :as => :text, :input_html => { :class => 'autogrow', :rows => 5 } %>
+    <div id="addresses">
+      <%= f.semantic_fields_for :member_locations do |member_location| %>
+        <%= render 'member_location_fields', :f => member_location %>
+        <%= link_to_add_association 'add an existing location', f, :member_locations %>
+      <% end %>
+    </div>
   <% end %>
   <%= f.actions do %>
      <%= f.action :submit, :as => :button %>

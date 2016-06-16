@@ -76,6 +76,23 @@ class MembersController < ApplicationController
                                         :responder,
                                         :subject,
                                         :_destroy
+                                      ],
+                                      member_locations_attributes: [
+                                        :id,
+                                        :_destroy,
+                                        :member_id,
+                                        :location_id,
+                                        :from,
+                                        :to,
+                                        location_attributes: [
+                                          :id,
+                                          :_destroy,
+                                          :name,
+                                          :line1,
+                                          :line2,
+                                          :city,
+                                          :postcode
+                                        ],
                                       ]
                                     )
     end

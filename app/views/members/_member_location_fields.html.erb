@@ -1,0 +1,9 @@
+<div class="nested-fields member-location-fields">
+  <%= f.inputs do %>
+    <div id="location-from-list">
+      <%= f.input :location, :collection => Location.order('name ASC').all, :prompt => 'Choose an existing location' %>
+    </div>
+    <%= link_to_add_association 'create a new location', f, :location %>
+    <%= link_to_remove_association "remove location", f %>
+  <% end %>
+</div>
