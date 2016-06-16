@@ -12,6 +12,7 @@ capybara-*.html
 /node_modules
 /app/assets/*/compiled/
 /public/assets/*
+*.DS_Store
 
 **.orig
 rerun.txt

@@ -3,12 +3,18 @@ require 'test_helper'
 class EventsControllerTest < ActionController::TestCase
   setup do
     @event = create(:event)
+    @future_event = create(:event)
+    @past_event = create(:event)
   end
 
   test "should get index" do
     get :index
     assert_response :success
     assert_not_nil assigns(:events)
+    assert_select "th", "Name"
+    assert_select "th", "Start"
+    assert_select "th", "Location"
+    assert_select "th", "Category"
   end
 
   test "should get new" do
@@ -35,6 +41,12 @@ class EventsControllerTest < ActionController::TestCase
   test "should show event" do
     get :show, id: @event
     assert_response :success
+    assert_select ".event__name"
+    assert_select ".event__date"
+    assert_select ".event__location"
+    assert_select ".event__description"
+    assert_select ".event__category"
+    assert_select ".event__google-id"
   end
 
   test "should get edit" do

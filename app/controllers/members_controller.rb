@@ -4,6 +4,10 @@ class MembersController < ApplicationController
   # GET /members
   def index
     @members = Member.all
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
   end
 
   # GET /members/1
@@ -64,6 +68,8 @@ class MembersController < ApplicationController
                                       :tel,
                                       :mob,
                                       :email,
+                                      :is_resident,
+                                      :notes,
                                       question_responses_attributes: [
                                         :id,
                                         :question,

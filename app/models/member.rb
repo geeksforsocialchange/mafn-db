@@ -8,12 +8,13 @@ class Member < ActiveRecord::Base
   belongs_to :entity
 
   accepts_nested_attributes_for :question_responses, allow_destroy: true
-  default_scope { order('last_name') } 
+  default_scope { order('last_name') }
 
   enum region: {
     "Hulme & Moss Side": 0,
     "Burnage": 1,
     "Moston": 2,
+    "Miles Platting": 3,
   }
 
   after_create do

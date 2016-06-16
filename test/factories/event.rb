@@ -6,7 +6,7 @@ FactoryGirl.define do
      c.org.uk"
     location "Trinity House Community Resource Centr\, Grove Close\, off Platt L
       ane Rusholme Manchester M14 5AA"
-    start 10.days.ago
-    finish 10.days.ago + 2.hours
+    start Time.parse("Sat, 04 Jun 2016 16:22:13")
+    finish Time.parse("Sat, 04 Jun 2016 18:22:13")
   end
 end

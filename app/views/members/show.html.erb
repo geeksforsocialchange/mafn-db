@@ -1,39 +1,54 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="member__id">
   <strong>ID:</strong>
   <tt><%= @member.membership_code %></tt>
 </p>
 
-<p>
+<p class="member__name">
   <strong>Name:</strong>
   <%= @member.first_name %> <%= @member.last_name %>
 </p>
 
-<p>
+<p class="member__dob">
   <strong>DoB:</strong>
   <%= @member.dob %>
 </p>
 
-<p>
+<p class="member__region">
+  <strong>Region:</strong>
+  <%= @member.region %>
+  <div class="member__is-resident">
+    <strong>Resident:</strong>
+    <%= @member.is_resident ? "Yes" : "No" %>
+  </div>
+</p>
+
+<p class="member__gender">
   <strong>Gender:</strong>
   <%= @member.gender %>
 </p>
 
-<p>
+<p class="member__tel">
   <strong>Tel:</strong>
   <%= @member.tel %>
 </p>
 
-<p>
+<p class="member__mob">
   <strong>Mob:</strong>
   <%= @member.mob %>
 </p>
 
-<p>
+<p class="member__email">
   <strong>Email:</strong>
   <%= @member.email %>
 </p>
+
+<p class="member__notes">
+  <strong>Notes:</strong>
+  <%= @member.notes %>
+</p>
+
 
 <h2>Locations</h2>
 <ul>

@@ -3,11 +3,13 @@
     <%= f.input :first_name %>
     <%= f.input :last_name %>
     <%= f.input :region %>
+    <%= f.input :is_resident %>
     <%= f.input :dob, :as => :date_picker %>
     <%= f.input :gender %>
     <%= f.input :tel %>
     <%= f.input :mob %>
     <%= f.input :email %>
+    <%= f.input :notes, :as => :text, :input_html => { :class => 'autogrow', :rows => 5 } %>
   <% end %>
   <%= f.actions do %>
      <%= f.action :submit, :as => :button %>
