@@ -51,9 +51,9 @@
 
 <h2>Locations</h2>
 <ul>
-  <% MemberLocation.where(member: @member).each do |l| %>
+  <% @member.member_locations.each do |l| %>
     <% location = l.location %>
-    <li><%= location.full_address %> (<%= l.from %> -- <%= l.to || "now" %>)</li>
+    <li><%= location.full_address %> (<%= l.from %> -- <%= l.to || "now" %>) <%= link_to "(edit)", edit_location_path(location) %></li>
   <% end %>
 </ul>
 

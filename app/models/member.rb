@@ -8,7 +8,7 @@ class Member < ActiveRecord::Base
   belongs_to :entity
 
   accepts_nested_attributes_for :question_responses, allow_destroy: true
-  accepts_nested_attributes_for :member_locations
+  accepts_nested_attributes_for :member_locations, allow_destroy: true
   accepts_nested_attributes_for :locations
 
   enum region: {
