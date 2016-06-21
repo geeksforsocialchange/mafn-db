@@ -13,8 +13,8 @@
     <div id="addresses">
       <%= f.semantic_fields_for :member_locations do |member_location| %>
         <%= render 'member_location_fields', :f => member_location %>
-        <%= link_to_add_association 'add an existing location', f, :member_locations %>
       <% end %>
+      <%= link_to_add_association 'add an existing location', f, :member_locations %>
     </div>
   <% end %>
   <%= f.actions do %>
