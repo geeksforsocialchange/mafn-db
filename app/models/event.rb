@@ -10,8 +10,6 @@ class Event < ActiveRecord::Base
 
   POSTCODE_REGEX = /^\s*((GIR\s*0AA)|((([A-PR-UWYZ][0-9]{1,2})|(([A-PR-UWYZ][A-HK-Y][0-9]{1,2})|(([A-PR-UWYZ][0-9][A-HJKSTUW])|([A-PR-UWYZ][A-HK-Y][0-9][ABEHMNPRVWXY]))))\s*[0-9][ABD-HJLNP-UW-Z]{2}))\s*$/i
 
-
-
   def geolocate
     unless ENV['RAILS_ENV'] = "test"
       # Get the postcode from the location string
@@ -47,6 +45,10 @@ class Event < ActiveRecord::Base
 
   def attendees
     self.members.count
+  end
+
+  def has_finished?
+    self.finish ? self.finish < Time.now : false
   end
 
   def self.to_csv(options = {})
