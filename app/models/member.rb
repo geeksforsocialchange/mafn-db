@@ -8,7 +8,8 @@ class Member < ActiveRecord::Base
   belongs_to :entity
 
   accepts_nested_attributes_for :question_responses, allow_destroy: true
-  default_scope { order('last_name') }
+  accepts_nested_attributes_for :member_locations, allow_destroy: true
+  accepts_nested_attributes_for :locations
 
   enum region: {
     "Hulme & Moss Side": 0,
@@ -50,7 +51,12 @@ class Member < ActiveRecord::Base
   end
 
   def date_sorted_responses
-    self.question_responses.order(:created_at).reverse
+    self.question_responses.order(:question_id, :created_at).reverse
+  end
+
+  def grouped_responses
+    r = self.question_responses
+    r.group_by(&:question_id)
   end
 
   def membership_code

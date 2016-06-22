@@ -36,7 +36,7 @@ module.exports = {
   },
   browserify: {
     bundleConfigs: [{
-      entries: sourceFiles + '/javascripts/global.coffee',
+      entries: sourceFiles + '/javascripts/global.js',
       dest: publicAssets + '/javascripts',
       outputName: 'global.js',
       extensions: ['.js','.coffee']

@@ -10,4 +10,4 @@
 //
 //= require cocoon
 // Pull compiled from /public/assets/javascripts
-// require global
+//= require global

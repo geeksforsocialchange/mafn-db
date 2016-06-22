@@ -3,8 +3,8 @@ require 'test_helper'
 class EventsControllerTest < ActionController::TestCase
   setup do
     @event = create(:event)
-    @future_event = create(:event)
-    @past_event = create(:event)
+    @future_event = create(:event, finish: 1.week.from_now)
+    @past_event = create(:event, finish: 1.week.ago)
   end
 
   test "should get index" do
@@ -52,6 +52,12 @@ class EventsControllerTest < ActionController::TestCase
   test "should get edit" do
     get :edit, id: @event
     assert_response :success
+  end
+
+  test "if event starts in the future" do
+    get :edit, id: @future_event
+    assert_select ".event__error--in-future"
+    assert_select "textarea", false
   end
 
   test "should update event" do

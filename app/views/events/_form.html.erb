@@ -1,11 +1,20 @@
 <%= semantic_form_for(@event) do |f| %>
   <%= f.inputs do %>
-    <%= f.input :name %>
     <%= f.input :category %>
-    <%= f.input :start, :as => :date_picker %>
-    <%= f.input :finish, :as => :date_picker %>
-    <%= f.input :description, :as => :text, :input_html => { :class => 'autogrow', :rows => 10 } %>
-    <%= f.input :location, :as => :text, :input_html => { :class => 'autogrow', :rows => 5 } %>
+    <% if @event.has_finished? %>
+      <%= f.input :name %>
+      <%= f.input :start, :as => :date_picker %>
+      <%= f.input :finish, :as => :date_picker %>
+      <%= f.input :description, :as => :text, :input_html => { :class => 'autogrow', :rows => 10 } %>
+      <%= f.input :location, :as => :text, :input_html => { :class => 'autogrow', :rows => 5 } %>
+    <% else %>
+      <div class="event__error--in-future">
+        <p><strong>This event cannot be edited here as it is in the future. If you wish to make changes, edit it on Google Calendar.</strong></p>
+      </div>
+      <p>Start: <%= @event.start %>, Finish: <%= @event.finish %></p>
+      <p><%= @event.description %></p>
+      <p><%= @event.location %></p>
+    <% end %>
   <% end %>
   <%= f.actions do %>
      <%= f.action :submit, :as => :button %>
