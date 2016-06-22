@@ -1,18 +1,20 @@
 $(function(){
-  $("#js-member-addresses a.add_fields").
+
+  $(".js-member-locations a.add_fields").
     data("association-insertion-position", 'before').
     data("association-insertion-node", 'this');
 
-  $('#js-member-addresses').on('cocoon:after-insert',
-    function() {
-      console.log("content inserted");
+  $('.js-member-locations').bind('cocoon:after-insert',
+    function(e, loc) {
+      console.log("inserting new location...");
       $(".js-member-location-fields a.add_fields").
         data("association-insertion-position", 'before').
         data("association-insertion-node", 'this');
-      $('.js-member-location-fields').on('cocoon:after-insert',
+
+      $(this).find('.js-member-location-fields').bind('cocoon:after-insert',
         function() {
-          console.log("location removed");
-          $(this).children("#js-location-from-list").remove();
+          console.log("insert new location...");
+          $(this).children(".js-location-from-list").remove();
           $(this).children("a.add_fields").hide();
         });
       });

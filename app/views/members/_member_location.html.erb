@@ -1,14 +1,10 @@
 <%= semantic_form_for(member) do |f| %>
   <%= f.inputs do %>
-    <div id="js-member-addresses">
+    <div class="js-member-locations">
       <%= f.semantic_fields_for :member_locations do |member_location| %>
         <%= render 'member_location_fields', f: member_location %>
       <% end %>
-      <div class="links">
-        <p>
-          <%= link_to_add_association 'add existing location', f, :member_locations %>
-        </p>
-      </div>
+      <%= link_to_add_association 'add new location', f, :member_locations %>
     </div>
   <% end %>
   <%= f.actions do %>

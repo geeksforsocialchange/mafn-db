@@ -1,6 +1,6 @@
-<div class="nested-fields member-location-fields  js-member-location-fields">
+<div class="js-member-location-fields">
   <%= f.inputs do %>
-    <div id="location-from-list js-location-from-list">
+    <div class="js-location-from-list">
       <%= f.input :location, :collection => Location.order('name ASC').all, :prompt => 'Choose an existing location' %>
       <%= f.input :from, :as => :date_picker %>
       <%= f.input :to, :as => :date_picker %>
