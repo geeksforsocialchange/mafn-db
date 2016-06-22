@@ -8,5 +8,6 @@
  *= require formtastic
  *
  * Pull compiled from /public/assets/stylesheets
+ *= require scaffolds
  *= require global
  */
