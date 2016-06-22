@@ -5,6 +5,9 @@
  * Use this file to include any stylesheet assets from installed gems. All other css is compiled with
  * libsass with Gulp.
  *
- * Pull compiled from /public/assets/stylesheets
  *= require formtastic
+ *
+ * Pull compiled from /public/assets/stylesheets
+ *= require scaffolds
+ *= require global
  */
