@@ -1,6 +1,6 @@
 <%= semantic_form_for(member) do |f| %>
   <%= f.inputs do %>
-    <div id="tasks">
+    <div id="js-member-addresses">
       <%= f.semantic_fields_for :member_locations do |member_location| %>
         <%= render 'member_location_fields', f: member_location %>
       <% end %>
