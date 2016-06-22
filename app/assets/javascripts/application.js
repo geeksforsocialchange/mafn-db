@@ -8,6 +8,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require cocoon
-//
-// Pull compiled from /public/assets/javascripts
-//= require global
+//= require vendor/jquery.dataTables.min
+
+//= require partials/_cocoon
+//= require partials/_tables

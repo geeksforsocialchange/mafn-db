@@ -9,7 +9,7 @@
   <%= link_to "Excel", members_path(format: "xlsx") %>
 </p>
 
-<table id="js-table-sort">
+<table class="js-table-sort">
   <thead>
     <tr>
       <th>ID</th>
@@ -21,9 +21,24 @@
       <th>Tel</th>
       <th>Mob</th>
       <th>Email</th>
-      <th colspan="3"></th>
+      <th>Link</th>
     </tr>
   </thead>
+  <tfoot>
+    <tr>
+      <th class="js-table-sort__searchable">ID</th>
+      <th class="js-table-sort__searchable">Name</th>
+      <th class="js-table-sort__searchable">DoB</th>
+      <th class="js-table-sort__searchable">Region</th>
+      <th class="js-table-sort__searchable">Resident?</th>
+      <th class="js-table-sort__searchable">Gender</th>
+      <th class="js-table-sort__searchable">Tel</th>
+      <th class="js-table-sort__searchable">Mob</th>
+      <th class="js-table-sort__searchable">Email</th>
+      <th>Link</th>
+    </tr>
+  </tfoot>
+
 
   <tbody>
     <% @members.each do |member| %>
@@ -37,9 +52,11 @@
         <td><%= member.tel %></td>
         <td><%= member.mob %></td>
         <td><%= member.email %></td>
-        <td><%= link_to 'Show', member %></td>
-        <td><%= link_to 'Edit', edit_member_path(member) %></td>
-        <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+            <%= link_to 'Show', member %>
+            <%= link_to 'Edit', edit_member_path(member) %>
+            <%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
