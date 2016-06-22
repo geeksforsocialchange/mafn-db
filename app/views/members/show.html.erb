@@ -4,6 +4,11 @@
   <%= @member.first_name %> <%= @member.last_name %>
 </h1>
 
+
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>
+
+
 <p class="member__id">
   <strong>ID:</strong>
   <tt><%= @member.membership_code %></tt>
@@ -53,11 +58,13 @@
 <ul>
   <% @member.member_locations.each do |l| %>
     <% location = l.location %>
-    <li><%= location.full_address %> (<%= l.from %> -- <%= l.to || "now" %>) <%= link_to "(edit)", edit_location_path(location) %></li>
+    <li>
+      <%= location.full_address %> (<%= l.from %> -- <%= l.to || "now" %>)
+      <%= link_to "edit address", edit_location_path(location) %>
+      <%= link_to "edit dates", edit_member_location_path(l) %>
+    </li>
   <% end %>
 </ul>
-
-<%= render partial: 'member_location', locals: { member: @member } %>
 
 <h2>Questions</h2>
 
@@ -75,9 +82,6 @@
     <dd><%= link_to r.formatted_response, question_response_path(r.id) %> <em>(<%= time_ago_in_words(r.created_at) %> ago, <%= link_to "edit", edit_question_response_path(r.id) %>)</em></dt>
   <% end %>
 </dl>
-
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
 
 <h2>Attendances</h2>
 

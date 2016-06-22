@@ -10,11 +10,13 @@
     <%= f.input :mob %>
     <%= f.input :email %>
     <%= f.input :notes, :as => :text, :input_html => { :class => 'autogrow', :rows => 5 } %>
-    <div id="addresses">
+    <div class="js-member-locations">
       <%= f.semantic_fields_for :member_locations do |member_location| %>
         <%= render 'member_location_fields', :f => member_location %>
       <% end %>
-      <%= link_to_add_association 'add an existing location', f, :member_locations %>
+      <div class="links">
+        <%= link_to_add_association 'add a new location', f, :member_locations %>
+      </div>
     </div>
   <% end %>
   <%= f.actions do %>
