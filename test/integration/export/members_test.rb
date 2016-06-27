@@ -60,18 +60,20 @@ class ExportMembersTest < ActionDispatch::IntegrationTest
     assert_equal head[15], "Prefer not to say"
 
     # TODO: work out if this is really how they want fields from here stored
-    assert_equal head[16], "Ethnic Background: Asian/ Asian British	Asian/ Asian British Other"
-    assert_equal head[17], "Ethnic Background: Black/ Black British	Black Black British Other"
-    assert_equal head[18], "Ethnic Background: White British"
-    assert_equal head[19], "White Other"
-    assert_equal head[20], "Any Other Background"
-    assert_equal head[21], "Any mixed Background"
-    assert_equal head[22], "Religion"
-    assert_equal head[23], "Other religion"
-    assert_equal head[24], "Sexual Orientation"
+    assert_equal head[16], "Ethnic Background: Asian/ Asian British"
+    assert_equal head[17], "Asian/ Asian British Other"
+    assert_equal head[18], "Ethnic Background: Black/ Black British"
+    assert_equal head[19], "Black Black British Other"
+    assert_equal head[20], "Ethnic Background: White British"
+    assert_equal head[21], "White Other"
+    assert_equal head[22], "Any Other Background"
+    assert_equal head[23], "Any mixed Background"
+    assert_equal head[24], "Religion"
+    assert_equal head[25], "Other religion"
+    assert_equal head[26], "Sexual Orientation"
 
     # TODO: find out where this comes from
-    assert_equal head[25], "What do you think makes an age friendly neighbourhood"
+    assert_equal head[27], "What do you think makes an age friendly neighbourhood"
   end
 
 end

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class EventDemographicsTest < ActionDispatch::IntegrationTest
+class ExportEventDemographicsTest < ActionDispatch::IntegrationTest
 
   setup do
     @events = create(:event)

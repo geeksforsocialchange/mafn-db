@@ -21,11 +21,17 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
-  resources :exports do
+  resources :exports, only: [:index] do
     collection do
-      get 'members'
       get 'events'
       get 'events_demographics'
+      get 'events_feedback'
+      get 'initial_questionnaire'
+      get 'followup_questionnaire'
+      get 'volunteer_initial_questionnaire'
+      get 'volunteer_followup_questionnaire'
+      get 'members'
+      get 'volunteers', action: :members
     end
   end
 
