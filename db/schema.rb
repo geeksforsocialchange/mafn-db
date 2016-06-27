@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160621144316) do
+ActiveRecord::Schema.define(version: 20160623102049) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -93,6 +93,15 @@ ActiveRecord::Schema.define(version: 20160621144316) do
 
   add_index "members", ["entity_id"], name: "index_members_on_entity_id", using: :btree
 
+  create_table "question_lists", force: :cascade do |t|
+    t.integer "question_id"
+    t.integer "question_set_id"
+    t.integer "weight"
+  end
+
+  add_index "question_lists", ["question_id"], name: "index_question_lists_on_question_id", using: :btree
+  add_index "question_lists", ["question_set_id"], name: "index_question_lists_on_question_set_id", using: :btree
+
   create_table "question_responses", force: :cascade do |t|
     t.string   "response"
     t.integer  "entity_id"
@@ -112,14 +121,6 @@ ActiveRecord::Schema.define(version: 20160621144316) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "question_sets_questions", id: false, force: :cascade do |t|
-    t.integer "question_id",     null: false
-    t.integer "question_set_id", null: false
-    t.integer "weight"
-  end
-
-  add_index "question_sets_questions", ["question_id", "question_set_id"], name: "question_sets_to_questions", unique: true, using: :btree
-
   create_table "questions", force: :cascade do |t|
     t.string   "question",   null: false
     t.string   "response"
@@ -135,6 +136,8 @@ ActiveRecord::Schema.define(version: 20160621144316) do
   add_foreign_key "member_locations", "locations"
   add_foreign_key "member_locations", "members"
   add_foreign_key "members", "entities"
+  add_foreign_key "question_lists", "question_sets"
+  add_foreign_key "question_lists", "questions"
   add_foreign_key "question_responses", "entities"
   add_foreign_key "question_responses", "members"
   add_foreign_key "question_responses", "questions"

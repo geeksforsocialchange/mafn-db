@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @question_list.question %>
+</p>
+
+<p>
+  <strong>Question set:</strong>
+  <%= @question_list.question_set %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @question_list.weight %>
+</p>
+
+<%= link_to 'Edit', edit_question_list_path(@question_list) %> |
+<%= link_to 'Back', question_lists_path %>

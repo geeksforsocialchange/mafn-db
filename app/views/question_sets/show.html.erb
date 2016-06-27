@@ -7,13 +7,13 @@
 <h2>Questions in this set</h2>
 
 <dl>
-  <% @questions.each do |q| %>
+  <% @question_set.question_lists.each do |l| %>
     <dt class="question">
-      <strong><%= q.category %></strong>
-      <%= q.question %>
+      <strong><%= l.weight || 0 %>. <%= l.question.category %></strong>
+      <%= l.question.question %>
     </dt>
     <dd>
-      <%= q.response %>
+      <%= l.question.response %>
     </dd>
   <% end %>
 </dl>
