@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :question_list do
-    question nil
-    question_set nil
+    association :question
+    association :question_set
     weight 1
   end
 end

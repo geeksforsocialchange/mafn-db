@@ -17,8 +17,9 @@ class AttendancesControllerTest < ActionController::TestCase
   end
 
   test "should create attendance" do
+    attendance = build(:attendance)
     assert_difference('Attendance.count') do
-      post :create, attendance: { event_id: @attendance.event_id, member_id: @attendance.member_id }
+      post :create, attendance: { event_id: attendance.event_id, member_id: attendance.member_id }
     end
 
     assert_redirected_to attendance_path(assigns(:attendance))
