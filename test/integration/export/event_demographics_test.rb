@@ -7,7 +7,7 @@ class EventDemographicsTest < ActionDispatch::IntegrationTest
   end
 
   test "event demographic spreadsheet report" do
-    sheet = load_spreadsheet "demographics"
+    sheet = load_spreadsheet "events_demographics"
 
     # We're just testing that the one event demographic works
     head = sheet.row(1)

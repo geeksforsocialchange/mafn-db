@@ -1,14 +1,33 @@
 wb = xlsx_package.workbook
-wb.add_worksheet(name: "Events") do |sheet|
-  sheet.add_row [ "Project External ID",
-                  "Event Name",
+wb.add_worksheet(name: "Event Demographics") do |sheet|
+  sheet.add_row [
                   "Event External ID",
-                  "Date Of Event",
-                  "Type of Event",
-                  "Other Event",
-                  "No of attendees"
+                  "Who do you live with",
+                  "Other living arrangement",
+                  "What is your marital status",
+                  "What is your year of birth",
+                  "Gender",
+                  "Is your gender the same as assigned at birth",
+                  "Sexual Orientation",
+                  "How long have you lived in your ward",
+                  "Ethnic Background: Asian/ Asian British",
+                  "Asian/ Asian British Other",
+                  "Ethnic Background: Black/ Black British",
+                  "Black Black British Other",
+                  "Ethnic Background: White British",
+                  "White Other",
+                  "Any Other Background",
+                  "Prefer not to say",
+                  "Religion",
+                  "Other religion",
+                  "Anyone Sick or disabled you care for",
+                  "Do you have any long standing conditions",
+                  "Please name/briefly describe condition",
+                  "Education level",
+                  "Current Employment status",
+                  "Postcode",
                 ]
-  @events.each do |event|
-    sheet.add_row ["", event.name, event.id, event.ydm, "", "", event.attendees]
-  end
+  # @events.each do |event|
+  #   sheet.add_row ["", event.name, event.id, event.ydm, "", "", event.attendees]
+  # end
 end
