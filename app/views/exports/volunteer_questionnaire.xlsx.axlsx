@@ -1,8 +1,9 @@
 wb = xlsx_package.workbook
-wb.add_worksheet(name: "Volunteer initial questionnaire") do |sheet|
+wb.add_worksheet(name: "Volunteer questionnaire") do |sheet|
   sheet.add_row [
     "Participant External ID",
     "Questionnaire Type",
+    "Have any of the following circumstances changed for you",
     "Postcode",
     "What is your marital status",
     "Education level",

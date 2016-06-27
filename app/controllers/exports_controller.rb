@@ -32,17 +32,18 @@ class ExportsController < ApplicationController
   end
 
 
-  def initial_questionnaire
+  def questionnaire
+    respond_to do |format|
+      format.xlsx
+    end
+  end
+
+  def volunteer_questionnaire
     respond_to do |format|
       format.xlsx
     end
   end
 
 
-  def followup_questionnaire
-    respond_to do |format|
-      format.xlsx
-    end
-  end
 
 end

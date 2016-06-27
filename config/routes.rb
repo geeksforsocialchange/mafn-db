@@ -26,10 +26,8 @@ Rails.application.routes.draw do
       get 'events'
       get 'events_demographics'
       get 'events_feedback'
-      get 'initial_questionnaire'
-      get 'followup_questionnaire'
-      get 'volunteer_initial_questionnaire'
-      get 'volunteer_followup_questionnaire'
+      get 'questionnaire'
+      get 'volunteer_questionnaire'
       get 'members'
       get 'volunteers', action: :members
     end
