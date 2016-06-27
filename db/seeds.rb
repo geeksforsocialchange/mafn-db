@@ -33,7 +33,7 @@ end
 # Seed questions with actual data
 member_questions = YAML.load_file "db/questions/member.yml"
 
-member_questions.each do |q|
+member_questions.each_with_index do |q|
   Question.create!(
                     question: q[0],
                     response: q[1],
@@ -43,12 +43,23 @@ end
 
 # Create question set for these
 member_set = QuestionSet.create!(title: "Community Audit")
-member_set.questions = Question.where(category: 0)
+Question.where(category: 0).each_with_index do |q, idx|
+  QuestionList.create(
+                        question_set_id: member_set.id,
+                        question_id: q.id,
+                        weight: idx
+                      )
+end
 
 # Answer some random questions
-100.times do |n|
-  response = Faker::Lorem.sentence
+200.times do |n|
   question = Question.order("RANDOM()").limit(1).first
+  if question.response
+    option_count = JSON.parse(question.response).length
+    response = rand(0..option_count)
+  else
+    response = Faker::Lorem.sentence
+  end
   responder = Member.order("RANDOM()").limit(1).first
   subject =  Entity.order("RANDOM()").limit(1).first
   QuestionResponse.create!(
@@ -79,6 +90,7 @@ end
   )
 end
 
+# Give every member a location
 Member.all.each_with_index do |member, idx|
   MemberLocation.create!(
     member: member,
