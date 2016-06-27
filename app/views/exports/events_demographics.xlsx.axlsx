@@ -25,9 +25,37 @@ wb.add_worksheet(name: "Event Demographics") do |sheet|
                   "Please name/briefly describe condition",
                   "Education level",
                   "Current Employment status",
-                  "Postcode",
+                  "Postcode"
                 ]
-  # @events.each do |event|
-  #   sheet.add_row ["", event.name, event.id, event.ydm, "", "", event.attendees]
-  # end
+  @events.each do |event|
+    event.members.each do |member|
+      sheet.add_row [
+                      event.id,
+                      "",
+                      "",
+                      "",
+                      member.dob.year,
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+    end
+  end
 end

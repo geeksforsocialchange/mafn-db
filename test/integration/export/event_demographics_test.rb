@@ -4,17 +4,18 @@ class ExportEventDemographicsTest < ActionDispatch::IntegrationTest
 
   setup do
     @events = create(:event)
+    @events.members = create_list(:member, 5)
   end
 
   test "event demographic spreadsheet report" do
-    sheet = load_spreadsheet "events_demographics"
 
-    # We're just testing that the one event demographic works
+    sheet = load_spreadsheet "events_demographics"
     head = sheet.row(1)
     content = sheet.row(2)
 
-    assert_equal head[0], "Event External ID"
-    # Our ref
+    #======#
+    # TODO #
+    #======#
 
     assert_equal head[1], "Who do you live with"
     # Living Alone, Living with Partner, Living with other family member, or Other
@@ -22,8 +23,6 @@ class ExportEventDemographicsTest < ActionDispatch::IntegrationTest
 
     assert_equal head[3], "What is your marital status"
     # Single Married/civil partnered Divorced Widow Widower Prefer not to say
-
-    assert_equal head[4], "What is your year of birth"
 
     assert_equal head[5], "Gender"
     # Female Male Self-definition Prefer not to say
@@ -65,6 +64,17 @@ class ExportEventDemographicsTest < ActionDispatch::IntegrationTest
     assert_equal head[23], "Current Employment status"
     # Employed full-time Employed part-time Retired Unemployed Self-employed
     assert_equal head[24], "Postcode"
+
+    #======#
+    # DONE #
+    #======#
+
+    assert_equal head[0], "Event External ID"
+    assert_equal content[0], 1
+
+    assert_equal head[4], "What is your year of birth"
+    assert_equal content[4], 1956
+
 
   end
 end
