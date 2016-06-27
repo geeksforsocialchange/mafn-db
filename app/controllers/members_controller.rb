@@ -64,7 +64,6 @@ class MembersController < ApplicationController
                                       :last_name,
                                       :dob,
                                       :region,
-                                      :gender,
                                       :tel,
                                       :mob,
                                       :email,

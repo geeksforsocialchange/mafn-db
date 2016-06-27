@@ -41,7 +41,7 @@ wb.add_worksheet(name: "Members") do |sheet|
       member.tel,
       member.email,
       member.dob.year,
-      member.gender,
+      "Gender",
       "Other Gender Please State",
       "Gender same as at Birth",
       "Do you live in an Ambition for Ageing Ward",

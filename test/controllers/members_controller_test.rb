@@ -24,7 +24,6 @@ class MembersControllerTest < ActionController::TestCase
                               is_resident: @member.is_resident,
                               region: @member.region,
                               email: @member.email,
-                              gender: @member.gender,
                               mob: @member.mob,
                               tel: @member.tel,
                               notes: @member.notes }
@@ -41,7 +40,6 @@ class MembersControllerTest < ActionController::TestCase
     assert_select ".member__is-resident"
     assert_select ".member__region"
     assert_select ".member__email"
-    assert_select ".member__gender"
     assert_select ".member__mob"
     assert_select ".member__tel"
     assert_select ".member__notes"
@@ -59,7 +57,6 @@ class MembersControllerTest < ActionController::TestCase
                                           is_resident: @member.is_resident,
                                           region: @member.region,
                                           email: @member.email,
-                                          gender: @member.gender,
                                           mob: @member.mob,
                                           tel: @member.tel,
                                           notes: @member.notes}
