@@ -10,6 +10,13 @@ class EventsController < ApplicationController
     end
   end
 
+  def demographics
+    @events = Event.all
+    respond_to do |format|
+      format.xlsx
+    end
+  end
+
   # GET /events/1
   def show
   end

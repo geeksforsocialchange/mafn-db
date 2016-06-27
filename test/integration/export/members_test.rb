@@ -13,7 +13,6 @@ class ExportMembersTest < ActionDispatch::IntegrationTest
     head = sheet.row(1)
     content = sheet.row(2)
 
-
     # TODO: implement projects
     assert_equal head[0], "Project External ID"
 
@@ -34,7 +33,7 @@ class ExportMembersTest < ActionDispatch::IntegrationTest
     assert_equal head[5], "Date Engaged with project"
     assert_equal content[5], Date.parse("Wed, 15 Jun 2016")
 
-    # TODO: confirm which phone number is more important
+    # TODO: confirm which phone number is more important, mobile or telephone
     assert_equal head[6], "Phone Number"
     assert_equal content[6], "0800 893731"
 
