@@ -17,23 +17,6 @@ class ExportEventDemographicsTest < ActionDispatch::IntegrationTest
     # TODO #
     #======#
 
-    assert_equal head[1], "Who do you live with"
-    # Living Alone, Living with Partner, Living with other family member, or Other
-    assert_equal head[2], "Other living arrangement"
-
-    assert_equal head[3], "What is your marital status"
-    # Single Married/civil partnered Divorced Widow Widower Prefer not to say
-
-    assert_equal head[5], "Gender"
-    # Female Male Self-definition Prefer not to say
-    assert_equal head[6], "Is your gender the same as assigned at birth"
-    # Yes No Prefer not to say
-    assert_equal head[7], "Sexual Orientation"
-    # Bisexual Gay Heterosexual Lesbian Prefer not to say
-
-    assert_equal head[8], "How long have you lived in your ward"
-    # Number in years
-
     assert_equal head[9], "Ethnic Background: Asian/ Asian British"
     # Indian Pakistani Bangladeshi Chinese Any other Asian/ Asian British Background (please state)
     assert_equal head[10], "Asian/ Asian British Other"
@@ -46,6 +29,33 @@ class ExportEventDemographicsTest < ActionDispatch::IntegrationTest
     assert_equal head[15], "Any Other Background"
     assert_equal head[16], "Prefer not to say"
     # Boolean
+
+    #======#
+    # DONE #
+    #======#
+
+    assert_equal head[0], "Event External ID"
+    assert_equal content[0], 1
+
+    assert_equal head[1], "Who do you live with"
+    # Living Alone, Living with Partner, Living with other family member, or Other
+    assert_equal head[2], "Other living arrangement"
+
+    assert_equal head[3], "What is your marital status"
+    # Single Married/civil partnered Divorced Widow Widower Prefer not to say
+
+    assert_equal head[4], "What is your year of birth"
+    assert_equal content[4], 1956
+
+    assert_equal head[5], "Gender"
+    # Female Male Self-definition Prefer not to say
+    assert_equal head[6], "Is your gender the same as assigned at birth"
+    # Yes No Prefer not to say
+    assert_equal head[7], "Sexual Orientation"
+    # Bisexual Gay Heterosexual Lesbian Prefer not to say
+
+    assert_equal head[8], "How long have you lived in your ward"
+    # Number in years
 
     assert_equal head[17], "Religion"
     # Christian Buddhist Hindu Jewish Muslim No religion Sikh Other Prefer not to say
@@ -64,16 +74,6 @@ class ExportEventDemographicsTest < ActionDispatch::IntegrationTest
     assert_equal head[23], "Current Employment status"
     # Employed full-time Employed part-time Retired Unemployed Self-employed
     assert_equal head[24], "Postcode"
-
-    #======#
-    # DONE #
-    #======#
-
-    assert_equal head[0], "Event External ID"
-    assert_equal content[0], 1
-
-    assert_equal head[4], "What is your year of birth"
-    assert_equal content[4], 1956
 
 
   end

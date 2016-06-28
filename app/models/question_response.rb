@@ -17,4 +17,5 @@ class QuestionResponse < ActiveRecord::Base
       self.response
     end
   end
+
 end

@@ -114,3 +114,9 @@ Member.all.each_with_index do |member, idx|
     from: Faker::Date.between(20.years.ago, 0.years.ago)
   )
 end
+
+# Import events
+`rake calendar:import`
+
+# Assign some random attendances
+# Member.all.each_with_index do |member, idx|

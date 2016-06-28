@@ -31,19 +31,7 @@ class ExportMembersTest < ActionDispatch::IntegrationTest
     assert_equal head[6], "Phone Number"
     assert_equal content[6], "0800 893731"
 
-    # TODO: confirm that they really want gender stored like this - seems silly
-    assert_equal head[9], "Gender"
-    assert_equal head[10], "Other Gender Please State"
-    assert_equal head[11], "Gender same as at Birth"
 
-    # TODO: add in bool for if they live in a ward or not
-    assert_equal head[12], "Do you live in an Ambition for Ageing Ward"
-
-    # TODO: figure out how to calculate this
-    assert_equal head[13], "How long have you lived in your ward"
-
-    # TODO: work out where to store this
-    assert_equal head[14], "Current Employment status"
     # TODO: work out if this is REALLY a column or not
     assert_equal head[15], "Prefer not to say"
 
@@ -56,9 +44,6 @@ class ExportMembersTest < ActionDispatch::IntegrationTest
     assert_equal head[21], "White Other"
     assert_equal head[22], "Any Other Background"
     assert_equal head[23], "Any mixed Background"
-    assert_equal head[24], "Religion"
-    assert_equal head[25], "Other religion"
-    assert_equal head[26], "Sexual Orientation"
 
     # TODO: find out where this comes from
     assert_equal head[27], "What do you think makes an age friendly neighbourhood"
@@ -83,6 +68,20 @@ class ExportMembersTest < ActionDispatch::IntegrationTest
 
     assert_equal head[8], "Year of Birth"
     assert_equal content[8], 1956
+
+    assert_equal head[9], "Gender"
+    assert_equal head[10], "Other Gender Please State"
+    assert_equal head[11], "Gender same as at Birth"
+
+    assert_equal head[12], "Do you live in an Ambition for Ageing Ward"
+
+    assert_equal head[13], "How long have you lived in your ward"
+
+    assert_equal head[14], "Current Employment status"
+
+    assert_equal head[24], "Religion"
+    assert_equal head[25], "Other religion"
+    assert_equal head[26], "Sexual Orientation"
 
   end
 
