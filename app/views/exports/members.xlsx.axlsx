@@ -1,3 +1,7 @@
+asian_options = ["Bangladeshi", "Chinese", "Indian", "Pakistani", "Any other Asian/ Asian British Background (please state)"]
+black_options = ["African", "Caribbean", "Any other Black / Black British Background (please state)"]
+white_options = ["English/Northern Irish/Scottish/Welsh", "Irish", "Gypsy/Traveller/Irish Traveller", "Any other white background (please state)"]
+
 wb = xlsx_package.workbook
 wb.add_worksheet(name: "Members") do |sheet|
   sheet.add_row [
@@ -42,16 +46,18 @@ wb.add_worksheet(name: "Members") do |sheet|
       member.email,
       member.dob.year,
       last_response(member, "Gender"),
+      "",
       last_response(member, "Is this the gender you were assigned at birth?"),
       member.is_resident?,
       last_response(member, "How long have you lived in your ward in years?"),
       last_response(member, "What is your current employment status?"),
-      # TODO: Does this really need splitting out?
       "",
+      last_response_if_in_array(member, "What is your ethnic background?", asian_options),
       "",
+      last_response_if_in_array(member, "What is your ethnic background?", black_options),
       "",
-      "",
-      "",
+      last_response_if_in_array(member, "What is your ethnic background?", white_options),
+      last_response(member, "What is your ethnic background? (other)"),
       "",
       "",
       last_response(member, "What is your religion?"),
