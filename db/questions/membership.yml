@@ -4,13 +4,15 @@
 "Preferred method of contact":
   ["Post","Telephone","Email"]
 "Gender":
-"Sexual orientation":
+  ["Female", "Male", "Self-definition", "Prefer not to say"]
 "Is this the gender you were assigned at birth":
-  ["No","Yes","Prefer not to say"]
+  ["No", "Yes", "Prefer not to say"]
+"Sexual orientation":
+  ["Bisexual", "Gay", "Heterosexual", "Lesbian", "Prefer not to say"]
 "What is your ethnic background?":
-  ["Bangladeshi", "Chinese", "Indian", "Pakistani",
-   "African", "Caribbean",
-   "English/Northern Irish/Scottish/Welsh", "Irish", "Gypsy/Traveller/Irish Traveller",
+  ["Bangladeshi", "Chinese", "Indian", "Pakistani", "Any other Asian/ Asian British Background (please state)",
+   "African", "Caribbean", "Any other Black / Black British Background (please state)",
+   "English/Northern Irish/Scottish/Welsh", "Irish", "Gypsy/Traveller/Irish Traveller", "Any other white background (please state)",
    "Prefer not to say", "Other (please state)"]
 "What is your ethnic background? (other)":
 "What is your first language?":
@@ -18,6 +20,8 @@
   ["No", "Yes (please specify)"]
 "If so, which":
 "What is your religion?":
+  ["Christian", "Buddhist", "Hindu", "Jewish", "Muslim", "No religion", "Sikh", "Other (please state)", "Prefer not to say"]
+"Other religion":
 "What is your marital status?":
   ["Co-habiting", "Divorced", "Married or Civil partnered", "Single","Widow/Widower", "Prefer not to say"]
 "What is your living situation?":

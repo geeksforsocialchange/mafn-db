@@ -1,5 +1,3 @@
-"Member ID":
-"Event ID":
 "How did you find out about today?":
   ["Friends or Family", "Leaflet or Poster", "Online or Social Media", "Newspaper", "Email", "Other (specify)"]
 "How did you find out about today? (other reason)":
@@ -12,4 +10,3 @@
 "People can change things in my local area if they work together":
   ["Definitely Disagree", "Tend to Disagree", "Tend to Agree", "Definitely Agree"]
 "Can you tell us what you would do to improve the area?":
-  ["Definitely Disagree", "Tend to Disagree", "Tend to Agree", "Definitely Agree"]
