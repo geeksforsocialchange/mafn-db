@@ -31,25 +31,41 @@ end
 
 
 # Seed questions with actual data
-member_questions = YAML.load_file "db/questions/member.yml"
+event_feedback_data   = YAML.load_file "db/questions/event_feedback.yml"
+community_audit_data  = YAML.load_file "db/questions/community_audit.yml"
+membership_data       = YAML.load_file "db/questions/membership.yml"
 
-member_questions.each_with_index do |q|
-  Question.create!(
-                    question: q[0],
-                    response: q[1],
-                    category: 0,
-                  )
+def create_questions(questions, category = 0)
+  output = []
+  questions.each_with_index do |q|
+    new_question = Question.create!(question: q[0], response: q[1], category: category)
+    output << new_question
+  end
+  return output
 end
 
-# Create question set for these
-member_set = QuestionSet.create!(title: "Community Audit")
-Question.where(category: 0).each_with_index do |q, idx|
-  QuestionList.create(
-                        question_set_id: member_set.id,
-                        question_id: q.id,
-                        weight: idx
-                      )
+event_feedback_questions  = create_questions(event_feedback_data, 1)
+community_audit_questions = create_questions(community_audit_data)
+membership_questions      = create_questions(membership_data)
+
+# Create question sets
+event_feedback  = QuestionSet.create!(title: "Event Feedback")
+community_audit = QuestionSet.create!(title: "Community Audit")
+membership      = QuestionSet.create!(title: "Membership")
+
+def create_question_set(question_set, questions)
+  questions.each_with_index do |q, idx|
+    QuestionList.create!(
+                          question_set_id: question_set.id,
+                          question_id: q.id,
+                          weight: idx
+                        )
+  end
 end
+
+create_question_set(event_feedback, event_feedback_questions)
+create_question_set(community_audit, community_audit_questions)
+create_question_set(membership, membership_questions)
 
 # Answer some random questions
 200.times do |n|
@@ -98,3 +114,9 @@ Member.all.each_with_index do |member, idx|
     from: Faker::Date.between(20.years.ago, 0.years.ago)
   )
 end
+
+# Import events
+`rake calendar:import`
+
+# Assign some random attendances
+# Member.all.each_with_index do |member, idx|

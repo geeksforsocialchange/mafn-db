@@ -1,0 +1,20 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Events Feedback") do |sheet|
+  sheet.add_row [
+                  "Event External ID",
+                  "How Did You Find Out About Today",
+                  "Other How you found out",
+                  "Have previously attended an event or activity",
+                  "Why did you attend today",
+                  "Would you recommend future events/activities to others?",
+                  "To what extent do you feel that you live in an age-friendly neighbourhood?",
+                  "Could you tell us why you think this?",
+                  "I can influence decisions affecting my local area",
+                  "People can change things in my local area if they work together",
+                  "Could you tell us why you think this?",
+                  "Do you have any comments or feedback about the day for us?",
+                ]
+  # @events.each do |event|
+  #   sheet.add_row ["", event.name, event.id, event.ydm, "", "", event.attendees]
+  # end
+end

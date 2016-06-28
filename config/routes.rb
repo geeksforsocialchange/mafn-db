@@ -20,7 +20,18 @@ Rails.application.routes.draw do
   resources :members
 
   get 'welcome/index'
-  get 'export' => 'export#index', as: :export
+
+  resources :exports, only: [:index] do
+    collection do
+      get 'events'
+      get 'events_demographics'
+      get 'events_feedback'
+      get 'questionnaire'
+      get 'volunteer_questionnaire'
+      get 'members'
+      get 'volunteers', action: :members
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

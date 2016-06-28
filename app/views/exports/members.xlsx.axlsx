@@ -1,0 +1,69 @@
+asian_options = ["Bangladeshi", "Chinese", "Indian", "Pakistani", "Any other Asian/ Asian British Background (please state)"]
+black_options = ["African", "Caribbean", "Any other Black / Black British Background (please state)"]
+white_options = ["English/Northern Irish/Scottish/Welsh", "Irish", "Gypsy/Traveller/Irish Traveller", "Any other white background (please state)"]
+
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Members") do |sheet|
+  sheet.add_row [
+    "Project External ID",
+    "Consent Given",
+    "Participant External ID Field",
+    "First Name",
+    "Last Name",
+    "Date Engaged with project",
+    "Phone Number",
+    "Email Address",
+    "Year of Birth",
+    "Gender",
+    "Other Gender Please State",
+    "Gender same as at Birth",
+    "Do you live in an Ambition for Ageing Ward",
+    "How long have you lived in your ward",
+    "Current Employment status",
+    "Prefer not to say",
+    "Ethnic Background: Asian/ Asian British",
+    "Asian/ Asian British Other",
+    "Ethnic Background: Black/ Black British",
+    "Black Black British Other",
+    "Ethnic Background: White British",
+    "White Other",
+    "Any Other Background",
+    "Any mixed Background",
+    "Religion",
+    "Other religion",
+    "Sexual Orientation",
+    "What do you think makes an age friendly neighbourhood"
+  ]
+  @members.each do |member|
+    sheet.add_row [
+      "",
+      "",
+      member.id,
+      member.first_name,
+      member.last_name,
+      member.created_at,
+      member.tel,
+      member.email,
+      member.dob.year,
+      last_response(member, "Gender"),
+      "",
+      last_response(member, "Is this the gender you were assigned at birth?"),
+      member.is_resident?,
+      last_response(member, "How long have you lived in your ward in years?"),
+      last_response(member, "What is your current employment status?"),
+      "",
+      last_response_if_in_array(member, "What is your ethnic background?", asian_options),
+      "",
+      last_response_if_in_array(member, "What is your ethnic background?", black_options),
+      "",
+      last_response_if_in_array(member, "What is your ethnic background?", white_options),
+      last_response(member, "What is your ethnic background? (other)"),
+      "",
+      "",
+      last_response(member, "What is your religion?"),
+      last_response(member, "Other religion"),
+      last_response(member, "Sexual orientation"),
+      "What do you think makes an age friendly neighbourhood"
+    ]
+  end
+end

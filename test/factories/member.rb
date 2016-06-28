@@ -10,5 +10,9 @@ FactoryGirl.define do
     tel "0800 893731"
     mob "07688 349455"
     email "jane_doe@test.net"
+
+    factory :complete_member do
+
+    end
   end
 end

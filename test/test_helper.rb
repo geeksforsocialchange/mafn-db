@@ -21,7 +21,7 @@ class ActiveSupport::TestCase
   include Capybara::DSL
 
   def load_spreadsheet spreadsheet
-    visit "/#{spreadsheet}.xlsx"
+    visit "/exports/#{spreadsheet}.xlsx"
     File.open("/tmp/#{spreadsheet}.xlsx", 'w') {|f| f.write(page.source) }
     wb = Roo::Excelx.new("/tmp/#{spreadsheet}.xlsx")
     wb.sheet(0)

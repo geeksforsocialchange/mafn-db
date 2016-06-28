@@ -4,11 +4,6 @@
 
 <p><%= link_to 'New Member', new_member_path %></p>
 
-<p>
-  Download:
-  <%= link_to "Excel", members_path(format: "xlsx") %>
-</p>
-
 <table class="js-table-sort">
   <thead>
     <tr>
@@ -17,7 +12,6 @@
       <th>DoB</th>
       <th>Region</th>
       <th>Resident?</th>
-      <th>Gender</th>
       <th>Tel</th>
       <th>Mob</th>
       <th>Email</th>
@@ -31,7 +25,6 @@
       <th class="js-table-sort__searchable">DoB</th>
       <th class="js-table-sort__searchable">Region</th>
       <th class="js-table-sort__searchable">Resident?</th>
-      <th class="js-table-sort__searchable">Gender</th>
       <th class="js-table-sort__searchable">Tel</th>
       <th class="js-table-sort__searchable">Mob</th>
       <th class="js-table-sort__searchable">Email</th>
@@ -48,7 +41,6 @@
         <td><%= member.dob %></td>
         <td><%= member.region %></td>
         <td><%= member.is_resident ? "Yes" : "No" %></td>
-        <td><%= member.gender %></td>
         <td><%= member.tel %></td>
         <td><%= member.mob %></td>
         <td><%= member.email %></td>

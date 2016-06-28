@@ -1,0 +1,42 @@
+"Date form was completed":
+"How long have you lived in your ward in years?":
+"Preferred method of contact":
+  ["Post","Telephone","Email"]
+"Gender":
+  ["Female", "Male", "Self-definition", "Prefer not to say"]
+"Is this the gender you were assigned at birth?":
+  ["No", "Yes", "Prefer not to say"]
+"Sexual orientation":
+  ["Bisexual", "Gay", "Heterosexual", "Lesbian", "Prefer not to say"]
+"What is your ethnic background?":
+  ["Bangladeshi", "Chinese", "Indian", "Pakistani", "Any other Asian/ Asian British Background (please state)",
+   "African", "Caribbean", "Any other Black / Black British Background (please state)",
+   "English/Northern Irish/Scottish/Welsh", "Irish", "Gypsy/Traveller/Irish Traveller", "Any other white background (please state)",
+   "Prefer not to say", "Other (please state)"]
+"What is your ethnic background? (other)":
+"What is your first language?":
+"Do you speak any other languages in normal day to day life?":
+  ["No", "Yes (please specify)"]
+"If so, which":
+"What is your religion?":
+  ["Christian", "Buddhist", "Hindu", "Jewish", "Muslim", "No religion", "Sikh", "Other (please state)", "Prefer not to say"]
+"Other religion":
+"What is your marital status?":
+  ["Co-habiting", "Divorced", "Married or Civil partnered", "Single","Widow/Widower", "Prefer not to say"]
+"What is your living situation?":
+  ["Living Alone", "Living with a Partner", "Living with other family member", "Other (specify)", "Prefer not to say"]
+"What is your living situation? (other)":
+"How is your health in general?":
+  ["Very Bad", "Bad", "Fair", "Good", "Very good", "Prefer not to say"]
+"Do you have any long standing physical or mental illness or disability?":
+  ["No", "Yes (specify)", "Prefer not to say"]
+"If so, please name/briefly describe condition":  
+"Is there anyone who is sick, disabled or needs support whom you look after or give special help to?":
+  ["No","Yes in my home", "Yes, in my neighbourhood", "Prefer not to say"]
+"Does anyone care for/assist you on a regular basis? If so, who?":
+  ["No", "Family Yes", "Neighbours Yes", "Prefer not to say"]
+"Do you use any special equipment when accessing facilities or attending events in your neighbourhood? If so, what do you use?":
+"What is your highest level of education?":
+  ["No Schooling","Primary", "GCSE, O-level or post 14 apprenticeship", "A level or equivalent or post 16 apprenticeship", "Degree level or equivalent", "Postgraduate degree level or equivalent", "Prefer not to say"]
+"What is your current employment status?":
+  ["Employed full time", "Employed part time", "Self Employed", "Unemployed", "Retired", "Prefer not to say"]
