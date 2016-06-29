@@ -31,5 +31,5 @@ wb.add_worksheet(name: "Initial Questionnaire") do |sheet|
     "I borrow things and exchange favours with my neighbours",
     "I would be willing to work together with others on something to improve my neighbourhood",
     "I regularly stop and talk with people in my neighbourhood",
-    ]
+  ]
 end

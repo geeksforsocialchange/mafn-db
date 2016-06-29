@@ -67,23 +67,31 @@ create_question_set(event_feedback, event_feedback_questions)
 create_question_set(community_audit, community_audit_questions)
 create_question_set(membership, membership_questions)
 
-# Answer some random questions
-500.times do |n|
-  question = Question.order("RANDOM()").limit(1).first
+def answer_question(  question = Question.where(category: 0).order("RANDOM()").limit(1).first,
+                      target = false,
+                      responder = Member.order("RANDOM()").limit(1).first )
   if question.response
     option_count = JSON.parse(question.response).length
     response = rand(0..option_count)
   else
     response = Faker::Lorem.sentence
   end
-  responder = Member.order("RANDOM()").limit(1).first
-  subject =  Entity.order("RANDOM()").limit(1).first
+  if target
+    subject = Entity.find(target.entity_id)
+  else
+    subject = Entity.find(responder.entity_id)
+  end
   QuestionResponse.create!(
     response: response,
     question: question,
     responder: responder,
     subject: subject,
   )
+end
+
+# Answer some random questions
+500.times do |n|
+  answer_question
 end
 
 # Create locations
@@ -118,11 +126,18 @@ end
 # Import events
 `rake calendar:import`
 
-# Assign some random attendances
+# Assign some random attendances and do feedback
 event_count = Event.count
 Member.all.each do |member|
-  attendances = (1..event_count).to_a.sort{ rand() - 0.5 }[0..10]
+  # Create 5 random numbers between 1 and event count
+  attendances = (1..event_count).to_a.sort{ rand() - 0.5 }[0..5]
   attendances.each do |attendance|
-    Attendance.create(event: Event.find(attendance), member: member)
+    event = Event.find(attendance)
+    # Make an attendance for each one
+    Attendance.create(event: event, member: member)
+    # Answer the feedback form
+    Question.where(category: 1).each do |q|
+      answer_question(q, event, member)
+    end
   end
 end

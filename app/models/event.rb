@@ -8,6 +8,10 @@ class Event < ActiveRecord::Base
 
   after_save :geolocate, if: :location_changed?
 
+  after_create do
+    self.update(entity_id: Entity.create.id)
+  end
+
   POSTCODE_REGEX = /^\s*((GIR\s*0AA)|((([A-PR-UWYZ][0-9]{1,2})|(([A-PR-UWYZ][A-HK-Y][0-9]{1,2})|(([A-PR-UWYZ][0-9][A-HJKSTUW])|([A-PR-UWYZ][A-HK-Y][0-9][ABEHMNPRVWXY]))))\s*[0-9][ABD-HJLNP-UW-Z]{2}))\s*$/i
 
   def geolocate
@@ -47,8 +51,17 @@ class Event < ActiveRecord::Base
     self.members.count
   end
 
+  # IDs of people who did a questionnaire for this
+  def responders
+    QuestionResponse.where(entity_id: self.entity_id).pluck(:member_id).uniq
+  end
+
   def has_finished?
     self.finish ? self.finish < Time.now : false
+  end
+
+  def select_string
+    "#{self.id}. #{self.name}"
   end
 
   def self.to_csv(options = {})

@@ -35,6 +35,9 @@ class Member < ActiveRecord::Base
     self.last_name + ", " + self.first_name
   end
 
+  # Need to give entity lookups a consistent interface
+  alias name full_name
+
   def initials
     self.first_name.first + self.last_name.first
   end

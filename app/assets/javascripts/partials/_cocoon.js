@@ -18,4 +18,21 @@ $(function(){
           $(this).children("a.add_fields").hide();
         });
       });
+
+
+  if($(".js-form__needs-entity").length > 0) {
+    // If this div exists, hide the form until something is selected
+    $(".form").hide();
+    // When somene's picked something...
+    $(".js-form__entity-selector").change(function(){
+      // ... show the form ...
+      $(".form").show();
+      // ... get the value from the picker ...
+      var entity_id = $(".js-form__entity-selector").val();
+      // ... and append it to the form method as a GET variable
+      $('form').attr('action', function(i, value) {
+          return value + "&subject=" + entity_id;
+      });
+    })
+  }
 });

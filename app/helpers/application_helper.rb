@@ -1,9 +1,19 @@
 module ApplicationHelper
 
-  def last_response(member, question)
+  def last_response(member, question, entity = false)
+    # Find the question the response relates to
     q = Question.where(question: question).pluck(:id)
+    # If it exists...
     if !q.empty?
-      r = QuestionResponse.where(question: q, responder:member)
+      # Then check the responses to the question
+      if entity
+        # If this is questions about a specific thing then check that
+        r = QuestionResponse.where(question: q, responder: member, subject: entity)
+      else
+        # If not then just the previous response
+        r = QuestionResponse.where(question: q, responder: member)
+      end
+      # If there are responses, return the last one
       if !r.empty?
         return r.last.formatted_response
       end

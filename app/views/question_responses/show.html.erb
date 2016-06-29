@@ -15,11 +15,14 @@
   <%= @question_response.response %>
 </p>
 
-<p>
-  <strong>Subject:</strong>
-  <%= @question_response.subject %>
-</p>
-
+<% if @question_response.subject %>
+  <% s_id = @question_response.subject %>
+  <% subject = Event.where(entity_id: s_id).first || Member.where(entity_id: s_id).first || Location.where(entity_id: s_id).first %>
+  <p>
+    <strong>Subject:</strong>
+    <%= link_to subject.name, subject %>
+  </p>
+<% end %>
 
 
 <%= link_to 'Edit', edit_question_response_path(@question_response) %> |
