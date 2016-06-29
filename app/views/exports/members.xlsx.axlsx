@@ -36,34 +36,46 @@ wb.add_worksheet(name: "Members") do |sheet|
   ]
   @members.each do |member|
     sheet.add_row [
+      # "Project External ID"
       "",
+      # "Consent Given"
       "",
       member.id,
       member.first_name,
       member.last_name,
+      # "Date Engaged with project"
       member.created_at,
       member.tel,
       member.email,
       member.dob.year,
       last_response(member, "Gender"),
+      # "Other Gender Please State"
       "",
       last_response(member, "Is this the gender you were assigned at birth?"),
       member.is_resident?,
       last_response(member, "How long have you lived in your ward in years?"),
       last_response(member, "What is your current employment status?"),
+      # "Prefer not to say"
       "",
       last_response_if_in_array(member, "What is your ethnic background?", asian_options),
+      # "Asian/ Asian British Other"
       "",
       last_response_if_in_array(member, "What is your ethnic background?", black_options),
+      # "Black Black British Other"
       "",
       last_response_if_in_array(member, "What is your ethnic background?", white_options),
-      last_response(member, "What is your ethnic background? (other)"),
+      # "White Other"
       "",
+      # "Any other background"
+      last_response(member, "What is your ethnic background? (other)"),
+      # "Any mixed Background"
       "",
       last_response(member, "What is your religion?"),
+      # "Other religion"
       last_response(member, "Other religion"),
       last_response(member, "Sexual orientation"),
-      "What do you think makes an age friendly neighbourhood"
+      # "What do you think makes an age friendly neighbourhood"
+      ""
     ]
   end
 end

@@ -68,7 +68,7 @@ create_question_set(community_audit, community_audit_questions)
 create_question_set(membership, membership_questions)
 
 # Answer some random questions
-200.times do |n|
+500.times do |n|
   question = Question.order("RANDOM()").limit(1).first
   if question.response
     option_count = JSON.parse(question.response).length
@@ -119,4 +119,10 @@ end
 `rake calendar:import`
 
 # Assign some random attendances
-# Member.all.each_with_index do |member, idx|
+event_count = Event.count
+Member.all.each do |member|
+  attendances = (1..event_count).to_a.sort{ rand() - 0.5 }[0..10]
+  attendances.each do |attendance|
+    Attendance.create(event: Event.find(attendance), member: member)
+  end
+end
