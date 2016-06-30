@@ -29,20 +29,20 @@ wb.add_worksheet(name: "Events Feedback") do |sheet|
         Member.find(member).events.count,
         # "Why did you attend today"
         last_response(member, "Why did you attend today?", event.entity_id),
-        # "Would you recommend future events/activities to others?"
-        "TODO",
+        # NOT CAPTURING: "Would you recommend future events/activities to others?"
+        "",
         # "To what extent do you feel that you live in an age-friendly neighbourhood?"
-        "TODO",
+        last_response(member, "My neighbourhood is…", event.entity_id),
         # "Could you tell us why you think this?"
-        "TODO",
+        last_response(member, "Can you tell us what you would do to improve the area?", event.entity_id),
         # "I can influence decisions affecting my local area"
         last_response(member, "I can influence decisions affecting my local area", event.entity_id),
         # "People can change things in my local area if they work together"
         last_response(member, "People can change things in my local area if they work together", event.entity_id),
         # "Could you tell us why you think this?"
-        "TODO",
+        last_response(member, "Can you tell us what you would do to improve the area?", event.entity_id),
         # "Do you have any comments or feedback about the day for us?"
-        "TODO",
+        last_response(member, "Do you have any comments or feedback about today?", event.entity_id),
         Member.find(member).id
       ]
     end
