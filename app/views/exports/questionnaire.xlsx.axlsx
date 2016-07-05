@@ -41,7 +41,7 @@ wb.add_worksheet(name: "Initial Questionnaire") do |sheet|
       # "Have any of the following circumstances changed for you",
       "TODO",
       # "Postcode",
-      member.locations.last.postcode,
+      member.locations.empty? ? "" : member.locations.last.postcode,
 
       # MEMBERSHIP QUESTIONS
       # "What is your marital status",
