@@ -42,3 +42,6 @@ bower.json
 
 # Ignore test coverage
 /coverage
+
+# Spreadsheet temp files
+/test/spreadsheets/.~*
