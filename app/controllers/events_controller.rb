@@ -71,6 +71,8 @@ class EventsController < ApplicationController
                                       :location,
                                       :latitude,
                                       :longitude,
+                                      :type,
+                                      :type_other,
                                       :description,
                                       :google_id,
                                       attendances_attributes: [
