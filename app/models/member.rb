@@ -28,6 +28,38 @@ class Member < ActiveRecord::Base
     "Any other background": 12, "Any mixed background": 13
   }
 
+  after_create do
+    self.update(entity_id: Entity.create.id)
+  end
+
+  # Returns their age in years
+  def age
+    Time.now.year - self.dob.year
+  end
+
+  def full_name
+    self.last_name + ", " + self.first_name
+  end
+
+  # Need to give entity lookups a consistent interface
+  alias name full_name
+
+  def initials
+    self.first_name.first + self.last_name.first
+  end
+
+  # Short code for our member's ID
+  def region_code
+    return case self.region
+    when "Hulme & Moss Side"
+      'HM'
+    when "Burnage"
+      'BU'
+    when "Moston"
+      'MO'
+    end
+  end
+
   def export_ethnicity
     return ["", "", "", "", "", "", ""] unless self.ethnic_background
     # Should output array for easy insertion into export spreadsheets
@@ -54,50 +86,28 @@ class Member < ActiveRecord::Base
     return r
   end
 
-  after_create do
-    self.update(entity_id: Entity.create.id)
-  end
-
-  # TODO: Create relationships
-  # has_many :event_attendances
-  # has_and_belongs_to_many :projects
-
-  # Returns their age in years
-  def age
-    Time.now.year - self.dob.year
-  end
-
-  def full_name
-    self.last_name + ", " + self.first_name
-  end
-
-  # Need to give entity lookups a consistent interface
-  alias name full_name
-
-  def initials
-    self.first_name.first + self.last_name.first
-  end
-
-  def region_code
-    return case self.region
-    when "Hulme & Moss Side"
-      'HM'
-    when "Burnage"
-      'BU'
-    when "Moston"
-      'MO'
-    end
-  end
-
+  # Sort responses by date for the member view
   def date_sorted_responses
     self.question_responses.order(:question_id, :created_at).reverse
   end
 
+  # Responses grouped by ID
   def grouped_responses
     r = self.question_responses
     r.group_by(&:question_id)
   end
 
+  # Questions grouped by day for doing followups
+  def day_grouped_responses
+    days = self.question_responses.order("date_trunc('day', created_at)").pluck("date_trunc('day', created_at)").uniq
+    responses = {}
+    days.each do |day|
+      responses[:"#{day.to_date}"] = self.question_responses.where(created_at: day.beginning_of_day..day.end_of_day)
+    end
+    return responses
+  end
+
+  # Code for membership card
   def membership_code
     "AFN-#{self.region_code}-#{self.id.to_s.rjust(4, '0')}-#{self.initials}"
   end
