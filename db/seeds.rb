@@ -18,6 +18,7 @@ Faker::Config.locale = 'en-GB'
   dob = Faker::Date.between(100.years.ago, 18.years.ago)
   tel = Faker::PhoneNumber.phone_number
   mob = Faker::PhoneNumber.cell_phone
+  ethnic_background_other = Faker::Lorem.word
   Member.create!( first_name: first_name,
                   last_name: last_name,
                   email: email,
@@ -25,6 +26,8 @@ Faker::Config.locale = 'en-GB'
                   tel: tel,
                   mob: mob,
                   is_resident: true,
+                  ethnic_background: rand(0..13),
+                  ethnic_background_other: ethnic_background_other,
                   region: rand(0..2)
                 )
 end

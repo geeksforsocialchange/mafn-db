@@ -29,6 +29,7 @@ class Member < ActiveRecord::Base
   }
 
   def export_ethnicity
+    return ["", "", "", "", "", "", ""] unless self.ethnic_background
     # Should output array for easy insertion into export spreadsheets
     r = []
     e = self[:ethnic_background]
@@ -50,7 +51,7 @@ class Member < ActiveRecord::Base
     e == 12 ? r << o || "Any other background" : r << ""
     # Other background or "any mixed background" if 13
     e == 13 ? r << o || "Any mixed background" : r << ""
-    r
+    return r
   end
 
   after_create do

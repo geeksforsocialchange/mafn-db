@@ -1,7 +1,3 @@
-asian_options = ["Bangladeshi", "Chinese", "Indian", "Pakistani", "Any other Asian/ Asian British Background (please state)"]
-black_options = ["African", "Caribbean", "Any other Black / Black British Background (please state)"]
-white_options = ["English/Northern Irish/Scottish/Welsh", "Irish", "Gypsy/Traveller/Irish Traveller", "Any other white background (please state)"]
-
 wb = xlsx_package.workbook
 wb.add_worksheet(name: "Members") do |sheet|
   sheet.add_row [
@@ -35,6 +31,7 @@ wb.add_worksheet(name: "Members") do |sheet|
     "What do you think makes an age friendly neighbourhood"
   ]
   @members.each do |member|
+    ethnicity = member.export_ethnicity
     sheet.add_row [
       # "Project External ID"
       "TODO",
@@ -57,19 +54,15 @@ wb.add_worksheet(name: "Members") do |sheet|
       last_response(member, "What is your current employment status?"),
       # MISTAKE COLUMN: "Prefer not to say"
       "",
-      last_response_if_in_array(member, "What is your ethnic background?", asian_options),
-      # "Asian/ Asian British Other"
-      "TODO",
-      last_response_if_in_array(member, "What is your ethnic background?", black_options),
-      # "Black Black British Other"
-      "TODO",
-      last_response_if_in_array(member, "What is your ethnic background?", white_options),
-      # "White Other"
-      "TODO",
-      # "Any other background"
-      last_response(member, "What is your ethnic background? (other)"),
-      # "Any mixed Background"
-      "TODO",
+      # Ethnicities
+      ethnicity[0],
+      ethnicity[1],
+      ethnicity[2],
+      ethnicity[3],
+      ethnicity[4],
+      ethnicity[5],
+      ethnicity[6],
+      ethnicity[7],
       last_response(member, "What is your religion?"),
       # "Other religion"
       last_response(member, "Other religion"),
