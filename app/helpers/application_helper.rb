@@ -16,7 +16,7 @@ module ApplicationHelper
       # If there are responses, return the last one
       if !r.empty?
         # If first == true, then get the first answer instead
-        if opts[:first] == true
+        if opts[:initial] == true
           return r.first.formatted_response
         else
           return r.last.formatted_response

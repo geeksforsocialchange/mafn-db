@@ -62,10 +62,13 @@ class Member < ActiveRecord::Base
 
   def export_ethnicity
     return ["", "", "", "", "", "", ""] unless self.ethnic_background
-    # Should output array for easy insertion into export spreadsheets
+    # Output an array for easy insertion into export spreadsheets
     r = []
+    # ID
     e = self[:ethnic_background]
+    # Text
     t = self.ethnic_background
+    # Other option
     o = self.ethnic_background_other || ""
     # Options 0 - 4 if present
     e.between?(0, 4) ? r << t : r << ""
