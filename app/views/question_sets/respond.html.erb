@@ -1,19 +1,28 @@
 <h1>Respond to <%= @question_set.title %> as <%= @member.full_name %> (<%= @member.membership_code %>)</h1>
 
-<%= form_for @question_set, :url => {:action => "batch_create", params: {responder: @member.entity_id, subject: @member.entity_id}}, method: "post" do |f| %>
-  <%= f.fields_for :questions do |question| %>
-    <h3><%= question.object.question %></h3>
-    <%= f.fields_for :question_response do |response| %>
-      <%# If there's a string here, then it's an array of acceptable answers %>
-      <% if question.object.response %>
-        <% JSON.parse(question.object.response).each_with_index do |option, idx| %>
-          <%= response.radio_button "#{question.object.id}", idx %>
-          <%= response.label "#{question.object.id}_#{idx}", option %>
+<% if @question_set.questions.where(category: 1).exists? %>
+  <div class="js-form__needs-entity">
+    <p>Some of these questions relate to an event. Select the event to continue.</p>
+    <%= select_tag "Event", options_from_collection_for_select(Event.all, "entity_id", "select_string"), { class: 'js-form__entity-selector' } %>
+  </div>
+<% end %>
+
+<div class="form">
+  <%= form_for @question_set, :url => {:action => "batch_create", params: {responder: @member.entity_id}}, method: "post" do |f| %>
+    <%= f.fields_for :questions do |question| %>
+      <h3><%= question.object.question %></h3>
+      <%= f.fields_for :question_response do |response| %>
+        <%# If there's a string here, then it's an array of acceptable answers %>
+        <% if question.object.response %>
+          <% JSON.parse(question.object.response).each_with_index do |option, idx| %>
+            <%= response.radio_button "#{question.object.id}", idx %>
+            <%= response.label "#{question.object.id}_#{idx}", option %>
+          <% end %>
+        <% else %>
+          <%= response.text_area "#{question.object.id}", cols: "80", rows: "5" %>
         <% end %>
-      <% else %>
-        <%= response.text_area "#{question.object.id}", cols: "80", rows: "5" %>
       <% end %>
     <% end %>
+    <%= f.submit %>
   <% end %>
-  <%= f.submit %>
-<% end %>
+</div>

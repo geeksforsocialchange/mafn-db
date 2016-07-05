@@ -18,6 +18,7 @@ Faker::Config.locale = 'en-GB'
   dob = Faker::Date.between(100.years.ago, 18.years.ago)
   tel = Faker::PhoneNumber.phone_number
   mob = Faker::PhoneNumber.cell_phone
+  ethnic_background_other = Faker::Lorem.word
   Member.create!( first_name: first_name,
                   last_name: last_name,
                   email: email,
@@ -25,6 +26,8 @@ Faker::Config.locale = 'en-GB'
                   tel: tel,
                   mob: mob,
                   is_resident: true,
+                  ethnic_background: rand(0..13),
+                  ethnic_background_other: ethnic_background_other,
                   region: rand(0..2)
                 )
 end
@@ -67,23 +70,31 @@ create_question_set(event_feedback, event_feedback_questions)
 create_question_set(community_audit, community_audit_questions)
 create_question_set(membership, membership_questions)
 
-# Answer some random questions
-200.times do |n|
-  question = Question.order("RANDOM()").limit(1).first
+def answer_question(  question = Question.where(category: 0).order("RANDOM()").limit(1).first,
+                      target = false,
+                      responder = Member.order("RANDOM()").limit(1).first )
   if question.response
     option_count = JSON.parse(question.response).length
     response = rand(0..option_count)
   else
     response = Faker::Lorem.sentence
   end
-  responder = Member.order("RANDOM()").limit(1).first
-  subject =  Entity.order("RANDOM()").limit(1).first
+  if target
+    subject = Entity.find(target.entity_id)
+  else
+    subject = Entity.find(responder.entity_id)
+  end
   QuestionResponse.create!(
     response: response,
     question: question,
     responder: responder,
     subject: subject,
   )
+end
+
+# Answer some random questions
+500.times do |n|
+  answer_question
 end
 
 # Create locations
@@ -118,5 +129,18 @@ end
 # Import events
 `rake calendar:import`
 
-# Assign some random attendances
-# Member.all.each_with_index do |member, idx|
+# Assign some random attendances and do feedback
+event_count = Event.count
+Member.all.each do |member|
+  # Create 5 random numbers between 1 and event count
+  attendances = (1..event_count).to_a.sort{ rand() - 0.5 }[0..5]
+  attendances.each do |attendance|
+    event = Event.find(attendance)
+    # Make an attendance for each one
+    Attendance.create(event: event, member: member)
+    # Answer the feedback form
+    Question.where(category: 1).each do |q|
+      answer_question(q, event, member)
+    end
+  end
+end

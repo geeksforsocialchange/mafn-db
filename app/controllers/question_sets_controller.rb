@@ -43,7 +43,11 @@ class QuestionSetsController < ApplicationController
 
   def batch_create
     responder = Member.find(params[:responder].to_i)
-    subject = Entity.find(params[:subject].to_i)
+    if params[:subject]
+      subject = Entity.find(params[:subject].to_i)
+    else
+      subject = Entity.find(responder.entity_id)
+    end
     responses = params["question_set"]["question_response"]
 
     responses.each do |q,r|

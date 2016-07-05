@@ -17,18 +17,6 @@ class ExportEventDemographicsTest < ActionDispatch::IntegrationTest
     # TODO #
     #======#
 
-    assert_equal head[9], "Ethnic Background: Asian/ Asian British"
-    # Indian Pakistani Bangladeshi Chinese Any other Asian/ Asian British Background (please state)
-    assert_equal head[10], "Asian/ Asian British Other"
-    assert_equal head[11], "Ethnic Background: Black/ Black British"
-    # African Caribbean Any other Black / Black British Background (please state)
-    assert_equal head[12], "Black Black British Other"
-    assert_equal head[13], "Ethnic Background: White British"
-    # English/NorthernIrish/Scottish/Welsh/UK Irish Gypsy/Traveller/Irish Traveller Any other white background (please state)
-    assert_equal head[14], "White Other"
-    assert_equal head[15], "Any Other Background"
-    assert_equal head[16], "Prefer not to say"
-    # Boolean
 
     #======#
     # DONE #
@@ -56,6 +44,19 @@ class ExportEventDemographicsTest < ActionDispatch::IntegrationTest
 
     assert_equal head[8], "How long have you lived in your ward"
     # Number in years
+
+    assert_equal head[9], "Ethnic Background: Asian/ Asian British"
+    # Indian Pakistani Bangladeshi Chinese Any other Asian/ Asian British Background (please state)
+    assert_equal head[10], "Asian/ Asian British Other"
+    assert_equal head[11], "Ethnic Background: Black/ Black British"
+    # African Caribbean Any other Black / Black British Background (please state)
+    assert_equal head[12], "Black Black British Other"
+    assert_equal head[13], "Ethnic Background: White British"
+    # English/NorthernIrish/Scottish/Welsh/UK Irish Gypsy/Traveller/Irish Traveller Any other white background (please state)
+    assert_equal head[14], "White Other"
+    assert_equal head[15], "Any Other Background"
+    assert_equal head[16], "Prefer not to say"
+
 
     assert_equal head[17], "Religion"
     # Christian Buddhist Hindu Jewish Muslim No religion Sikh Other Prefer not to say

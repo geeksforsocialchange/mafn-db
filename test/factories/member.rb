@@ -12,7 +12,8 @@ FactoryGirl.define do
     email "jane_doe@test.net"
 
     factory :complete_member do
-
+      ethnic_background 0
+      ethnic_background_other "Another ethnic background"
     end
   end
 end

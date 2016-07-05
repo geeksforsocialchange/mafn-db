@@ -31,6 +31,8 @@ class EventsControllerTest < ActionController::TestCase
                               description: @event.description,
                               latitude: @event.latitude,
                               longitude: @event.longitude,
+                              event_type: @event.event_type,
+                              event_type_other: @event.event_type_other,
                               category: @event.category,
                               google_id: @event.google_id
                            }
@@ -45,6 +47,8 @@ class EventsControllerTest < ActionController::TestCase
     assert_select ".event__date"
     assert_select ".event__location"
     assert_select ".event__description"
+    assert_select ".event__event-type"
+    assert_select ".event__event-type-other"
     assert_select ".event__category"
     assert_select ".event__google-id"
   end
@@ -61,7 +65,16 @@ class EventsControllerTest < ActionController::TestCase
   end
 
   test "should update event" do
-    patch :update, id: @event, event: { start: @event.start, finish: @event.finish, description: @event.description, latitude: @event.latitude, longitude: @event.longitude, name: @event.name, category: @event.category, location: @event.location }
+    patch :update, id: @event, event: {   start: @event.start,
+                                          finish: @event.finish,
+                                          description: @event.description,
+                                          latitude: @event.latitude,
+                                          longitude: @event.longitude,
+                                          name: @event.name,
+                                          event_type: @event.event_type,
+                                          event_type_other: @event.event_type_other,
+                                          category: @event.category,
+                                          location: @event.location }
     assert_redirected_to event_path(assigns(:event))
   end
 

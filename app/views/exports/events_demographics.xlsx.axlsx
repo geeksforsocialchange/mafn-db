@@ -29,6 +29,7 @@ wb.add_worksheet(name: "Event Demographics") do |sheet|
     ]
   @events.each do |event|
     event.members.each do |member|
+      ethnicity = member.export_ethnicity
       sheet.add_row [
         event.id,
         last_response(member, "What is your living situation?"),
@@ -39,14 +40,14 @@ wb.add_worksheet(name: "Event Demographics") do |sheet|
         last_response(member, "Is this the gender you were assigned at birth?"),
         last_response(member, "Sexual orientation"),
         last_response(member, "How long have you lived in your ward in years?"),
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
+        ethnicity[0],
+        ethnicity[1],
+        ethnicity[2],
+        ethnicity[3],
+        ethnicity[4],
+        ethnicity[5],
+        ethnicity[6] || ethnicity[7],
+        member.ethnic_background.nil? ? "Prefer not to say" : "",
         last_response(member, "What is your religion?"),
         last_response(member, "Other religion"),
         last_response(member, "Is there anyone who is sick, disabled or needs support whom you look after or give special help to?"),

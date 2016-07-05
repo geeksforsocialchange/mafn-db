@@ -6,7 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//  require turbolinks
 //= require cocoon
 //= require vendor/jquery.dataTables.min
 

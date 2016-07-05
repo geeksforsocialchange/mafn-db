@@ -46,8 +46,8 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem "rails-erd"
   # gem 'livereload'
-  # gem 'rack-livereload'
-  # gem 'guard-livereload'
+  gem 'rack-livereload'
+  gem 'guard-livereload'
 end
 
 group :test do

@@ -18,6 +18,42 @@ class Member < ActiveRecord::Base
     "Miles Platting": 3,
   }
 
+  enum ethnic_background: {
+    # Asian options
+    "Bangladeshi": 0, "Chinese": 1, "Indian": 2, "Pakistani": 3, "Any other Asian/ Asian British Background (please state)": 4,
+    # Black options
+    "African": 5, "Caribbean": 6, "Any other Black / Black British Background (please state)": 7,
+    # White options
+    "English/Northern Irish/Scottish/Welsh": 8, "Irish": 9, "Gypsy/Traveller/Irish Traveller": 10, "Any other white background (please state)": 11,
+    "Any other background": 12, "Any mixed background": 13
+  }
+
+  def export_ethnicity
+    return ["", "", "", "", "", "", ""] unless self.ethnic_background
+    # Should output array for easy insertion into export spreadsheets
+    r = []
+    e = self[:ethnic_background]
+    t = self.ethnic_background
+    o = self.ethnic_background_other || ""
+    # Options 0 - 4 if present
+    e.between?(0, 4) ? r << t : r << ""
+    # Other background if 4
+    e == 4 ? r << o : r << ""
+    # Options 5 - 7 if present
+    e.between?(5, 7) ? r << t: r << ""
+    # Other background if 7
+    e == 7 ? r << o : r << ""
+    # Options 8 - 11 if present
+    e.between?(8, 11) ? r << t : r << ""
+    # Other background if 11
+    e == 11 ? r << o : r << ""
+    # Other background or "any other background" if 12
+    e == 12 ? r << o || "Any other background" : r << ""
+    # Other background or "any mixed background" if 13
+    e == 13 ? r << o || "Any mixed background" : r << ""
+    return r
+  end
+
   after_create do
     self.update(entity_id: Entity.create.id)
   end
@@ -34,6 +70,9 @@ class Member < ActiveRecord::Base
   def full_name
     self.last_name + ", " + self.first_name
   end
+
+  # Need to give entity lookups a consistent interface
+  alias name full_name
 
   def initials
     self.first_name.first + self.last_name.first

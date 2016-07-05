@@ -68,6 +68,8 @@ class MembersController < ApplicationController
                                       :mob,
                                       :email,
                                       :is_resident,
+                                      :ethnic_background,
+                                      :ethnic_background_other,
                                       :notes,
                                       question_responses_attributes: [
                                         :id,
