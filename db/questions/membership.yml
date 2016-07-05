@@ -4,6 +4,7 @@
   ["Post","Telephone","Email"]
 "Gender":
   ["Female", "Male", "Self-definition", "Prefer not to say"]
+"Gender -- other":
 "Is this the gender you were assigned at birth?":
   ["No", "Yes", "Prefer not to say"]
 "Sexual orientation":
@@ -30,7 +31,7 @@
   ["Very Bad", "Bad", "Fair", "Good", "Very good", "Prefer not to say"]
 "Do you have any long standing physical or mental illness or disability?":
   ["No", "Yes (specify)", "Prefer not to say"]
-"If so, please name/briefly describe condition":  
+"If so, please name/briefly describe condition":
 "Is there anyone who is sick, disabled or needs support whom you look after or give special help to?":
   ["No","Yes in my home", "Yes, in my neighbourhood", "Prefer not to say"]
 "Does anyone care for/assist you on a regular basis? If so, who?":
