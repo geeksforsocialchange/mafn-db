@@ -1,4 +1,3 @@
-"Date form was completed":
 "If I need advice about something, I could go to someone in my neighbourhood":
   ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]
 "I borrow things and exchange favours with my neighbours":
@@ -22,76 +21,36 @@
 "The venues where activities are held are suitable for my needs":
   ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]
 "Is there anything specific preventing you from taking part which you would like to change?":
+  ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]
+"Have you moved house in the last 12 months?":
+  ["No", "Yes"]
+"If yes, what is your new post code":
+"Has your employment status changed in the last 12 months?":
+  ["No", "Yes"]
+"If yes, what is your new employment status":
+  ["Employed Full time", "Employed Part time", "Retired", "Unemployed", "Self employed"]
+"Has your marital status changed in the last 12 months":
+  ["No", "Yes"]
+"If yes, what is your new marital status":
+  ["Co-habiting", "Divorced", "Civil partnered or married", "Single", "Widowed/Widower"]
 "Have you moved houses in the last 12 months?":
   ["No", "Yes", "Prefer not to say"]
-"If yes, what is your new post code?":
+"If yes, what is your new postcode?":
 "Has your employment status changed in the last 12 months?":
   ["No", "Yes", "Prefer not to say"]
 "If yes, what is your new employment status?":
   ["Employed full time", "Employed part time", "Self Employed", "Unemployed", "Retired"]
 "Has your marital status changed in the last 12 months?":
   ["No", "Yes", "Prefer not to say"]
-"If yes, what is your new marital status?":
-  ["Co-habiting", "Divorced", "Married or Civil partnered", "Single", "Widow/Widower"]
+"If yes, what is your new marital status":
+  ["Co-habiting", "Divorced", "Married or Civil partnered", "Single", "Widow/Widower", "Prefer not to say"]
 "Has your health status changed in the last 12 months?":
-  ["No", "Yes", "Prefer not to say"]
-"Have you started or stopped providing care from someone in the last 12 months?":
-  ["No", "Yes I have started providing care from someone", "Yes, I have stopped providing care", "Prefer not to say"]
-"Has your living situation changed in the last 12 months?":
-  ["No", "Yes", "Prefer not to say"]
-"If yes, how has your living situation changed?":
-  ["Living Alone", "Living with a Partner", "Living with other family member", "Other (specify)"]
-"How much do you find out about what’s going on from - Friends and Family":
-  ["1", "2", "3", "4","5"]
-"How much do you find out about what’s going on from - Leaflet or Poster":
-  ["1","2","3","4","5"]
-"How much do you find out about what’s going on from - Newspaper":
-  ["1", "2", "3","4", "5"]
-"How much do you find out about what’s going on from - Online or Social Media":
-  ["1", "2", "3","4", "5"]
-"How much do you find out about what’s going on from - Email":
-  ["1", "2", "3","4", "5"]
-"Do you use a computer, smartphone or tablet?":
-  ["Computer", "Tablet", "Smartphone", "No", "Prefer not to say"]
-"How often do you use the following modes of transport - Walking":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"How often do you use the following modes of transport - Cycling":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"How often do you use the following modes of transport - Car":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"How often do you use the following modes of transport - Bus":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"How often do you use the following modes of transport - Tram/Train":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"How often do you use the following modes of transport - Taxis":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Without any special equipment, how much difficulty do you have walking half a mile?":
-  ["No difficulty", "Some difficulty", "Much difficulty", "I am unable to do this"]
-"Do you use email?":
-  ["No", "Yes", "Prefer not to say"]
-"On average, how often do you - Send or receive text messages with friends, colleagues, family or neighbours":
-  ["Less than once a year or never", "Once or twice a year", "Once every few months", "1-2 times a month", "1-2 times a week", "3+ times a week"]
-"On average, how often do you - Speak on the phone/skype with friends, family, colleagues or neighbours":
-  ["Less than once a year or never", "Once or twice a year", "Once every few months", "1-2 times a month", "1-2 times a week", "3+ times a week"]
-"On average, how often do you - Talk to your neighbours":
-  ["Less than once a year or never", "Once or twice a year", "Once every few months", "1-2 times a month", "1-2 times a week", "3+ times a week"]
-"On average, how often do you - Meet up with friends, family or neighbours (not including those you live with)":
-  ["Less than once a year or never", "Once or twice a year", "Once every few months", "1-2 times a month", "1-2 times a week", "3+ times a week"]
-"Do you use any social networking sites to stay in touch with friends or family? If so, which ones and how often?":
-"Do you chat or interact with friends or family using email or social media websites? If so, how many hours do you do this on a normal day?":
-  ["Less than daily", "Less than an hour", "1-3 hours", "4-6 Hours", "7 + Hours", "No/Prefer not to say"]
-"Are there any other places where you regularly go shopping? Please list them below":
-"Why do you go shopping where you do? What do you like about it?":
-"Do you belong to any community or social groups?":
-"Where do you meet?":
-"How regularly do you go?":
-"What do you do?":
-"Why do you like going?":
-"Do you organise or contribute to the group?":
-"If so, what is your role in the group?":
-"How many hours did you spend at home by yourself yesterday (excluding time you were asleep)?":
-"Would you have preferred to spend more or less time by yourself yesterday?":
-  ["Much more time by myself", "A little more time by myself", "It was about right", "A little more time with others", "Much more time with others"]
-"Do you have an ideas for projects, events or activities which might make your neighbourhood more age-friendly?":
-"Would you like to be involved in projects to make [ward] more age-friendly?":
-  ["No, I don't feel able to participate at the moment",  "No, I don’t have the time/interest to participate at the moment", "Yes, I would like to design or lead projects", "Yes, I would like to help set up or run projects", "Yes, I want to participate in activities"]
+["No", "Yes I now have a long-standing physical or mental illness or disability"]
+"Have you started or stopped providing care for someone in the last 12 months?":
+["No", "Yes - I now provide care for someone", "Yes I no-longer provide care for someone"]
+"Has your living situation changed in the last 12 months":
+["No", "Yes", "Prefer not to say"]
+"If yes, how has your living situation changed? ":
+["Living alone", "Living with partner", "Living with other family member"]
+"If other please specify":
+"Is there anything specific preventing you from taking part which you would like to change?":
