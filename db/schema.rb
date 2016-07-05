@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160705104115) do
+ActiveRecord::Schema.define(version: 20160705113435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,12 +84,14 @@ ActiveRecord::Schema.define(version: 20160705104115) do
     t.string   "tel"
     t.string   "mob"
     t.string   "email"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.integer  "entity_id"
     t.integer  "region"
     t.string   "notes"
     t.boolean  "is_resident"
+    t.integer  "ethnic_background"
+    t.string   "ethnic_background_other"
   end
 
   add_index "members", ["entity_id"], name: "index_members_on_entity_id", using: :btree

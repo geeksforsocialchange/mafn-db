@@ -18,6 +18,12 @@ class Member < ActiveRecord::Base
     "Miles Platting": 3,
   }
 
+  # Race options
+  asian_options = ["Bangladeshi", "Chinese", "Indian", "Pakistani", "Any other Asian/ Asian British Background (please state)"]
+  black_options = ["African", "Caribbean", "Any other Black / Black British Background (please state)"]
+  white_options = ["English/Northern Irish/Scottish/Welsh", "Irish", "Gypsy/Traveller/Irish Traveller", "Any other white background (please state)"]
+
+
   after_create do
     self.update(entity_id: Entity.create.id)
   end
