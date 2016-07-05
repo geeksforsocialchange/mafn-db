@@ -33,12 +33,14 @@ class ExportsController < ApplicationController
 
 
   def questionnaire
+    @members = Member.all
     respond_to do |format|
       format.xlsx
     end
   end
 
   def volunteer_questionnaire
+    @members = Member.all
     respond_to do |format|
       format.xlsx
     end
