@@ -45,12 +45,12 @@
 "If yes, what is your new marital status":
   ["Co-habiting", "Divorced", "Married or Civil partnered", "Single", "Widow/Widower", "Prefer not to say"]
 "Has your health status changed in the last 12 months?":
-["No", "Yes I now have a long-standing physical or mental illness or disability"]
+  ["No", "Yes I now have a long-standing physical or mental illness or disability"]
 "Have you started or stopped providing care for someone in the last 12 months?":
-["No", "Yes - I now provide care for someone", "Yes I no-longer provide care for someone"]
+  ["No", "Yes - I now provide care for someone", "Yes I no-longer provide care for someone"]
 "Has your living situation changed in the last 12 months":
-["No", "Yes", "Prefer not to say"]
+  ["No", "Yes", "Prefer not to say"]
 "If yes, how has your living situation changed? ":
-["Living alone", "Living with partner", "Living with other family member"]
+  ["Living alone", "Living with partner", "Living with other family member"]
 "If other please specify":
 "Is there anything specific preventing you from taking part which you would like to change?":
