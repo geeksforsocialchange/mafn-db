@@ -1,5 +1,5 @@
 class AddTypeOtherToEvent < ActiveRecord::Migration
   def change
-    add_column :events, :type_other, :string
+    add_column :events, :event_type_other, :string
   end
 end

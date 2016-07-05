@@ -1,5 +1,5 @@
 class AddTypeToEvent < ActiveRecord::Migration
   def change
-    add_column :events, :type, :integer
+    add_column :events, :event_type, :integer
   end
 end

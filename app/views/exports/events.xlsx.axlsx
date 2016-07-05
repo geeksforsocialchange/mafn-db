@@ -13,8 +13,8 @@ wb.add_worksheet(name: "Events") do |sheet|
                     event.name,
                     event.id,
                     event.ydm,
-                    "TODO",
-                    "TODO",
+                    event.event_type,
+                    event.event_type_other,
                     event.attendees
                   ]
   end

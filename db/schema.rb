@@ -36,16 +36,16 @@ ActiveRecord::Schema.define(version: 20160705104115) do
     t.integer  "category"
     t.datetime "start"
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.integer  "entity_id"
     t.datetime "finish"
     t.string   "google_id"
     t.string   "location"
     t.float    "latitude"
     t.float    "longitude"
-    t.integer  "type"
-    t.string   "type_other"
+    t.integer  "event_type"
+    t.string   "event_type_other"
   end
 
   add_index "events", ["entity_id"], name: "index_events_on_entity_id", using: :btree

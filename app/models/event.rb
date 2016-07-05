@@ -12,7 +12,7 @@ class Event < ActiveRecord::Base
     self.update(entity_id: Entity.create.id)
   end
 
-  enum type: {
+  enum event_type: {
     "Meeting": 0,
     "Seminar": 1,
     "Forum": 2,
