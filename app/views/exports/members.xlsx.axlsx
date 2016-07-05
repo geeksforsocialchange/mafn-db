@@ -1,4 +1,4 @@
-vim: set syntax=ruby:
+vim: set syntax=rails:
 wb = xlsx_package.workbook
 wb.add_worksheet(name: "Members") do |sheet|
   sheet.add_row [
