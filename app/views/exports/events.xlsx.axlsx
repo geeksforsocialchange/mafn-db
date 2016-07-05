@@ -1,3 +1,4 @@
+# vim: set syntax=ruby:
 wb = xlsx_package.workbook
 wb.add_worksheet(name: "Events") do |sheet|
   sheet.add_row [ "Project External ID",

@@ -1,3 +1,4 @@
+# vim: set syntax=ruby:
 wb = xlsx_package.workbook
 wb.add_worksheet(name: "Members") do |sheet|
   sheet.add_row [
@@ -45,12 +46,12 @@ wb.add_worksheet(name: "Members") do |sheet|
       member.tel,
       member.email,
       member.dob.year,
-      last_response(member, "Gender"),
-      last_response(member, "Gender -- other"),
-      last_response(member, "Is this the gender you were assigned at birth?"),
+      get_response(member, "Gender"),
+      get_response(member, "Gender -- other"),
+      get_response(member, "Is this the gender you were assigned at birth?"),
       member.is_resident?,
-      last_response(member, "How long have you lived in your ward in years?"),
-      last_response(member, "What is your current employment status?"),
+      get_response(member, "How long have you lived in your ward in years?"),
+      get_response(member, "What is your current employment status?"),
       # MISTAKE COLUMN: "Prefer not to say"
       "",
       # Ethnicities
@@ -62,10 +63,10 @@ wb.add_worksheet(name: "Members") do |sheet|
       ethnicity[5],
       ethnicity[6],
       ethnicity[7],
-      last_response(member, "What is your religion?"),
+      get_response(member, "What is your religion?"),
       # "Other religion"
-      last_response(member, "Other religion"),
-      last_response(member, "Sexual orientation"),
+      get_response(member, "Other religion"),
+      get_response(member, "Sexual orientation"),
       # NOT CAPTURING HERE: "What do you think makes an age friendly neighbourhood"
       ""
     ]
