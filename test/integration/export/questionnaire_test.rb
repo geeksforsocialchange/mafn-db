@@ -43,6 +43,11 @@ class ExportQuestionnaireTest < ActionDispatch::IntegrationTest
     assert_equal head[27], "I borrow things and exchange favours with my neighbours"
     assert_equal head[28], "I would be willing to work together with others on something to improve my neighbourhood"
     assert_equal head[29], "I regularly stop and talk with people in my neighbourhood"
+    assert_equal head[30], "what functions do you carry out in your ambition for ageing volunteer role"
+    assert_equal head[31], "Other function"
+    assert_equal head[32], "How often do you carry out these activities"
+    assert_equal head[33], "Do you volunteer with any other organisations, groups or communities not part of Ambition for Ageing?"
+    assert_equal head[34], "How often do you generally volunteer with other organisations?"
 
   end
 end
