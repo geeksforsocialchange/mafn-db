@@ -1,3 +1,4 @@
+# vim: set syntax=ruby:
 wb = xlsx_package.workbook
 wb.add_worksheet(name: "Volunteer questionnaire") do |sheet|
   sheet.add_row [
