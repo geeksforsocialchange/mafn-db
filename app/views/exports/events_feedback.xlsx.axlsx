@@ -22,27 +22,27 @@ wb.add_worksheet(name: "Events Feedback") do |sheet|
         # "Event External ID"
         event.id,
         # "How Did You Find Out About Today"
-        last_response(member, "How did you find out about today?", event.entity_id),
+        get_response(member, "How did you find out about today?", entity: event.entity_id),
         # "Other How you found out"
-        last_response(member, "How did you find out about today? (other reason)", event.entity_id),
+        get_response(member, "How did you find out about today? (other reason)", entity: event.entity_id),
         # "Have previously attended an event or activity"
         Member.find(member).events.count,
         # "Why did you attend today"
-        last_response(member, "Why did you attend today?", event.entity_id),
+        get_response(member, "Why did you attend today?", entity: event.entity_id),
         # NOT CAPTURING: "Would you recommend future events/activities to others?"
         "",
         # "To what extent do you feel that you live in an age-friendly neighbourhood?"
-        last_response(member, "My neighbourhood is…", event.entity_id),
+        get_response(member, "My neighbourhood is…", entity: event.entity_id),
         # "Could you tell us why you think this?"
-        last_response(member, "Can you tell us what you would do to improve the area?", event.entity_id),
+        get_response(member, "Can you tell us what you would do to improve the area?", entity: event.entity_id),
         # "I can influence decisions affecting my local area"
-        last_response(member, "I can influence decisions affecting my local area", event.entity_id),
+        get_response(member, "I can influence decisions affecting my local area", entity: event.entity_id),
         # "People can change things in my local area if they work together"
-        last_response(member, "People can change things in my local area if they work together", event.entity_id),
+        get_response(member, "People can change things in my local area if they work together", entity: event.entity_id),
         # "Could you tell us why you think this?"
-        last_response(member, "Can you tell us what you would do to improve the area?", event.entity_id),
+        get_response(member, "Can you tell us what you would do to improve the area?", entity: event.entity_id),
         # "Do you have any comments or feedback about the day for us?"
-        last_response(member, "Do you have any comments or feedback about today?", event.entity_id),
+        get_response(member, "Do you have any comments or feedback about today?", entity: event.entity_id),
         Member.find(member).id
       ]
     end
