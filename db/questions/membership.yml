@@ -9,8 +9,6 @@
 "Gender -- other":
 "Is this the gender you were assigned at birth?":
   ["No", "Yes", "Prefer not to say"]
-"Sexual orientation":
-  ["Bisexual", "Gay", "Heterosexual", "Lesbian", "Prefer not to say"]
 "What is your ethnic background?":
   ["Bangladeshi", "Chinese", "Indian", "Pakistani", "Any other Asian/ Asian British Background (please state)",
    "African", "Caribbean", "Any other Black / Black British Background (please state)",
@@ -21,11 +19,15 @@
 "Do you speak any other languages in normal day to day life?":
   ["No", "Yes (please specify)"]
 "If so, which":
+"Sexual orientation":
+  ["Bisexual", "Gay", "Heterosexual", "Lesbian", "Prefer not to say"]
+"What is your marital status?":
+  ["Co-habiting", "Divorced", "Married or Civil partnered", "Single","Widow/Widower", "Prefer not to say"]
 "What is your religion?":
   ["Christian", "Buddhist", "Hindu", "Jewish", "Muslim", "No religion", "Sikh", "Other (please state)", "Prefer not to say"]
 "Other religion":
-"What is your marital status?":
-  ["Co-habiting", "Divorced", "Married or Civil partnered", "Single","Widow/Widower", "Prefer not to say"]
+"Do you own or rent your home?":
+  ["Owner Occupier", "Social Rental", "Private Rental", "Prefer not to say"]
 "What is your living situation?":
   ["Living Alone", "Living with a Partner", "Living with other family member", "Other (specify)", "Prefer not to say"]
 "What is your living situation? (other)":
@@ -43,3 +45,6 @@
   ["No Schooling","Primary", "GCSE, O-level or post 14 apprenticeship", "A level or equivalent or post 16 apprenticeship", "Degree level or equivalent", "Postgraduate degree level or equivalent", "Prefer not to say"]
 "What is your current employment status?":
   ["Employed full time", "Employed part time", "Self Employed", "Unemployed", "Retired", "Prefer not to say"]
+"How much time did you spend at home by yourself yesterday? (excluding time you were asleep)": 
+"Would you have prefered to spend more or less time by yourself yesterday?":
+  ["Much more time by myself", "A little more time by myself", "It was about right", "A little more time with others", "A lot more time with others"]
