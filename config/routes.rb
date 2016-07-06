@@ -16,7 +16,11 @@ Rails.application.routes.draw do
     end
   end
   resources :questions
-  resources :events
+  resources :events do
+    collection do
+      post 'update', action: :update_calendar
+    end
+  end
   resources :members
 
   get 'welcome/index'

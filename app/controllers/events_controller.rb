@@ -10,6 +10,11 @@ class EventsController < ApplicationController
     end
   end
 
+  def update_calendar
+    CalendarImportJob.perform_later
+    redirect_to action: "index"
+  end
+
   def demographics
     @events = Event.all
     respond_to do |format|

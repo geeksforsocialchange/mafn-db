@@ -10,6 +10,24 @@ X-WR-CALDESC:For more events visit the website: www.tinyurl.com/handmcalend
  ourhood team. If there are any errors\, please let them know. 0161 247 5960
   or email mafn@mmu.ac.uk 
 BEGIN:VTIMEZONE
+TZID:Europe/Dublin
+X-LIC-LOCATION:Europe/Dublin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:IST
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+TZNAME:GMT
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
 TZID:Europe/London
 X-LIC-LOCATION:Europe/London
 BEGIN:DAYLIGHT
@@ -28,41 +46,190 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160630T130000
-DTEND;TZID=Europe/London:20160630T150000
-RRULE:FREQ=MONTHLY;BYDAY=-1TH
-DTSTAMP:20160614T152317Z
-UID:dl1jkjo7ksf5n20gk9i9nledfg@google.com
-CREATED:20160609T141935Z
-DESCRIPTION:Men Only Thursdays - Cancer Support Group\n Are you a man? Have
-  you or anyone else close to you been affected by cancer? Would you like to
-  meet other men in a similar position?\n\nWhat do we offer?\n- regular meet
- ings where you can chat with others and share experiences.\n- Health and we
- ll-being therapies (relaxation\, massage\, reflexology)\n- Structured cance
- r related workshops\, i.e. managing fatigue\, stress and anxiety.\n- Advice
-  and tips on how to manage both practical and emotional issues.\nWe meet on
-  the first Wednesday of every month at Kath Locke Centre from 1.15 - 3.15pm
- .\n\nThis project is targeted at\, but not exclusive to BME and marginilise
- d men living in Hulme\, Moss Side\, Old Trafford\, Levenshulme\, Chorlton a
- nd surrounding areas.\n\nAll activities and workshops are delivered by qual
- ified and experienced individuals. Activities are free and refreshments are
-  provided. We welcome men who are carers\, family and friends (over 18 year
- s) of people with cancer.\n\nFor more information contact Marcella: 07496 0
- 89310\, email: info@can-survive.org.uk \nhttp://www.can-survive.org.uk/
-LAST-MODIFIED:20160609T142231Z
-LOCATION:Kath Locke Centre\, 123 Moss Ln E\, Manchester\, Manchester M15 5D
- D\, UK
+DTSTART;TZID=Europe/London:20160526T110000
+DTEND;TZID=Europe/London:20160526T130000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+DTSTAMP:20160706T143013Z
+UID:h49di6vhm0mda6noddhm3240q8@google.com
+CREATED:20160701T094343Z
+DESCRIPTION:Come and chat with members of the Age Friendly Hulme & Moss Sid
+ e board and Manchester Age Friendly Neighbourhood team. 
+LAST-MODIFIED:20160701T094400Z
+LOCATION:Millennium Powerhouse Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Age Friendly Hulme & Moss Side Drop In
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160630T140000
+DTEND;TZID=Europe/London:20160630T160000
+RRULE:FREQ=MONTHLY;COUNT=6;BYDAY=-1TH
+DTSTAMP:20160706T143013Z
+UID:cgg9mhh047lsqggd78llp4jac8@google.com
+CREATED:20160628T170401Z
+DESCRIPTION:We offer fully supported museum visits for people living with d
+ ementia and their family member or carer. \n\nThis is a free session on the
+  last Thursday of the month from 2pm - 4pm.\n\nFor further info plrase cont
+ act Wendy Gallagher:\nwendy.gallagher@manchester.ac.uk or call 07920 595772
+LAST-MODIFIED:20160628T170621Z
+LOCATION:Whitworth Art Gallery\, Oxford Rd\, Manchester M15 6ER\, UK
 SEQUENCE:1
 STATUS:CONFIRMED
-SUMMARY:MOT - Cancer Support Group
+SUMMARY:Coffee Cake & Culture
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160601T131500
-DTEND;TZID=Europe/London:20160601T151500
+DTSTART;TZID=Europe/London:20160629T123000
+DTEND;TZID=Europe/London:20160629T133000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+DTSTAMP:20160706T143013Z
+UID:5fv1n8mjfsdi4r90g4kn8qv68s@google.com
+CREATED:20160628T165336Z
+DESCRIPTION:Walking is great for your well-being and puts a spring in your 
+ step. With this event you can take part in free short art walks at Whitwort
+ h Park to help you get active at a pace that works for you.\n\nIt's an exce
+ llent way to stretch your legs\, explore what's on your door-step\, and mak
+ e new friends.\n\nJoin us every Wednesday lunchtime 12.30pm - 1.30pm for a 
+ walk in the park. We meet at the park entrance reception of the gallery.\n\
+ nFor more info pleas econtact whitworth@manchester.ac.uk or call 0161 275 7
+ 450
+LAST-MODIFIED:20160628T170205Z
+LOCATION:Whitworth Art Gallery\, Oxford Rd\, Manchester M15 6ER\, UK
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Walking for Health
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20160920
+DTEND;VALUE=DATE:20160921
+DTSTAMP:20160706T143013Z
+UID:2o283bfsugkngh3m4et5eioi18@google.com
+CREATED:20160628T161612Z
+DESCRIPTION:
+LAST-MODIFIED:20160628T161612Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:MMU Welcome Week "Meet the Neighbours"
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20160727
+DTEND;VALUE=DATE:20160728
+DTSTAMP:20160706T143013Z
+UID:qnf08lj9b00flficarv8d3ruek@google.com
+CLASS:PUBLIC
+CREATED:20160617T101601Z
+DESCRIPTION:This Community Learning Festival consists of four days of works
+ hops\, speakers and events to inspire and support many types of learning. I
+ t will also provide a space to build connections between people\, and betwe
+ en the University and our local community.\n\nWednesday: Theme - Care and C
+ reativity\nAll afternoon Community Games Tepee and Parachute\n12 noon Hidde
+ n Voices of Hulme - workshop performance\n1.00pm - 2.30pm Looking After Our
+ selves? Discussion on sex and healthy relationships led\nby Jayne Mugglesto
+ ne and Jayshree Henry (Age 14+)\n1.00pm - 4.00pm Women’s Comedy workshops r
+ un by Natalie Diddams - Royal Exchange\n(Age 18+)\n1.00pm - 4.00pm Promotin
+ g Positive Sexual Health: Focus on testicular cancer and young\nmen (Age 14
+ +)\n1.00pm - 4.00pm Storytelling workshops:\n• Petrus Homelessness Project 
+ and Digital Arts North West (all ages)\n• LGBT storytelling workshop led by
+  The Proud Trust\n• Mobile Phone story telling led by Imran (young people f
+ ocus)\n• Under 8’s and Under 12’s sessions led by Libraries\n1.00pm - 4.00p
+ m Exploring Boys Work: Voluntary Youth Manchester Boys Work Network\n2.00pm
+  - 5:00pm Showing of the films Paddington and Inside Out followed by discus
+ sions\n3.00pm - 4.00pm All age workshop on the Citizen App with Kevin Jones
+  and Caleb Jackson\n4.00pm - 5.00pm Hideaway films on harassment of Muslim 
+ girls and women\, plus\ndiscussion (young people focus)\n4.00pm - 5.00pm Be
+ ing young and being a part of the whole world: Workshop led by\nHebe\n5.00p
+ m - 6.00pm Public Lecture with Gabrielle Ivinson: Poverty\, Community and\n
+ Education\, lecture and discussioin\n6.00pm - 7.00pm Hidden Voices of Hulme
+  performance\n\nTo keep up to date with the festival please subscribe to ou
+ r email list here.\nhttp://eepurl.com/bOjsCn\n\nThe festival will run from 
+ 26th-29th July\, to get involved in the planning of the event please email 
+ edlab@mmu.ac.uk letting us know how you or your group would want to contrib
+ ute.
+LAST-MODIFIED:20160620T094919Z
+LOCATION:Brooks Building\, Birley\, Bonsall St\, Manchester M15
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Community Learning Festival
+TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20160728
+DTEND;VALUE=DATE:20160729
+DTSTAMP:20160706T143013Z
+UID:1m6sqc6pd793fm81jpstg02qgk@google.com
+CLASS:PUBLIC
+CREATED:20160617T101736Z
+DESCRIPTION:This Community Learning Festival consists of four days of works
+ hops\, speakers and events to inspire and support many types of learning. I
+ t will also provide a space to build connections between people\, and betwe
+ en the University and our local community.\n\nThursday: Theme - Environment
+  and Sustainability\nAll afternoon Stalls and Bike Bonanza\n12.00pm - 1.30p
+ m Tony Curry writing workshops: RAP on the theme of environment and\nsustai
+ nability\n12.00pm - 1.30pm Hulme Community Garden Centre workshop: Pond dip
+ ping\, herbs and\nmuch more\n2.00pm - 3.30pm Asset based working workshop: 
+ sustainable community development\nled by Eve Davidson\n2.00pm - 3.30pm Ton
+ y Curry writing workshops: RAP on the theme of environment and\nsustainabil
+ ity\n2.00pm - 3.30pm Carbon literacy course introduction\n2.00pm - 3.30pm H
+ ulme Community Garden Centre: permaculture\n2.00pm - 3.30pm Site tours: lea
+ rn about the Birley Campus as a ‘green campus\n4.00pm - 5.00pm Geoff Bright
+  Presentation: ‘The Lady’s not for Burning? May she Rust\nin Peace: Ghostly
+  Presences and Social Hauntings from the Miner’s Strike\n1984-5 in South Yo
+ rkshire.’\n4.00pm - 5.30pm Just eat it? (film)\n6.00pm - 7.00pm Public lect
+ ure: ‘Tale of Two Cities’ talk - issues of sustainability in\nManchester\n6
+ .00pm - 7.00pm Transport in Hulme: Talks and discussion with Transport for 
+ Greater\nManchester\, Manchester City Council and Manchester Metropolitan\n
+ University\n\nTo keep up to date with the festival please subscribe to our 
+ email list here.\nhttp://eepurl.com/bOjsCn\n\nThe festival will run from 26
+ th-29th July\, to get involved in the planning of the event please email ed
+ lab@mmu.ac.uk letting us know how you or your group would want to contribut
+ e.
+LAST-MODIFIED:20160620T094919Z
+LOCATION:Brooks Building\, Birley\, Bonsall St\, Manchester M15
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Community Learning Festival
+TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160704T130000Z
+DTEND:20160704T150000Z
+DTSTAMP:20160706T143013Z
+UID:ov3rhu6qnntb69p8hrf78lhu50@google.com
+CLASS:PUBLIC
+CREATED:20160617T100305Z
+DESCRIPTION:Are you over 50? \nDo you cycle in Hulme & Moss Side?\nOr do yo
+ u want to cycle more? \nWe want to talk to you! \nWe would like to find out
+  what it’s like to cycle in your neighbourhood\, and to talk about ways to 
+ encourage more older people to cycle!\n\nCome along to the workshop to find
+  out more:\nMonday 4th July\, 2pm - 4pm\nCity South HQ\, Turing House\nArch
+ way 5\, Hulme\, Manchester M15 5RL\n\nRefresments wil be available\n\nEvery
+ one welcome\, but please RSVP:\nEmily Crompton\, Manchester Age Friendly Ne
+ ighbourhoods (MAFN)\n0161 247 5960 or 07973 973184\ne.crompton@mmu.ac.uk\n
+LAST-MODIFIED:20160620T094918Z
+LOCATION:City South HQ\, Turing House\,Archway 5\, Hulme\, Manchester M15 5
+ RL
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Cycling in an Age Friendly Hulme & Moss Side?
+TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160601T131500
+DTEND;TZID=Europe/Dublin:20160601T151500
 RRULE:FREQ=MONTHLY;BYDAY=1WE
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:jmbsmjit50j5jjb64iukr1dek4@google.com
+CLASS:PUBLIC
 CREATED:20160609T140551Z
 DESCRIPTION:Women only Wednesdays Cancer Support\nAre you a woman? Have you
   or anyone else close to you been affected by cancer? Would you like to mee
@@ -79,60 +246,74 @@ DESCRIPTION:Women only Wednesdays Cancer Support\nAre you a woman? Have you
   provided. We welcome women who are carers\, family and friends (over 18 ye
  ars) of people with cancer.\n\nFor more information contact Marcella: 07496
   089310\, email: info@can-survive.org.uk \nhttp://www.can-survive.org.uk/
-LAST-MODIFIED:20160609T141924Z
+LAST-MODIFIED:20160620T094917Z
 LOCATION:Kath Locke Centre\, 123 Moss Ln E\, Manchester\, Manchester M15 5D
  D\, UK
 SEQUENCE:1
 STATUS:CONFIRMED
 SUMMARY:WoW - Cancer Support Group
 TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160630T130000
+DTEND;TZID=Europe/Dublin:20160630T150000
+RRULE:FREQ=MONTHLY;BYDAY=-1TH
+DTSTAMP:20160706T143013Z
+UID:dl1jkjo7ksf5n20gk9i9nledfg@google.com
+CLASS:PUBLIC
+CREATED:20160609T141935Z
+DESCRIPTION:Men Only Thursdays - Cancer Support Group\n Are you a man? Have
+  you or anyone else close to you been affected by cancer? Would you like to
+  meet other men in a similar position?\n\nWhat do we offer?\n- regular meet
+ ings where you can chat with others and share experiences.\n- Health and we
+ ll-being therapies (relaxation\, massage\, reflexology)\n- Structured cance
+ r related workshops\, i.e. managing fatigue\, stress and anxiety.\n- Advice
+  and tips on how to manage both practical and emotional issues.\nWe meet on
+  the first Wednesday of every month at Kath Locke Centre from 1.15 - 3.15pm
+ .\n\nThis project is targeted at\, but not exclusive to BME and marginilise
+ d men living in Hulme\, Moss Side\, Old Trafford\, Levenshulme\, Chorlton a
+ nd surrounding areas.\n\nAll activities and workshops are delivered by qual
+ ified and experienced individuals. Activities are free and refreshments are
+  provided. We welcome men who are carers\, family and friends (over 18 year
+ s) of people with cancer.\n\nFor more information contact Marcella: 07496 0
+ 89310\, email: info@can-survive.org.uk \nhttp://www.can-survive.org.uk/
+LAST-MODIFIED:20160620T094917Z
+LOCATION:Kath Locke Centre\, 123 Moss Ln E\, Manchester\, Manchester M15 5D
+ D\, UK
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:MOT - Cancer Support Group
+TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20160610T170000Z
 DTEND:20160610T200000Z
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:ujbcmaotadn0e6impbkb0us0fo@google.com
+CLASS:PUBLIC
 CREATED:20160608T100552Z
 DESCRIPTION:Community Social Event at St James\, quiz\, food and music from
   40s and 50s - Invite your friends and neighbours!
-LAST-MODIFIED:20160608T100753Z
+LAST-MODIFIED:20160620T094916Z
 LOCATION:St James\, 95a Princess Road/ Great Western Street\, M14 4TH
 SEQUENCE:1
 STATUS:CONFIRMED
 SUMMARY:Queens Birthday Community Social
 TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160610T140000
-DTEND;TZID=Europe/London:20160610T160000
-RRULE:FREQ=WEEKLY;BYDAY=FR
-DTSTAMP:20160614T152317Z
-UID:kkc52m5afs9jsdpb9kgfsf5kc4@google.com
-CREATED:20160606T165820Z
-DESCRIPTION:Coffee and Computing sessions run to help local people get onli
- ne and understand how to use the internet. Sessions are open to people of a
- ll abilities\, whether you’ve used a computer before or not. If you know so
- meone who’s like to get online for the first time\, why not pass the messag
- e on. We have volunteers ready and willing to talk you through simple activ
- ities in basic computer use\, email and social networking. All sessions are
-  free of charge and there is no need to book\, although the number of compu
- ters available is limited.\n\nIf you would like more information about thes
- e sessions please contact Brian or call 0161 225 1064 or check the website:
-  http://www.trinityhousecrc.org.uk/ 
-LAST-MODIFIED:20160606T165940Z
-LOCATION:Trinity House Community Resource Centre\, Grove Close\, Manchester
-  M14 5AA\, 
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Coffee and Computing
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160613T133000
-DTEND;TZID=Europe/London:20160613T150000
+DTSTART;TZID=Europe/Dublin:20160613T133000
+DTEND;TZID=Europe/Dublin:20160613T150000
 RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:0g774tu1t9v058qgoufpc8c5ks@google.com
+CLASS:PUBLIC
 CREATED:20160606T165334Z
 DESCRIPTION:Every Wednesday our Arts & Crafts group meets for a two hour se
  ssion of experimenting with different art techniques\, from painting and dr
@@ -144,171 +325,50 @@ DESCRIPTION:Every Wednesday our Arts & Crafts group meets for a two hour se
  ability you’ll be welcomed into our friendly group and go home with your ve
  ry own masterpiece!\n\nSee website for more details: http://www.trinityhous
  ecrc.org.uk/ \n\nContact Trinity House on 0161 225 1064
-LAST-MODIFIED:20160606T165547Z
+LAST-MODIFIED:20160620T094915Z
 LOCATION:Trinity House Community Resource Centre\, Grove Close\, Manchester
  \, M14 5AA
 SEQUENCE:1
 STATUS:CONFIRMED
 SUMMARY:LINK Arts and Crafts
 TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160608T130000
-DTEND;TZID=Europe/London:20160608T140000
-RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160614T152317Z
-UID:4m4spa75ds0loljkd8lfig1eo0_R20160608T120000@google.com
-CREATED:20160526T093621Z
-DESCRIPTION:Dementia Friendly Swimming session for people affected by demen
- tia - either as a carer or someone living with the condition.\n\nThe sessio
- n is £1 for anyone under 60 or from outside of the City of Manchester bound
- aries – otherwise the session is free (thanks to the free swimming for Over
-  60s offer and the centre’s Carers Scheme) - please bring proof of age and 
- address.\n\nThe group offer support with Transport in partnership with Manc
- hester Community Transport. So please do get in touch if you require transp
- ort in order to get to the session.\n\nContact Catriona Sudlow for queries/
-  to arrange transport: 07583 134810
-LAST-MODIFIED:20160602T144906Z
-LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
- 5NN\, UK
+DTSTART;TZID=Europe/Dublin:20160610T140000
+DTEND;TZID=Europe/Dublin:20160610T160000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+DTSTAMP:20160706T143013Z
+UID:kkc52m5afs9jsdpb9kgfsf5kc4@google.com
+CLASS:PUBLIC
+CREATED:20160606T165820Z
+DESCRIPTION:Coffee and Computing sessions run to help local people get onli
+ ne and understand how to use the internet. Sessions are open to people of a
+ ll abilities\, whether you’ve used a computer before or not. If you know so
+ meone who’s like to get online for the first time\, why not pass the messag
+ e on. We have volunteers ready and willing to talk you through simple activ
+ ities in basic computer use\, email and social networking. All sessions are
+  free of charge and there is no need to book\, although the number of compu
+ ters available is limited.\n\nIf you would like more information about thes
+ e sessions please contact Brian or call 0161 225 1064 or check the website:
+  http://www.trinityhousecrc.org.uk/ 
+LAST-MODIFIED:20160620T094914Z
+LOCATION:Trinity House Community Resource Centre\, Grove Close\, Manchester
+  M14 5AA\, 
 SEQUENCE:1
 STATUS:CONFIRMED
-SUMMARY:Dementia Friendly Swimming
+SUMMARY:Coffee and Computing
 TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160601T130000
-DTEND;TZID=Europe/London:20160601T140000
-RRULE:FREQ=WEEKLY;UNTIL=20160608T115959Z;BYDAY=WE
-DTSTAMP:20160614T152317Z
-UID:4m4spa75ds0loljkd8lfig1eo0@google.com
-CREATED:20160526T093621Z
-DESCRIPTION:Dementia Friendly Swimming session for people with dementia and
-  carers.
-LAST-MODIFIED:20160602T143349Z
-LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
- 5NN\, UK
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Dementia Friendly Swimming
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160210T120000
-DTEND;TZID=Europe/London:20160210T130000
-RRULE:FREQ=WEEKLY;UNTIL=20160525T110000Z;BYDAY=WE
-DTSTAMP:20160614T152317Z
-UID:iacqc0jlgl5nppp9gpa2s6e6j4@google.com
-CREATED:20160205T135145Z
-DESCRIPTION:Contact Anne for more information:\nCall: 0161 226 8254\nEmail:
-  anne389@btinternet.com
-LAST-MODIFIED:20160531T143655Z
-LOCATION:Aquarius
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Aquarius 50+ Allotment Group
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160215T120000
-DTEND;TZID=Europe/London:20160215T130000
-RRULE:FREQ=WEEKLY;UNTIL=20160509T110000Z;BYDAY=MO
-DTSTAMP:20160614T152317Z
-UID:9o4ds033al43jt3nvt4iups3f0@google.com
-CREATED:20160209T112918Z
-DESCRIPTION:Contact Anne for more information:\nCall: 0161 226 8254\nEmail:
-  anne389@btinternet.com
-LAST-MODIFIED:20160531T143636Z
-LOCATION:Aqarius Centre\, 21 Eden Close\, M15 6AX
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Chair Assisted Exercise
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160215T130000
-DTEND;TZID=Europe/London:20160215T134500
-RRULE:FREQ=WEEKLY;UNTIL=20160523T120000Z;BYDAY=MO
-DTSTAMP:20160614T152317Z
-UID:fro63veov8mqgv5cimhgeenfac@google.com
-CREATED:20160209T113747Z
-DESCRIPTION:Contact Anne for more information:\n0161 226 8254\nanne389@btin
- ternet.com
-LAST-MODIFIED:20160531T143631Z
-LOCATION:Aqarius Centre\, 21 Eden Close\, M15 6AX
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Tea Break Club
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160209T110000
-DTEND;TZID=Europe/London:20160209T130000
-RRULE:FREQ=WEEKLY;UNTIL=20160524T100000Z;BYDAY=TU
-DTSTAMP:20160614T152317Z
-UID:4tnq09db23i8vgim0uf3vfqjo4@google.com
-CREATED:20160209T113855Z
-DESCRIPTION:Contact Anne for more information:\n0161 226 8254\nanne389@btin
- ternet.com
-LAST-MODIFIED:20160531T143602Z
-LOCATION:Aqarius Centre\, 21 Eden Close\, M15 6AX
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Art Class
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20161016T120000Z
-DTEND:20161016T150000Z
-DTSTAMP:20160614T152317Z
-UID:h29b18095v4c463gok5kphmin4@google.com
-CREATED:20160531T093724Z
-DESCRIPTION:The course Includes discussion\, practical remedy making\, hand
- outs and freebies\; the course will help you to assess your health and diet
-  and to make positive changes and healthier food choices for you and your f
- amily. \nAll sessions assume no prior knowledge and are open to anyone who 
- is interested in improving their health choices and knowledge of traditiona
- l plant medicine and nutrition. \n\nThis course will be held on every third
-  Sunday of the month\, June to October from 1-4pm. \n\nfor more Info contac
- t Jane Placca 07944 916196 themanchesterherbalist@yahoo.com \nFacebook: Liv
- ing Medicine Manchester 
-LAST-MODIFIED:20160531T093724Z
-LOCATION:Hulme Community Garden Centre\, 28 Old Birley St\, St. George's\, 
- Manchester M15 5RG\, UK
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Living Medicine - Self Care With Food & Herbs: Coughs\, Colds & All
- ergies
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20160918T120000Z
-DTEND:20160918T150000Z
-DTSTAMP:20160614T152317Z
-UID:ngd2fv2lnasrj41e7vg17nc6ts@google.com
-CREATED:20160531T093520Z
-DESCRIPTION:The course Includes discussion\, practical remedy making\, hand
- outs and freebies\; the course will help you to assess your health and diet
-  and to make positive changes and healthier food choices for you and your f
- amily. \nAll sessions assume no prior knowledge and are open to anyone who 
- is interested in improving their health choices and knowledge of traditiona
- l plant medicine and nutrition. \n\nThis course will be held on every third
-  Sunday of the month\, June to October from 1-4pm. \n\nfor more Info contac
- t Jane Placca 07944 916196 themanchesterherbalist@yahoo.com \nFacebook: Liv
- ing Medicine Manchester 
-LAST-MODIFIED:20160531T093520Z
-LOCATION:Hulme Community Garden Centre\, 28 Old Birley St\, St. George's\, 
- Manchester M15 5RG\, UK
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Living Medicine - Self Care With Food & Herbs: Skin & First Aid
-TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20160821T120000Z
 DTEND:20160821T150000Z
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:5b711gari6f4ta74phatg9q6b0@google.com
+CLASS:PUBLIC
 CREATED:20160531T093332Z
 DESCRIPTION:The course Includes discussion\, practical remedy making\, hand
  outs and freebies\; the course will help you to assess your health and diet
@@ -319,7 +379,7 @@ DESCRIPTION:The course Includes discussion\, practical remedy making\, hand
   Sunday of the month\, June to October from 1-4pm. \n\nfor more Info contac
  t Jane Placca 07944 916196 themanchesterherbalist@yahoo.com \nFacebook: Liv
  ing Medicine Manchester 
-LAST-MODIFIED:20160531T093332Z
+LAST-MODIFIED:20160620T094913Z
 LOCATION:Hulme Community Garden Centre\, 28 Old Birley St\, St. George's\, 
  Manchester M15 5RG\, UK
 SEQUENCE:0
@@ -327,12 +387,15 @@ STATUS:CONFIRMED
 SUMMARY:Living Medicine - Self Care With Food & Herbs: Sleep\, Anxiety & Fa
  tigue
 TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20160717T120000Z
 DTEND:20160717T150000Z
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:c829tkand8je0mjv4euthm3pqk@google.com
+CLASS:PUBLIC
 CREATED:20160531T093118Z
 DESCRIPTION:The course Includes discussion\, practical remedy making\, hand
  outs and freebies\; the course will help you to assess your health and diet
@@ -343,19 +406,22 @@ DESCRIPTION:The course Includes discussion\, practical remedy making\, hand
   Sunday of the month\, June to October from 1-4pm. \n\nfor more Info contac
  t Jane Placca 07944 916196 themanchesterherbalist@yahoo.com \nFacebook: Liv
  ing Medicine Manchester 
-LAST-MODIFIED:20160531T093118Z
+LAST-MODIFIED:20160620T094912Z
 LOCATION:Hulme Community Garden Centre\, 28 Old Birley St\, St. George's\, 
  Manchester M15 5RG\, UK
 SEQUENCE:0
 STATUS:CONFIRMED
 SUMMARY:Living Medicine - Self Care With Food & Herbs: Digestion Discomfort
 TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20160619T120000Z
 DTEND:20160619T150000Z
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:hgusihru1oqcceot64llt3ldao@google.com
+CLASS:PUBLIC
 CREATED:20160531T092841Z
 DESCRIPTION:The course Includes discussion\, practical remedy making\, hand
  outs and freebies\; the course will help you to assess your health and diet
@@ -366,83 +432,96 @@ DESCRIPTION:The course Includes discussion\, practical remedy making\, hand
   Sunday of the month\, June to October from 1-4pm. \n\nfor more Info contac
  t Jane Placca 07944 916196 themanchesterherbalist@yahoo.com \nFacebook: Liv
  ing Medicine Manchester 
-LAST-MODIFIED:20160531T092841Z
+LAST-MODIFIED:20160620T094912Z
 LOCATION:Hulme Community Garden Centre\, 28 Old Birley St\, St. George's\, 
  Manchester M15 5RG\, UK
 SEQUENCE:0
 STATUS:CONFIRMED
 SUMMARY:Living Medicine- Self Care With Food & Herbs: Self Care
 TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20161016T120000Z
+DTEND:20161016T150000Z
+DTSTAMP:20160706T143013Z
+UID:h29b18095v4c463gok5kphmin4@google.com
+CLASS:PUBLIC
+CREATED:20160531T093724Z
+DESCRIPTION:The course Includes discussion\, practical remedy making\, hand
+ outs and freebies\; the course will help you to assess your health and diet
+  and to make positive changes and healthier food choices for you and your f
+ amily. \nAll sessions assume no prior knowledge and are open to anyone who 
+ is interested in improving their health choices and knowledge of traditiona
+ l plant medicine and nutrition. \n\nThis course will be held on every third
+  Sunday of the month\, June to October from 1-4pm. \n\nfor more Info contac
+ t Jane Placca 07944 916196 themanchesterherbalist@yahoo.com \nFacebook: Liv
+ ing Medicine Manchester 
+LAST-MODIFIED:20160620T094911Z
+LOCATION:Hulme Community Garden Centre\, 28 Old Birley St\, St. George's\, 
+ Manchester M15 5RG\, UK
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Living Medicine - Self Care With Food & Herbs: Coughs\, Colds & All
+ ergies
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160918T120000Z
+DTEND:20160918T150000Z
+DTSTAMP:20160706T143013Z
+UID:ngd2fv2lnasrj41e7vg17nc6ts@google.com
+CLASS:PUBLIC
+CREATED:20160531T093520Z
+DESCRIPTION:The course Includes discussion\, practical remedy making\, hand
+ outs and freebies\; the course will help you to assess your health and diet
+  and to make positive changes and healthier food choices for you and your f
+ amily. \nAll sessions assume no prior knowledge and are open to anyone who 
+ is interested in improving their health choices and knowledge of traditiona
+ l plant medicine and nutrition. \n\nThis course will be held on every third
+  Sunday of the month\, June to October from 1-4pm. \n\nfor more Info contac
+ t Jane Placca 07944 916196 themanchesterherbalist@yahoo.com \nFacebook: Liv
+ ing Medicine Manchester 
+LAST-MODIFIED:20160620T094910Z
+LOCATION:Hulme Community Garden Centre\, 28 Old Birley St\, St. George's\, 
+ Manchester M15 5RG\, UK
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Living Medicine - Self Care With Food & Herbs: Skin & First Aid
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20160630T083000Z
 DTEND:20160630T150000Z
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:qf5fc9dg568av72idmsde44ki0@google.com
+CLASS:PUBLIC
 CREATED:20160527T151902Z
 DESCRIPTION:Thursday 30th June 2016 9.30 - 4.00pm\nHome Business Workshop\n
  Venue: St Wilfred's Enterprise Centre\n(FirmStart) Royce Road Hulme M15 4BJ
  \n\nFor further details contact: Richard at ABS (Amazin Business Solutions)
   on 07590425644 or 079271 43531\nemail: info@amazinbusinesssolutions.com\n
-LAST-MODIFIED:20160527T151902Z
+LAST-MODIFIED:20160620T094910Z
 LOCATION:St Wilfred's Enterprose Centre
 SEQUENCE:0
 STATUS:CONFIRMED
 SUMMARY:Home Business Workshop
 TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160530T063000
-DTEND;TZID=Europe/London:20160530T100000
-RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160614T152317Z
-UID:lm7ish2sov1mjovp61aujepf8g@google.com
-CREATED:20160526T092854Z
-DESCRIPTION:This is a swimming session adults only\, aged 16 and over. \n\n
- You can swim for free if you are over 60 and a resident of Manchester. Take
-  along a document with proof of date of birth and a utilities bill showing 
- you are a Manchester resident.\n\nPrice: £2.50 or with a Manchester Leisure
-  Pass £2 (peak) £1.70 (off peak 9am-12 and 2-5pm). Free if over 60.\n\nNo B
- ooking required. Just come along at the times listed and enjoy your swim in
-  our pool - note that swim safely rules do apply.\n\nSee here for more: htt
- p://www.better.org.uk/venues/moss-side/timetable/pool
-LAST-MODIFIED:20160526T092854Z
-LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
- 5NN\, UK
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Swim for Adults
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160529T160000
-DTEND;TZID=Europe/London:20160529T170000
-RRULE:FREQ=WEEKLY;BYDAY=SU,SA
-DTSTAMP:20160614T152317Z
-UID:qbjpoujo1qkc70bjgjdf8q8qro@google.com
-CREATED:20160526T092658Z
-DESCRIPTION:This is a swimming session adults only\, aged 16 and over. \n\n
- You can swim for free if you are over 60 and a resident of Manchester. Take
-  along a document with proof of date of birth and a utilities bill showing 
- you are a Manchester resident.\n\nPrice: £2.50 or with a Manchester Leisure
-  Pass £2 (peak times) £1.70 (off peak times: 9am-12 and 2-5pm). Free if ove
- r 60.\n\nNo Booking required. Just come along at the times listed and enjoy
-  your swim in our pool - note that swim safely rules do apply.\n\nSee here 
- for more: http://www.better.org.uk/venues/moss-side/timetable/pool
-LAST-MODIFIED:20160526T092724Z
-LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
- 5NN\, UK
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Swim for Adults
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160522T090000
-DTEND;TZID=Europe/London:20160522T100000
+DTSTART;TZID=Europe/Dublin:20160522T090000
+DTEND;TZID=Europe/Dublin:20160522T100000
 RRULE:FREQ=WEEKLY;BYDAY=SU
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:r5b0df1l32l7vng8a5755ngv14@google.com
+CLASS:PUBLIC
 CREATED:20160526T092451Z
 DESCRIPTION:This is a swimming session adults only\, aged 16 and over. \n\n
  You can swim for free if you are over 60 and a resident of Manchester. Take
@@ -452,20 +531,94 @@ DESCRIPTION:This is a swimming session adults only\, aged 16 and over. \n\n
  r 60.\n\nNo Booking required. Just come along at the times listed and enjoy
   your swim in our pool - note that swim safely rules do apply.\n\nSee here 
  for more: http://www.better.org.uk/venues/moss-side/timetable/pool
-LAST-MODIFIED:20160526T092613Z
+LAST-MODIFIED:20160620T094909Z
 LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
  5NN\, UK
 SEQUENCE:1
 STATUS:CONFIRMED
 SUMMARY:Swim for Adults
 TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160526T063000
-DTEND;TZID=Europe/London:20160526T090000
+DTSTART;TZID=Europe/Dublin:20160530T063000
+DTEND;TZID=Europe/Dublin:20160530T100000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+DTSTAMP:20160706T143013Z
+UID:lm7ish2sov1mjovp61aujepf8g@google.com
+CLASS:PUBLIC
+CREATED:20160526T092854Z
+DESCRIPTION:This is a swimming session adults only\, aged 16 and over. \n\n
+ You can swim for free if you are over 60 and a resident of Manchester. Take
+  along a document with proof of date of birth and a utilities bill showing 
+ you are a Manchester resident.\n\nPrice: £2.50 or with a Manchester Leisure
+  Pass £2 (peak) £1.70 (off peak 9am-12 and 2-5pm). Free if over 60.\n\nNo B
+ ooking required. Just come along at the times listed and enjoy your swim in
+  our pool - note that swim safely rules do apply.\n\nSee here for more: htt
+ p://www.better.org.uk/venues/moss-side/timetable/pool
+LAST-MODIFIED:20160620T094908Z
+LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
+ 5NN\, UK
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Swim for Adults
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160608T130000
+DTEND;TZID=Europe/London:20160608T140000
+RRULE:FREQ=WEEKLY;COUNT=1;INTERVAL=1;BYDAY=WE
+DTSTAMP:20160706T143013Z
+UID:4m4spa75ds0loljkd8lfig1eo0_R20160608T120000@google.com
+CLASS:PUBLIC
+CREATED:20160526T093621Z
+DESCRIPTION:Dementia Friendly Swimming session for people affected by demen
+ tia - either as a carer or someone living with the condition.\n\nThe sessio
+ n is £1 for anyone under 60 or from outside of the City of Manchester bound
+ aries – otherwise the session is free (thanks to the free swimming for Over
+  60s offer and the centre’s Carers Scheme) - please bring proof of age and 
+ address.\n\nThe group offer support with Transport in partnership with Manc
+ hester Community Transport. So please do get in touch if you require transp
+ ort in order to get to the session.\n\nContact Catriona Sudlow for queries/
+  to arrange transport: 07583 134810
+LAST-MODIFIED:20160620T094908Z
+LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
+ 5NN\, UK
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Dementia Friendly Swimming
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160601T130000
+DTEND;TZID=Europe/Dublin:20160601T140000
+RRULE:FREQ=WEEKLY;UNTIL=20160608T115959Z;INTERVAL=1;BYDAY=WE
+DTSTAMP:20160706T143013Z
+UID:4m4spa75ds0loljkd8lfig1eo0@google.com
+CLASS:PUBLIC
+CREATED:20160526T093621Z
+DESCRIPTION:Dementia Friendly Swimming session for people with dementia and
+  carers.
+LAST-MODIFIED:20160620T094908Z
+LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
+ 5NN\, UK
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Dementia Friendly Swimming
+TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160526T063000
+DTEND;TZID=Europe/Dublin:20160526T090000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:bdrspt61u2ebmv2p8m5iu39r2g@google.com
+CLASS:PUBLIC
 CREATED:20160526T092356Z
 DESCRIPTION:This is a swimming session adults only\, aged 16 and over. \n\n
  You can swim for free if you are over 60 and a resident of Manchester. Take
@@ -475,34 +628,103 @@ DESCRIPTION:This is a swimming session adults only\, aged 16 and over. \n\n
  ooking required. Just come along at the times listed and enjoy your swim in
   our pool - note that swim safely rules do apply.\n\nSee here for more: htt
  p://www.better.org.uk/venues/moss-side/timetable/pool
-LAST-MODIFIED:20160526T092356Z
+LAST-MODIFIED:20160620T094907Z
 LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
  5NN\, UK
 SEQUENCE:0
 STATUS:CONFIRMED
 SUMMARY:Swim For Adults
 TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160529T160000
+DTEND;TZID=Europe/Dublin:20160529T170000
+RRULE:FREQ=WEEKLY;BYDAY=SU,SA
+DTSTAMP:20160706T143013Z
+UID:qbjpoujo1qkc70bjgjdf8q8qro@google.com
+CLASS:PUBLIC
+CREATED:20160526T092658Z
+DESCRIPTION:This is a swimming session adults only\, aged 16 and over. \n\n
+ You can swim for free if you are over 60 and a resident of Manchester. Take
+  along a document with proof of date of birth and a utilities bill showing 
+ you are a Manchester resident.\n\nPrice: £2.50 or with a Manchester Leisure
+  Pass £2 (peak times) £1.70 (off peak times: 9am-12 and 2-5pm). Free if ove
+ r 60.\n\nNo Booking required. Just come along at the times listed and enjoy
+  your swim in our pool - note that swim safely rules do apply.\n\nSee here 
+ for more: http://www.better.org.uk/venues/moss-side/timetable/pool
+LAST-MODIFIED:20160620T094906Z
+LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
+ 5NN\, UK
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Swim for Adults
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20160713
 DTEND;VALUE=DATE:20160714
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:0r86qjcd190176gve9mp7sga8s@google.com
+CLASS:PUBLIC
 CREATED:20160524T145013Z
 DESCRIPTION:11am - 2pm\n\nContact Emily Crompton if you want to host a stal
  l\, attend or get involved\n0161 247 5960 / 07973973814
-LAST-MODIFIED:20160524T145122Z
+LAST-MODIFIED:20160620T094906Z
 LOCATION:
 SEQUENCE:1
 STATUS:CONFIRMED
 SUMMARY:AGE FRIENDLY COMMUNITY FORUM
 TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20160723
+DTEND;VALUE=DATE:20160821
+DTSTAMP:20160706T143013Z
+UID:90p7ccilqtvco3akf0kkkmtaj4@google.com
+CLASS:PUBLIC
+CREATED:20160518T085717Z
+DESCRIPTION:
+LAST-MODIFIED:20160620T094905Z
+LOCATION:Brooks\, Birley\, 53 Bonsall Street Manchester M15 6GX
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Summer Community Games
+TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160603T084500Z
+DTEND:20160603T110000Z
+DTSTAMP:20160706T143013Z
+UID:3bsivkij8er2fu0ldvbso6fefg@google.com
+CLASS:PUBLIC
+CREATED:20160524T094224Z
+DESCRIPTION:We will be arriving at 9.45am and sing at 10.30am\nWe are singi
+ ng Put a Little Love In Your Heart voices only \nDress code blue and white\
+ n\nContact Sally Ferris\,  Together Dementia Support\n07854 335890\n
+LAST-MODIFIED:20160620T094905Z
+LOCATION:EPPING WALK BRIDGE located at MMU Bonsall St Hulme Manchester M15 
+ 6GX
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Sing Along BBC MUSIC DAY
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20160710
 DTEND;VALUE=DATE:20160711
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:h56pf4ai304oq33gv1o24bmnlg@google.com
+CLASS:PUBLIC
 CREATED:20160518T085614Z
 DESCRIPTION:Contact Manchester and District Orienteering Club for more deta
  ils: http://www.mdoc.org.uk/ \n\ntwinpeak2016@mdoc.org.uk \n\nVenue\nSouthe
@@ -537,17 +759,1506 @@ DESCRIPTION:Contact Manchester and District Orienteering Club for more deta
   so.\n\nBoth times on Saturday and time on Sunday will be added together to
   give final Twin Peak placing.\n(For M/W 10 to 14\, add together the single
   time on Saturday and the time on Sunday) 
-LAST-MODIFIED:20160524T100228Z
+LAST-MODIFIED:20160620T094904Z
 LOCATION:Brooks\, MMU Birley Bonsall Street
 SEQUENCE:0
 STATUS:CONFIRMED
 SUMMARY:Manchester & District Orienteering Club event
 TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160611T140000Z
+DTEND:20160611T160000Z
+DTSTAMP:20160706T143013Z
+UID:8l5fr4vv5to10t0toggs1om3bk@google.com
+CLASS:PUBLIC
+CREATED:20160511T093959Z
+DESCRIPTION:Dementia friendly gospel choir for African and Caribbean people
+  with memory difficulties/dementia to enjoy and spend time together with re
+ latives or friends.\n\nEveryone welcome.\n\nContact: Dorothy Allen Dorothy@
+ togetherdementiasupport.org\, Sally Ferris 07854 335890 or Dawn Edge dawn.e
+ dge@manchester.ac.uk 07796 202806
+LAST-MODIFIED:20160620T094904Z
+LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
+ h Rd\, Manchester M16 7HU\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Together in Song
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20161015T140000Z
+DTEND:20161015T160000Z
+DTSTAMP:20160706T143013Z
+UID:20i9p5qdohcfn6crsptu9nf33g@google.com
+CLASS:PUBLIC
+CREATED:20160511T094453Z
+DESCRIPTION:Dementia friendly gospel choir for African and Caribbean people
+  with memory difficulties/dementia to enjoy and spend time together with re
+ latives or friends.\n\nEveryone welcome.\n\nContact: Dorothy Allen Dorothy@
+ togetherdementiasupport.org\, Sally Ferris 07854 335890 or Dawn Edge dawn.e
+ dge@manchester.ac.uk 07796 202806
+LAST-MODIFIED:20160620T094903Z
+LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
+ h Rd\, Manchester M16 7HU\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Together in Song
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160917T140000Z
+DTEND:20160917T160000Z
+DTSTAMP:20160706T143013Z
+UID:17b0apo0hj3ruoih6t1r6ngo04@google.com
+CLASS:PUBLIC
+CREATED:20160511T094349Z
+DESCRIPTION:Dementia friendly gospel choir for African and Caribbean people
+  with memory difficulties/dementia to enjoy and spend time together with re
+ latives or friends.\n\nEveryone welcome.\n\nContact: Dorothy Allen Dorothy@
+ togetherdementiasupport.org\, Sally Ferris 07854 335890 or Dawn Edge dawn.e
+ dge@manchester.ac.uk 07796 202806
+LAST-MODIFIED:20160620T094902Z
+LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
+ h Rd\, Manchester M16 7HU\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Together in Song
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160813T140000Z
+DTEND:20160813T150000Z
+DTSTAMP:20160706T143013Z
+UID:r5q1733g2bvresv3mhq6prsii4@google.com
+CLASS:PUBLIC
+CREATED:20160511T094244Z
+DESCRIPTION:Dementia friendly gospel choir for African and Caribbean people
+  with memory difficulties/dementia to enjoy and spend time together with re
+ latives or friends.\n\nEveryone welcome.\n\nContact: Dorothy Allen Dorothy@
+ togetherdementiasupport.org\, Sally Ferris 07854 335890 or Dawn Edge dawn.e
+ dge@manchester.ac.uk 07796 202806
+LAST-MODIFIED:20160620T094902Z
+LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
+ h Rd\, Manchester M16 7HU\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Together in Song
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160709T140000Z
+DTEND:20160709T160000Z
+DTSTAMP:20160706T143013Z
+UID:qug0u0p9mao9b5r1bjhb7p2i0g@google.com
+CLASS:PUBLIC
+CREATED:20160511T094125Z
+DESCRIPTION:Dementia friendly gospel choir for African and Caribbean people
+  with memory difficulties/dementia to enjoy and spend time together with re
+ latives or friends.\n\nEveryone welcome.\n\nContact: Dorothy Allen Dorothy@
+ togetherdementiasupport.org\, Sally Ferris 07854 335890 or Dawn Edge dawn.e
+ dge@manchester.ac.uk 07796 202806
+LAST-MODIFIED:20160620T094901Z
+LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
+ h Rd\, Manchester M16 7HU\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Together in Song
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160421T110000
+DTEND;TZID=Europe/Dublin:20160421T140000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
+DTSTAMP:20160706T143013Z
+UID:c9ahuoa9lnl137ntm008rtgtrc@google.com
+CLASS:PUBLIC
+CREATED:20160307T115414Z
+DESCRIPTION:Monday: 11am-2pm \nTuesday: 11am-2pm\nWednesday: 11am-2pm\nThur
+ sday: 11am -2pm\nFriday: closed\nSaturday: 12-5pm\nSunday: Closed\n\nCall: 
+ 0161 227 3758\nEmail: powerhouselibrary@manchester.gov.uk\n
+LAST-MODIFIED:20160620T094900Z
+LOCATION:Moss Side Powerhouse Library\, 140 Raby St\, Manchester M14 4SQ\, 
+ United Kingdom
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Powerhouse Library
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160420T130000
+DTEND;TZID=Europe/Dublin:20160420T200000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+DTSTAMP:20160706T143013Z
+UID:uvj7ciu79208kssph3rfap6qv4@google.com
+CLASS:PUBLIC
+CREATED:20160422T112917Z
+DESCRIPTION:Hulme had the very first branch library of Manchester’s free li
+ brary – which was itself the country’s first free library!\n\nAssistance Av
+ ailable:\nMondays: 1–5pm\nTuesdays: 9am–1pm\nWednesdays: 1–8pm\nThursdays: 
+ 9am-1pm\nFridays: 1–5pm\nSaturdays: 9am-1pm & 2–5pm\nBank holidays we are c
+ losed.\n\nThere is underground car parking\n\nThe library will be open the 
+ same hours as the leisure centre and you will be able to:\nbrowse & borrow 
+ a selection of popular books\;\nreturn & renew books\;\nlog on to internet-
+ ready PCs\; and \ncollect reservations.\nContact: 0161 227 3739 or hulmelib
+ rary@manchester.gov.uk
+LAST-MODIFIED:20160620T094859Z
+LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
+ 5NN\, United Kingdom
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Hulme Library
+TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160423T140000
+DTEND;TZID=Europe/Dublin:20160423T170000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+DTSTAMP:20160706T143013Z
+UID:dful56j9cu09kdnofscgs7ffeg@google.com
+CLASS:PUBLIC
+CREATED:20160422T112843Z
+DESCRIPTION:Hulme had the very first branch library of Manchester’s free li
+ brary – which was itself the country’s first free library!\n\nAssistance Av
+ ailable:\nMondays: 1–5pm\nTuesdays: 9am–1pm\nWednesdays: 1–8pm\nThursdays: 
+ 9am-1pm\nFridays: 1–5pm\nSaturdays: 9am-1pm & 2–5pm\nBank holidays we are c
+ losed.\n\nThere is underground car parking\n\nThe library will be open the 
+ same hours as the leisure centre and you will be able to:\nbrowse & borrow 
+ a selection of popular books\;\nreturn & renew books\;\nlog on to internet-
+ ready PCs\; and \ncollect reservations.\nContact: 0161 227 3739 or hulmelib
+ rary@manchester.gov.uk
+LAST-MODIFIED:20160620T094859Z
+LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
+ 5NN\, United Kingdom
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Hulme Library
+TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160422T130000
+DTEND;TZID=Europe/Dublin:20160422T170000
+RRULE:FREQ=WEEKLY;BYDAY=MO,FR
+DTSTAMP:20160706T143013Z
+UID:v551f81seite6h1hsdn5k9i8j8@google.com
+CLASS:PUBLIC
+CREATED:20160422T112320Z
+DESCRIPTION:Hulme had the very first branch library of Manchester’s free li
+ brary – which was itself the country’s first free library!\n\nAssistance Av
+ ailable:\nMondays: 1–5pm\nTuesdays: 9am–1pm\nWednesdays: 1–8pm\nThursdays: 
+ 9am-1pm\nFridays: 1–5pm\nSaturdays: 9am-1pm & 2–5pm\nBank holidays we are c
+ losed.\n\nThere is underground car parking\n\nThe library will be open the 
+ same hours as the leisure centre and you will be able to:\nbrowse & borrow 
+ a selection of popular books\;\nreturn & renew books\;\nlog on to internet-
+ ready PCs\; and \ncollect reservations.\nContact: 0161 227 3739 or hulmelib
+ rary@manchester.gov.uk
+LAST-MODIFIED:20160620T094858Z
+LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
+ 5NN\, United Kingdom
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Hulme Library
+TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20160612
+DTEND;VALUE=DATE:20160613
+DTSTAMP:20160706T143013Z
+UID:rdibmc8jc9k33iu03iat93bb14@google.com
+CLASS:PUBLIC
+CREATED:20160422T111851Z
+DESCRIPTION:On Sunday 12th June\, we will be hosting a community picnic at 
+ Birley as part of the national Big Lunch\, an annual event aimed at bringin
+ g people together and celebrating community.\nThe event will be linked to M
+ anchester’s status as European City of Science 2016 and will have avery spe
+ cial science theme.\nIn partnership with the Faculty of Science and Enginee
+ ring\, MetMUnch\, the University’s Environment Team\, and local community p
+ artners we’ll be showcasing fermented foods made out of microbes and invite
+  you to take part and bring your own picnic. There’ll be plenty of family-f
+ riendly activities and you can find out more about the Birley Community Orc
+ hard and herb garden.  \nFor more information on how to get involved contac
+ t: engagement@mmu.ac.uk or 0161 247 3393
+LAST-MODIFIED:20160620T094858Z
+LOCATION:Birley Fields\, Bonsall St\, Manchester M15\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:World Family Picnic European City of Science 
+TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20160726
+DTEND;VALUE=DATE:20160727
+DTSTAMP:20160706T143013Z
+UID:tnu98on6c865jp309g4ir5spto@google.com
+CLASS:PUBLIC
+CREATED:20160422T112108Z
+DESCRIPTION:This Community Learning Festival consists of four days of works
+ hops\, speakers and events to inspire and support many types of learning. I
+ t will also provide a space to build connections between people\, and betwe
+ en the University and our local community.\n\nTuesday: Theme - Politics and
+  Democracy\n12 noon Drumming workshop and Spoken Word event led by Emeka\nE
+ lendu and Joy Jikiemi\n1.00pm - 2.30pm Community Philosophy: Peaceful Citie
+ s? Peaceful World?\nChildren and young people’s workshop led by Graeme Tiff
+ any with\nHideaway\n1.00pm - 2.30pm People’s History of Hulme and Moss Side
+ : All age walk with\nDominique Tessier\n2.45pm - 3.45pm Community Philosoph
+ y: Peaceful Neighbourhoods? Peaceful\nWorld? All age workshop led by Graeme
+  Tiffany\n2.45pm - 3.45pm People’s History walk: Children and young people’
+ s walk with\nDominique Tessier\n4.00pm - 5.00pm Young people interview loca
+ l Councillors (facilitated by Hideaway)\n5.00pm Public Lecture with Dr Patr
+ ick Williams: The same as it ever was!\nThe Policing of ‘suspected’ communi
+ ties: a focus on the continuities of\nStop and Search.\n6.00pm - 7.00pm Dru
+ mming Workshop and Spoken Word performance\n\nTo keep up to date with the f
+ estival please subscribe to our email list here.\nhttp://eepurl.com/bOjsCn\
+ n\nThe festival will run from 26th-29th July\, to get involved in the plann
+ ing of the event please email edlab@mmu.ac.uk letting us know how you or yo
+ ur group would want to contribute.
+LAST-MODIFIED:20160620T094857Z
+LOCATION:Brooks Building\, Birley\, Bonsall St\, Manchester M15
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Community Learning Festival
+TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160419T090000
+DTEND;TZID=Europe/Dublin:20160419T130000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH,SA
+DTSTAMP:20160706T143013Z
+UID:isbg5oeqfhrrq22k7nn48363ak@google.com
+CLASS:PUBLIC
+CREATED:20160422T112751Z
+DESCRIPTION:Hulme had the very first branch library of Manchester’s free li
+ brary – which was itself the country’s first free library!\n\nAssistance Av
+ ailable:\nMondays: 1–5pm\nTuesdays: 9am–1pm\nWednesdays: 1–8pm\nThursdays: 
+ 9am-1pm\nFridays: 1–5pm\nSaturdays: 9am-1pm & 2–5pm\nBank holidays we are c
+ losed.\n\nThere is underground car parking\n\nThe library will be open the 
+ same hours as the leisure centre and you will be able to:\nbrowse & borrow 
+ a selection of popular books\;\nreturn & renew books\;\nlog on to internet-
+ ready PCs\; and \ncollect reservations.\nContact: 0161 227 3739 or hulmelib
+ rary@manchester.gov.uk
+LAST-MODIFIED:20160620T094857Z
+LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
+ 5NN\, United Kingdom
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Hulme Library
+TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20160603T110000Z
+DTEND:20160603T140000Z
+DTSTAMP:20160706T143013Z
+UID:fe1bpddo56210crdqjcbeebmqo@google.com
+CLASS:PUBLIC
+CREATED:20160422T110328Z
+DESCRIPTION:Event to celebrate the re-opening of Trinity House!\nMore detai
+ ls to come!\n\nContact: Lydia on 0161 225 1064 or email info@trinityhousecr
+ c.org.uk 
+LAST-MODIFIED:20160620T094856Z
+LOCATION:Trinity House Community Resource Centr\, Grove Close\, off Platt L
+ ane Rusholme Manchester M14 5AA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Trinity House Opening Party!
+TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160315T200000
+DTEND;TZID=Europe/Dublin:20160315T210000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+DTSTAMP:20160706T143013Z
+UID:m0dgjnna49tn5v65jjnv3e8c4c@google.com
+CLASS:PUBLIC
+CREATED:20160310T175332Z
+DESCRIPTION:For all levels of ability\, from beginners and improvers throug
+ h to masters. A friendly bunch with regular social events\, great coaching\
+ , overseas trips and a nice atmosphere. The sky’s the limit!\n\nPRICES\nDoo
+ r Price: £4.50 / session\nStanding Order: £15 / month\nConcession — door pr
+ ice is £2.50 / session or £7.50 / month via standing order.\nSee here fore 
+ more details: http://northernwave.org/V02/#swimtimes 
+LAST-MODIFIED:20160620T094855Z
+LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
+ 5NN\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LGBT Swimming - Northern Wave
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160314T100000
+DTEND;TZID=Europe/Dublin:20160314T120000
+RRULE:FREQ=WEEKLY;BYDAY=MO,FR
+DTSTAMP:20160706T143013Z
+UID:d96plvr7dk2t3vf1svv5beasq0@google.com
+CLASS:PUBLIC
+CREATED:20160307T160456Z
+DESCRIPTION:Coffee Morning (Food\nvoucher service)\n10:00am  12:00pm\nZion 
+ Centre\n339 Stretford Road\nManchester M15 4ZY\nTel: 0161 226 5412\nwww.zio
+ ncentre.co.uk
+LAST-MODIFIED:20160620T094855Z
+LOCATION:Zion Community Resource Centre\, 339 Stretford Rd\, Manchester M15
+  4ZY\, United Kingdom
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Coffee Morning
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160312T100000
+DTEND;TZID=Europe/Dublin:20160312T113000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+DTSTAMP:20160706T143013Z
+UID:oimq0had02u6imhl59a7b9jqak@google.com
+CLASS:PUBLIC
+CREATED:20160307T161413Z
+DESCRIPTION:Flex it @ 50\n10.15am – 11.15pm\n£3.00\nZion Centre\n339 Stretf
+ ord Road\nManchester M15 4ZY\nTel: 0161 226 5412\nwww.zioncentre.co.uk
+LAST-MODIFIED:20160620T094854Z
+LOCATION:Zion Community Resource Centre\, 339 Stratford\, Manchester\, Manc
+ hester M15 4ZY\, UK
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Flex it at 50
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160311T133000
+DTEND;TZID=Europe/Dublin:20160311T153000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+DTSTAMP:20160706T143013Z
+UID:c5pee7m8oedmdijorioqnj0v4s@google.com
+CLASS:PUBLIC
+CREATED:20160307T161150Z
+DESCRIPTION:Art Group\n1:30pm – 3:30pm Free\nZion Centre\n339 Stretford Roa
+ d\nManchester M15 4ZY\nTel: 0161 226 5412\nwww.zioncentre.co.uk\n
+LAST-MODIFIED:20160620T094853Z
+LOCATION:Zion Community Resource Centre\, 339 Stratford\, Manchester\, Manc
+ hester M15 4ZY\, UK
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Art Group
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160308T120000
+DTEND;TZID=Europe/Dublin:20160308T130000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+DTSTAMP:20160706T143013Z
+UID:qf5vgun6447fcf89vm3ajcs25g@google.com
+CLASS:PUBLIC
+CREATED:20160307T162132Z
+DESCRIPTION:Flex It @ 50\n12:00pm – 1:00pm\nPrice: £3\nKath Locke Centre\n1
+ 23 Moss Lane East\nManchester M15 5DD\nTel: 0161 455 0211\nwww.kathlockecen
+ tre.co.uk
+LAST-MODIFIED:20160620T094853Z
+LOCATION:Kath Locke Centre\, 123 Moss Ln E\, Manchester M15 5DD\, United Ki
+ ngdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Flex it at 50
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160309T140000
+DTEND;TZID=Europe/Dublin:20160309T160000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+DTSTAMP:20160706T143013Z
+UID:l0llfohqcu9ql3iakfs0oqert0@google.com
+CLASS:PUBLIC
+CREATED:20160307T160310Z
+DESCRIPTION:Bingo\n2:00pm – 4:00pm\nPrice: £3.00 per session\nZion Centre\n
+ 339 Stretford Road\nManchester M15 4ZY\nTel: 0161 226 5412\nwww.zioncentre.
+ co.uk\n
+LAST-MODIFIED:20160620T094852Z
+LOCATION:Zion Community Resource Centre\, 339 Stretford Rd\, Manchester M15
+  4ZY\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Bingo
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160307T180000
+DTEND;TZID=Europe/Dublin:20160307T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+DTSTAMP:20160706T143013Z
+UID:k2hr9ugtjva43f8ik1i9vqcokk@google.com
+CLASS:PUBLIC
+CREATED:20160307T153337Z
+DESCRIPTION:cllr.l.igbon@manchester.gov.uk 07908 759 042\ncllr.a.lone@manch
+ ester.gov.uk 07947 383 514\ncllr.n.murphy@manchester.gov.uk 0161 234 3217 (
+ Town Hall)\n\nEvery Monday from 6pm (except Bank Holidays and the month of 
+ August) **new location from Monday 16th March 2015**\nBirley Building \nMan
+ chester Metropolitan University \nBonsall Street  \nHulme \nMANCHESTER \nM1
+ 5 6GX
+LAST-MODIFIED:20160620T094852Z
+LOCATION:Birley Fields\, Bonsall St\, Manchester M15\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Hulme Councillors Surgery
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160308T100000
+DTEND;TZID=Europe/Dublin:20160308T130000
+RRULE:FREQ=WEEKLY;BYDAY=TU,FR
+DTSTAMP:20160706T143013Z
+UID:1eohc249omjvbjmvn5droq7k5o@google.com
+CLASS:PUBLIC
+CREATED:20160307T160759Z
+DESCRIPTION:IT drop in (cafe suite)\nFree\n10am -1pm\nZion Centre\n339 Stre
+ tford Road\nManchester M15 4ZY\nTel: 0161 226 5412\nwww.zioncentre.co.uk\n
+LAST-MODIFIED:20160620T094851Z
+LOCATION:Zion Community Resource Centre\, 339 Stretford Rd\, Manchester M15
+  4ZY\, United Kingdom
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:IT Drop in
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160310T100000
+DTEND;TZID=Europe/Dublin:20160310T110000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+DTSTAMP:20160706T143013Z
+UID:q3o04umeujrq63qpmm01aj8obg@google.com
+CLASS:PUBLIC
+CREATED:20160307T161939Z
+DESCRIPTION:Zumba Gold\n(for active older people)\n10:00am  11.00am\nPrice:
+  £3\nKath Locke Centre\n123 Moss Lane East\nManchester M15 5DD\nTel: 0161 4
+ 55 0211\nwww.kathlockecentre.co.uk
+LAST-MODIFIED:20160620T094850Z
+LOCATION:Kath Locke Centre\, 123 Moss Ln E\, Manchester M15 5DD\, United Ki
+ ngdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Zumba Gold (for active older people)
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160308T173000
+DTEND;TZID=Europe/Dublin:20160308T183000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+DTSTAMP:20160706T143013Z
+UID:opm2teom22fqpne2mb17fur2c8@google.com
+CLASS:PUBLIC
+CREATED:20160307T153704Z
+DESCRIPTION:cllr.e.rowles@manchester.gov.uk 07852 306 957\ncllr.a.cox@manch
+ ester.gov.uk 0161 226 3258\ncllr.s.ali@manchester.gov.uk 07960 514 188\n\nE
+ very Tuesday 5.30pm to 6.30pm (Excluding the month of August)\nGreenheys Ad
+ ult Education Centre\nGreat Western Street\nMoss Side\nMANCHESTER\nM14 4HZ
+LAST-MODIFIED:20160620T094850Z
+LOCATION:Greenheys Adult Learning Centre\, Upper Lloyd Street\, Manchester 
+ Area\, Manchester M14 4\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Moss Side Councillors Surgery
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160307T130000
+DTEND;TZID=Europe/Dublin:20160307T160000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+DTSTAMP:20160706T143013Z
+UID:bhm5sp3kbb3ceq1043b97p6qpc@google.com
+CLASS:PUBLIC
+CREATED:20160307T161756Z
+DESCRIPTION:Manchester Advice Drop In\n( Manchester residents only)\n1:00pm
+  – 4:00pm\nZion Centre\n339 Stretford Road\nManchester M15 4ZY\nTel: 0161 2
+ 26 5412\nwww.zioncentre.co.uk
+LAST-MODIFIED:20160620T094849Z
+LOCATION:Zion Community Resource Centre\, 339 Stratford\, Manchester\, Manc
+ hester M15 4ZY\, UK
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Manchester Advice Drop in
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160310T163000
+DTEND;TZID=Europe/Dublin:20160310T193000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+DTSTAMP:20160706T143013Z
+UID:rsoh6g03g1u19rh7iroerji5mc@google.com
+CLASS:PUBLIC
+CREATED:20160307T161608Z
+DESCRIPTION:Barnados Womens Group\n4:30pm – 7:30pm\nFree\nZion Centre\n339 
+ Stretford Road\nManchester M15 4ZY\nTel: 0161 226 5412\nwww.zioncentre.co.u
+ k\n
+LAST-MODIFIED:20160620T094849Z
+LOCATION:Zion Community Resource Centre\, 339 Stratford\, Manchester\, Manc
+ hester M15 4ZY\, UK
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Barnados Womens Group
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160407T113000
+DTEND;TZID=Europe/Dublin:20160407T170000
+RRULE:FREQ=MONTHLY;BYDAY=1TH
+DTSTAMP:20160706T143013Z
+UID:m49bh1kfp1lad70icrh0egqotg@google.com
+CLASS:PUBLIC
+CREATED:20160307T135137Z
+DESCRIPTION:\n 11.30am at the Windrush Millennium Centre\nSupport\, trips\,
+  short breaks\, information/advice\, respite alternative treatments\, pract
+ ical help.\nTel: 0161 226-9562\nFax: 0161 226-7947\nEmail: admin@acmhs-blac
+ kmentalhealth.org.uk\nWeb: www.acmhs-blackmentalhealth.org.uk\n\n
+LAST-MODIFIED:20160620T094848Z
+LOCATION:Windrush Drive\, Windrush Dr\, Manchester\, Manchester M9 5QR\, UK
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Carers Support drop in (1st Thursday of the month)
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160308T130000
+DTEND;TZID=Europe/Dublin:20160308T150000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+DTSTAMP:20160706T143013Z
+UID:ajmngp86a2h662ifdsgqa19g1o@google.com
+CLASS:PUBLIC
+CREATED:20160307T134716Z
+DESCRIPTION:Advice\, information\, discussion\, support\nTel: 0161 226-9562
+ \nFax: 0161 226-7947\nEmail: admin@acmhs-blackmentalhealth.org.uk\nWeb: www
+ .acmhs-blackmentalhealth.org.uk\n
+LAST-MODIFIED:20160620T094847Z
+LOCATION:Windrush Millennium Centre\, Alexandra Rd\, Manchester\, Mancheste
+ r M16 7WD\, UK
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Women's Group
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160308T140000
+DTEND;TZID=Europe/Dublin:20160308T170000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+DTSTAMP:20160706T143013Z
+UID:5hil0k0bsik9fvr6ud2orjmnso@google.com
+CLASS:PUBLIC
+CREATED:20160307T114155Z
+DESCRIPTION:Fair share food delivery\, for more information please contact:
+ \nTelephone: 0161 2265045    Mobile: 07579965667  \nEmail: anysie.kankindi@
+ citysouthmanchester.co.uk
+LAST-MODIFIED:20160620T094847Z
+LOCATION:Will Griffiths Court\, 3 Elwick Close\, Manchester M16 7LA\, Unite
+ d Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Fair Share at Will Griffiths Court
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160308T100000
+DTEND;TZID=Europe/Dublin:20160308T120000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+DTSTAMP:20160706T143013Z
+UID:830tjus3mgbrd673412lus6pvg@google.com
+CLASS:PUBLIC
+CREATED:20160307T132845Z
+DESCRIPTION:The So Sew group is run by Linda Puttick and takes place on a T
+ uesday morning from 10-12.\nIt runs on a 3 term x 10 week basis and is at p
+ resent looking for new members.\nThere is a fee to cover costs.\n\nContact:
+  lindajputtick@gmail.com\n
+LAST-MODIFIED:20160620T094846Z
+LOCATION:Armani Centre\, Quinney Cresent Shoreham Close\, Manchester\, M16 
+ 7DG
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:So Sew Group
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160514T120000
+DTEND;TZID=Europe/London:20160514T170000
+RRULE:FREQ=WEEKLY;COUNT=1;INTERVAL=1;BYDAY=SA
+DTSTAMP:20160706T143013Z
+UID:o4h6rnctnhes5sh4f27kmrruvs_R20160514T110000@google.com
+CLASS:PUBLIC
+CREATED:20160307T115940Z
+DESCRIPTION:Monday: 11am-2pm \nTuesday: 11am-2pm\nWednesday: 11am-2pm\nThur
+ sday: 11am -2pm\nFriday: Closed\nSaturday: 12noon-5pm\nSunday: Closed\n\nCa
+ ll: 0161 227 3758\nEmail: powerhouselibrary@manchester.gov.uk\n
+LAST-MODIFIED:20160620T094845Z
+LOCATION:Moss Side Powerhouse Library\, 140 Raby St\, Manchester M14 4SQ\, 
+ United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Powerhouse Library
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160312T120000
+DTEND;TZID=Europe/Dublin:20160312T170000
+RRULE:FREQ=WEEKLY;UNTIL=20160514T105959Z;INTERVAL=1;BYDAY=SA
+DTSTAMP:20160706T143013Z
+UID:o4h6rnctnhes5sh4f27kmrruvs@google.com
+CLASS:PUBLIC
+CREATED:20160307T115940Z
+DESCRIPTION:Monday: 11am-2pm\; 3-7pm\nTuesday: 11am-2pm\; 3-7pm\nWednesday:
+  11am-2pm\; 3-7pm\nThursday: 11am -2pm\; 3-7pm\nFriday: closed\nSaturday: 1
+ 2-5pm\n\nCall: 0161 227 3758\nEmail: powerhouselibrary@manchester.gov.uk\n
+LAST-MODIFIED:20160620T094845Z
+LOCATION:Moss Side Powerhouse Library\, 140 Raby St\, Manchester M14 4SQ\, 
+ United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Powerhouse Library
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160306T103000
+DTEND;TZID=Europe/Dublin:20160306T120000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+DTSTAMP:20160706T143013Z
+UID:i78dcpt96ccnephj8jj5tpihhs@google.com
+CLASS:PUBLIC
+CREATED:20160302T153543Z
+DESCRIPTION:
+LAST-MODIFIED:20160620T094845Z
+LOCATION:Trinity Community Church at Armani Centre
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Age Friendly Worship
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160304T140000
+DTEND;TZID=Europe/Dublin:20160304T160000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+DTSTAMP:20160706T143013Z
+UID:f3gajlu0ckm4dqkmnskdg7cfn0@google.com
+CLASS:PUBLIC
+CREATED:20160302T152433Z
+DESCRIPTION:People First activity session contact 0161 8737335
+LAST-MODIFIED:20160620T094843Z
+LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
+ h Rd\, Manchester M16 7HU\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Activity Group
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160304T110000
+DTEND;TZID=Europe/Dublin:20160304T130000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+DTSTAMP:20160706T143013Z
+UID:cblkarsa7dv73sdhgrc5magh38@google.com
+CLASS:PUBLIC
+CREATED:20160302T151524Z
+DESCRIPTION:Luncheon club for the over 50s\, will be based at the church un
+ til Trinity House opens again. Call Lydia 0161 2251064
+LAST-MODIFIED:20160620T094843Z
+LOCATION:Holy Trinity Platt Church\, Platt Ln\, Manchester M14 5NF\, United
+  Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Luncheon Club
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160304T093000
+DTEND;TZID=Europe/Dublin:20160304T123000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+DTSTAMP:20160706T143013Z
+UID:rrdioupeip6f4go2i0np3g6p90@google.com
+CLASS:PUBLIC
+CREATED:20160302T151303Z
+DESCRIPTION:Tea and cake for all to enjoy.\nCall: 07734414449
+LAST-MODIFIED:20160620T094842Z
+LOCATION:Fallowfield Methodist Churh\, Platt Lane
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cafe on the Corner
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160311T110000
+DTEND;TZID=Europe/Dublin:20160311T130000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+DTSTAMP:20160706T143013Z
+UID:0o4out0c7ep1vrdui0bpas75fk@google.com
+CLASS:PUBLIC
+CREATED:20160302T153147Z
+DESCRIPTION:Call 0161 2262702 for more details
+LAST-MODIFIED:20160620T094842Z
+LOCATION:Wesley Centre Hulme
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Foodbank 
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160303T190000
+DTEND;TZID=Europe/Dublin:20160303T210000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+DTSTAMP:20160706T143013Z
+UID:np524vmhmregcrhtbnu92mj4fs@google.com
+CLASS:PUBLIC
+CREATED:20160302T150920Z
+DESCRIPTION:Ki-Aikido 0161 2267696
+LAST-MODIFIED:20160620T094841Z
+LOCATION:The Yard Theatre Manchester
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Mind and Body Classes
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160308T100000
+DTEND;TZID=Europe/Dublin:20160308T120000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+DTSTAMP:20160706T143013Z
+UID:i3snmqrqhs7bosjqk4014ka72s@google.com
+CLASS:PUBLIC
+CREATED:20160302T141304Z
+DESCRIPTION:Supporting women with a range of different activities. \nEmail:
+  whipmcr@gmail.com
+LAST-MODIFIED:20160620T094840Z
+LOCATION:Zion Community Resource Centre\, 339 Stretford Rd\, Manchester M15
+  4ZY\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Women of Hulme Participate (WHIP)
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160308T110000
+DTEND;TZID=Europe/Dublin:20160308T130000
+RRULE:FREQ=WEEKLY;BYDAY=TU,FR
+DTSTAMP:20160706T143013Z
+UID:l5u6s4dnluh7ff8ms9r1uju4v4@google.com
+CLASS:PUBLIC
+CREATED:20160302T150540Z
+DESCRIPTION:Call 0161 2269012
+LAST-MODIFIED:20160620T094840Z
+LOCATION:Church of God of Prophecy Christian Centre\, Manchester\, United K
+ ingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Tuesday and Friday Lunch
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160309T100000
+DTEND;TZID=Europe/Dublin:20160309T120000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+DTSTAMP:20160706T143013Z
+UID:tprhp383sghvn470pcl8ergae8@google.com
+CLASS:PUBLIC
+CREATED:20160302T144057Z
+DESCRIPTION:For more information please contact: 0161 8737335
+LAST-MODIFIED:20160620T094838Z
+LOCATION:Old Trafford Sports Barn\, Seymour Park\, Carver St\, Manchester M
+ 16 9PQ\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Keep Fit and Walking Football
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160308T140000
+DTEND;TZID=Europe/Dublin:20160308T160000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+DTSTAMP:20160706T143013Z
+UID:fb7gf208q5gc4amcchn093a63c@google.com
+CLASS:PUBLIC
+CREATED:20160302T141504Z
+DESCRIPTION:Different speakers each week.\nCall 0161 2241123
+LAST-MODIFIED:20160620T094838Z
+LOCATION:Holy Trinity Platt Church\, Platt Ln\, Manchester M14 5NF\, United
+  Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Elderly Christian Group
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160307T100000
+DTEND;TZID=Europe/Dublin:20160307T170000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+DTSTAMP:20160706T143013Z
+UID:iq0tt2vpgh4hsceqnr4sfq8qt4@google.com
+CLASS:PUBLIC
+CREATED:20160302T135926Z
+DESCRIPTION:Call 0161 226 4335 for more information
+LAST-MODIFIED:20160620T094837Z
+LOCATION:Moss Side Powerhouse Library\, 140 Raby St\, Manchester M14 4SQ\, 
+ United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:MTTC/United Daycare
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160309T110000
+DTEND;TZID=Europe/Dublin:20160309T153000
+RRULE:FREQ=WEEKLY;BYDAY=SU,WE,SA
+DTSTAMP:20160706T143013Z
+UID:98fmc82fb9uclacq9e5dim6v0c@google.com
+CLASS:PUBLIC
+CREATED:20160302T143111Z
+DESCRIPTION:Call 0161 2278198
+LAST-MODIFIED:20160620T094837Z
+LOCATION:Hulme Community Garden Centre\, 28 Old Birley St\, St. George's\, 
+ Manchester M15 5RG\, United Kingdom
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Volunteering
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160303T113000
+DTEND;TZID=Europe/Dublin:20160303T143000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+DTSTAMP:20160706T143013Z
+UID:t5fsiavsi00j43q9nn9qpj8i9s@google.com
+CLASS:PUBLIC
+CREATED:20160302T150145Z
+DESCRIPTION:Contact Amy Murtha Sha 07528 817039
+LAST-MODIFIED:20160620T094836Z
+LOCATION:Church of God of Prophecy Christian Centre\, Manchester\, United K
+ ingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Yellowbird Age Friendly Drop in
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160307T130000
+DTEND;TZID=Europe/Dublin:20160307T150000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+DTSTAMP:20160706T143013Z
+UID:uhdl0ipd7a15qhqtc2tlpvo4v8@google.com
+CLASS:PUBLIC
+CREATED:20160302T140803Z
+DESCRIPTION:Diabetes support group for people with the illness and their ca
+ rers. Call 0161 4450211
+LAST-MODIFIED:20160620T094836Z
+LOCATION:Kath Locke Centre\, 123 Moss Ln E\, Manchester M15 5DD\, United Ki
+ ngdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Sugar Group
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160310T110000
+DTEND;TZID=Europe/Dublin:20160310T140000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+DTSTAMP:20160706T143013Z
+UID:b9rptd5mitvloehfrqqjf9p89c@google.com
+CLASS:PUBLIC
+CREATED:20160302T145319Z
+DESCRIPTION:Call Anysie for more details Telephone: 0161 2265045  Mobile: 0
+ 7579965667  
+LAST-MODIFIED:20160620T094835Z
+LOCATION:Will Griffiths Court\, 3 Elwick Close\, Manchester M16 7LA\, Unite
+ d Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Brunch Club
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160309T110000
+DTEND;TZID=Europe/Dublin:20160309T130000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+DTSTAMP:20160706T143013Z
+UID:g8rj73669j0bfmqtsoh7eu977c@google.com
+CLASS:PUBLIC
+CREATED:20160302T143306Z
+DESCRIPTION:Session run by Together Dementia Support call Sally on: 0161 28
+ 39970
+LAST-MODIFIED:20160620T094835Z
+LOCATION:Alexandra Park\, 180 Russell St\, Manchester M16 7JL\, United King
+ dom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Dementia Friends Walk and Talk Group
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160309T103000
+DTEND;TZID=Europe/Dublin:20160309T120000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+DTSTAMP:20160706T143013Z
+UID:6tdpus8n0els7bqsj42r1m4cqo@google.com
+CLASS:PUBLIC
+CREATED:20160302T142629Z
+DESCRIPTION:Coffee Morning\, for more details please contact Anysie on: any
+ sie.kankindi@citysouthmanchester.co.uk\nTelephone: 0161 2265045  \nMobile: 
+ 07579965667  
+LAST-MODIFIED:20160620T094834Z
+LOCATION:Frank Hatton Court\, Whickham Cl\, Manchester M14 4HW\, United Kin
+ gdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Coffee Morning
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160309T140000
+DTEND;TZID=Europe/Dublin:20160309T160000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+DTSTAMP:20160706T143013Z
+UID:jggatvdg0cs6ispfna1banjmlg@google.com
+CLASS:PUBLIC
+CREATED:20160302T144521Z
+DESCRIPTION:Over 50s informal computer class for beginners\, for more infor
+ mation please Simon or Lydia on: 0161 2251064  
+LAST-MODIFIED:20160620T094833Z
+LOCATION:Zion Community Resource Centre\, 339 Stratford\, Manchester\, Manc
+ hester M15 4ZY\, UK
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Coffee and Computing
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160309T110000
+DTEND;TZID=Europe/Dublin:20160309T150000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+DTSTAMP:20160706T143013Z
+UID:ukacgtjt3lj1hb6q6siijmvlg4@google.com
+CLASS:PUBLIC
+CREATED:20160302T142935Z
+DESCRIPTION:Call 0161 2261291 for more details
+LAST-MODIFIED:20160620T094832Z
+LOCATION:St Edmunds Alexandra Road
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Foodbank
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160308T193000
+DTEND;TZID=Europe/Dublin:20160308T213000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+DTSTAMP:20160706T143013Z
+UID:pusscdh821n8fq8jlatd6vnkt0@google.com
+CLASS:PUBLIC
+CREATED:20160302T142218Z
+DESCRIPTION:Run by Together Dementia Support a group primarily for carers o
+ f people with dementia\, contact: 0161 2859970
+LAST-MODIFIED:20160620T094831Z
+LOCATION:Chorlton Central Church\, Barlow Moor Rd\, Manchester M21 8BF\, Un
+ ited Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Carers Group
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160229T133000
+DTEND;TZID=Europe/Dublin:20160229T143000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+DTSTAMP:20160706T143013Z
+UID:8hepbt7egl0aj85qhpmijck2d8@google.com
+CLASS:PUBLIC
+CREATED:20160301T124118Z
+DESCRIPTION:A gentle all-over body workout designed to improve mobility\, s
+ trength\, stamina and all-round fitness. This class is suitable for older a
+ dults\, and complete beginners.\n\nCost\n£1\n\nRegistration\nhttp://www.man
+ chester.gov.uk/activelifestyles\n0161 234 5454\n
+LAST-MODIFIED:20160620T094830Z
+LOCATION:Active Lifestyles Centre\, Denmark Rd\, Manchester M15 6FG\, Unite
+ d Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Simply Circuits
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160302T120000
+DTEND;TZID=Europe/Dublin:20160302T130000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+DTSTAMP:20160706T143013Z
+UID:r5l6c80are2taqivse57jbd4f8@google.com
+CLASS:PUBLIC
+CREATED:20160301T123715Z
+DESCRIPTION:A gentle all-over body workout designed to improve mobility\, s
+ trength\, stamina and all-round fitness. This class is suitable for older a
+ dults\, and complete beginners.\n\nCost £1\n\nRegistration\nhttp://www.manc
+ hester.gov.uk/activelifestyles \n\n0161 234 5454
+LAST-MODIFIED:20160620T094830Z
+LOCATION:Active Lifestyles Centre\, Denmark Rd\, Manchester M15 6FG\, Unite
+ d Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Simply Circuits
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160304T130000
+DTEND;TZID=Europe/Dublin:20160304T140000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+DTSTAMP:20160706T143013Z
+UID:gdv37123s1t96ps2ofi1rpg0i4@google.com
+CLASS:PUBLIC
+CREATED:20160301T124011Z
+DESCRIPTION:A gentle all-over body workout designed to improve mobility\, s
+ trength\, stamina and all-round fitness. This class is suitable for older a
+ dults\, and complete beginners.\n\nCost\n£1\n\nRegistration\nhttp://www.man
+ chester.gov.uk/activelifestyles\n0161 234 5454\n
+LAST-MODIFIED:20160620T094829Z
+LOCATION:Active Lifestyles Centre\, Denmark Rd\, Manchester M15 6FG\, Unite
+ d Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Simply Circuits
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160210T093000
+DTEND;TZID=Europe/Dublin:20160210T123000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+DTSTAMP:20160706T143013Z
+UID:g8be1mc0qgg2p7ogrhg5v05m14@google.com
+CLASS:PUBLIC
+CREATED:20160212T160017Z
+DESCRIPTION:For more information please contact Anysie on:\nTelephone: 0161
+  2265045    Mobile: 07579965667  \nEmail: anysie.kankindi@citysouthmanchest
+ er.co.uk\n
+LAST-MODIFIED:20160620T094828Z
+LOCATION:Will Griffiths Court\, 3 Elwick Close\, Manchester M16 7LA\, Unite
+ d Kingdom
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Computer Class
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160208T100000
+DTEND;TZID=Europe/Dublin:20160208T130000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+DTSTAMP:20160706T143013Z
+UID:l2r1186d5748afqtec31n17glc@google.com
+CLASS:PUBLIC
+CREATED:20160212T155908Z
+DESCRIPTION:For more information please contact:\nTelephone: 0161 2265045  
+   Mobile: 07579965667  \nEmail: anysie.kankindi@citysouthmanchester.co.uk\n
+LAST-MODIFIED:20160620T094828Z
+LOCATION:Will Griffiths Court\, 3 Elwick Close\, Manchester M16 7LA\, Unite
+ d Kingdom
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Art Class
+TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160211T120000
+DTEND;TZID=Europe/Dublin:20160211T130000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+DTSTAMP:20160706T143013Z
+UID:c8shegdd6aqv95lfnp955opkpg@google.com
+CLASS:PUBLIC
+CREATED:20160212T115737Z
+DESCRIPTION:A low impact circuits based class suitable for older people or 
+ people new to exercise. Exercises can be adapted for chair based exercise. 
+ \nEveryone welcome!\n£1 per session\nFor more info please contact: 0161 219
+  2569 or email info@mcrgames.com 
+LAST-MODIFIED:20160620T094826Z
+LOCATION:Moss Side Millennium Powerhouse\, 140 Raby St\, Manchester M14 4SL
+ \, United Kingdom
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Easy Rhythms Circuits Class
+TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160209T110000
+DTEND;TZID=Europe/Dublin:20160209T130000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+DTSTAMP:20160706T143013Z
+UID:172i90f6f0itk25m9ng76do3vk@google.com
+CLASS:PUBLIC
+CREATED:20160212T114936Z
+DESCRIPTION:Computer club and other activities based in the Powerhouse Libr
+ ary\nContact: 0161 227 3758\nEmail: powerhouselibrary@manchester.gov.uk\n\n
+ Library general opening times:\nMonday: 11am-2pm\; 3-7pm\nTuesday: 11am-2pm
+ \; 3-7pm\nWednesday: 11am-2pm\; 3-7pm\nThursday: 11am -2pm\; 3-7pm\nFriday:
+  closed\nSaturday: 12-5pm\n
+LAST-MODIFIED:20160620T094826Z
+LOCATION:Moss Side Millennium Powerhouse\, 140 Raby St\, Manchester M14 4SL
+ \, United Kingdom
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Power rangers
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160213T100000
+DTEND;TZID=Europe/Dublin:20160213T120000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+DTSTAMP:20160706T143013Z
+UID:a4alfmno6rglodpcifge9nk20k@google.com
+CLASS:PUBLIC
+CREATED:20160210T093828Z
+DESCRIPTION:In the multi-purpose hall\n0161 247 2646
+LAST-MODIFIED:20160620T094824Z
+LOCATION:Brooks Building\, Birley\, MMU\, 53 Bonsall St\, Manchester M15 6G
+ X
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Table Tennis
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160210T140000
+DTEND;TZID=Europe/Dublin:20160210T153000
+RRULE:FREQ=MONTHLY;BYDAY=2WE
+DTSTAMP:20160706T143013Z
+UID:aoe2bdp07nh3kph77vqiouhj9c@google.com
+CLASS:PUBLIC
+CREATED:20160209T120333Z
+DESCRIPTION:‘Coffee\, Cake and Culture’ is designed to support those at ris
+ k of social isolation by providing stimulating and creative learning opport
+ unities through meaningful activities crafted for individuals with dementia
+ . For people living with dementia\, their family\, carer's and friends.
+LAST-MODIFIED:20160620T094824Z
+LOCATION:Whitworth Art Gallery\, Oxford Rd\, Manchester\, Manchester M15 6E
+ R\, UK
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Coffee Cake and Culture
+TRANSP:TRANSPARENT
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160211T190000
+DTEND;TZID=Europe/London:20160211T210000
+RRULE:FREQ=MONTHLY;COUNT=1;INTERVAL=1;BYDAY=2TH
+DTSTAMP:20160706T143013Z
+UID:37orv3fgcb6h2p7bj8gsipcc6o_R20160211T190000@google.com
+CLASS:PUBLIC
+CREATED:20160205T155242Z
+DESCRIPTION:tel:01612261912\nhttp://www.z-arts.org/about-us/contact-us/
+LAST-MODIFIED:20160620T094823Z
+LOCATION:Z-arts\, 335 Stretford Rd\, Manchester M15 5ZA\, United Kingdom
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Hulme History Group Meet up
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160211T190000
+DTEND;TZID=Europe/Dublin:20160211T210000
+RRULE:FREQ=MONTHLY;UNTIL=20160211T185959Z;INTERVAL=1;BYDAY=2TH
+DTSTAMP:20160706T143013Z
+UID:37orv3fgcb6h2p7bj8gsipcc6o@google.com
+CLASS:PUBLIC
+CREATED:20160205T155242Z
+DESCRIPTION:tel:01612261912\nhttp://www.z-arts.org/about-us/contact-us/
+LAST-MODIFIED:20160620T094823Z
+LOCATION:Z-arts\, 335 Stretford Rd\, Manchester M15 5ZA\, United Kingdom
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Hulme History Group Meet up
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160203T140000
+DTEND;TZID=Europe/Dublin:20160203T160000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+DTSTAMP:20160706T143013Z
+UID:hj8meebequh74b3kelkuqq9sfo@google.com
+CLASS:PUBLIC
+CREATED:20160205T135455Z
+DESCRIPTION:Based in Hibiscus Court the cafe has different activities to ge
+ t involved in\, for more information contact Simon or Lydia on: 0161 225106
+ 4
+LAST-MODIFIED:20160620T094823Z
+LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
+ h Rd\, Manchester M16 7HU\, United Kingdom
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Hibiscus Court Afternoon Cafe
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160208T140000
+DTEND;TZID=Europe/London:20160208T160000
+RRULE:FREQ=WEEKLY;COUNT=1;INTERVAL=1;BYDAY=MO
+DTSTAMP:20160706T143013Z
+UID:73pc4cvq0spsk29dvhaam83m04_R20160208T140000@google.com
+CLASS:PUBLIC
+CREATED:20160205T100122Z
+DESCRIPTION:Run by Together Dementia Support. For people living with dement
+ ia\, their family\, carers and friends. Physical games (indoor bowling\, qu
+ oits\, pool)\, table games such as dominoes\, cards\, draughts\, Jenga etc\
+ , art and craft\, baking\, singing\, poetry reading\, quizzes\, reminiscenc
+ e and many more.\nTel. 07854 335890\nwww.togetherdementiasupport.org\n
+LAST-MODIFIED:20160620T094822Z
+LOCATION:Amani Centre Quinney Cresent Shoreham Close\, Manchester M16 7DG
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Dementia Friends and Activities Group
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160208T140000
+DTEND;TZID=Europe/Dublin:20160208T160000
+RRULE:FREQ=WEEKLY;UNTIL=20160208T135959Z;INTERVAL=1;BYDAY=MO
+DTSTAMP:20160706T143013Z
+UID:73pc4cvq0spsk29dvhaam83m04@google.com
+CLASS:PUBLIC
+CREATED:20160205T100122Z
+DESCRIPTION:Run by Together Dementia Support. For people living with dement
+ ia\, their family\, carers and friends. Physical games (indoor bowling\, qu
+ oits\, pool)\, table games such as dominoes\, cards\, draughts\, Jenga etc\
+ , art and craft\, baking\, singing\, poetry reading\, quizzes\, reminiscenc
+ e and many more.\nTel. 07854 335890\nwww.togetherdementiasupport.org\n
+LAST-MODIFIED:20160620T094822Z
+LOCATION:Amani Centre Quinney Cresent Shoreham Close\, Manchester M16 7DG
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Dementia Cafe
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160212T140000
+DTEND;TZID=Europe/Dublin:20160212T160000
+EXDATE;TZID=Europe/Dublin:20160219T140000
+EXDATE;TZID=Europe/Dublin:20160325T140000
+RRULE:FREQ=WEEKLY;INTERVAL=1;BYDAY=FR
+DTSTAMP:20160706T143013Z
+UID:d5om4b985oat5i2st9oqthnsg8@google.com
+CLASS:PUBLIC
+CREATED:20160205T140018Z
+DESCRIPTION:Enjoy a cup of tea and a chat\, and try your hand at a range of
+  traditional skills including woodblock carving\, sculpture\, printing\, wa
+ tercolour painting and many others. Each month\, an artist will introduce a
+  different technique. Every Friday our Clore Learning Studio is open as an 
+ Age Friendly art studio\, in partnership with Age Friendly Manchester.\n\nc
+ laire.cowell@manchester.ac.uk\n07776 170 688\n\nhttp://www.whitworth.manche
+ ster.ac.uk/learn/adults/coursesandworkshops/handmade/ 
+LAST-MODIFIED:20160620T094821Z
+LOCATION:Whitworth Art Gallery\, The University of Manchester\, Oxford Rd\,
+  Manchester\, Lancashire M15 6ER\, United Kingdom
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Handmade
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Dublin:20160212T130000
+DTEND;TZID=Europe/Dublin:20160212T160000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+DTSTAMP:20160706T143013Z
+UID:7dl8aji6mprcv6nqqfh551d9qo@google.com
+CLASS:PUBLIC
+CREATED:20160205T140129Z
+DESCRIPTION:For more information call Anysie on:\nTelephone: 0161 2265045  
+  Mobile: 07579965667  \nEmail: anysie.kankindi@citysouthmanchester.co.uk\n
+LAST-MODIFIED:20160620T094820Z
+LOCATION:Will Griffiths Court\, 3 Elwick Close\, Manchester M16 7LA\, Unite
+ d Kingdom
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Film Club (Time not specified\, just evenings)
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160210T120000
+DTEND;TZID=Europe/London:20160210T130000
+RRULE:FREQ=WEEKLY;UNTIL=20160525T110000Z;BYDAY=WE
+DTSTAMP:20160706T143013Z
+UID:iacqc0jlgl5nppp9gpa2s6e6j4@google.com
+CREATED:20160205T135145Z
+DESCRIPTION:Contact Anne for more information:\nCall: 0161 226 8254\nEmail:
+  anne389@btinternet.com
+LAST-MODIFIED:20160531T143655Z
+LOCATION:Aquarius
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Aquarius 50+ Allotment Group
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160215T120000
+DTEND;TZID=Europe/London:20160215T130000
+RRULE:FREQ=WEEKLY;UNTIL=20160509T110000Z;BYDAY=MO
+DTSTAMP:20160706T143013Z
+UID:9o4ds033al43jt3nvt4iups3f0@google.com
+CREATED:20160209T112918Z
+DESCRIPTION:Contact Anne for more information:\nCall: 0161 226 8254\nEmail:
+  anne389@btinternet.com
+LAST-MODIFIED:20160531T143636Z
+LOCATION:Aqarius Centre\, 21 Eden Close\, M15 6AX
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chair Assisted Exercise
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160215T130000
+DTEND;TZID=Europe/London:20160215T134500
+RRULE:FREQ=WEEKLY;UNTIL=20160523T120000Z;BYDAY=MO
+DTSTAMP:20160706T143013Z
+UID:fro63veov8mqgv5cimhgeenfac@google.com
+CREATED:20160209T113747Z
+DESCRIPTION:Contact Anne for more information:\n0161 226 8254\nanne389@btin
+ ternet.com
+LAST-MODIFIED:20160531T143631Z
+LOCATION:Aqarius Centre\, 21 Eden Close\, M15 6AX
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Tea Break Club
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20160209T110000
+DTEND;TZID=Europe/London:20160209T130000
+RRULE:FREQ=WEEKLY;UNTIL=20160524T100000Z;BYDAY=TU
+DTSTAMP:20160706T143013Z
+UID:4tnq09db23i8vgim0uf3vfqjo4@google.com
+CREATED:20160209T113855Z
+DESCRIPTION:Contact Anne for more information:\n0161 226 8254\nanne389@btin
+ ternet.com
+LAST-MODIFIED:20160531T143602Z
+LOCATION:Aqarius Centre\, 21 Eden Close\, M15 6AX
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Art Class
+TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20160526T160000Z
 DTEND:20160526T180000Z
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:m4hvmbbopmrod014pvf89fq9q4@google.com
 CREATED:20160524T095617Z
 DESCRIPTION:On Thursday 26th May\, from 5-7pm\, Manchester Met’s Environmen
@@ -569,83 +2280,9 @@ SUMMARY:Film Screening: Just Eat It
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART:20160603T084500Z
-DTEND:20160603T110000Z
-DTSTAMP:20160614T152317Z
-UID:3bsivkij8er2fu0ldvbso6fefg@google.com
-CREATED:20160524T094224Z
-DESCRIPTION:We will be arriving at 9.45am and sing at 10.30am\nWe are singi
- ng Put a Little Love In Your Heart voices only \nDress code blue and white\
- n\nContact Sally Ferris\,  Together Dementia Support\n07854 335890\n
-LAST-MODIFIED:20160524T094224Z
-LOCATION:EPPING WALK BRIDGE located at MMU Bonsall St Hulme Manchester M15 
- 6GX
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Sing Along BBC MUSIC DAY
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20160723
-DTEND;VALUE=DATE:20160821
-DTSTAMP:20160614T152317Z
-UID:90p7ccilqtvco3akf0kkkmtaj4@google.com
-CREATED:20160518T085717Z
-DESCRIPTION:
-LAST-MODIFIED:20160518T090322Z
-LOCATION:Brooks\, Birley\, 53 Bonsall Street Manchester M15 6GX
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Summer Community Games
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20160612
-DTEND;VALUE=DATE:20160613
-DTSTAMP:20160614T152317Z
-UID:rdibmc8jc9k33iu03iat93bb14@google.com
-CREATED:20160422T111851Z
-DESCRIPTION:On Sunday 12th June\, we will be hosting a community picnic at 
- Birley as part of the national Big Lunch\, an annual event aimed at bringin
- g people together and celebrating community.\nThe event will be linked to M
- anchester’s status as European City of Science 2016 and will have avery spe
- cial science theme.\nIn partnership with the Faculty of Science and Enginee
- ring\, MetMUnch\, the University’s Environment Team\, and local community p
- artners we’ll be showcasing fermented foods made out of microbes and invite
-  you to take part and bring your own picnic. There’ll be plenty of family-f
- riendly activities and you can find out more about the Birley Community Orc
- hard and herb garden.  \nFor more information on how to get involved contac
- t: engagement@mmu.ac.uk or 0161 247 3393
-LAST-MODIFIED:20160518T085516Z
-LOCATION:Birley Fields\, Bonsall St\, Manchester M15\, United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:World Family Picnic European City of Science 
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20160611T140000Z
-DTEND:20160611T160000Z
-DTSTAMP:20160614T152317Z
-UID:8l5fr4vv5to10t0toggs1om3bk@google.com
-CREATED:20160511T093959Z
-DESCRIPTION:Dementia friendly gospel choir for African and Caribbean people
-  with memory difficulties/dementia to enjoy and spend time together with re
- latives or friends.\n\nEveryone welcome.\n\nContact: Dorothy Allen Dorothy@
- togetherdementiasupport.org\, Sally Ferris 07854 335890 or Dawn Edge dawn.e
- dge@manchester.ac.uk 07796 202806
-LAST-MODIFIED:20160511T094544Z
-LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
- h Rd\, Manchester M16 7HU\, United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Together in Song
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 DTSTART:20160514T140000Z
 DTEND:20160514T160000Z
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:bbsr0u24i384jp5uuk7j3gdijg@google.com
 CREATED:20160511T093856Z
 DESCRIPTION:Dementia friendly gospel choir for African and Caribbean people
@@ -662,207 +2299,9 @@ SUMMARY:Together in Song
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART:20161015T140000Z
-DTEND:20161015T160000Z
-DTSTAMP:20160614T152317Z
-UID:20i9p5qdohcfn6crsptu9nf33g@google.com
-CREATED:20160511T094453Z
-DESCRIPTION:Dementia friendly gospel choir for African and Caribbean people
-  with memory difficulties/dementia to enjoy and spend time together with re
- latives or friends.\n\nEveryone welcome.\n\nContact: Dorothy Allen Dorothy@
- togetherdementiasupport.org\, Sally Ferris 07854 335890 or Dawn Edge dawn.e
- dge@manchester.ac.uk 07796 202806
-LAST-MODIFIED:20160511T094453Z
-LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
- h Rd\, Manchester M16 7HU\, United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Together in Song
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20160917T140000Z
-DTEND:20160917T160000Z
-DTSTAMP:20160614T152317Z
-UID:17b0apo0hj3ruoih6t1r6ngo04@google.com
-CREATED:20160511T094349Z
-DESCRIPTION:Dementia friendly gospel choir for African and Caribbean people
-  with memory difficulties/dementia to enjoy and spend time together with re
- latives or friends.\n\nEveryone welcome.\n\nContact: Dorothy Allen Dorothy@
- togetherdementiasupport.org\, Sally Ferris 07854 335890 or Dawn Edge dawn.e
- dge@manchester.ac.uk 07796 202806
-LAST-MODIFIED:20160511T094349Z
-LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
- h Rd\, Manchester M16 7HU\, United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Together in Song
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20160813T140000Z
-DTEND:20160813T150000Z
-DTSTAMP:20160614T152317Z
-UID:r5q1733g2bvresv3mhq6prsii4@google.com
-CREATED:20160511T094244Z
-DESCRIPTION:Dementia friendly gospel choir for African and Caribbean people
-  with memory difficulties/dementia to enjoy and spend time together with re
- latives or friends.\n\nEveryone welcome.\n\nContact: Dorothy Allen Dorothy@
- togetherdementiasupport.org\, Sally Ferris 07854 335890 or Dawn Edge dawn.e
- dge@manchester.ac.uk 07796 202806
-LAST-MODIFIED:20160511T094244Z
-LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
- h Rd\, Manchester M16 7HU\, United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Together in Song
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20160709T140000Z
-DTEND:20160709T160000Z
-DTSTAMP:20160614T152317Z
-UID:qug0u0p9mao9b5r1bjhb7p2i0g@google.com
-CREATED:20160511T094125Z
-DESCRIPTION:Dementia friendly gospel choir for African and Caribbean people
-  with memory difficulties/dementia to enjoy and spend time together with re
- latives or friends.\n\nEveryone welcome.\n\nContact: Dorothy Allen Dorothy@
- togetherdementiasupport.org\, Sally Ferris 07854 335890 or Dawn Edge dawn.e
- dge@manchester.ac.uk 07796 202806
-LAST-MODIFIED:20160511T094125Z
-LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
- h Rd\, Manchester M16 7HU\, United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Together in Song
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160420T130000
-DTEND;TZID=Europe/London:20160420T200000
-RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160614T152317Z
-UID:uvj7ciu79208kssph3rfap6qv4@google.com
-CREATED:20160422T112917Z
-DESCRIPTION:Hulme had the very first branch library of Manchester’s free li
- brary – which was itself the country’s first free library!\n\nAssistance Av
- ailable:\nMondays: 1–5pm\nTuesdays: 9am–1pm\nWednesdays: 1–8pm\nThursdays: 
- 9am-1pm\nFridays: 1–5pm\nSaturdays: 9am-1pm & 2–5pm\nBank holidays we are c
- losed.\n\nThere is underground car parking\n\nThe library will be open the 
- same hours as the leisure centre and you will be able to:\nbrowse & borrow 
- a selection of popular books\;\nreturn & renew books\;\nlog on to internet-
- ready PCs\; and \ncollect reservations.\nContact: 0161 227 3739 or hulmelib
- rary@manchester.gov.uk
-LAST-MODIFIED:20160422T113002Z
-LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
- 5NN\, United Kingdom
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Hulme Library
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160423T140000
-DTEND;TZID=Europe/London:20160423T170000
-RRULE:FREQ=WEEKLY;BYDAY=SA
-DTSTAMP:20160614T152317Z
-UID:dful56j9cu09kdnofscgs7ffeg@google.com
-CREATED:20160422T112843Z
-DESCRIPTION:Hulme had the very first branch library of Manchester’s free li
- brary – which was itself the country’s first free library!\n\nAssistance Av
- ailable:\nMondays: 1–5pm\nTuesdays: 9am–1pm\nWednesdays: 1–8pm\nThursdays: 
- 9am-1pm\nFridays: 1–5pm\nSaturdays: 9am-1pm & 2–5pm\nBank holidays we are c
- losed.\n\nThere is underground car parking\n\nThe library will be open the 
- same hours as the leisure centre and you will be able to:\nbrowse & borrow 
- a selection of popular books\;\nreturn & renew books\;\nlog on to internet-
- ready PCs\; and \ncollect reservations.\nContact: 0161 227 3739 or hulmelib
- rary@manchester.gov.uk
-LAST-MODIFIED:20160422T112913Z
-LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
- 5NN\, United Kingdom
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Hulme Library
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160419T090000
-DTEND;TZID=Europe/London:20160419T130000
-RRULE:FREQ=WEEKLY;BYDAY=TU,TH,SA
-DTSTAMP:20160614T152317Z
-UID:isbg5oeqfhrrq22k7nn48363ak@google.com
-CREATED:20160422T112751Z
-DESCRIPTION:Hulme had the very first branch library of Manchester’s free li
- brary – which was itself the country’s first free library!\n\nAssistance Av
- ailable:\nMondays: 1–5pm\nTuesdays: 9am–1pm\nWednesdays: 1–8pm\nThursdays: 
- 9am-1pm\nFridays: 1–5pm\nSaturdays: 9am-1pm & 2–5pm\nBank holidays we are c
- losed.\n\nThere is underground car parking\n\nThe library will be open the 
- same hours as the leisure centre and you will be able to:\nbrowse & borrow 
- a selection of popular books\;\nreturn & renew books\;\nlog on to internet-
- ready PCs\; and \ncollect reservations.\nContact: 0161 227 3739 or hulmelib
- rary@manchester.gov.uk
-LAST-MODIFIED:20160422T112841Z
-LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
- 5NN\, United Kingdom
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Hulme Library
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160422T130000
-DTEND;TZID=Europe/London:20160422T170000
-RRULE:FREQ=WEEKLY;BYDAY=MO,FR
-DTSTAMP:20160614T152317Z
-UID:v551f81seite6h1hsdn5k9i8j8@google.com
-CREATED:20160422T112320Z
-DESCRIPTION:Hulme had the very first branch library of Manchester’s free li
- brary – which was itself the country’s first free library!\n\nAssistance Av
- ailable:\nMondays: 1–5pm\nTuesdays: 9am–1pm\nWednesdays: 1–8pm\nThursdays: 
- 9am-1pm\nFridays: 1–5pm\nSaturdays: 9am-1pm & 2–5pm\nBank holidays we are c
- losed.\n\nThere is underground car parking\n\nThe library will be open the 
- same hours as the leisure centre and you will be able to:\nbrowse & borrow 
- a selection of popular books\;\nreturn & renew books\;\nlog on to internet-
- ready PCs\; and \ncollect reservations.\nContact: 0161 227 3739 or hulmelib
- rary@manchester.gov.uk
-LAST-MODIFIED:20160422T112739Z
-LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
- 5NN\, United Kingdom
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Hulme Library
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20160726
-DTEND;VALUE=DATE:20160730
-DTSTAMP:20160614T152317Z
-UID:tnu98on6c865jp309g4ir5spto@google.com
-CREATED:20160422T112108Z
-DESCRIPTION:This Community Learning Festival consists of four days of works
- hops\, speakers and events to inspire and support many types of learning. I
- t will also provide a space to build connections between people\, and betwe
- en the University and our local community.\n\nThe aims include:\ncelebratin
- g creativity in the delivery of education with a special focus on community
- -based learning\ncreating a platform for all types of learning that local c
- ommunity members are involved with\nfacilitating an experimental place to d
- eliver new projects co-produced by students\, MMU staff and community educa
- tion providers\n\nTo keep up to date with the festival please subscribe to 
- our email list here.\nhttp://eepurl.com/bOjsCn\n\nThe festival will run fro
- m 26th-29th July\, to get involved in the planning of the event please emai
- l edlab@mmu.ac.uk letting us know how you or your group would want to contr
- ibute.
-LAST-MODIFIED:20160422T112122Z
-LOCATION:Birley Fields\, Bonsall St\, Manchester M15\, United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Community Learning Festival
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;VALUE=DATE:20160517
 DTEND;VALUE=DATE:20160518
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:jd6k81ms9e591tca3c72nq3rdo@google.com
 CREATED:20160422T111731Z
 DESCRIPTION:
@@ -874,100 +2313,10 @@ SUMMARY:Healthy Relationships
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-DTSTART:20160603T110000Z
-DTEND:20160603T140000Z
-DTSTAMP:20160614T152317Z
-UID:fe1bpddo56210crdqjcbeebmqo@google.com
-CREATED:20160422T110328Z
-DESCRIPTION:Event to celebrate the re-opening of Trinity House!\nMore detai
- ls to come!\n\nContact: Lydia on 0161 225 1064 or email info@trinityhousecr
- c.org.uk 
-LAST-MODIFIED:20160422T110619Z
-LOCATION:Trinity House Community Resource Centr\, Grove Close\, off Platt L
- ane Rusholme Manchester M14 5AA
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Trinity House Opening Party!
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160308T100000
-DTEND;TZID=Europe/London:20160308T120000
-RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160614T152317Z
-UID:830tjus3mgbrd673412lus6pvg@google.com
-CREATED:20160307T132845Z
-DESCRIPTION:The So Sew group is run by Linda Puttick and takes place on a T
- uesday morning from 10-12.\nIt runs on a 3 term x 10 week basis and is at p
- resent looking for new members.\nThere is a fee to cover costs.\n\nContact:
-  lindajputtick@gmail.com\n
-LAST-MODIFIED:20160422T110138Z
-LOCATION:Armani Centre\, Quinney Cresent Shoreham Close\, Manchester\, M16 
- 7DG
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:So Sew Group
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160514T120000
-DTEND;TZID=Europe/London:20160514T170000
-RRULE:FREQ=WEEKLY;BYDAY=SA
-DTSTAMP:20160614T152317Z
-UID:o4h6rnctnhes5sh4f27kmrruvs_R20160514T110000@google.com
-CREATED:20160307T115940Z
-DESCRIPTION:Monday: 11am-2pm \nTuesday: 11am-2pm\nWednesday: 11am-2pm\nThur
- sday: 11am -2pm\nFriday: Closed\nSaturday: 12noon-5pm\nSunday: Closed\n\nCa
- ll: 0161 227 3758\nEmail: powerhouselibrary@manchester.gov.uk\n
-LAST-MODIFIED:20160422T105928Z
-LOCATION:Moss Side Powerhouse Library\, 140 Raby St\, Manchester M14 4SQ\, 
- United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Powerhouse Library
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160312T120000
-DTEND;TZID=Europe/London:20160312T170000
-RRULE:FREQ=WEEKLY;UNTIL=20160514T105959Z;BYDAY=SA
-DTSTAMP:20160614T152317Z
-UID:o4h6rnctnhes5sh4f27kmrruvs@google.com
-CREATED:20160307T115940Z
-DESCRIPTION:Monday: 11am-2pm\; 3-7pm\nTuesday: 11am-2pm\; 3-7pm\nWednesday:
-  11am-2pm\; 3-7pm\nThursday: 11am -2pm\; 3-7pm\nFriday: closed\nSaturday: 1
- 2-5pm\n\nCall: 0161 227 3758\nEmail: powerhouselibrary@manchester.gov.uk\n
-LAST-MODIFIED:20160422T105928Z
-LOCATION:Moss Side Powerhouse Library\, 140 Raby St\, Manchester M14 4SQ\, 
- United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Powerhouse Library
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160421T110000
-DTEND;TZID=Europe/London:20160421T140000
-RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
-DTSTAMP:20160614T152317Z
-UID:c9ahuoa9lnl137ntm008rtgtrc@google.com
-CREATED:20160307T115414Z
-DESCRIPTION:Monday: 11am-2pm \nTuesday: 11am-2pm\nWednesday: 11am-2pm\nThur
- sday: 11am -2pm\nFriday: closed\nSaturday: 12-5pm\nSunday: Closed\n\nCall: 
- 0161 227 3758\nEmail: powerhouselibrary@manchester.gov.uk\n
-LAST-MODIFIED:20160422T105900Z
-LOCATION:Moss Side Powerhouse Library\, 140 Raby St\, Manchester M14 4SQ\, 
- United Kingdom
-SEQUENCE:2
-STATUS:CONFIRMED
-SUMMARY:Powerhouse Library
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160307T110000
 DTEND;TZID=Europe/London:20160307T140000
 RRULE:FREQ=WEEKLY;UNTIL=20160420T225959Z;BYDAY=MO,TU,WE,TH,SA
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:3b8kpamiap7kb9pkt4mfmfigv4@google.com
 CREATED:20160307T115414Z
 DESCRIPTION:Monday: 11am-2pm \nTuesday: 11am-2pm\nWednesday: 11am-2pm\nThur
@@ -985,7 +2334,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160307T110000
 DTEND;TZID=Europe/London:20160307T140000
 RRULE:FREQ=WEEKLY;UNTIL=20160420T225959Z;BYDAY=MO,TU,WE,TH,FR
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:545po409sj4csr736q6i7rc1q4@google.com
 CREATED:20160307T115414Z
 DESCRIPTION:Monday: 11am-2pm\; 3-7pm\nTuesday: 11am-2pm\; 3-7pm\nWednesday:
@@ -1002,7 +2351,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20160515
 DTEND;VALUE=DATE:20160522
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:9q961po2br8fjqgm6um164437g@google.com
 CREATED:20160412T154814Z
 DESCRIPTION:This year's Dementia Awareness Week\, 15 – 21 May\, will encour
@@ -1023,27 +2372,9 @@ SUMMARY:Dementia Awareness Week
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160308T130000
-DTEND;TZID=Europe/London:20160308T150000
-RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160614T152317Z
-UID:ajmngp86a2h662ifdsgqa19g1o@google.com
-CREATED:20160307T134716Z
-DESCRIPTION:Advice\, information\, discussion\, support\nTel: 0161 226-9562
- \nFax: 0161 226-7947\nEmail: admin@acmhs-blackmentalhealth.org.uk\nWeb: www
- .acmhs-blackmentalhealth.org.uk\n
-LAST-MODIFIED:20160404T110423Z
-LOCATION:Windrush Millennium Centre\, Alexandra Rd\, Manchester\, Mancheste
- r M16 7WD\, UK
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Women's Group
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 DTSTART:20160326T100000Z
 DTEND:20160326T160000Z
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:ifeetj2bjl27070mucp9eljc5s@google.com
 CREATED:20160323T162810Z
 DESCRIPTION:Manchester Community Games Day \nSaturday 26th March at the Act
@@ -1066,7 +2397,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART:20160404T093000Z
 DTEND:20160404T120000Z
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:svbh3dhsvcn1drr56flocpnuio@google.com
 CREATED:20160321T173826Z
 DESCRIPTION:Manchester Children’s Book Festival FREE Trailblazer Event\n\nJ
@@ -1102,7 +2433,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160419T140000
 DTEND;TZID=Europe/London:20160419T160000
 RRULE:FREQ=WEEKLY;COUNT=6;BYDAY=TU
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:4ggifho7fb6qu90khrahpckprs@google.com
 CREATED:20160224T093234Z
 DESCRIPTION:Are you interested in learning new life skills to help you age 
@@ -1127,699 +2458,10 @@ SUMMARY:Building a Healthy Future in Retirement
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160315T200000
-DTEND;TZID=Europe/London:20160315T210000
-RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160614T152317Z
-UID:m0dgjnna49tn5v65jjnv3e8c4c@google.com
-CREATED:20160310T175332Z
-DESCRIPTION:For all levels of ability\, from beginners and improvers throug
- h to masters. A friendly bunch with regular social events\, great coaching\
- , overseas trips and a nice atmosphere. The sky’s the limit!\n\nPRICES\nDoo
- r Price: £4.50 / session\nStanding Order: £15 / month\nConcession — door pr
- ice is £2.50 / session or £7.50 / month via standing order.\nSee here fore 
- more details: http://northernwave.org/V02/#swimtimes 
-LAST-MODIFIED:20160310T175332Z
-LOCATION:Moss Side Leisure Centre\, Moss Ln E\, Moss Side\, Manchester M15 
- 5NN\, United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:LGBT Swimming - Northern Wave
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160308T120000
-DTEND;TZID=Europe/London:20160308T130000
-RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160614T152317Z
-UID:qf5vgun6447fcf89vm3ajcs25g@google.com
-CREATED:20160307T162132Z
-DESCRIPTION:Flex It @ 50\n12:00pm – 1:00pm\nPrice: £3\nKath Locke Centre\n1
- 23 Moss Lane East\nManchester M15 5DD\nTel: 0161 455 0211\nwww.kathlockecen
- tre.co.uk
-LAST-MODIFIED:20160307T162132Z
-LOCATION:Kath Locke Centre\, 123 Moss Ln E\, Manchester M15 5DD\, United Ki
- ngdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Flex it at 50
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160310T100000
-DTEND;TZID=Europe/London:20160310T110000
-RRULE:FREQ=WEEKLY;BYDAY=TH
-DTSTAMP:20160614T152317Z
-UID:q3o04umeujrq63qpmm01aj8obg@google.com
-CREATED:20160307T161939Z
-DESCRIPTION:Zumba Gold\n(for active older people)\n10:00am – 11.00am\nPrice
- : £3\nKath Locke Centre\n123 Moss Lane East\nManchester M15 5DD\nTel: 0161 
- 455 0211\nwww.kathlockecentre.co.uk
-LAST-MODIFIED:20160307T161939Z
-LOCATION:Kath Locke Centre\, 123 Moss Ln E\, Manchester M15 5DD\, United Ki
- ngdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Zumba Gold (for active older people)
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160307T130000
-DTEND;TZID=Europe/London:20160307T160000
-RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160614T152317Z
-UID:bhm5sp3kbb3ceq1043b97p6qpc@google.com
-CREATED:20160307T161756Z
-DESCRIPTION:Manchester Advice Drop In\n( Manchester residents only)\n1:00pm
-  – 4:00pm\nZion Centre\n339 Stretford Road\nManchester M15 4ZY\nTel: 0161 2
- 26 5412\nwww.zioncentre.co.uk
-LAST-MODIFIED:20160307T161756Z
-LOCATION:Zion Community Resource Centre\, 339 Stratford\, Manchester\, Manc
- hester M15 4ZY\, UK
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Manchester Advice Drop in
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160310T163000
-DTEND;TZID=Europe/London:20160310T193000
-RRULE:FREQ=WEEKLY;BYDAY=TH
-DTSTAMP:20160614T152317Z
-UID:rsoh6g03g1u19rh7iroerji5mc@google.com
-CREATED:20160307T161608Z
-DESCRIPTION:Barnados Womens Group\n4:30pm – 7:30pm\nFree\nZion Centre\n339 
- Stretford Road\nManchester M15 4ZY\nTel: 0161 226 5412\nwww.zioncentre.co.u
- k\n
-LAST-MODIFIED:20160307T161608Z
-LOCATION:Zion Community Resource Centre\, 339 Stratford\, Manchester\, Manc
- hester M15 4ZY\, UK
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Barnados Womens Group
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160312T100000
-DTEND;TZID=Europe/London:20160312T113000
-RRULE:FREQ=WEEKLY;BYDAY=SA
-DTSTAMP:20160614T152317Z
-UID:oimq0had02u6imhl59a7b9jqak@google.com
-CREATED:20160307T161413Z
-DESCRIPTION:Flex it @ 50\n10.15am – 11.15pm\n£3.00\nZion Centre\n339 Stretf
- ord Road\nManchester M15 4ZY\nTel: 0161 226 5412\nwww.zioncentre.co.uk
-LAST-MODIFIED:20160307T161413Z
-LOCATION:Zion Community Resource Centre\, 339 Stratford\, Manchester\, Manc
- hester M15 4ZY\, UK
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Flex it at 50
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160308T100000
-DTEND;TZID=Europe/London:20160308T130000
-RRULE:FREQ=WEEKLY;BYDAY=TU,FR
-DTSTAMP:20160614T152317Z
-UID:1eohc249omjvbjmvn5droq7k5o@google.com
-CREATED:20160307T160759Z
-DESCRIPTION:IT drop in (cafe suite)\nFree\n10am -1pm\nZion Centre\n339 Stre
- tford Road\nManchester M15 4ZY\nTel: 0161 226 5412\nwww.zioncentre.co.uk\n
-LAST-MODIFIED:20160307T161254Z
-LOCATION:Zion Community Resource Centre\, 339 Stretford Rd\, Manchester M15
-  4ZY\, United Kingdom
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:IT Drop in
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160311T133000
-DTEND;TZID=Europe/London:20160311T153000
-RRULE:FREQ=WEEKLY;BYDAY=FR
-DTSTAMP:20160614T152317Z
-UID:c5pee7m8oedmdijorioqnj0v4s@google.com
-CREATED:20160307T161150Z
-DESCRIPTION:Art Group\n1:30pm – 3:30pm Free\nZion Centre\n339 Stretford Roa
- d\nManchester M15 4ZY\nTel: 0161 226 5412\nwww.zioncentre.co.uk\n
-LAST-MODIFIED:20160307T161150Z
-LOCATION:Zion Community Resource Centre\, 339 Stratford\, Manchester\, Manc
- hester M15 4ZY\, UK
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Art Group
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160314T100000
-DTEND;TZID=Europe/London:20160314T120000
-RRULE:FREQ=WEEKLY;BYDAY=MO,FR
-DTSTAMP:20160614T152317Z
-UID:d96plvr7dk2t3vf1svv5beasq0@google.com
-CREATED:20160307T160456Z
-DESCRIPTION:Coffee Morning (Food\nvoucher service)\n10:00am – 12:00pm\nZion
-  Centre\n339 Stretford Road\nManchester M15 4ZY\nTel: 0161 226 5412\nwww.zi
- oncentre.co.uk
-LAST-MODIFIED:20160307T160549Z
-LOCATION:Zion Community Resource Centre\, 339 Stretford Rd\, Manchester M15
-  4ZY\, United Kingdom
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Coffee Morning
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160309T140000
-DTEND;TZID=Europe/London:20160309T160000
-RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160614T152317Z
-UID:l0llfohqcu9ql3iakfs0oqert0@google.com
-CREATED:20160307T160310Z
-DESCRIPTION:Bingo\n2:00pm – 4:00pm\nPrice: £3.00 per session\nZion Centre\n
- 339 Stretford Road\nManchester M15 4ZY\nTel: 0161 226 5412\nwww.zioncentre.
- co.uk\n
-LAST-MODIFIED:20160307T160310Z
-LOCATION:Zion Community Resource Centre\, 339 Stretford Rd\, Manchester M15
-  4ZY\, United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Bingo
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160308T173000
-DTEND;TZID=Europe/London:20160308T183000
-RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160614T152317Z
-UID:opm2teom22fqpne2mb17fur2c8@google.com
-CREATED:20160307T153704Z
-DESCRIPTION:cllr.e.rowles@manchester.gov.uk 07852 306 957\ncllr.a.cox@manch
- ester.gov.uk 0161 226 3258\ncllr.s.ali@manchester.gov.uk 07960 514 188\n\nE
- very Tuesday 5.30pm to 6.30pm (Excluding the month of August)\nGreenheys Ad
- ult Education Centre\nGreat Western Street\nMoss Side\nMANCHESTER\nM14 4HZ
-LAST-MODIFIED:20160307T153704Z
-LOCATION:Greenheys Adult Learning Centre\, Upper Lloyd Street\, Manchester 
- Area\, Manchester M14 4\, United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Moss Side Councillors Surgery
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160307T180000
-DTEND;TZID=Europe/London:20160307T190000
-RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160614T152317Z
-UID:k2hr9ugtjva43f8ik1i9vqcokk@google.com
-CREATED:20160307T153337Z
-DESCRIPTION:cllr.l.igbon@manchester.gov.uk 07908 759 042\ncllr.a.lone@manch
- ester.gov.uk 07947 383 514\ncllr.n.murphy@manchester.gov.uk 0161 234 3217 (
- Town Hall)\n\nEvery Monday from 6pm (except Bank Holidays and the month of 
- August) **new location from Monday 16th March 2015**\nBirley Building \nMan
- chester Metropolitan University \nBonsall Street  \nHulme \nMANCHESTER \nM1
- 5 6GX
-LAST-MODIFIED:20160307T153354Z
-LOCATION:Birley Fields\, Bonsall St\, Manchester M15\, United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Hulme Councillors Surgery
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160208T100000
-DTEND;TZID=Europe/London:20160208T130000
-RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160614T152317Z
-UID:l2r1186d5748afqtec31n17glc@google.com
-CREATED:20160212T155908Z
-DESCRIPTION:For more information please contact:\nTelephone: 0161 2265045  
-   Mobile: 07579965667  \nEmail: anysie.kankindi@citysouthmanchester.co.uk\n
-LAST-MODIFIED:20160307T135442Z
-LOCATION:Will Griffiths Court\, 3 Elwick Close\, Manchester M16 7LA\, Unite
- d Kingdom
-SEQUENCE:2
-STATUS:CONFIRMED
-SUMMARY:Art Class
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160407T113000
-DTEND;TZID=Europe/London:20160407T170000
-RRULE:FREQ=MONTHLY;BYDAY=1TH
-DTSTAMP:20160614T152317Z
-UID:m49bh1kfp1lad70icrh0egqotg@google.com
-CREATED:20160307T135137Z
-DESCRIPTION:\n 11.30am at the Windrush Millennium Centre\nSupport\, trips\,
-  short breaks\, information/advice\, respite alternative treatments\, pract
- ical help.\nTel: 0161 226-9562\nFax: 0161 226-7947\nEmail: admin@acmhs-blac
- kmentalhealth.org.uk\nWeb: www.acmhs-blackmentalhealth.org.uk\n\n
-LAST-MODIFIED:20160307T135137Z
-LOCATION:Windrush Drive\, Windrush Dr\, Manchester\, Manchester M9 5QR\, UK
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Carers Support drop in (1st Thursday of the month)
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160212T130000
-DTEND;TZID=Europe/London:20160212T160000
-RRULE:FREQ=WEEKLY;BYDAY=FR
-DTSTAMP:20160614T152317Z
-UID:7dl8aji6mprcv6nqqfh551d9qo@google.com
-CREATED:20160205T140129Z
-DESCRIPTION:For more information call Anysie on:\nTelephone: 0161 2265045  
-  Mobile: 07579965667  \nEmail: anysie.kankindi@citysouthmanchester.co.uk\n
-LAST-MODIFIED:20160307T133526Z
-LOCATION:Will Griffiths Court\, 3 Elwick Close\, Manchester M16 7LA\, Unite
- d Kingdom
-SEQUENCE:2
-STATUS:CONFIRMED
-SUMMARY:Film Club (Time not specified\, just evenings)
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160210T093000
-DTEND;TZID=Europe/London:20160210T123000
-RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160614T152317Z
-UID:g8be1mc0qgg2p7ogrhg5v05m14@google.com
-CREATED:20160212T160017Z
-DESCRIPTION:For more information please contact Anysie on:\nTelephone: 0161
-  2265045    Mobile: 07579965667  \nEmail: anysie.kankindi@citysouthmanchest
- er.co.uk\n
-LAST-MODIFIED:20160307T133437Z
-LOCATION:Will Griffiths Court\, 3 Elwick Close\, Manchester M16 7LA\, Unite
- d Kingdom
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Computer Class
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160304T093000
-DTEND;TZID=Europe/London:20160304T123000
-RRULE:FREQ=WEEKLY;BYDAY=FR
-DTSTAMP:20160614T152317Z
-UID:rrdioupeip6f4go2i0np3g6p90@google.com
-CREATED:20160302T151303Z
-DESCRIPTION:Tea and cake for all to enjoy.\nCall: 07734414449
-LAST-MODIFIED:20160307T123438Z
-LOCATION:Fallowfield Methodist Churh\, Platt Lane
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Cafe on the Corner
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160211T190000
-DTEND;TZID=Europe/London:20160211T210000
-RRULE:FREQ=MONTHLY;BYDAY=2TH
-DTSTAMP:20160614T152317Z
-UID:37orv3fgcb6h2p7bj8gsipcc6o_R20160211T190000@google.com
-CREATED:20160205T155242Z
-DESCRIPTION:tel:01612261912\nhttp://www.z-arts.org/about-us/contact-us/
-LAST-MODIFIED:20160307T123234Z
-LOCATION:Z-arts\, 335 Stretford Rd\, Manchester M15 5ZA\, United Kingdom
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Hulme History Group Meet up
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160211T190000
-DTEND;TZID=Europe/London:20160211T210000
-RRULE:FREQ=MONTHLY;UNTIL=20160211T185959Z;BYDAY=2TH
-DTSTAMP:20160614T152317Z
-UID:37orv3fgcb6h2p7bj8gsipcc6o@google.com
-CREATED:20160205T155242Z
-DESCRIPTION:tel:01612261912\nhttp://www.z-arts.org/about-us/contact-us/
-LAST-MODIFIED:20160307T123234Z
-LOCATION:Z-arts\, 335 Stretford Rd\, Manchester M15 5ZA\, United Kingdom
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Hulme History Group Meet up
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160203T140000
-DTEND;TZID=Europe/London:20160203T160000
-RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160614T152317Z
-UID:hj8meebequh74b3kelkuqq9sfo@google.com
-CREATED:20160205T135455Z
-DESCRIPTION:Based in Hibiscus Court the cafe has different activities to ge
- t involved in\, for more information contact Simon or Lydia on: 0161 225106
- 4
-LAST-MODIFIED:20160307T122609Z
-LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
- h Rd\, Manchester M16 7HU\, United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Hibiscus Court Afternoon Cafe
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160309T110000
-DTEND;TZID=Europe/London:20160309T130000
-RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160614T152317Z
-UID:g8rj73669j0bfmqtsoh7eu977c@google.com
-CREATED:20160302T143306Z
-DESCRIPTION:Session run by Together Dementia Support call Sally on: 0161 28
- 39970
-LAST-MODIFIED:20160307T121154Z
-LOCATION:Alexandra Park\, 180 Russell St\, Manchester M16 7JL\, United King
- dom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Dementia Friends Walk and Talk Group
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160309T140000
-DTEND;TZID=Europe/London:20160309T160000
-RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160614T152317Z
-UID:jggatvdg0cs6ispfna1banjmlg@google.com
-CREATED:20160302T144521Z
-DESCRIPTION:Over 50s informal computer class for beginners\, for more infor
- mation please Simon or Lydia on: 0161 2251064  
-LAST-MODIFIED:20160307T120901Z
-LOCATION:Zion Community Resource Centre\, 339 Stratford\, Manchester\, Manc
- hester M15 4ZY\, UK
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Coffee and Computing
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160309T103000
-DTEND;TZID=Europe/London:20160309T120000
-RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160614T152317Z
-UID:6tdpus8n0els7bqsj42r1m4cqo@google.com
-CREATED:20160302T142629Z
-DESCRIPTION:Coffee Morning\, for more details please contact Anysie on: any
- sie.kankindi@citysouthmanchester.co.uk\nTelephone: 0161 2265045  \nMobile: 
- 07579965667  
-LAST-MODIFIED:20160307T120306Z
-LOCATION:Frank Hatton Court\, Whickham Cl\, Manchester M14 4HW\, United Kin
- gdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Coffee Morning
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160308T193000
-DTEND;TZID=Europe/London:20160308T213000
-RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160614T152317Z
-UID:pusscdh821n8fq8jlatd6vnkt0@google.com
-CREATED:20160302T142218Z
-DESCRIPTION:Run by Together Dementia Support a group primarily for carers o
- f people with dementia\, contact: 0161 2859970
-LAST-MODIFIED:20160307T120124Z
-LOCATION:Chorlton Central Church\, Barlow Moor Rd\, Manchester M21 8BF\, Un
- ited Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Carers Group
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160309T100000
-DTEND;TZID=Europe/London:20160309T120000
-RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160614T152317Z
-UID:tprhp383sghvn470pcl8ergae8@google.com
-CREATED:20160302T144057Z
-DESCRIPTION:For more information please contact: 0161 8737335
-LAST-MODIFIED:20160307T120107Z
-LOCATION:Old Trafford Sports Barn\, Seymour Park\, Carver St\, Manchester M
- 16 9PQ\, United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Keep Fit and Walking Football
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160308T140000
-DTEND;TZID=Europe/London:20160308T160000
-RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160614T152317Z
-UID:fb7gf208q5gc4amcchn093a63c@google.com
-CREATED:20160302T141504Z
-DESCRIPTION:Different speakers each week.\nCall 0161 2241123
-LAST-MODIFIED:20160307T120024Z
-LOCATION:Holy Trinity Platt Church\, Platt Ln\, Manchester M14 5NF\, United
-  Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Elderly Christian Group
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160209T110000
-DTEND;TZID=Europe/London:20160209T130000
-RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160614T152317Z
-UID:172i90f6f0itk25m9ng76do3vk@google.com
-CREATED:20160212T114936Z
-DESCRIPTION:Computer club and other activities based in the Powerhouse Libr
- ary\nContact: 0161 227 3758\nEmail: powerhouselibrary@manchester.gov.uk\n\n
- Library general opening times:\nMonday: 11am-2pm\; 3-7pm\nTuesday: 11am-2pm
- \; 3-7pm\nWednesday: 11am-2pm\; 3-7pm\nThursday: 11am -2pm\; 3-7pm\nFriday:
-  closed\nSaturday: 12-5pm\n
-LAST-MODIFIED:20160307T115745Z
-LOCATION:Moss Side Millennium Powerhouse\, 140 Raby St\, Manchester M14 4SL
- \, United Kingdom
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Power rangers
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160308T100000
-DTEND;TZID=Europe/London:20160308T120000
-RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160614T152317Z
-UID:i3snmqrqhs7bosjqk4014ka72s@google.com
-CREATED:20160302T141304Z
-DESCRIPTION:Supporting women with a range of different activities. \nEmail:
-  whipmcr@gmail.com
-LAST-MODIFIED:20160307T114853Z
-LOCATION:Zion Community Resource Centre\, 339 Stretford Rd\, Manchester M15
-  4ZY\, United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Women of Hulme Participate (WHIP)
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160208T140000
-DTEND;TZID=Europe/London:20160208T160000
-RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160614T152317Z
-UID:73pc4cvq0spsk29dvhaam83m04_R20160208T140000@google.com
-CREATED:20160205T100122Z
-DESCRIPTION:Run by Together Dementia Support. For people living with dement
- ia\, their family\, carers and friends. Physical games (indoor bowling\, qu
- oits\, pool)\, table games such as dominoes\, cards\, draughts\, Jenga etc\
- , art and craft\, baking\, singing\, poetry reading\, quizzes\, reminiscenc
- e and many more.\nTel. 07854 335890\nwww.togetherdementiasupport.org\n
-LAST-MODIFIED:20160307T114835Z
-LOCATION:Amani Centre Quinney Cresent Shoreham Close\, Manchester M16 7DG
-SEQUENCE:2
-STATUS:CONFIRMED
-SUMMARY:Dementia Friends and Activities Group
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160208T140000
-DTEND;TZID=Europe/London:20160208T160000
-RRULE:FREQ=WEEKLY;UNTIL=20160208T135959Z;BYDAY=MO
-DTSTAMP:20160614T152317Z
-UID:73pc4cvq0spsk29dvhaam83m04@google.com
-CREATED:20160205T100122Z
-DESCRIPTION:Run by Together Dementia Support. For people living with dement
- ia\, their family\, carers and friends. Physical games (indoor bowling\, qu
- oits\, pool)\, table games such as dominoes\, cards\, draughts\, Jenga etc\
- , art and craft\, baking\, singing\, poetry reading\, quizzes\, reminiscenc
- e and many more.\nTel. 07854 335890\nwww.togetherdementiasupport.org\n
-LAST-MODIFIED:20160307T114835Z
-LOCATION:Amani Centre Quinney Cresent Shoreham Close\, Manchester M16 7DG
-SEQUENCE:2
-STATUS:CONFIRMED
-SUMMARY:Dementia Cafe
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160308T140000
-DTEND;TZID=Europe/London:20160308T170000
-RRULE:FREQ=WEEKLY;BYDAY=TU
-DTSTAMP:20160614T152317Z
-UID:5hil0k0bsik9fvr6ud2orjmnso@google.com
-CREATED:20160307T114155Z
-DESCRIPTION:Fair share food delivery\, for more information please contact:
- \nTelephone: 0161 2265045    Mobile: 07579965667  \nEmail: anysie.kankindi@
- citysouthmanchester.co.uk
-LAST-MODIFIED:20160307T114155Z
-LOCATION:Will Griffiths Court\, 3 Elwick Close\, Manchester M16 7LA\, Unite
- d Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Fair Share at Will Griffiths Court
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160306T103000
-DTEND;TZID=Europe/London:20160306T120000
-RRULE:FREQ=WEEKLY;BYDAY=SU
-DTSTAMP:20160614T152317Z
-UID:i78dcpt96ccnephj8jj5tpihhs@google.com
-CREATED:20160302T153543Z
-DESCRIPTION:
-LAST-MODIFIED:20160302T153543Z
-LOCATION:Trinity Community Church at Armani Centre
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Age Friendly Worship
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160311T110000
-DTEND;TZID=Europe/London:20160311T130000
-RRULE:FREQ=WEEKLY;BYDAY=FR
-DTSTAMP:20160614T152317Z
-UID:0o4out0c7ep1vrdui0bpas75fk@google.com
-CREATED:20160302T153147Z
-DESCRIPTION:Call 0161 2262702 for more details
-LAST-MODIFIED:20160302T153147Z
-LOCATION:Wesley Centre Hulme
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Foodbank 
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160303T113000
-DTEND;TZID=Europe/London:20160303T143000
-RRULE:FREQ=WEEKLY;BYDAY=TH
-DTSTAMP:20160614T152317Z
-UID:t5fsiavsi00j43q9nn9qpj8i9s@google.com
-CREATED:20160302T150145Z
-DESCRIPTION:Contact Amy Murtha Sha 07528 817039
-LAST-MODIFIED:20160302T152708Z
-LOCATION:Church of God of Prophecy Christian Centre\, Manchester\, United K
- ingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Yellowbird Age Friendly Drop in
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160304T140000
-DTEND;TZID=Europe/London:20160304T160000
-RRULE:FREQ=WEEKLY;BYDAY=FR
-DTSTAMP:20160614T152317Z
-UID:f3gajlu0ckm4dqkmnskdg7cfn0@google.com
-CREATED:20160302T152433Z
-DESCRIPTION:People First activity session contact 0161 8737335
-LAST-MODIFIED:20160302T152433Z
-LOCATION:Hibiscus Court - Extra Care Retirement Apartments\, 16 Sedgeboroug
- h Rd\, Manchester M16 7HU\, United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Activity Group
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160304T110000
-DTEND;TZID=Europe/London:20160304T130000
-RRULE:FREQ=WEEKLY;BYDAY=FR
-DTSTAMP:20160614T152317Z
-UID:cblkarsa7dv73sdhgrc5magh38@google.com
-CREATED:20160302T151524Z
-DESCRIPTION:Luncheon club for the over 50s\, will be based at the church un
- til Trinity House opens again. Call Lydia 0161 2251064
-LAST-MODIFIED:20160302T151524Z
-LOCATION:Holy Trinity Platt Church\, Platt Ln\, Manchester M14 5NF\, United
-  Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Luncheon Club
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160309T110000
-DTEND;TZID=Europe/London:20160309T153000
-RRULE:FREQ=WEEKLY;BYDAY=SU,WE,SA
-DTSTAMP:20160614T152317Z
-UID:98fmc82fb9uclacq9e5dim6v0c@google.com
-CREATED:20160302T143111Z
-DESCRIPTION:Call 0161 2278198
-LAST-MODIFIED:20160302T151135Z
-LOCATION:Hulme Community Garden Centre\, 28 Old Birley St\, St. George's\, 
- Manchester M15 5RG\, United Kingdom
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Volunteering
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160303T190000
-DTEND;TZID=Europe/London:20160303T210000
-RRULE:FREQ=WEEKLY;BYDAY=TH
-DTSTAMP:20160614T152317Z
-UID:np524vmhmregcrhtbnu92mj4fs@google.com
-CREATED:20160302T150920Z
-DESCRIPTION:Ki-Aikido 0161 2267696
-LAST-MODIFIED:20160302T150920Z
-LOCATION:The Yard Theatre Manchester
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Mind and Body Classes
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160308T110000
-DTEND;TZID=Europe/London:20160308T130000
-RRULE:FREQ=WEEKLY;BYDAY=TU,FR
-DTSTAMP:20160614T152317Z
-UID:l5u6s4dnluh7ff8ms9r1uju4v4@google.com
-CREATED:20160302T150540Z
-DESCRIPTION:Call 0161 2269012
-LAST-MODIFIED:20160302T150540Z
-LOCATION:Church of God of Prophecy Christian Centre\, Manchester\, United K
- ingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Tuesday and Friday Lunch
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160310T110000
-DTEND;TZID=Europe/London:20160310T140000
-RRULE:FREQ=WEEKLY;BYDAY=TH
-DTSTAMP:20160614T152317Z
-UID:b9rptd5mitvloehfrqqjf9p89c@google.com
-CREATED:20160302T145319Z
-DESCRIPTION:Call Anysie for more details Telephone: 0161 2265045  Mobile: 0
- 7579965667  
-LAST-MODIFIED:20160302T145319Z
-LOCATION:Will Griffiths Court\, 3 Elwick Close\, Manchester M16 7LA\, Unite
- d Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Brunch Club
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160330T150000
 DTEND;TZID=Europe/London:20160330T160000
 RRULE:FREQ=WEEKLY;COUNT=8;BYDAY=WE
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:hivrll9n03ktc9vrk22ker1fc8@google.com
 CREATED:20160302T143716Z
 DESCRIPTION:For families living with dementia\, starting for 8 weeks on the
@@ -1832,114 +2474,9 @@ SUMMARY:Dementia Friendly Communities
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160309T110000
-DTEND;TZID=Europe/London:20160309T150000
-RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160614T152317Z
-UID:ukacgtjt3lj1hb6q6siijmvlg4@google.com
-CREATED:20160302T142935Z
-DESCRIPTION:Call 0161 2261291 for more details
-LAST-MODIFIED:20160302T142935Z
-LOCATION:St Edmunds Alexandra Road
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Foodbank
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160307T130000
-DTEND;TZID=Europe/London:20160307T150000
-RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160614T152317Z
-UID:uhdl0ipd7a15qhqtc2tlpvo4v8@google.com
-CREATED:20160302T140803Z
-DESCRIPTION:Diabetes support group for people with the illness and their ca
- rers. Call 0161 4450211
-LAST-MODIFIED:20160302T140803Z
-LOCATION:Kath Locke Centre\, 123 Moss Ln E\, Manchester M15 5DD\, United Ki
- ngdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Sugar Group
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160307T100000
-DTEND;TZID=Europe/London:20160307T170000
-RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160614T152317Z
-UID:iq0tt2vpgh4hsceqnr4sfq8qt4@google.com
-CREATED:20160302T135926Z
-DESCRIPTION:Call 0161 226 4335 for more information
-LAST-MODIFIED:20160302T135926Z
-LOCATION:Moss Side Powerhouse Library\, 140 Raby St\, Manchester M14 4SQ\, 
- United Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:MTTC/United Daycare
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160229T133000
-DTEND;TZID=Europe/London:20160229T143000
-RRULE:FREQ=WEEKLY;BYDAY=MO
-DTSTAMP:20160614T152317Z
-UID:8hepbt7egl0aj85qhpmijck2d8@google.com
-CREATED:20160301T124118Z
-DESCRIPTION:A gentle all-over body workout designed to improve mobility\, s
- trength\, stamina and all-round fitness. This class is suitable for older a
- dults\, and complete beginners.\n\nCost\n£1\n\nRegistration\nhttp://www.man
- chester.gov.uk/activelifestyles\n0161 234 5454\n
-LAST-MODIFIED:20160301T124118Z
-LOCATION:Active Lifestyles Centre\, Denmark Rd\, Manchester M15 6FG\, Unite
- d Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Simply Circuits
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160304T130000
-DTEND;TZID=Europe/London:20160304T140000
-RRULE:FREQ=WEEKLY;BYDAY=FR
-DTSTAMP:20160614T152317Z
-UID:gdv37123s1t96ps2ofi1rpg0i4@google.com
-CREATED:20160301T124011Z
-DESCRIPTION:A gentle all-over body workout designed to improve mobility\, s
- trength\, stamina and all-round fitness. This class is suitable for older a
- dults\, and complete beginners.\n\nCost\n£1\n\nRegistration\nhttp://www.man
- chester.gov.uk/activelifestyles\n0161 234 5454\n
-LAST-MODIFIED:20160301T124011Z
-LOCATION:Active Lifestyles Centre\, Denmark Rd\, Manchester M15 6FG\, Unite
- d Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Simply Circuits
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160302T120000
-DTEND;TZID=Europe/London:20160302T130000
-RRULE:FREQ=WEEKLY;BYDAY=WE
-DTSTAMP:20160614T152317Z
-UID:r5l6c80are2taqivse57jbd4f8@google.com
-CREATED:20160301T123715Z
-DESCRIPTION:A gentle all-over body workout designed to improve mobility\, s
- trength\, stamina and all-round fitness. This class is suitable for older a
- dults\, and complete beginners.\n\nCost £1\n\nRegistration\nhttp://www.manc
- hester.gov.uk/activelifestyles \n\n0161 234 5454
-LAST-MODIFIED:20160301T123900Z
-LOCATION:Active Lifestyles Centre\, Denmark Rd\, Manchester M15 6FG\, Unite
- d Kingdom
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Simply Circuits
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 DTSTART:20160507T130000Z
 DTEND:20160507T150000Z
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:e88e148ts9v4rum5iib27jvhhk@google.com
 CREATED:20160301T104050Z
 DESCRIPTION:Exhibition of artwork created at a workshop held at two worksho
@@ -1962,7 +2499,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160306T120000
 DTEND;TZID=Europe/London:20160306T140000
 RRULE:FREQ=WEEKLY;UNTIL=20160403T110000Z;INTERVAL=4;BYDAY=SU
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:nbgu5dcs8jbjs6gbfn6b6s0k8g@google.com
 CREATED:20160301T104324Z
 DESCRIPTION:Rebels & Rollers is a free workshop\, taking place as part of A
@@ -1989,68 +2526,9 @@ SUMMARY:Rebels & Rollers Workshop
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160211T120000
-DTEND;TZID=Europe/London:20160211T130000
-RRULE:FREQ=WEEKLY;BYDAY=TH
-DTSTAMP:20160614T152317Z
-UID:c8shegdd6aqv95lfnp955opkpg@google.com
-CREATED:20160212T115737Z
-DESCRIPTION:A low impact circuits based class suitable for older people or 
- people new to exercise. Exercises can be adapted for chair based exercise. 
- \nEveryone welcome!\n£1 per session\nFor more info please contact: 0161 219
-  2569 or email info@mcrgames.com 
-LAST-MODIFIED:20160222T181732Z
-LOCATION:Moss Side Millennium Powerhouse\, 140 Raby St\, Manchester M14 4SL
- \, United Kingdom
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Easy Rhythms Circuits Class
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160212T140000
-DTEND;TZID=Europe/London:20160212T160000
-RRULE:FREQ=WEEKLY;BYDAY=FR
-EXDATE;TZID=Europe/London:20160325T140000
-EXDATE;TZID=Europe/London:20160219T140000
-DTSTAMP:20160614T152317Z
-UID:d5om4b985oat5i2st9oqthnsg8@google.com
-CREATED:20160205T140018Z
-DESCRIPTION:Enjoy a cup of tea and a chat\, and try your hand at a range of
-  traditional skills including woodblock carving\, sculpture\, printing\, wa
- tercolour painting and many others. Each month\, an artist will introduce a
-  different technique. Every Friday our Clore Learning Studio is open as an 
- Age Friendly art studio\, in partnership with Age Friendly Manchester.\n\nc
- laire.cowell@manchester.ac.uk\n07776 170 688\n\nhttp://www.whitworth.manche
- ster.ac.uk/learn/adults/coursesandworkshops/handmade/ 
-LAST-MODIFIED:20160216T100626Z
-LOCATION:Whitworth Art Gallery\, The University of Manchester\, Oxford Rd\,
-  Manchester\, Lancashire M15 6ER\, United Kingdom
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Handmade
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160213T100000
-DTEND;TZID=Europe/London:20160213T120000
-RRULE:FREQ=WEEKLY;BYDAY=SA
-DTSTAMP:20160614T152317Z
-UID:a4alfmno6rglodpcifge9nk20k@google.com
-CREATED:20160210T093828Z
-DESCRIPTION:In the multi-purpose hall\n0161 247 2646
-LAST-MODIFIED:20160210T093850Z
-LOCATION:Brooks Building\, Birley\, MMU\, 53 Bonsall St\, Manchester M15 6G
- X
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Table Tennis
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 DTSTART:20160310T123000Z
 DTEND:20160310T150000Z
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:j6v8ng4mepk89pt5fp1htsm6mg@google.com
 CREATED:20160210T091605Z
 DESCRIPTION:World Cafe\, with food.
@@ -2065,7 +2543,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160211T103000
 DTEND;TZID=Europe/London:20160211T113000
 RRULE:FREQ=WEEKLY;UNTIL=20160427T225959Z;BYDAY=TH
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:5cr001f3kjbhbuf0qvq9ak63mc_R20160211T103000@google.com
 CREATED:20160209T124843Z
 DESCRIPTION:Drinks and Toast - everyone welcome!
@@ -2080,7 +2558,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160428T103000
 DTEND;TZID=Europe/London:20160428T120000
 RRULE:FREQ=WEEKLY;UNTIL=20160505T093000Z;BYDAY=TH
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:3asg00tcgps8jke94eeqlcg28s@google.com
 CREATED:20160209T124843Z
 DESCRIPTION:Drinks and Toast - everyone welcome!
@@ -2095,7 +2573,7 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20160211T103000
 DTEND;TZID=Europe/London:20160211T113000
 RRULE:FREQ=WEEKLY;UNTIL=20160211T102959Z;BYDAY=TH
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:5cr001f3kjbhbuf0qvq9ak63mc@google.com
 CREATED:20160209T124843Z
 DESCRIPTION:
@@ -2107,28 +2585,9 @@ SUMMARY:Coffee Morning
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20160210T140000
-DTEND;TZID=Europe/London:20160210T153000
-RRULE:FREQ=MONTHLY;BYDAY=2WE
-DTSTAMP:20160614T152317Z
-UID:aoe2bdp07nh3kph77vqiouhj9c@google.com
-CREATED:20160209T120333Z
-DESCRIPTION:‘Coffee\, Cake and Culture’ is designed to support those at ris
- k of social isolation by providing stimulating and creative learning opport
- unities through meaningful activities crafted for individuals with dementia
- . For people living with dementia\, their family\, carer's and friends.
-LAST-MODIFIED:20160209T121929Z
-LOCATION:Whitworth Art Gallery\, Oxford Rd\, Manchester\, Manchester M15 6E
- R\, UK
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Coffee Cake and Culture
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 DTSTART:20160225T113000Z
 DTEND:20160225T140000Z
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:ska0op0avcpt7qq58onecrvki4@google.com
 CREATED:20160113T093125Z
 DESCRIPTION:
@@ -2143,7 +2602,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART:20160121T110000Z
 DTEND:20160121T130000Z
-DTSTAMP:20160614T152317Z
+DTSTAMP:20160706T143013Z
 UID:pesdbkf7iqs44t1f491u9ic47s@google.com
 CREATED:20160113T092935Z
 DESCRIPTION:

@@ -75,7 +75,7 @@ class Member < ActiveRecord::Base
     # Other background if 4
     e == 4 ? r << o : r << ""
     # Options 5 - 7 if present
-    e.between?(5, 7) ? r << t: r << ""
+    e.between?(5, 7) ? r << t : r << ""
     # Other background if 7
     e == 7 ? r << o : r << ""
     # Options 8 - 11 if present
