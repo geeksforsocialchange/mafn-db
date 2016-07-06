@@ -1,4 +1,91 @@
 # vim: set syntax=ruby:
+def row(member, params)
+  [
+    # "Participant External ID",
+    member.id,
+    # "Questionnaire Type" [6 month, 12 month, Final],
+    "TODO",
+    # "Have any of the following circumstances changed for you",
+    params[:initial] ? "" : "Yes",
+    # "Postcode",
+    member.locations.empty? ? "" : member.locations.last.postcode,
+
+    # MEMBERSHIP QUESTIONS
+    # "What is your marital status",
+    get_response(member, "What is your marital status?", params),
+    # "Education level",
+    get_response(member, "What is your highest level of education?", params),
+    # "Current Employment status",
+    get_response(member, "What is your current employment status?", params),
+    # "Anyone Sick or disabled you care for",
+    get_response(member, "Is there anyone who is sick, disabled or needs support whom you look after or give special help to?", params),
+    # "Do you have any long standing conditions",
+    get_response(member, "Do you have any long standing physical or mental illness or disability?", params),
+    # "Please name/briefly describe condition",
+    get_response(member, "If so, please name/briefly describe condition", params),
+
+    # COMMUNITY AUDIT QUESTIONS
+    # "To what extent do you feel that you live in an age-friendly neighbourhood?",
+    "TODO",
+    # "Do you use a smartphone, computer, tablet?",
+    get_response(member, "Do you use a computer, smartphone or tablet?", params),
+    # "Do you belong to any social networking websites or forums?",
+    get_response(member, "Do you use any social networking sites to stay in touch with friends or family? If so, which ones and how often?", params),
+    # "Other social network",
+    get_response(member, "Do you use any social networking sites to stay in touch with friends or family? If so, which ones and how often?", params),
+    # "Do you use email",
+    get_response(member, "Do you use email?", params),
+    # "Hours on social media, websites, email",
+    get_response(member, "Do you chat or interact with friends or family using email or social media websites? If so, how many hours do you do th, paramsis on a normal day?"),
+    # "participant- do you currently volunteer",
+    "TODO",
+    # "participant- Do you want to volunteer?",
+    get_response(member, "Would you like to be involved in projects to make [ward] more age-friendly?", params),
+    # "friends and family-how often do you meet up ?",
+    get_response(member, "On average, how often do you - Send or receive text messages with friends, colleagues, family or neighbours", params),
+    # "friends and family-speak on the phone",
+    get_response(member, "On average, how often do you - Speak on the phone/skype with friends, family, colleagues or neighbours", params),
+    # "friends and family- send receive texts",
+    get_response(member, "On average, how often do you - Send or receive text messages with friends, colleagues, family or neighbours", params),
+    # "People can change things in my local area if they work together",
+    "TODO",
+    # "I can influence decisions affecting my local area",
+    "TODO",
+    # "How often do you talk to your neighbours?",
+    get_response(member, "On average, how often do you - Talk to your neighbours", params),
+    # "I feel like I belong to this neighbourhood",
+    get_response(member, "I feel like I belong to this neighbourhood", params),
+    # "The friendships and associations I have with other people in my neighbourhood mean a lot to me",
+    get_response(member, "The friendship and associations I have with other people in my neighbourhood mean a lot to me", params),
+    # "If I needed advice about something I could go to someone in my neighbourhood",
+    get_response(member, "If I need advice about something, I could go to someone in my neighbourhood", params),
+    # "I borrow things and exchange favours with my neighbours",
+    get_response(member, "I borrow things and exchange favours with my neighbours", params),
+    # "I would be willing to work together with others on something to improve my neighbourhood",
+    get_response(member, "I would be willing to work together with others on something to improve my neighbourhood", params),
+    # "I regularly stop and talk with people in my neighbourhood",
+    get_response(member, "On average, how often do you - Talk to your neighbours", params),
+
+    # Volunteer extra questions
+
+    # "what functions do you carry out in your ambition for ageing volunteer role",
+    get_response(member, "If so, what is your role in the group?", params),
+    # "Other function",
+    "",
+    # "How often do you carry out these activities",
+    get_response(member, "How regularly do you go?", params),
+    # "Do you volunteer with any other organisations, groups or communities not part of Ambition for Ageing?",
+    get_response(member, "Do you belong to any community or social groups?", params),
+    # "How often do you generally volunteer with other organisations?",
+    get_response(member, "How regularly do you go?", params),
+
+    # Extra col from Kim
+    if params.key?(:date_range)
+      params[:date_range].first.to_date
+    end
+  ]
+end
+
 wb = xlsx_package.workbook
 title = @initial ? "Initial Questionnaire" : "Followup Questionnaire"
 wb.add_worksheet(name: title) do |sheet|
@@ -41,86 +128,20 @@ wb.add_worksheet(name: title) do |sheet|
     "How often do you carry out these activities",
     "Do you volunteer with any other organisations, groups or communities not part of Ambition for Ageing?",
     "How often do you generally volunteer with other organisations?",
+
+    # Extra column added by Kim
+    "Response date if followup"
   ]
   @members.each do |member|
-    sheet.add_row [
-      # "Participant External ID",
-      member.id,
-      # "Questionnaire Type" [6 month, 12 month, Final],
-      "TODO",
-      # "Have any of the following circumstances changed for you",
-      "TODO",
-      # "Postcode",
-      member.locations.empty? ? "" : member.locations.last.postcode,
-
-      # MEMBERSHIP QUESTIONS
-      # "What is your marital status",
-      get_response(member, "What is your marital status?", initial: @initial),
-      # "Education level",
-      get_response(member, "What is your highest level of education?", initial: @initial),
-      # "Current Employment status",
-      get_response(member, "What is your current employment status?", initial: @initial),
-      # "Anyone Sick or disabled you care for",
-      get_response(member, "Is there anyone who is sick, disabled or needs support whom you look after or give special help to?", initial: @initial),
-      # "Do you have any long standing conditions",
-      get_response(member, "Do you have any long standing physical or mental illness or disability?", initial: @initial),
-      # "Please name/briefly describe condition",
-      get_response(member, "If so, please name/briefly describe condition", initial: @initial),
-
-      # COMMUNITY AUDIT QUESTIONS
-      # "To what extent do you feel that you live in an age-friendly neighbourhood?",
-      "TODO",
-      # "Do you use a smartphone, computer, tablet?",
-      get_response(member, "Do you use a computer, smartphone or tablet?", initial: @initial),
-      # "Do you belong to any social networking websites or forums?",
-      get_response(member, "Do you use any social networking sites to stay in touch with friends or family? If so, which ones and how often?", initial: @initial),
-      # "Other social network",
-      get_response(member, "Do you use any social networking sites to stay in touch with friends or family? If so, which ones and how often?", initial: @initial),
-      # "Do you use email",
-      get_response(member, "Do you use email?", initial: @initial),
-      # "Hours on social media, websites, email",
-      get_response(member, "Do you chat or interact with friends or family using email or social media websites? If so, how many hours do you do th, initial: @initialis on a normal day?"),
-      # "participant- do you currently volunteer",
-      "TODO",
-      # "participant- Do you want to volunteer?",
-      get_response(member, "Would you like to be involved in projects to make [ward] more age-friendly?", initial: @initial),
-      # "friends and family-how often do you meet up ?",
-      get_response(member, "On average, how often do you - Send or receive text messages with friends, colleagues, family or neighbours", initial: @initial),
-      # "friends and family-speak on the phone",
-      get_response(member, "On average, how often do you - Speak on the phone/skype with friends, family, colleagues or neighbours", initial: @initial),
-      # "friends and family- send receive texts",
-      get_response(member, "On average, how often do you - Send or receive text messages with friends, colleagues, family or neighbours", initial: @initial),
-      # "People can change things in my local area if they work together",
-      "TODO",
-      # "I can influence decisions affecting my local area",
-      "TODO",
-      # "How often do you talk to your neighbours?",
-      get_response(member, "On average, how often do you - Talk to your neighbours", initial: @initial),
-      # "I feel like I belong to this neighbourhood",
-      get_response(member, "I feel like I belong to this neighbourhood", initial: @initial),
-      # "The friendships and associations I have with other people in my neighbourhood mean a lot to me",
-      get_response(member, "The friendship and associations I have with other people in my neighbourhood mean a lot to me", initial: @initial),
-      # "If I needed advice about something I could go to someone in my neighbourhood",
-      get_response(member, "If I need advice about something, I could go to someone in my neighbourhood", initial: @initial),
-      # "I borrow things and exchange favours with my neighbours",
-      get_response(member, "I borrow things and exchange favours with my neighbours", initial: @initial),
-      # "I would be willing to work together with others on something to improve my neighbourhood",
-      get_response(member, "I would be willing to work together with others on something to improve my neighbourhood", initial: @initial),
-      # "I regularly stop and talk with people in my neighbourhood",
-      get_response(member, "On average, how often do you - Talk to your neighbours", initial: @initial),
-
-      # Volunteer extra questions
-
-      # "what functions do you carry out in your ambition for ageing volunteer role",
-      get_response(member, "If so, what is your role in the group?", initial: @initial),
-      # "Other function",
-      "",
-      # "How often do you carry out these activities",
-      get_response(member, "How regularly do you go?", initial: @initial),
-      # "Do you volunteer with any other organisations, groups or communities not part of Ambition for Ageing?",
-      get_response(member, "Do you belong to any community or social groups?", initial: @initial),
-      # "How often do you generally volunteer with other organisations?",
-      get_response(member, "How regularly do you go?", initial: @initial),
-    ]
+    if @initial
+      sheet.add_row row(member, { initial: true } )
+    else
+      days = member.response_days.drop(1)
+      if days
+        days.each do |date_range|
+          sheet.add_row row(member, { initial: false, date_range: date_range } )
+        end
+      end
+    end
   end
 end

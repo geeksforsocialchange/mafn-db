@@ -101,13 +101,11 @@ class Member < ActiveRecord::Base
   end
 
   # Questions grouped by day for doing followups
-  def day_grouped_responses
+  def response_days
+    # Get all the unique days that the member responded to a question on
     days = self.question_responses.order("date_trunc('day', created_at)").pluck("date_trunc('day', created_at)").uniq
-    responses = {}
-    days.each do |day|
-      responses[:"#{day.to_date}"] = self.question_responses.where(created_at: day.beginning_of_day..day.end_of_day)
-    end
-    return responses
+    # Return these as an array of ranges
+    days.map! { |d| d.beginning_of_day..d.end_of_day }
   end
 
   # Code for membership card

@@ -48,6 +48,7 @@ class ExportQuestionnaireTest < ActionDispatch::IntegrationTest
     assert_equal head[32], "How often do you carry out these activities"
     assert_equal head[33], "Do you volunteer with any other organisations, groups or communities not part of Ambition for Ageing?"
     assert_equal head[34], "How often do you generally volunteer with other organisations?"
+    assert_equal head[35], "Response date if followup"
 
   end
 end
