@@ -1,7 +1,8 @@
-namespace :calendar do
-  desc "TODO"
-  task import: :environment do
-    # Open the file
+class CalendarImportJob < ActiveJob::Base
+  queue_as :default
+
+  def perform(*args)
+    `wget -O ./calendars/mafn.ics https://calendar.google.com/calendar/ical/d0ok3oc2trd21adadm3b8qaimg%40group.calendar.google.com/public/basic.ics`
     f = File.open("./calendars/mafn.ics")
     # Parse it with the ical gem
     c = Icalendar.parse(f).first
@@ -36,13 +37,5 @@ namespace :calendar do
         end
       end
     end
-  end
-
-  task download: :environment do
-    `wget -O ./calendars/mafn.ics https://calendar.google.com/calendar/ical/d0ok3oc2trd21adadm3b8qaimg%40group.calendar.google.com/public/basic.ics`
-  end
-
-  task destroy: :environment do
-    Event.destroy_all
   end
 end
