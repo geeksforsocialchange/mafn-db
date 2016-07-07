@@ -2,8 +2,8 @@ class CalendarImportJob < ActiveJob::Base
   queue_as :default
 
   def perform(*args)
-    `wget -O ./calendars/mafn.ics https://calendar.google.com/calendar/ical/d0ok3oc2trd21adadm3b8qaimg%40group.calendar.google.com/public/basic.ics`
-    f = File.open("./calendars/mafn.ics")
+    `wget -O ./tmp/calendars/mafn.ics https://calendar.google.com/calendar/ical/d0ok3oc2trd21adadm3b8qaimg%40group.calendar.google.com/public/basic.ics`
+    f = File.open("./tmp/calendars/mafn.ics")
     # Parse it with the ical gem
     c = Icalendar.parse(f).first
     c.events.each do |e|
