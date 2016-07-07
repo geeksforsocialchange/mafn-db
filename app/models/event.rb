@@ -5,6 +5,7 @@ class Event < ActiveRecord::Base
   validates_uniqueness_of :google_id, :allow_blank => true, :allow_nil => true
   enum category: [ :research, :project, :partnership ]
   accepts_nested_attributes_for :attendances, allow_destroy: true
+  belongs_to :entity
 
   after_save :geolocate, if: :location_changed?
 
