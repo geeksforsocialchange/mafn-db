@@ -16,11 +16,8 @@ Rails.application.routes.draw do
     end
   end
   resources :questions
-  resources :events do
-    collection do
-      post 'update', action: :update_calendar
-    end
-  end
+  post 'update_calendar', to: 'events#update_calendar'
+  resources :events
   resources :members
 
   get 'welcome/index'
