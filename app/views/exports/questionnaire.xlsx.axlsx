@@ -4,6 +4,7 @@ def row(member, params)
     # "Participant External ID",
     member.id,
     # "Questionnaire Type" [6 month, 12 month, Final],
+    # TODO: make this the date and q type an extra column which records the sequence
     "TODO",
     # "Have any of the following circumstances changed for you",
     params[:initial] ? "" : "Yes",
