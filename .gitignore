@@ -13,6 +13,7 @@ capybara-*.html
 /app/assets/*/compiled/
 /public/assets/*
 *.DS_Store
+.byebug_history
 
 **.orig
 rerun.txt

@@ -59,8 +59,8 @@ membership      = QuestionSet.create!(title: "Membership")
 def create_question_set(question_set, questions)
   questions.each_with_index do |q, idx|
     QuestionList.create!(
-                          question_set_id: question_set.id,
-                          question_id: q.id,
+                          question_set: question_set,
+                          question: q,
                           weight: idx
                         )
   end
@@ -71,8 +71,9 @@ create_question_set(community_audit, community_audit_questions)
 create_question_set(membership, membership_questions)
 
 def answer_question(  question = Question.where(category: 0).order("RANDOM()").limit(1).first,
-                      target = false,
-                      responder = Member.order("RANDOM()").limit(1).first )
+                      responder = Member.order("RANDOM()").limit(1).first,
+                      target = false
+                  )
   if question.response
     option_count = JSON.parse(question.response).length
     response = rand(0..option_count)
@@ -92,10 +93,6 @@ def answer_question(  question = Question.where(category: 0).order("RANDOM()").l
   )
 end
 
-# Answer some random questions
-500.times do |n|
-  answer_question
-end
 
 # Create locations
 50.times do |n|
@@ -129,10 +126,10 @@ end
 # Import events
 `rake calendar:import`
 
-# Assign some random attendances and do feedback
 event_count = Event.count
 Member.all.each do |member|
-  # Create 5 random numbers between 1 and event count
+  # Assign some random attendances and do feedback
+  # Create 5 random events between 1 and event count
   attendances = (1..event_count).to_a.sort{ rand() - 0.5 }[0..5]
   attendances.each do |attendance|
     event = Event.find(attendance)
@@ -140,7 +137,17 @@ Member.all.each do |member|
     Attendance.create(event: event, member: member)
     # Answer the feedback form
     Question.where(category: 1).each do |q|
-      answer_question(q, event, member)
+      answer_question(q, member, event)
     end
+  end
+
+  # Answer the membership survey once
+  QuestionSet.where(title: "Membership").first.questions.each do |q|
+    answer_question(q, member)
+  end
+
+  # Do the Community Audit once
+  QuestionSet.where(title: "Community Audit").first.questions.each do |q|
+    answer_question(q, member)
   end
 end
