@@ -36,7 +36,11 @@ class ExportsController < ApplicationController
     @members = Member.all
     @followup = params[:followup] == "true" ? true : false
     respond_to do |format|
-      format.xlsx
+      if @followup
+        format.xlsx { headers["Content-Disposition"] = "attachment; filename=\"followup_questionnaire.xlsx" }
+      else
+        format.xlsx
+      end
     end
   end
 

@@ -28,9 +28,8 @@ Rails.application.routes.draw do
       get 'events_demographics'
       get 'events_feedback'
       get 'questionnaire'
-      get 'volunteer_questionnaire'
       get 'members'
-      get 'volunteers', action: :members
+      get 'followup_questionnaire', to: 'exports#questionnaire', defaults: { followup: true }
     end
   end
 
