@@ -148,6 +148,11 @@
 "Informal Social Venue9":
   ["Never", "Rarely", "Sometimes", "Weekly", "Often"] 
 "Are there any other venues where you regularly attend events which we have missed. If so, ":  
+"Are you currently involved in organising or contribute to a local community group?":
+  ["Yes", "No", "Prefer not to say"]
+"Would you like to get involved in organising or contribute to a local community group?"  
+  ["Yes", "No", "Prefer not to say"]
+
 
 # Has Anything Changed in the Last 12 Months?
 "Have you moved house in the last 12 months?":
