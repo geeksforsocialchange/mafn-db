@@ -9,7 +9,6 @@
   ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]
 "I feel like I belong to this neighbourhood":
   ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]
-"  
 
 # Barriers to Activities
 "I would like to take part in more social activities around here":
@@ -32,13 +31,13 @@
 "Cycling":
   ["Often", "Weekly", "Sometimes", "Rarely", "Never"]
 "Car":
-  ["Often", "Weekly", "Sometimes", "Rarely", "Never"]  
+  ["Often", "Weekly", "Sometimes", "Rarely", "Never"]
 "Bus":
   ["Often", "Weekly", "Sometimes", "Rarely", "Never"]
 "Tram or Train":
   ["Often", "Weekly", "Sometimes", "Rarely", "Never"]
 "Taxis":
-  ["Often", "Weekly", "Sometimes", "Rarely", "Never"]  
+  ["Often", "Weekly", "Sometimes", "Rarely", "Never"]
 "Without any specialist equipment, how much difficulty do you have walking half a mile?":
   ["No difficulty", "Some difficulty", "Much difficulty", "I am unable to do this"]
 
@@ -46,114 +45,23 @@
 "Do you use a computer, smartphone or tablet?":
   ["No", "Yes, Computer", "Yes, Tablet", "Yes, Smartphone"]
 # 'On average, how often do you do the following activities?"
-"On average, how often do you - Send or receive text messages with friends, colleagues, family or neighbours"
+"On average, how often do you - Send or receive text messages with friends, colleagues, family or neighbours":
   ["Never/Less than once a year", "Once or twice a year", "Once every few months", "1-2 times a month", "1-2 times a week", "3+ times a week"]
 "On average, how often do you - Speak on the phone or skype with friends, family, colleagues or neighbours":
   ["Never/Less than once a year", "Once or twice a year", "Once every few months", "1-2 times a month", "1-2 times a week", "3+ times a week"]
-"On average, how often do you - Talk to your neighbours":  
+"On average, how often do you - Talk to your neighbours":
   ["Never/Less than once a year", "Once or twice a year", "Once every few months", "1-2 times a month", "1-2 times a week", "3+ times a week"]
-"On average, how often do you - Meet up with friends, family or neighbours (not counting those you live with)?"
+"On average, how often do you - Meet up with friends, family or neighbours (not counting those you live with)?":
   ["Never/Less than once a year", "Once or twice a year", "Once every few months", "1-2 times a month", "1-2 times a week", "3+ times a week"]
 "How many hours do you spend chatting or interacting with friends or family on social networking websites or email on a normal day":
   ["I do not does this", "Less than daily", "Less than 1 hour", "1-3 hours", "4-6 hours", "7 or more hours"]
 "Please list an social networking websites that you use":
-  ["No", "Facebook", "Google +", "Instagram", "LinkedIn", "Pinterest", "Reddit", "Snapchat", "Tumblr", "Twitter", "Other (Please state)", "Prefer not to say"]
-" Other social networking websites":
-
-# Going Shopping
-# 'How often do you go shopping in the following shops or areas?'
-"Shopping Area1":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Shopping Area2":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Shopping Area3":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Shopping Area4":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Shopping Area5":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"] 
-"Shopping Area6":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"] 
-"Shopping Area7":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Shopping Area8":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]  
-  
-# Social and Leisure Activities
-# 'How often do you attend events at the following venues?"
-"Leisure Venue1":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Leisure Venue2":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Leisure Venue3":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Leisure Venue4":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Leisure Venue5":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Community Venue1":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Community Venue1":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Community Venue2":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Community Venue3":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Community Venue4":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Community Venue5":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Community Venue6":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Community Venue7":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]  
-"Community Venue8":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Community Venue9":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Religious Venue1":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Religious Venue2":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Religious Venue3":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Religious Venue4":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Religious Venue5":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]  
-"Religious Venue6":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Religious Venue7":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"] 
-"Religious Venue8":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Religious Venue9":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Informal Social Venue1":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]  
-"Informal Social Venue2":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"] 
-"Informal Social Venue3":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"] 
-"Informal Social Venue4":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"] 
-"Informal Social Venue5":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]
-"Informal Social Venue6":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"] 
-"Informal Social Venue7":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"] 
-"Informal Social Venue8":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"]  
-"Informal Social Venue9":
-  ["Never", "Rarely", "Sometimes", "Weekly", "Often"] 
-"Are there any other venues where you regularly attend events which we have missed. If so, ":  
+"Other social networking websites":
+"Are there any other venues where you regularly attend events which we have missed. If so, list them":
 "Are you currently involved in organising or contribute to a local community group?":
   ["Yes", "No", "Prefer not to say"]
-"Would you like to get involved in organising or contribute to a local community group?"  
+"Would you like to get involved in organising or contribute to a local community group?":
   ["Yes", "No", "Prefer not to say"]
-
-
 # Has Anything Changed in the Last 12 Months?
 "Have you moved house in the last 12 months?":
   ["No", "Yes"]
@@ -186,4 +94,3 @@
 "If yes, how has your living situation changed? ":
   ["Living alone", "Living with partner", "Living with other family member", "Other"]
 "If 'other' living situation please specify":
-
