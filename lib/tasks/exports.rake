@@ -5,7 +5,7 @@ namespace :exports do
 
   task test: :environment do
     require 'roo'
-    # download_all
+    download_all
     errors = 0
     todo = 0
     EXPORTS.each do |e|
