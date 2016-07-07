@@ -7,7 +7,7 @@ def row(member, params)
     # TODO: make this the date and q type an extra column which records the sequence
     "TODO",
     # "Have any of the following circumstances changed for you",
-    params[:initial] ? "" : "Yes",
+    params[:followup] ? "Yes" : "No",
     # "Postcode",
     member.locations.empty? ? "" : member.locations.last.postcode,
 
@@ -88,7 +88,7 @@ def row(member, params)
 end
 
 wb = xlsx_package.workbook
-title = @initial ? "Initial Questionnaire" : "Followup Questionnaire"
+title = @followup ? "Followup Questionnaire" : "Initial Questionnaire"
 wb.add_worksheet(name: title) do |sheet|
   sheet.add_row [
     # Participant questions
@@ -134,13 +134,13 @@ wb.add_worksheet(name: title) do |sheet|
     "Response date if followup"
   ]
   @members.each do |member|
-    if @initial
-      sheet.add_row row(member, { initial: true } )
+    if !@followup
+      sheet.add_row row(member, { followup: false })
     else
       days = member.response_days.drop(1)
       if days
         days.each do |date_range|
-          sheet.add_row row(member, { initial: false, date_range: date_range } )
+          sheet.add_row row(member, { followup: true, date_range: date_range } )
         end
       end
     end

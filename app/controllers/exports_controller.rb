@@ -34,7 +34,7 @@ class ExportsController < ApplicationController
 
   def questionnaire
     @members = Member.all
-    @initial = params[:initial] == "true" ? true : false
+    @followup = params[:followup] == "true" ? true : false
     respond_to do |format|
       format.xlsx
     end

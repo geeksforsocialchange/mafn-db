@@ -3,8 +3,8 @@ module ApplicationHelper
   def get_response(member, question, **opts)
     # Does this refer to an entity?
     entity      = opts[:entity]
-    # Are we only getting initial responses?
-    initial     = opts[:initial]
+    # Are we only getting followup responses?
+    followup    = opts[:followup]
     # Are we only getting responses in a given date range?
     date_range  = opts[:date_range]
     # Find the question the response relates to
@@ -21,13 +21,13 @@ module ApplicationHelper
       end
       # If there are responses, return the last one
       if !r.empty?
-        if initial == true
+        if !followup
           # If first == true, then get the first answer
           return r.first.formatted_response
         else
           # If it's not, then get by date passed in from the parameter
           # Presuming there is only one result on any given day here.
-          if date_range
+          if !date_range.nil?
             response = r.where(created_at: date_range)
             if response.length > 0
               return response.first.formatted_response

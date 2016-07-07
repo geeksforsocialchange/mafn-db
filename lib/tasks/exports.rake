@@ -5,16 +5,20 @@ namespace :exports do
 
   task test: :environment do
     require 'roo'
+    download_all
     errors = 0
     EXPORTS.each do |e|
       s = load_spreadsheet e
       header = s.row(1)
+      row_errors = false
+      # Check each row
       s.each_with_index do |row, row_idx|
-        error_cells = []
+        next if row_errors
         row.each_with_index do |cell, cell_idx|
           if cell.to_s.include?("ERROR")
             errors += 1
-            puts "#{header[cell_idx]}. Row #{row_idx}, Col #{cell_idx}: #{cell}"
+            puts "#{s.sheets.first}: #{cell_idx}. #{header[cell_idx]}. Row #{row_idx}: #{cell}"
+            row_errors = true
           end
         end
       end
@@ -23,6 +27,10 @@ namespace :exports do
   end
 
   task get_all: :environment do
+    download_all
+  end
+
+  def download_all
     require 'open-uri'
     EXPORTS.each do |e|
       puts "Getting #{e}..."
