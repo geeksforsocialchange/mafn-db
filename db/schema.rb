@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160705113435) do
+ActiveRecord::Schema.define(version: 20160708125312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,25 @@ ActiveRecord::Schema.define(version: 20160705113435) do
 
   add_index "attendances", ["event_id"], name: "index_attendances_on_event_id", using: :btree
   add_index "attendances", ["member_id"], name: "index_attendances_on_member_id", using: :btree
+
+  create_table "delayed_jobs", force: :cascade do |t|
+    t.integer  "priority",         default: 0, null: false
+    t.integer  "attempts",         default: 0, null: false
+    t.text     "handler",                      null: false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "progress_stage"
+    t.integer  "progress_current", default: 0
+    t.integer  "progress_max",     default: 0
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
   create_table "entities", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -96,6 +115,30 @@ ActiveRecord::Schema.define(version: 20160705113435) do
 
   add_index "members", ["entity_id"], name: "index_members_on_entity_id", using: :btree
 
+  create_table "organisations", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "location_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "organisations", ["location_id"], name: "index_organisations_on_location_id", using: :btree
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.date     "start"
+    t.date     "finish"
+    t.integer  "primary_partner_organisation_id"
+    t.integer  "resident_champion_id"
+    t.integer  "resident_seconder_id"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
+
+  add_index "projects", ["primary_partner_organisation_id"], name: "index_projects_on_primary_partner_organisation_id", using: :btree
+  add_index "projects", ["resident_champion_id"], name: "index_projects_on_resident_champion_id", using: :btree
+  add_index "projects", ["resident_seconder_id"], name: "index_projects_on_resident_seconder_id", using: :btree
+
   create_table "question_lists", force: :cascade do |t|
     t.integer "question_id"
     t.integer "question_set_id"
@@ -139,6 +182,10 @@ ActiveRecord::Schema.define(version: 20160705113435) do
   add_foreign_key "member_locations", "locations"
   add_foreign_key "member_locations", "members"
   add_foreign_key "members", "entities"
+  add_foreign_key "organisations", "locations"
+  add_foreign_key "projects", "members", column: "resident_champion_id"
+  add_foreign_key "projects", "members", column: "resident_seconder_id"
+  add_foreign_key "projects", "organisations", column: "primary_partner_organisation_id"
   add_foreign_key "question_lists", "question_sets"
   add_foreign_key "question_lists", "questions"
   add_foreign_key "question_responses", "entities"

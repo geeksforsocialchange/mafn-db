@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project.name %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @project.start %>
+</p>
+
+<p>
+  <strong>Finish:</strong>
+  <%= @project.finish %>
+</p>
+
+<p>
+  <strong>Primary partner organisation:</strong>
+  <%= @project.primary_partner_organisation %>
+</p>
+
+<p>
+  <strong>Resident champion:</strong>
+  <%= @project.resident_champion %>
+</p>
+
+<p>
+  <strong>Resident seconder:</strong>
+  <%= @project.resident_seconder %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

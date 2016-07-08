@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :projects
+
+  resources :organisations
+
   resources :question_lists
 
   resources :attendances
