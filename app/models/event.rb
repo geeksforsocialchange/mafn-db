@@ -1,9 +1,10 @@
 class Event < ActiveRecord::Base
+  belongs_to :entity
+
   has_many :attendances
   has_many :members, through: :attendances
   has_one :arranger
-  has_one :project, through: :arrangers
-  belongs_to :entity
+  has_one :project, through: :arranger
 
   validates_presence_of :name, :start, :finish, :location
   validates_uniqueness_of :google_id, :allow_blank => true, :allow_nil => true
