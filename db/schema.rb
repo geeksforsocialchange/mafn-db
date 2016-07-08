@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160708131053) do
+ActiveRecord::Schema.define(version: 20160708131201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "arrangers", force: :cascade do |t|
+    t.integer  "project_id"
+    t.integer  "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "arrangers", ["event_id"], name: "index_arrangers_on_event_id", using: :btree
+  add_index "arrangers", ["project_id"], name: "index_arrangers_on_project_id", using: :btree
 
   create_table "attendances", force: :cascade do |t|
     t.integer  "member_id"
@@ -215,6 +225,8 @@ ActiveRecord::Schema.define(version: 20160708131053) do
   add_index "volunteers", ["member_id"], name: "index_volunteers_on_member_id", using: :btree
   add_index "volunteers", ["project_id"], name: "index_volunteers_on_project_id", using: :btree
 
+  add_foreign_key "arrangers", "events"
+  add_foreign_key "arrangers", "projects"
   add_foreign_key "attendances", "events"
   add_foreign_key "attendances", "members"
   add_foreign_key "events", "entities"
