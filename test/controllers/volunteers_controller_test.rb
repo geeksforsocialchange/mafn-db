@@ -2,7 +2,7 @@ require 'test_helper'
 
 class VolunteersControllerTest < ActionController::TestCase
   setup do
-    @volunteer = volunteers(:one)
+    @volunteer = create(:volunteer)
   end
 
   test "should get index" do

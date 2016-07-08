@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :arranger do
-    project nil
-    event nil
+    association :project
+    association :event
   end
 end

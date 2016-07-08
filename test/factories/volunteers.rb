@@ -1,10 +1,10 @@
 FactoryGirl.define do
   factory :volunteer do
-    role "MyString"
+    role "Volunteer Role"
     is_leader false
     start "2016-07-08"
     finish "2016-07-08"
-    member nil
-    project nil
+    association :member
+    association :project
   end
 end

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class RepresentativesControllerTest < ActionController::TestCase
   setup do
-    @representative = representatives(:one)
+    @representative = create(:representative)
   end
 
   test "should get index" do

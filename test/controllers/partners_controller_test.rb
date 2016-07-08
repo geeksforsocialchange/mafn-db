@@ -2,7 +2,7 @@ require 'test_helper'
 
 class PartnersControllerTest < ActionController::TestCase
   setup do
-    @partner = partners(:one)
+    @partner = create(:partner)
   end
 
   test "should get index" do
@@ -18,7 +18,7 @@ class PartnersControllerTest < ActionController::TestCase
 
   test "should create partner" do
     assert_difference('Partner.count') do
-      post :create, partner: { finish: @partner.finish, organisation_id: @partner.organisation_id, project_id: @partner.project_id, start: @partner.start, type: @partner.type }
+      post :create, partner: { finish: @partner.finish, organisation_id: @partner.organisation_id, project_id: @partner.project_id, start: @partner.start, partner_type: @partner.partner_type }
     end
 
     assert_redirected_to partner_path(assigns(:partner))
@@ -35,7 +35,7 @@ class PartnersControllerTest < ActionController::TestCase
   end
 
   test "should update partner" do
-    patch :update, id: @partner, partner: { finish: @partner.finish, organisation_id: @partner.organisation_id, project_id: @partner.project_id, start: @partner.start, type: @partner.type }
+    patch :update, id: @partner, partner: { finish: @partner.finish, organisation_id: @partner.organisation_id, project_id: @partner.project_id, start: @partner.start, partner_type: @partner.partner_type }
     assert_redirected_to partner_path(assigns(:partner))
   end
 

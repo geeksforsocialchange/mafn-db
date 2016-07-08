@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ArrangersControllerTest < ActionController::TestCase
   setup do
-    @arranger = arrangers(:one)
+    @arranger = create(:arranger)
   end
 
   test "should get index" do

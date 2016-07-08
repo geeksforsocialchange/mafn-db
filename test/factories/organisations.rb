@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :organisation do
-    name "MyString"
-    location nil
+    name "Organisation Name"
+    association :location
   end
 end
