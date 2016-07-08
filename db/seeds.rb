@@ -10,7 +10,7 @@ require 'faker'
 
 Faker::Config.locale = 'en-GB'
 
-# Seed users with dummy data
+# Create Members
 50.times do |n|
   first_name = Faker::Name.first_name
   last_name = Faker::Name.last_name
@@ -32,11 +32,70 @@ Faker::Config.locale = 'en-GB'
                 )
 end
 
+# Create Locations
+50.times do |n|
+  name = Faker::Company.name
+  line1 = Faker::Address.street_name
+  line2 = Faker::Address.street_name
+  city = Faker::Address.city
+  postcode = Faker::Address.postcode
+  latitude = Faker::Address.latitude
+  longitude = Faker::Address.longitude
+  Location.create!(
+    name: name,
+    line1: line1,
+    line2: line2,
+    city: city,
+    postcode: postcode,
+    latitude: latitude,
+    longitude: longitude
+  )
+end
+
+# Give every Member a Location
+Member.all.each_with_index do |member, idx|
+  MemberLocation.create!(
+    member: member,
+    location: Location.find(idx + 1),
+    from: Faker::Date.between(20.years.ago, 0.years.ago)
+  )
+end
+
+# Create Projects
+random_members = Member.limit(20).order("RANDOM()")
+20.times do |n|
+  Project.create!(
+    name: Faker::Company.name,
+    start: Faker::Date.between(2.years.ago, Time.now),
+    resident_champion: random_members[n],
+    resident_seconder: random_members[n]
+  )
+end
+
+# Create Organisations
+random_locations: Location.limit(20).order("RANDOM()")
+20.times do |n|
+  Organisation.create!(
+    name: Faker::Company.name,
+    location: random_locations[n]
+  )
+end
+
+# TODO: Create Volunteers
+# 100.times do |n|
+#   Volunteer.create!(
+#     role:
+#   )
+# end
+
+# TODO: Create Partners
 
 # Seed questions with actual data
 event_feedback_data   = YAML.load_file "db/questions/event_feedback.yml"
 community_audit_data  = YAML.load_file "db/questions/community_audit.yml"
 membership_data       = YAML.load_file "db/questions/membership.yml"
+project_data          = YAML.load_file "db/questions/project.yml"
+
 
 def create_questions(questions, category = 0)
   output = []
@@ -47,14 +106,16 @@ def create_questions(questions, category = 0)
   return output
 end
 
-event_feedback_questions  = create_questions(event_feedback_data, 1)
+event_feedback_questions  = create_questions(event_feedback_data, "event")
 community_audit_questions = create_questions(community_audit_data)
 membership_questions      = create_questions(membership_data)
+project_questions         = create_questions(project_data, "project")
 
 # Create question sets
 event_feedback  = QuestionSet.create!(title: "Event Feedback")
 community_audit = QuestionSet.create!(title: "Community Audit")
 membership      = QuestionSet.create!(title: "Membership")
+projects        = QuestionSet.create!(title: "Project Questionnaire")
 
 def create_question_set(question_set, questions)
   questions.each_with_index do |q, idx|
@@ -66,9 +127,10 @@ def create_question_set(question_set, questions)
   end
 end
 
-create_question_set(event_feedback, event_feedback_questions)
-create_question_set(community_audit, community_audit_questions)
-create_question_set(membership, membership_questions)
+create_question_set(event_feedback,   event_feedback_questions)
+create_question_set(community_audit,  community_audit_questions)
+create_question_set(membership,       membership_questions)
+create_question_set(projects,         project_questions)
 
 def answer_question(  question = Question.where(category: 0).order("RANDOM()").limit(1).first,
                       responder = Member.order("RANDOM()").limit(1).first,
@@ -93,40 +155,12 @@ def answer_question(  question = Question.where(category: 0).order("RANDOM()").l
   )
 end
 
-
-# Create locations
-50.times do |n|
-  name = Faker::Company.name
-  line1 = Faker::Address.street_name
-  line2 = Faker::Address.street_name
-  city = Faker::Address.city
-  postcode = Faker::Address.postcode
-  latitude = Faker::Address.latitude
-  longitude = Faker::Address.longitude
-  Location.create!(
-    name: name,
-    line1: line1,
-    line2: line2,
-    city: city,
-    postcode: postcode,
-    latitude: latitude,
-    longitude: longitude
-  )
-end
-
-# Give every member a location
-Member.all.each_with_index do |member, idx|
-  MemberLocation.create!(
-    member: member,
-    location: Location.find(idx + 1),
-    from: Faker::Date.between(20.years.ago, 0.years.ago)
-  )
-end
-
-# Import events
+# Create Events by importing from Google
 `rake calendar:import`
 
 event_count = Event.count
+
+# Answer a bunch of questions
 Member.all.each do |member|
   # Assign some random attendances and do feedback
   # Create 5 random events between 1 and event count
