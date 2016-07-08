@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @partner.start %>
+</p>
+
+<p>
+  <strong>Finish:</strong>
+  <%= @partner.finish %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @partner.type %>
+</p>
+
+<p>
+  <strong>Organisation:</strong>
+  <%= @partner.organisation %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @partner.project %>
+</p>
+
+<%= link_to 'Edit', edit_partner_path(@partner) %> |
+<%= link_to 'Back', partners_path %>

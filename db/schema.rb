@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160708125312) do
+ActiveRecord::Schema.define(version: 20160708130612) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -124,6 +124,19 @@ ActiveRecord::Schema.define(version: 20160708125312) do
 
   add_index "organisations", ["location_id"], name: "index_organisations_on_location_id", using: :btree
 
+  create_table "partners", force: :cascade do |t|
+    t.date     "start"
+    t.date     "finish"
+    t.integer  "type"
+    t.integer  "organisation_id"
+    t.integer  "project_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "partners", ["organisation_id"], name: "index_partners_on_organisation_id", using: :btree
+  add_index "partners", ["project_id"], name: "index_partners_on_project_id", using: :btree
+
   create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.date     "start"
@@ -183,6 +196,8 @@ ActiveRecord::Schema.define(version: 20160708125312) do
   add_foreign_key "member_locations", "members"
   add_foreign_key "members", "entities"
   add_foreign_key "organisations", "locations"
+  add_foreign_key "partners", "organisations"
+  add_foreign_key "partners", "projects"
   add_foreign_key "projects", "members", column: "resident_champion_id"
   add_foreign_key "projects", "members", column: "resident_seconder_id"
   add_foreign_key "projects", "organisations", column: "primary_partner_organisation_id"

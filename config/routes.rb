@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :partners
+
   resources :projects
 
   resources :organisations
