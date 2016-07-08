@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Job title:</strong>
+  <%= @representative.job_title %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @representative.start %>
+</p>
+
+<p>
+  <strong>Finish:</strong>
+  <%= @representative.finish %>
+</p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @representative.member %>
+</p>
+
+<p>
+  <strong>Organisation:</strong>
+  <%= @representative.organisation %>
+</p>
+
+<%= link_to 'Edit', edit_representative_path(@representative) %> |
+<%= link_to 'Back', representatives_path %>

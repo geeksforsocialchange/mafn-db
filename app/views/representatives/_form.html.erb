@@ -1,0 +1,13 @@
+<%= semantic_form_for @representative do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :job_title %>
+    <%= f.input :start %>
+    <%= f.input :finish %>
+    <%= f.input :member %>
+    <%= f.input :organisation %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

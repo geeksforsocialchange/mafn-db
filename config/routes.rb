@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :representatives
+
   resources :partners
 
   resources :projects

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160708130612) do
+ActiveRecord::Schema.define(version: 20160708130836) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -188,6 +188,19 @@ ActiveRecord::Schema.define(version: 20160708130612) do
     t.integer  "category"
   end
 
+  create_table "representatives", force: :cascade do |t|
+    t.string   "job_title"
+    t.date     "start"
+    t.date     "finish"
+    t.integer  "member_id"
+    t.integer  "organisation_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "representatives", ["member_id"], name: "index_representatives_on_member_id", using: :btree
+  add_index "representatives", ["organisation_id"], name: "index_representatives_on_organisation_id", using: :btree
+
   add_foreign_key "attendances", "events"
   add_foreign_key "attendances", "members"
   add_foreign_key "events", "entities"
@@ -206,4 +219,6 @@ ActiveRecord::Schema.define(version: 20160708130612) do
   add_foreign_key "question_responses", "entities"
   add_foreign_key "question_responses", "members"
   add_foreign_key "question_responses", "questions"
+  add_foreign_key "representatives", "members"
+  add_foreign_key "representatives", "organisations"
 end
