@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160708130836) do
+ActiveRecord::Schema.define(version: 20160708131053) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -201,6 +201,20 @@ ActiveRecord::Schema.define(version: 20160708130836) do
   add_index "representatives", ["member_id"], name: "index_representatives_on_member_id", using: :btree
   add_index "representatives", ["organisation_id"], name: "index_representatives_on_organisation_id", using: :btree
 
+  create_table "volunteers", force: :cascade do |t|
+    t.string   "role"
+    t.boolean  "is_leader"
+    t.date     "start"
+    t.date     "finish"
+    t.integer  "member_id"
+    t.integer  "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "volunteers", ["member_id"], name: "index_volunteers_on_member_id", using: :btree
+  add_index "volunteers", ["project_id"], name: "index_volunteers_on_project_id", using: :btree
+
   add_foreign_key "attendances", "events"
   add_foreign_key "attendances", "members"
   add_foreign_key "events", "entities"
@@ -221,4 +235,6 @@ ActiveRecord::Schema.define(version: 20160708130836) do
   add_foreign_key "question_responses", "questions"
   add_foreign_key "representatives", "members"
   add_foreign_key "representatives", "organisations"
+  add_foreign_key "volunteers", "members"
+  add_foreign_key "volunteers", "projects"
 end
