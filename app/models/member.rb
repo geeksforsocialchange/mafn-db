@@ -1,11 +1,17 @@
 class Member < ActiveRecord::Base
-  validates_presence_of :first_name, :last_name, :dob, :region
+  belongs_to :entity
+  
   has_many :member_locations
   has_many :locations, through: :member_locations
   has_many :question_responses
   has_many :attendances
   has_many :events, through: :attendances
-  belongs_to :entity
+  has_many :volunteers
+  has_many :projects, through: :volunteers
+  has_many :representatives
+  has_many :organisations, through: :representatives
+
+  validates_presence_of :first_name, :last_name, :dob, :region
 
   accepts_nested_attributes_for :question_responses, allow_destroy: true
   accepts_nested_attributes_for :member_locations, allow_destroy: true

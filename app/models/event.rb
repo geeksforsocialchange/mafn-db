@@ -1,17 +1,22 @@
 class Event < ActiveRecord::Base
   has_many :attendances
   has_many :members, through: :attendances
+  has_one :arranger
+  has_one :project, through: :arrangers
+  belongs_to :entity
+
   validates_presence_of :name, :start, :finish, :location
   validates_uniqueness_of :google_id, :allow_blank => true, :allow_nil => true
-  enum category: [ :research, :project, :partnership ]
+
   accepts_nested_attributes_for :attendances, allow_destroy: true
-  belongs_to :entity
 
   after_save :geolocate, if: :location_changed?
 
   after_create do
     self.update(entity_id: Entity.create.id)
   end
+
+  enum category: [ :research, :project, :partnership ]
 
   enum event_type: {
     "Meeting": 0,
