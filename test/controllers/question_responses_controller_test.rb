@@ -2,6 +2,8 @@ require 'test_helper'
 
 class QuestionResponsesControllerTest < ActionController::TestCase
   setup do
+    @user = create(:user)
+    sign_in @user
     @question_response = create(:question_response)
   end
 

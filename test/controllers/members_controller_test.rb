@@ -2,6 +2,8 @@ require 'test_helper'
 
 class MembersControllerTest < ActionController::TestCase
   setup do
+    @user = create(:user)
+    sign_in @user
     @member = create(:member)
   end
 

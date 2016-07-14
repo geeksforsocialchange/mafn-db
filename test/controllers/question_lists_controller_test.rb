@@ -2,6 +2,8 @@ require 'test_helper'
 
 class QuestionListsControllerTest < ActionController::TestCase
   setup do
+    @user = create(:user)
+    sign_in @user
     @question_list = create(:question_list)
   end
 

@@ -2,6 +2,8 @@ require 'test_helper'
 
 class MemberLocationsControllerTest < ActionController::TestCase
   setup do
+    @user = create(:user)
+    sign_in @user
     @member_location = create(:member_location)
   end
 
