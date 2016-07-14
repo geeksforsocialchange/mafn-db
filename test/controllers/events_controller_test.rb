@@ -2,6 +2,8 @@ require 'test_helper'
 
 class EventsControllerTest < ActionController::TestCase
   setup do
+    @user = create(:user)
+    sign_in @user
     @event = create(:event)
     @future_event = create(:event, finish: 1.week.from_now)
     @past_event = create(:event, finish: 1.week.ago)

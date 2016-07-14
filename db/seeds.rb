@@ -38,5 +38,23 @@ create_question_set(event_feedback, event_feedback_questions)
 create_question_set(community_audit, community_audit_questions)
 create_question_set(membership, membership_questions)
 
+# Create users
+[
+  "kim@alliscalm.net",
+  "m.hammond@mmu.ac.uk",
+  "k.wong@mmu.ac.uk",
+  "s.white@mmu.ac.uk",
+  "e.crompton@mmu.ac.uk",
+  "m.youngson@mmu.ac.uk",
+  "jude.wells@mmu.ac.uk"
+].each do |email|
+  user = User.new
+  user.email = email
+  pw = SecureRandom.urlsafe_base64
+  user.password = pw
+  user.password_confirmation = pw
+  user.save!
+end
+
 # Import events
 `rake calendar:import`

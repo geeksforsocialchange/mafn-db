@@ -21,6 +21,10 @@ class QuestionResponsesController < ApplicationController
 
   # POST /question_responses
   def create
+    params[:subject] = Entity.find(params[:subject])
+    params[:responder] = Member.find(params[:responder])
+    params[:question] = Question.find(params[:question])
+
     @question_response = QuestionResponse.new(question_response_params)
 
     if @question_response.save
@@ -32,6 +36,10 @@ class QuestionResponsesController < ApplicationController
 
   # PATCH/PUT /question_responses/1
   def update
+    params[:subject] = Entity.find(params[:subject])
+    params[:responder] = Member.find(params[:responder])
+    params[:question] = Question.find(params[:question])
+
     if @question_response.update(question_response_params)
       redirect_to @question_response, notice: 'Question response was successfully updated.'
     else
@@ -53,10 +61,6 @@ class QuestionResponsesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def question_response_params
-      p = params.require(:question_response).permit(:response, :subject, :responder, :question)
-      p[:subject] = Entity.find(p[:subject])
-      p[:responder] = Member.find(p[:responder])
-      p[:question] = Question.find(p[:question])
-      p
+      params.require(:question_response).permit(:response, :subject, :responder, :question)
     end
 end

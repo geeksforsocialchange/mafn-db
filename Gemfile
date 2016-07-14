@@ -7,6 +7,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'pg'
+gem 'postgres_ext'
 gem 'icalendar'
 gem 'faker'
 # Nicer forms
@@ -24,6 +25,8 @@ gem 'geokit-rails'
 gem 'rubyzip', '~> 1.1.0'
 gem 'axlsx', '2.1.0.pre'
 gem 'axlsx_rails'
+# Users
+gem 'devise'
 
 group :production do
   gem 'rails_12factor'

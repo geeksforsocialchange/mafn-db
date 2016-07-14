@@ -3,6 +3,8 @@ require 'test_helper'
 class ExportEventDemographicsTest < ActionDispatch::IntegrationTest
 
   setup do
+    @user = create(:user)
+    sign_in @user
     @events = create(:event)
     @events.members = create_list(:member, 5)
   end
@@ -23,7 +25,7 @@ class ExportEventDemographicsTest < ActionDispatch::IntegrationTest
     #======#
 
     assert_equal head[0], "Event External ID"
-    assert_equal content[0], 1
+    assert_equal content[0], @events.id
 
     assert_equal head[1], "Who do you live with"
     # Living Alone, Living with Partner, Living with other family member, or Other

@@ -2,6 +2,8 @@ require 'test_helper'
 
 class QuestionSetsControllerTest < ActionController::TestCase
   setup do
+    @user = create(:user)
+    sign_in @user
     @question_set = create(:question_set)
     @questions = create_list(:question, 5)
   end

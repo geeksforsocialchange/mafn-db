@@ -2,6 +2,8 @@ require 'test_helper'
 
 class MemberFormLinksTest < ActionDispatch::IntegrationTest
   setup do
+    @user = create(:user)
+    sign_in @user
     @member = create(:member)
     @response = create(:question_response)
     @member.question_responses << @response

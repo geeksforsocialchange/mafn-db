@@ -3,6 +3,8 @@ require 'test_helper'
 class ExportEventTest < ActionDispatch::IntegrationTest
 
   setup do
+    @user = create(:user)
+    sign_in @user
     @events = create(:event)
     # Add a few members to test the attendee count
     @events.members = create_list(:member, 5)
@@ -31,7 +33,7 @@ class ExportEventTest < ActionDispatch::IntegrationTest
 
     # Our internal ID - can add some arbritrary number to this later if needed
     assert_equal head[2], "Event External ID"
-    assert_equal content[2], 1
+    assert_equal content[2], @events.id
 
     assert_equal head[3], "Date Of Event"
     assert_equal content[3], "2016-06-04"
