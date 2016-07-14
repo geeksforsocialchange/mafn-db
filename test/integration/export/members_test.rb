@@ -3,6 +3,8 @@ require 'test_helper'
 class ExportMembersTest < ActionDispatch::IntegrationTest
 
   setup do
+    @user = create(:user)
+    sign_in @user
     @members = create(:member)
   end
 

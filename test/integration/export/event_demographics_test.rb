@@ -3,6 +3,8 @@ require 'test_helper'
 class ExportEventDemographicsTest < ActionDispatch::IntegrationTest
 
   setup do
+    @user = create(:user)
+    sign_in @user
     @events = create(:event)
     @events.members = create_list(:member, 5)
   end

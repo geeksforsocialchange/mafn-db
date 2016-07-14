@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class ApplicationLayoutTestTest < ActionDispatch::IntegrationTest
-
+  setup do
+    @user = create(:user)
+    sign_in @user
+  end
   test "navigation links" do
     get root_path
     assert_select '.nav a[href=?]', '/members'

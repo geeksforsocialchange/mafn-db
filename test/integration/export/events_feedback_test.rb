@@ -3,6 +3,8 @@ require 'test_helper'
 class ExportEventFeedbackTest < ActionDispatch::IntegrationTest
 
   setup do
+    @user = create(:user)
+    sign_in @user
     @events = create(:event)
   end
 

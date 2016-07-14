@@ -2,6 +2,8 @@ require 'test_helper'
 
 class QuestionResponseSetTest < ActionDispatch::IntegrationTest
   setup do
+    @user = create(:user)
+    sign_in @user
     @member = create(:member)
     @question_set = create(:question_set)
   end

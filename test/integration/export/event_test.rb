@@ -3,6 +3,8 @@ require 'test_helper'
 class ExportEventTest < ActionDispatch::IntegrationTest
 
   setup do
+    @user = create(:user)
+    sign_in @user
     @events = create(:event)
     # Add a few members to test the attendee count
     @events.members = create_list(:member, 5)

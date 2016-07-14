@@ -13,6 +13,7 @@ require 'minitest/rails/capybara'
 Minitest::Reporters.use!
 
 
+
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
@@ -20,7 +21,7 @@ class ActiveSupport::TestCase
   include FactoryGirl::Syntax::Methods
   # Add more helper methods to be used by all tests here...
   include Capybara::DSL
-
+  
   # Load spreadsheets from file
   def load_spreadsheet spreadsheet
     visit "/exports/#{spreadsheet}.xlsx"
