@@ -7,6 +7,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'pg'
+gem 'postgres_ext'
 gem 'icalendar'
 gem 'faker'
 # Nicer forms
