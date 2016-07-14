@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :location do
     name "Zion Community Arts Centre"
-    entity_id 2
+    # entity_id 2
   end
 
   factory :full_location, class: Location do

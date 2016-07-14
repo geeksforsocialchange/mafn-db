@@ -27,6 +27,30 @@ namespace :test_data do
                     )
     end
 
+    def answer_question(  question = Question.where(category: 0).order("RANDOM()").limit(1).first,
+                          responder = Member.order("RANDOM()").limit(1).first,
+                          target = false
+                      )
+      if question.response
+        option_count = JSON.parse(question.response).length
+        response = rand(0..option_count)
+      else
+        response = Faker::Lorem.sentence
+      end
+      if target
+        subject = Entity.find(target.entity_id)
+      else
+        subject = Entity.find(responder.entity_id)
+      end
+      QuestionResponse.create!(
+        response: response,
+        question: question,
+        responder: responder,
+        subject: subject,
+      )
+    end
+
+
     # Create locations
     50.times do |n|
       name = Faker::Company.name
@@ -83,29 +107,4 @@ namespace :test_data do
     end
 
   end
-
-
-  def answer_question(  question = Question.where(category: 0).order("RANDOM()").limit(1).first,
-                        responder = Member.order("RANDOM()").limit(1).first,
-                        target = false
-                    )
-    if question.response
-      option_count = JSON.parse(question.response).length
-      response = rand(0..option_count)
-    else
-      response = Faker::Lorem.sentence
-    end
-    if target
-      subject = Entity.find(target.entity_id)
-    else
-      subject = Entity.find(responder.entity_id)
-    end
-    QuestionResponse.create!(
-      response: response,
-      question: question,
-      responder: responder,
-      subject: subject,
-    )
-  end
-
 end

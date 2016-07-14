@@ -31,7 +31,7 @@ class ExportEventTest < ActionDispatch::IntegrationTest
 
     # Our internal ID - can add some arbritrary number to this later if needed
     assert_equal head[2], "Event External ID"
-    assert_equal content[2], 1
+    assert_equal content[2], @events.id
 
     assert_equal head[3], "Date Of Event"
     assert_equal content[3], "2016-06-04"
