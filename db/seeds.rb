@@ -1,5 +1,3 @@
-require 'fileutils'
-
 # Load questions from YML
 event_feedback_data   = YAML.load_file "db/questions/event_feedback.yml"
 community_audit_data  = YAML.load_file "db/questions/community_audit.yml"
@@ -59,5 +57,4 @@ create_question_set(membership, membership_questions)
 end
 
 # Import events
-FileUtils::mkdir_p './tmp/calendar'
 `rake calendar:import`
