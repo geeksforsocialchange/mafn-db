@@ -8,8 +8,6 @@
 </head>
 <body>
 
-<%= render 'layouts/messages' %>
-
 <nav class="nav">
   <%= link_to "Members", members_path %> |
   <%= link_to "Events", events_path %> |
@@ -20,6 +18,8 @@
   <%= link_to "Question Sets", question_sets_path %> |
   <%= link_to "Export", exports_path %>
 </nav>
+
+<%= render 'layouts/messages' %>
 
 <%= yield %>
 
