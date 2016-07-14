@@ -59,5 +59,5 @@ create_question_set(membership, membership_questions)
 end
 
 # Import events
-FileUtils::mkdir_p 'tmp/calendar'
+FileUtils::mkdir_p './tmp/calendar'
 `rake calendar:import`
