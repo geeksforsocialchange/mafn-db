@@ -77,8 +77,26 @@ def row(member, params)
     "TODO",
     # "Do you volunteer with any other organisations, groups or communities not part of Ambition for Ageing?",
     get_response(member, "Are you currently involved in organising or contribute to a local community group?", params),
-    # "How often do you generally volunteer with other organisations?",
+    #"What is your role1":
     "TODO",
+    #"What is your organisation1":
+    "TODO",
+    #"What date did you start1":
+    "TODO",
+    #"What is your role2":
+    "TODO",
+    #"What is your organisation2":
+    "TODO",
+    #"What date did you start2":
+    "TODO",
+    #"What is your role3":
+    "TODO",
+    #"What is your organisation3":
+    "TODO",
+    #"What date did you start3":
+    "TODO",
+    #"How often do you generally volunteer with other organisations?",
+    get_response(member, "If yes, How often do you volunteer?", params),
 
     # Extra col from Kim
     if params.key?(:date_range)
