@@ -35,7 +35,7 @@ def row(member, params)
     # "Other social network",
     get_response(member, "Other social networking websites", params),
     # "Do you use email",
-    get_response(member, "How many hours do you spend chatting or interacting with friends or family on social networking websites or email on a normal day", params),
+    get_response(member, "How many hours do you spend chatting or interacting with friends or family on social networking websites or email on a normal day?", params),
     # "Hours on social media, websites, email",
     get_response(member, "How many hours do you spend chatting or interacting with friends or family on social networking websites or email on a normal day?"),
     # "participant- do you currently volunteer",
