@@ -46,7 +46,8 @@ create_question_set(membership, membership_questions)
   "s.white@mmu.ac.uk",
   "e.crompton@mmu.ac.uk",
   "m.youngson@mmu.ac.uk",
-  "jude.wells@mmu.ac.uk"
+  "jude.wells@mmu.ac.uk",
+  "jon-man.cheung@gmcvo.org.uk" 
 ].each do |email|
   user = User.new
   user.email = email

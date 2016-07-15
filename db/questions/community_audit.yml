@@ -53,15 +53,15 @@
   ["Never/Less than once a year", "Once or twice a year", "Once every few months", "1-2 times a month", "1-2 times a week", "3+ times a week"]
 "On average, how often do you - Meet up with friends, family or neighbours (not counting those you live with)?":
   ["Never/Less than once a year", "Once or twice a year", "Once every few months", "1-2 times a month", "1-2 times a week", "3+ times a week"]
-"How many hours do you spend chatting or interacting with friends or family on social networking websites or email on a normal day":
+"How many hours do you spend chatting or interacting with friends or family on social networking websites or email on a normal day?":
   ["I do not does this", "Less than daily", "Less than 1 hour", "1-3 hours", "4-6 hours", "7 or more hours"]
-"Please list an social networking websites that you use":
+"Please list any social networking websites that you use":
 "Other social networking websites":
 "Are there any other venues where you regularly attend events which we have missed. If so, list them":
 "Are you currently involved in organising or contribute to a local community group?":
-  ["Yes", "No", "Prefer not to say"]
+  ["No", "Yes", "Prefer not to say"]
 "Would you like to get involved in organising or contribute to a local community group?":
-  ["Yes", "No", "Prefer not to say"]
+  ["No", "Yes", "Prefer not to say"]
 # Has Anything Changed in the Last 12 Months?
 "Have you moved house in the last 12 months?":
   ["No", "Yes"]
@@ -91,6 +91,6 @@
   ["No", "Yes - I now provide care for someone", "Yes I no-longer provide care for someone"]
 "Has your living situation changed in the last 12 months":
   ["No", "Yes", "Prefer not to say"]
-"If yes, how has your living situation changed? ":
+"If yes, how has your living situation changed?":
   ["Living alone", "Living with partner", "Living with other family member", "Other"]
 "If 'other' living situation please specify":
