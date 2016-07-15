@@ -21,7 +21,7 @@
     <%= link_to "Questions", questions_path, class: "nav__main" %>
     (<%= link_to "Question Responses,", question_responses_path %>
     <%= link_to "Question Sets", question_sets_path %>) |
-    <%= link_to "Export", exports_path %>
+    <%= link_to "Export", exports_path, class: "nav__main" %>
     <% if user_signed_in? %>
       | <%= link_to "Logout #{current_user.email}", destroy_user_session_path, method: :delete %>
     <% end %>
@@ -31,7 +31,7 @@
 <main>
   <%= render 'layouts/messages' %>
   <%= yield %>
-</main> 
+</main>
 
 </body>
 </html>

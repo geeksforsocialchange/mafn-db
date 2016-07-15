@@ -15,14 +15,13 @@ namespace :exports do
       row_todo = false
       # Check each row
       s.each_with_index do |row, row_idx|
-        next if row_errors
+        next if row_errors || row_todo
         row.each_with_index do |cell, cell_idx|
           if cell.to_s.include?("ERROR")
             errors += 1
             puts "#{s.sheets.first}: Col #{cell_idx}. #{header[cell_idx]}. Row #{row_idx}: #{cell}"
             row_errors = true
           elsif cell.to_s.include?("TODO")
-            next if row_todo
             todo += 1
             puts "#{s.sheets.first}: Col #{cell_idx}. #{header[cell_idx]}. Row #{row_idx}: #{cell}"
             row_todo = true
