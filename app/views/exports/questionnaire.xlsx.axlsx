@@ -69,10 +69,15 @@ def row(member, params)
 
     # Volunteer extra questions
 
+    # TODO: Add column headings for these
+    # TODO: Comma seperated list of all Roles in Projects
+    # TODO: check column order from volunteer initial questionnaire
     # "what functions do you carry out in your ambition for ageing volunteer role",
     "TODO",
     # "Other function",
     "TODO",
+    # TODO: Number of events this project has run
+    # member.projects.events.count + times
     # "How often do you carry out these activities",
     "TODO",
     # "Do you volunteer with any other organisations, groups or communities not part of Ambition for Ageing?",
