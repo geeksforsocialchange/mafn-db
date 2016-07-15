@@ -67,8 +67,7 @@ wb.add_worksheet(name: "Members") do |sheet|
       # "Other religion"
       get_response(member, "Other religion"),
       get_response(member, "Sexual orientation"),
-      get_response(member, "What do you think makes an age-friendly neighbourhood"),
-      ""
+      get_response(member, "What do you think makes an ‘age friendly neighbourhood’?")
     ]
   end
 end

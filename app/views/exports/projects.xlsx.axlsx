@@ -31,6 +31,7 @@ wb.add_worksheet(name: "Projects") do |sheet|
       "MMU-#{project.id}",
       # "Organisation Name"
       project.name,
+      # TODO: Add Location to Project
       # "Main-Street Address"
       "TODO",
       # "Main-City"
@@ -41,12 +42,14 @@ wb.add_worksheet(name: "Projects") do |sheet|
       "TODO",
       # "GM Region"
       "TODO",
+      # TODO: same options as Member ward
       # "Manchester ward"
       "TODO",
       # "Project Start Date"
       project.start,
       # "Project End Date"
       project.finish,
+      # TODO: Import these from project questionnaire
       # "Type"
       "TODO",
       # "Purpose"
