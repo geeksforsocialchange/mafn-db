@@ -27,7 +27,7 @@ def row(member, params)
 
     # COMMUNITY AUDIT QUESTIONS
     # "To what extent do you feel that you live in an age-friendly neighbourhood?",
-    "TODO",
+    get_response(member, "My Neighbourhood is...", params),
     # "Do you use a smartphone, computer, tablet?",
     get_response(member, "Do you use a computer, smartphone or tablet?", params),
     # "Do you belong to any social networking websites or forums?",
@@ -49,9 +49,9 @@ def row(member, params)
     # "friends and family- send receive texts",
     get_response(member, "On average, how often do you - Send or receive text messages with friends, colleagues, family or neighbours", params),
     # "People can change things in my local area if they work together",
-    "TODO",
+    get_response(member, "People can change things in my local area if they work together", params),
     # "I can influence decisions affecting my local area",
-    "TODO",
+    get_response(member, "I can influence decisions affecting my local area", params),
     # "How often do you talk to your neighbours?",
     get_response(member, "On average, how often do you - Talk to your neighbours", params),
     # "I feel like I belong to this neighbourhood",
