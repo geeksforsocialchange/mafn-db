@@ -1,0 +1,76 @@
+# vim: set syntax=ruby:
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Projects") do |sheet|
+  sheet.add_row [
+    "External Identifier",
+    "Organisation Name",
+    "Main-Street Address",
+    "Main-City",
+    "Main-Postal Code",
+    "Main-Country",
+    "GM Region",
+    "Manchester ward",
+    "Project Start Date",
+    "Project End Date",
+    "Type",
+    "Purpose",
+    "what will project do",
+    "no. older people involved in design",
+    "How involved- evidence",
+    "Themes",
+    "Other themes",
+    "Categories",
+    "Project Cost",
+    "Ecorys - No of delivery partners",
+    "delivery partners- who- how involved",
+    "Regular participants"
+  ]
+  @projects.each do |project|
+    sheet.add_row [
+      # "External Identifier"
+      "MMU-#{project.id}",
+      # "Organisation Name"
+      project.name,
+      # "Main-Street Address"
+      "TODO",
+      # "Main-City"
+      "TODO",
+      # "Main-Postal Code"
+      "TODO",
+      # "Main-Country"
+      "TODO",
+      # "GM Region"
+      "TODO",
+      # "Manchester ward"
+      "TODO",
+      # "Project Start Date"
+      project.start,
+      # "Project End Date"
+      project.finish,
+      # "Type"
+      "TODO",
+      # "Purpose"
+      "TODO",
+      # "what will project do"
+      "TODO",
+      # "no. older people involved in design"
+      "TODO",
+      # "How involved- evidence"
+      "TODO",
+      # "Themes"
+      "TODO",
+      # "Other themes"
+      "TODO",
+      # "Categories"
+      "TODO",
+      # "Project Cost"
+      "TODO",
+      # "Ecorys - No of delivery partners"
+      "TODO",
+      # "delivery partners- who- how involved"
+      "TODO",
+      # "Regular participants"
+      "TODO"
+    ]
+  end
+end

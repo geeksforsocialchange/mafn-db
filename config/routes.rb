@@ -32,6 +32,7 @@ Rails.application.routes.draw do
       get 'events_feedback'
       get 'questionnaire'
       get 'members'
+      get 'projects'
       get 'followup_questionnaire', to: 'exports#questionnaire', defaults: { followup: true }
     end
   end

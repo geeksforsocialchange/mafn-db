@@ -31,6 +31,13 @@ class ExportsController < ApplicationController
     end
   end
 
+  def projects
+    @projects = Project.all
+    respond_to do |format|
+      format.xlsx
+    end
+  end
+
 
   def questionnaire
     @members = Member.all

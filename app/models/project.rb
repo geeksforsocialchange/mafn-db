@@ -11,6 +11,8 @@ class Project < ActiveRecord::Base
   has_many :volunteers
   has_many :members, through: :volunteers
 
+  validates_presence_of :start
+
   after_create do
     self.update(entity_id: Entity.create.id)
   end
