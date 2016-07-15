@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :member_locations
   resources :members
   resources :organisations
+  resources :partners
   resources :projects
   resources :question_lists
   resources :question_responses

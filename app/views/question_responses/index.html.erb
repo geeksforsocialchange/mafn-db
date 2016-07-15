@@ -21,10 +21,13 @@
         <td><%= link_to question_response.responder.full_name, question_response.responder %></td>
         <td><%= link_to question_response.question.question, question_response.question %></td>
         <td><%= question_response.formatted_response %></td>
-        <td><%= link_to   "#{question_response.subject.parent.model_name.human}:
-                          #{question_response.subject.parent.name}",
-                          question_response.subject.parent
-            %>
+        <td>
+          <% if question_response.subject %>
+            <%= link_to   "#{question_response.subject.parent.model_name.human}:
+                            #{question_response.subject.parent.name}",
+                            question_response.subject.parent
+              %>
+          <% end %>
         </td>
         <td><%= link_to 'Show', question_response %></td>
         <td><%= link_to 'Edit', edit_question_response_path(question_response) %></td>
