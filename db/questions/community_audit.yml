@@ -1,4 +1,6 @@
 # Neighbourhood
+"My Neighbourhood is...":
+  ["Not at all age-friendly", "Not really age-friendly", "Somewhat age-friendly", "Very age-friendly"]
 "If I need advice about something, I could go to someone in my neighbourhood":
   ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]
 "I borrow things and exchange favours with my neighbours":
@@ -9,7 +11,8 @@
   ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]
 "I feel like I belong to this neighbourhood":
   ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]
-
+"There are lots of things to do in ward":
+  ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]
 # Barriers to Activities
 "I would like to take part in more social activities around here":
   ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]
@@ -60,8 +63,14 @@
 "Are there any other venues where you regularly attend events which we have missed. If so, list them":
 "Are you currently involved in organising or contribute to a local community group?":
   ["No", "Yes", "Prefer not to say"]
-"Would you like to get involved in organising or contribute to a local community group?":
+"If yes, How often do you volunteer?":
+  ["Less than once a month", "Less than once a week", "1-2 times a week", "3+ times a week"]
+"Do you want to volunteer?":
   ["No", "Yes", "Prefer not to say"]
+"I can influence decisions affecting my local area":
+  ["Definately Disagree", "Tend to disagree", "Tend to agree", "Definitely agree"]
+"People can change things in my local area if they work together":  
+  ["Definately Disagree", "Tend to disagree", "Tend to agree", "Definitely agree"]
 # Has Anything Changed in the Last 12 Months?
 "Have you moved house in the last 12 months?":
   ["No", "Yes"]
