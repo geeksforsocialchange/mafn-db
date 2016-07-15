@@ -40,7 +40,9 @@
   ["No","Yes in my home", "Yes, in my neighbourhood", "Prefer not to say"]
 "Does anyone care for/assist you on a regular basis? If so, who?":
   ["No", "Family Yes", "Neighbours Yes", "Volunteers Yes", "Professionals Yes", "Prefer not to say"]
-"Do you use any special equipment when accessing facilities or attending events in your neighbourhood? If so, what do you use?":
+"Do you use any special equipment when accessing facilities or attending events in your neighbourhood?": 
+ ["No", "Yes"]
+"If yes, what equipment do you use?":
 "What is your highest level of education?":
   ["No Schooling","Primary", "GCSE, O-level or post 14 apprenticeship", "A level or equivalent or post 16 apprenticeship", "Degree level or equivalent", "Postgraduate degree level or equivalent", "Prefer not to say"]
 "What is your current employment status?":
