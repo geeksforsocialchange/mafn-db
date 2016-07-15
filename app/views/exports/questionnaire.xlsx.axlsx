@@ -41,7 +41,7 @@ def row(member, params)
     # "participant- do you currently volunteer",
     get_response(member, "Are you currently involved in organising or contribute to a local community group?", params),
     # "participant- Do you want to volunteer?",
-    get_response(member, "Would you like to get involved in organising or contribute to a local community group?", params),
+    get_response(member, "Do you want to volunteer?", params),
     # "friends and family-how often do you meet up ?",
     get_response(member, "On average, how often do you - Send or receive text messages with friends, colleagues, family or neighbours", params),
     # "friends and family-speak on the phone",

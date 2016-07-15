@@ -6,7 +6,7 @@ namespace :test_data do
     Faker::Config.locale = 'en-GB'
 
     # Seed users with dummy data
-    50.times do |n|
+    20.times do |n|
       first_name = Faker::Name.first_name
       last_name = Faker::Name.last_name
       email = Faker::Internet.email
@@ -52,7 +52,7 @@ namespace :test_data do
 
 
     # Create locations
-    50.times do |n|
+    20.times do |n|
       name = Faker::Company.name
       line1 = Faker::Address.street_name
       line2 = Faker::Address.street_name
@@ -84,7 +84,7 @@ namespace :test_data do
     Member.all.each do |member|
       # Assign some random attendances and do feedback
       # Create 5 random events between 1 and event count
-      attendances = (1..event_count).to_a.sort{ rand() - 0.5 }[0..5]
+      attendances = (1..event_count).to_a.sort{ rand() - 0.3 }[0..3]
       attendances.each do |attendance|
         event = Event.find(attendance)
         # Make an attendance for each one
