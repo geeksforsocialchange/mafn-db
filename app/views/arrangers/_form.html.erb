@@ -1,0 +1,10 @@
+<%= semantic_form_for @arranger do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :project %>
+    <%= f.input :event %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

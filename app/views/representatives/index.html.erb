@@ -1,0 +1,31 @@
+<h1>Listing Representatives</h1>
+
+<%= link_to 'New Representative', new_representative_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Organisation</th>
+      <th>Member</th>
+      <th>Job title</th>
+      <th>Start</th>
+      <th>Finish</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @representatives.each do |representative| %>
+      <tr>
+        <td><%= link_to representative.organisation.name, representative.organisation rescue nil %></td>
+        <td><%= link_to representative.member.name, representative.member rescue nil %></td>
+        <td><%= representative.job_title %></td>
+        <td><%= representative.start %></td>
+        <td><%= representative.finish %></td>
+        <td><%= link_to 'Show', representative %></td>
+        <td><%= link_to 'Edit', edit_representative_path(representative) %></td>
+        <td><%= link_to 'Destroy', representative, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

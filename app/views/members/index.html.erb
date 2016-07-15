@@ -37,7 +37,7 @@
     <% @members.each do |member| %>
       <tr>
         <td><tt><%= member.membership_code %></tt></td>
-        <td><%= member.full_name %></td>
+        <td><%= link_to member.name, member rescue nil %></td>
         <td><%= member.dob %></td>
         <td><%= member.region %></td>
         <td><%= member.is_resident ? "Yes" : "No" %></td>

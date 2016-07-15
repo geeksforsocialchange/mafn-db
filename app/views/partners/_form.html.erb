@@ -1,0 +1,13 @@
+<%= semantic_form_for @partner do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :start %>
+    <%= f.input :finish %>
+    <%= f.input :partner_type %>
+    <%= f.input :organisation %>
+    <%= f.input :project %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

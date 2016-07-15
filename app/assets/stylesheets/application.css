@@ -1,10 +1,11 @@
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
- 
+
  *= require formtastic
  *= require vendor/jquery.dataTables.min
 
+ *= require pagination
  *= require scaffolds
  *= require global
  */

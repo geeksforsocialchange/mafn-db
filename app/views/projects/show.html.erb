@@ -1,0 +1,30 @@
+<h1>Project: <%= @project.name %></h1>
+
+<p>
+  <strong>Start:</strong>
+  <%= @project.start %>
+</p>
+
+<p>
+  <strong>Finish:</strong>
+  <%= @project.finish %>
+</p>
+
+<p>
+  <strong>Primary partner organisation:</strong>
+  <%= link_to @project.primary_partner_organisation.name, organisations_path(@project.primary_partner_organisation) rescue nil %>
+
+</p>
+
+<p>
+  <strong>Resident champion:</strong>
+  <%= link_to @project.resident_champion.name, member_path(@project.resident_champion) rescue nil %>
+</p>
+
+<p>
+  <strong>Resident seconder:</strong>
+  <%= link_to @project.resident_seconder.name, member_path(@project.resident_seconder) rescue nil %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

@@ -1,0 +1,9 @@
+<h1><%= @organisation.name %></h1>
+
+<p>
+  <strong>Location:</strong>
+  <%= link_to @organisation.location.name, location_path(@organisation.location) rescue nil %>
+</p>
+
+<%= link_to 'Edit', edit_organisation_path(@organisation) %> |
+<%= link_to 'Back', organisations_path %>

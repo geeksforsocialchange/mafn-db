@@ -3,7 +3,7 @@ class QuestionResponsesController < ApplicationController
 
   # GET /question_responses
   def index
-    @question_responses = QuestionResponse.all
+    @question_responses = QuestionResponse.paginate(:page => params[:page])
   end
 
   # GET /question_responses/1

@@ -1,0 +1,35 @@
+<h1>Volunteer Record</h1>
+
+<p>
+  <strong>Member:</strong>
+  <%= link_to @volunteer.member.name rescue nil %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= link_to @volunteer.project.name, project_path(@volunteer.project) rescue nil %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @volunteer.role %>
+</p>
+
+<p>
+  <strong>Is leader:</strong>
+  <%= @volunteer.is_leader %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @volunteer.start %>
+</p>
+
+<p>
+  <strong>Finish:</strong>
+  <%= @volunteer.finish %>
+</p>
+
+
+<%= link_to 'Edit', edit_volunteer_path(@volunteer) %> |
+<%= link_to 'Back', volunteers_path %>

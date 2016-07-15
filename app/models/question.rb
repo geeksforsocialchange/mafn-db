@@ -9,6 +9,7 @@ class Question < ActiveRecord::Base
     member: 0,
     event: 1,
     location: 2,
+    project: 3
   }
 
 end

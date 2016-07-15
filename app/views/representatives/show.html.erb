@@ -1,0 +1,30 @@
+<h1>Representative Record</h1>
+
+<p>
+  <strong>Organisation:</strong>
+  <%= link_to @representative.organisation.name, @representative.organisation rescue nil %>
+</p>
+
+<p>
+  <strong>Member:</strong>
+  <%= link_to @representative.member.name, @representative.member rescue nil %>
+</p>
+
+<p>
+  <strong>Job title:</strong>
+  <%= @representative.job_title %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @representative.start %>
+</p>
+
+<p>
+  <strong>Finish:</strong>
+  <%= @representative.finish %>
+</p>
+
+
+<%= link_to 'Edit', edit_representative_path(@representative) %> |
+<%= link_to 'Back', representatives_path %>

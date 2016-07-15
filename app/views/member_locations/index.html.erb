@@ -16,8 +16,12 @@
   <tbody>
     <% @member_locations.each do |member_location| %>
       <tr>
-        <td><%= member_location.member.full_name %></td>
-        <td><%= member_location.location.line1 %>, <%= member_location.location.city %>, <%= member_location.location.postcode %></td>
+        <td><%= link_to member_location.member.name, member_location.member rescue nil %></td>
+        <td>
+          <%= link_to member_location.location do %>
+            <%= member_location.location.line1 %>, <%= member_location.location.city %>, <%= member_location.location.postcode %>
+          <% end %>
+        </td>
         <td><%= member_location.from %></td>
         <td><%= member_location.to %></td>
         <td><%= link_to 'Show', member_location %></td>

@@ -27,6 +27,7 @@ gem 'axlsx', '2.1.0.pre'
 gem 'axlsx_rails'
 # Users
 gem 'devise'
+gem 'will_paginate'
 
 group :production do
   gem 'rails_12factor'

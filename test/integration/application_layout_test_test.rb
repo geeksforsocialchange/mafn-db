@@ -9,6 +9,10 @@ class ApplicationLayoutTestTest < ActionDispatch::IntegrationTest
     get root_path
     assert_select '.nav a[href=?]', '/members'
     assert_select '.nav a[href=?]', '/events'
+    assert_select '.nav a[href=?]', '/projects'
+    assert_select '.nav a[href=?]', '/volunteers'
+    assert_select '.nav a[href=?]', '/organisations'
+    assert_select '.nav a[href=?]', '/representatives'
     assert_select '.nav a[href=?]', '/locations'
     assert_select '.nav a[href=?]', '/member_locations'
     assert_select '.nav a[href=?]', '/questions'

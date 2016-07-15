@@ -2,12 +2,12 @@
 
 <p>
   <strong>Member:</strong>
-  <%= @member_location.member %>
+  <%= link_to @member_location.member.name, @member_location.member rescue nil %>
 </p>
 
 <p>
   <strong>Location:</strong>
-  <%= @member_location.location %>
+  <%= link_to @member_location.location.name, @member_location.location rescue nil %>
 </p>
 
 <p>
