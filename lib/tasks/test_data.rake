@@ -72,6 +72,7 @@ namespace :test_data do
         name: Faker::Company.name,
         start: Faker::Date.between(20.years.ago, 0.years.ago),
         primary_partner_organisation:  orgs[p],
+        region: rand(0..3),
         resident_champion: members[(p * 2 - 1)],
         resident_seconder: members[(p * 2)]
       )
@@ -105,10 +106,35 @@ namespace :test_data do
         answer_question(q, member)
       end
 
-      # Join some Organisations
-
+      # Join an Organisation, maybe
+      if [true, false, false].sample
+        Representative.create!(
+          job_title: Faker::Name.title,
+          start: Faker::Date.between(20.years.ago, 0.years.ago),
+          organisation: Organisation.order("RANDOM()").limit(1).first,
+          member: member
+        )
+      end
 
       # Join some Projects
+      rand(0..2).times do |p|
+        Volunteer.create!(
+          role: Faker::Name.title,
+          is_leader: [true, false, false, false].sample,
+          start: Faker::Date.between(20.years.ago, 0.years.ago),
+          member: member,
+          project: Project.order("RANDOM()").limit(1).first
+        )
+      end
+    end
+
+    # Assign events to projects
+    Event.all.each do |event|
+      next if [true, true, false].sample
+      Arranger.create!(
+        project: Project.order("RANDOM()").limit(1).first,
+        event: event
+      )
     end
 
 
