@@ -72,6 +72,34 @@
   <% end %>
 </ul>
 
+<h2>Projects</h2>
+
+<ul>
+  <% @member.volunteers.each do |v| %>
+    <li>
+      <%= link_to "#{v.role || "Unnamed role"} at #{v.project.name}", project_path(v.project) %>
+    </li>
+  <% end %>
+</ul>
+
+<h2>Organisations</h2>
+
+<ul>
+  <% @member.representatives.each do |r| %>
+    <li>
+      <%= link_to "#{r.job_title || "No title"} at #{r.organisation.name}", organisation_path(r.organisation) %>
+    </li>
+  <% end %>
+</ul>
+
+<h2>Attendances</h2>
+
+<ul>
+  <% @member.events.each do |e| %>
+    <li><%= "#{e.pretty_start} (#{e.duration}). #{e.name}, #{e.location}." %></li>
+  <% end %>
+</ul>
+
 <h2>Questions</h2>
 
 <h3>Complete a survey as this user</h3>
@@ -88,11 +116,3 @@
     <dd><%= link_to r.formatted_response, question_response_path(r.id) %> <em>(<%= time_ago_in_words(r.created_at) %> ago, <%= link_to "edit", edit_question_response_path(r.id) %>)</em></dt>
   <% end %>
 </dl>
-
-<h2>Attendances</h2>
-
-<ul>
-  <% @member.events.each do |e| %>
-    <li><%= "#{e.pretty_start} (#{e.duration}). #{e.name}, #{e.location}." %></li>
-  <% end %>
-</ul>

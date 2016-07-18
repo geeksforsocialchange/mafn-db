@@ -46,3 +46,4 @@ bower.json
 
 # Spreadsheet temp files
 /test/spreadsheets/.~*
+/db/imports/.~*
