@@ -15,10 +15,10 @@ def create_questions(questions, category = 0)
 end
 
 # Create the questions
-event_feedback_questions  = create_questions(event_feedback_data, "event")
+event_feedback_questions  = create_questions(event_feedback_data, 1)
 community_audit_questions = create_questions(community_audit_data)
 membership_questions      = create_questions(membership_data)
-project_questions         = create_questions(project_data, "project")
+project_questions         = create_questions(project_data, 3)
 
 # Create question sets
 event_feedback  = QuestionSet.create!(title: "Event Feedback")
@@ -28,7 +28,7 @@ projects        = QuestionSet.create!(title: "Projects")
 
 # Add questions to question set
 def create_question_set(question_set, questions)
-  questions.each_with_index do |q, idx|
+  questions.each_with_index do |q, idx|#
     QuestionList.create!(
                           question_set: question_set,
                           question: q,
@@ -40,8 +40,9 @@ end
 create_question_set(event_feedback, event_feedback_questions)
 create_question_set(community_audit, community_audit_questions)
 create_question_set(membership, membership_questions)
+create_question_set(projects, project_questions)
 
-# Create users
+# Create users if they don't exist
 [
   "kim@alliscalm.net",
   "m.hammond@mmu.ac.uk",
@@ -52,6 +53,7 @@ create_question_set(membership, membership_questions)
   "jude.wells@mmu.ac.uk",
   "jon-man.cheung@gmcvo.org.uk"
 ].each do |email|
+  next if User.where(email: email).length > 0
   user = User.new
   user.email = email
   pw = SecureRandom.urlsafe_base64

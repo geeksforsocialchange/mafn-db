@@ -11,7 +11,7 @@ class Project < ActiveRecord::Base
   has_many :volunteers
   has_many :members, through: :volunteers
 
-  validates_presence_of :start, :region
+  validates_presence_of :region, :name
 
   after_create do
     self.update(entity_id: Entity.create.id)
@@ -23,5 +23,9 @@ class Project < ActiveRecord::Base
     "Moston": 2,
     "Miles Platting": 3,
   }
+
+  def select_string
+    "#{self.id}. #{self.name}"
+  end
 
 end

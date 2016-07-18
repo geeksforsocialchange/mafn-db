@@ -5,6 +5,11 @@
     <p>Some of these questions relate to an event. Select the event to continue.</p>
     <%= select_tag "Event", options_from_collection_for_select(Event.all, "entity_id", "select_string"), { class: 'js-form__entity-selector' } %>
   </div>
+<% elsif @question_set.questions.where(category: 3).exists?  %>
+  <div class="js-form__needs-entity">
+    <p>Some of these questions relate to a project. Select the project to continue.</p>
+    <%= select_tag "Project", options_from_collection_for_select(Project.all, "entity_id", "select_string"), { class: 'js-form__entity-selector' } %>
+  </div>
 <% end %>
 
 <div class="form">
@@ -13,7 +18,7 @@
       <h3><%= question.object.question %></h3>
       <%= f.fields_for :question_response do |response| %>
         <%# If there's a string here, then it's an array of acceptable answers %>
-        <% if question.object.response %>
+        <% if question.object.response && question.object.response.length > 0 %>
           <% JSON.parse(question.object.response).each_with_index do |option, idx| %>
             <%= response.radio_button "#{question.object.id}", idx %>
             <%= response.label "#{question.object.id}_#{idx}", option %>
@@ -23,6 +28,7 @@
         <% end %>
       <% end %>
     <% end %>
-    <%= f.submit %>
+    <br>
+    <%= f.submit :value => "Submit questionnaire" %>
   <% end %>
 </div>
