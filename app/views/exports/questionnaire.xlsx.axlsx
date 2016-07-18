@@ -1,5 +1,24 @@
 # vim: set syntax=ruby:
 def row(member, params)
+
+  volunteering = []
+  1..3.each do |n|
+    if member.volunteers[n]
+      #"What is your role1":
+      volunteering << member.volunteers[n].role
+      #"What is your organisation1":
+      volunteering << member.volunteers[n].organisation.name
+      #"What date did you start1":
+      volunteering << member.volunteers[n].start || member.volunteers[n].created_at
+    else
+      3.times do
+        volunteering << ""
+      end
+    end
+  end
+
+
+  # Return this giant array
   [
     # "Participant External ID",
     member.id,
@@ -70,36 +89,35 @@ def row(member, params)
     # Volunteer extra questions
 
     # TODO: Add column headings for these
-    # TODO: Comma seperated list of all Roles in Projects
     # TODO: check column order from volunteer initial questionnaire
     # "what functions do you carry out in your ambition for ageing volunteer role",
-    "TODO",
+    member.volunteers.each.map { |v| "#{v.role} for #{v.project.name}"}.join(", "),
     # "Other function",
     "TODO",
-    # TODO: Number of events this project has run
-    # member.projects.events.count + times
     # "How often do you carry out these activities",
-    "TODO",
+    # Arranger.where(project: member.projects).count,
     # "Do you volunteer with any other organisations, groups or communities not part of Ambition for Ageing?",
     get_response(member, "Are you currently involved in organising or contribute to a local community group?", params),
-    #"What is your role1":
-    "TODO",
-    #"What is your organisation1":
-    "TODO",
-    #"What date did you start1":
-    "TODO",
-    #"What is your role2":
-    "TODO",
-    #"What is your organisation2":
-    "TODO",
-    #"What date did you start2":
-    "TODO",
-    #"What is your role3":
-    "TODO",
-    #"What is your organisation3":
-    "TODO",
-    #"What date did you start3":
-    "TODO",
+
+    # "Role 1
+    volunteering[0],
+    # "Organisation 1
+    volunteering[1],
+    # "Date Started Role 1
+    volunteering[2],
+    # "Role 2
+    volunteering[3],
+    # "Organisation 2
+    volunteering[4],
+    # "Date Started Role 2
+    volunteering[5],
+    # "Role 3
+    volunteering[6],
+    # "Organisation 3
+    volunteering[7],
+    # "Date Started Role 3
+    volunteering[8],
+
     #"How often do you generally volunteer with other organisations?",
     get_response(member, "If yes, How often do you volunteer?", params),
 

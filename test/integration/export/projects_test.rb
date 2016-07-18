@@ -8,7 +8,7 @@ class ExportProjectsTest < ActionDispatch::IntegrationTest
     @project = create(:project)
   end
 
-  test "questionnaire spreadsheet export" do
+  test "project spreadsheet export" do
     sheet = load_spreadsheet "projects"
 
     # We're just testing the first row

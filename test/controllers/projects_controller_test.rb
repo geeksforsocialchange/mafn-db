@@ -18,7 +18,14 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test "should create project" do
     assert_difference('Project.count') do
-      post :create, project: { finish: @project.finish, name: @project.name, primary_partner_organisation_id: @project.primary_partner_organisation_id, resident_champion_id: @project.resident_champion_id, resident_seconder_id: @project.resident_seconder_id, start: @project.start }
+      post :create, project: {  name: @project.name,
+                                primary_partner_organisation_id: @project.primary_partner_organisation_id,
+                                resident_champion_id: @project.resident_champion_id,
+                                resident_seconder_id: @project.resident_seconder_id,
+                                start: @project.start,
+                                finish: @project.finish,
+                                region: @project.region
+                              }
     end
 
     assert_redirected_to project_path(assigns(:project))
@@ -35,7 +42,14 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test "should update project" do
-    patch :update, id: @project, project: { finish: @project.finish, name: @project.name, primary_partner_organisation_id: @project.primary_partner_organisation_id, resident_champion_id: @project.resident_champion_id, resident_seconder_id: @project.resident_seconder_id, start: @project.start }
+    patch :update, id: @project, project: { name: @project.name,
+                                            primary_partner_organisation_id: @project.primary_partner_organisation_id,
+                                            resident_champion_id: @project.resident_champion_id,
+                                            resident_seconder_id: @project.resident_seconder_id,
+                                            start: @project.start,
+                                            finish: @project.finish, 
+                                            region: @project.region
+                                          }
     assert_redirected_to project_path(assigns(:project))
   end
 

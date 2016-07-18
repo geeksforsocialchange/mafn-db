@@ -11,6 +11,12 @@
 </p>
 
 <p>
+  <strong>Region:</strong>
+  <%= @project.region %>
+</p>
+
+
+<p>
   <strong>Primary partner organisation:</strong>
   <%= link_to @project.primary_partner_organisation.name, organisations_path(@project.primary_partner_organisation) rescue nil %>
 

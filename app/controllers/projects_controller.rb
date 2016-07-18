@@ -53,6 +53,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def project_params
-      params.require(:project).permit(:name, :start, :finish, :primary_partner_organisation_id, :resident_champion_id, :resident_seconder_id)
+      params.require(:project).permit(:name, :start, :finish, :region, :primary_partner_organisation_id, :resident_champion_id, :resident_seconder_id)
     end
 end

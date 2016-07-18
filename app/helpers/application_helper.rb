@@ -13,8 +13,13 @@ module ApplicationHelper
     if !q.empty?
       # Then check the responses to the question
       if entity
-        # If this is questions about a specific thing then check that
-        r = QuestionResponse.where(question: q, responder: member, subject: entity)
+        # We don't care about the member if it's a project (for now)
+        if member
+          # If this is questions about a specific thing then check that
+          r = QuestionResponse.where(question: q, responder: member, subject: entity)
+        else
+          r = QuestionResponse.where(question: q, subject: entity)
+        end
       else
         # If not then just the previous response
         r = QuestionResponse.where(question: q, responder: member)
@@ -41,6 +46,14 @@ module ApplicationHelper
       end
     else
       "ERROR: Question not found!"
+    end
+  end
+
+  def ymd date
+    if date.class == Date || date.class == Time
+      date.strftime("%Y-%m-%d")
+    else
+      ""
     end
   end
 
