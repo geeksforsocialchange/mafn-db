@@ -32,7 +32,7 @@ wb.add_worksheet(name: "Event Demographics") do |sheet|
     event.members.each do |member|
       ethnicity = member.export_ethnicity
       sheet.add_row [
-        event.id,
+        "MMU-" + event.id.to_s,
         get_response(member, "What is your living situation?"),
         get_response(member, "What is your living situation? (other)"),
         get_response(member, "What is your marital status?"),

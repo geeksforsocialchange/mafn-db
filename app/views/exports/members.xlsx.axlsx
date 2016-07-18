@@ -34,8 +34,8 @@ wb.add_worksheet(name: "Members") do |sheet|
   @members.each do |member|
     ethnicity = member.export_ethnicity
     sheet.add_row [
-      # "Project External ID"
-      "TODO",
+      # "Participant External ID"
+      member.volunteers.pluck(:project_id).map { |p| "MMU-#{p}" }.join(", "),
       # "Consent Given"
       "Yes",
       member.id,
@@ -53,6 +53,7 @@ wb.add_worksheet(name: "Members") do |sheet|
       get_response(member, "How long have you lived in your ward in years?"),
       get_response(member, "What is your current employment status?"),
       # MISTAKE COLUMN: "Prefer not to say"
+      # Is this perhaps 'Ethnicity - prefer not to say'?
       "",
       # Ethnicities
       ethnicity[0],
@@ -67,8 +68,7 @@ wb.add_worksheet(name: "Members") do |sheet|
       # "Other religion"
       get_response(member, "Other religion"),
       get_response(member, "Sexual orientation"),
-      get_response(member, "What do you think makes an age-friendly neighbourhood"),
-      ""
+      get_response(member, "What do you think makes an ‘age friendly neighbourhood’?")
     ]
   end
 end

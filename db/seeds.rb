@@ -2,6 +2,7 @@
 event_feedback_data   = YAML.load_file "db/questions/event_feedback.yml"
 community_audit_data  = YAML.load_file "db/questions/community_audit.yml"
 membership_data       = YAML.load_file "db/questions/membership.yml"
+project_data          = YAML.load_file "db/questions/project.yml"
 
 # Function to create questions en masse
 def create_questions(questions, category = 0)
@@ -14,14 +15,16 @@ def create_questions(questions, category = 0)
 end
 
 # Create the questions
-event_feedback_questions  = create_questions(event_feedback_data, 1)
+event_feedback_questions  = create_questions(event_feedback_data, "event")
 community_audit_questions = create_questions(community_audit_data)
 membership_questions      = create_questions(membership_data)
+project_questions         = create_questions(project_data, "project")
 
 # Create question sets
 event_feedback  = QuestionSet.create!(title: "Event Feedback")
 community_audit = QuestionSet.create!(title: "Community Audit")
 membership      = QuestionSet.create!(title: "Membership")
+projects        = QuestionSet.create!(title: "Projects")
 
 # Add questions to question set
 def create_question_set(question_set, questions)
@@ -47,7 +50,7 @@ create_question_set(membership, membership_questions)
   "e.crompton@mmu.ac.uk",
   "m.youngson@mmu.ac.uk",
   "jude.wells@mmu.ac.uk",
-  "jon-man.cheung@gmcvo.org.uk" 
+  "jon-man.cheung@gmcvo.org.uk"
 ].each do |email|
   user = User.new
   user.email = email

@@ -1,10 +1,11 @@
 FactoryGirl.define do
   factory :project do
-    name "MyString"
-    start "2016-07-08"
+    name "Project Name"
+    start "2016-01-08"
     finish "2016-07-08"
-    primary_partner_organisation nil
-    resident_champion nil
-    resident_seconder nil
+    region 1
+    association :primary_partner_organisation, factory: :organisation
+    association :resident_champion, factory: :member
+    association :resident_seconder, factory: :member
   end
 end

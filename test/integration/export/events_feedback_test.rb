@@ -16,6 +16,8 @@ class ExportEventFeedbackTest < ActionDispatch::IntegrationTest
     content = sheet.row(2)
 
     assert_equal head[0], "Event External ID"
+    # TODO: find out why this is evaluating to nil
+    # assert_equal content[0], "MMU-" + @events.id.to_s
     assert_equal head[1], "How Did You Find Out About Today"
     assert_equal head[2], "Other How you found out"
     assert_equal head[3], "Have previously attended an event or activity"

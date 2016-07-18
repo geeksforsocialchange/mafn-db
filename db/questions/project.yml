@@ -1,6 +1,7 @@
 "Other Supporters":
 "Total Project Cost (inc. VAT)":
 "Outline of Project/Activity or Event":
+"What is the project theme?":
 "Outline Timetable":
 "Please outline how your project will continue in the future after the initial set up phase":
 "Our Project will help people from becoming socially isolated":
@@ -25,3 +26,14 @@
 "Please describe how older people will be involved in running the project":
 "Innovation - Please select one":
   ["New project/scaled up project previously funded by AF(ward)", "Improved project previously funded by AF(ward)", "Existing project not previously funded by AF(ward)"]
+"Categories a) one-to-one intervention":
+  ["No", "Yes"]
+"Categories b) group intervention":
+  ["No", "Yes"]
+"Categories c) service provision intervention":
+  ["No", "Yes"]
+"Categories d) wider community development/neighbourhood intervention":
+  ["No", "Yes"]
+"What other delivery partners are invovled?":
+"Regular participants?":
+  ["No", "Yes"]

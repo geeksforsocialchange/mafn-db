@@ -11,8 +11,17 @@ class Project < ActiveRecord::Base
   has_many :volunteers
   has_many :members, through: :volunteers
 
+  validates_presence_of :start, :region
+
   after_create do
     self.update(entity_id: Entity.create.id)
   end
+
+  enum region: {
+    "Hulme & Moss Side": 0,
+    "Burnage": 1,
+    "Moston": 2,
+    "Miles Platting": 3,
+  }
 
 end

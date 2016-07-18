@@ -1,11 +1,35 @@
 # vim: set syntax=ruby:
 def row(member, params)
+
+  volunteering = []
+  (1..3).each do |n|
+    if member.volunteers[n]
+      #"What is your role1":
+      volunteering << member.volunteers[n].role
+      #"What is your organisation1":
+      volunteering << member.volunteers[n].project.name
+      #"What date did you start1":
+      volunteering << member.volunteers[n].start || member.volunteers[n].created_at
+    else
+      volunteering << ""
+      volunteering << ""
+      volunteering << ""
+    end
+  end
+
+  if params.key?(:date_range)
+    start_date = params[:date_range].first.to_date
+  else
+    start_date = ""
+  end
+
+
+  # Return this giant array
   [
     # "Participant External ID",
-    member.id,
+    "MMU-" + member.id.to_s,
     # "Questionnaire Type" [6 month, 12 month, Final],
-    # TODO: make this the date and q type an extra column which records the sequence
-    "TODO",
+    params[:order],
     # "Have any of the following circumstances changed for you",
     params[:followup] ? "Yes" : "No",
     # "Postcode",
@@ -27,7 +51,7 @@ def row(member, params)
 
     # COMMUNITY AUDIT QUESTIONS
     # "To what extent do you feel that you live in an age-friendly neighbourhood?",
-    "TODO",
+    get_response(member, "My Neighbourhood is...", params),
     # "Do you use a smartphone, computer, tablet?",
     get_response(member, "Do you use a computer, smartphone or tablet?", params),
     # "Do you belong to any social networking websites or forums?",
@@ -49,9 +73,9 @@ def row(member, params)
     # "friends and family- send receive texts",
     get_response(member, "On average, how often do you - Send or receive text messages with friends, colleagues, family or neighbours", params),
     # "People can change things in my local area if they work together",
-    "TODO",
+    get_response(member, "People can change things in my local area if they work together", params),
     # "I can influence decisions affecting my local area",
-    "TODO",
+    get_response(member, "I can influence decisions affecting my local area", params),
     # "How often do you talk to your neighbours?",
     get_response(member, "On average, how often do you - Talk to your neighbours", params),
     # "I feel like I belong to this neighbourhood",
@@ -70,20 +94,37 @@ def row(member, params)
     # Volunteer extra questions
 
     # "what functions do you carry out in your ambition for ageing volunteer role",
-    "TODO",
+    member.volunteers.each.map { |v| "#{v.role} for #{v.project.name}"}.join(", "),
     # "Other function",
-    "TODO",
+    "",
     # "How often do you carry out these activities",
-    "TODO",
+    Arranger.where(project: member.projects).count,
     # "Do you volunteer with any other organisations, groups or communities not part of Ambition for Ageing?",
     get_response(member, "Are you currently involved in organising or contribute to a local community group?", params),
-    # "How often do you generally volunteer with other organisations?",
-    "TODO",
+    #"How often do you generally volunteer with other organisations?",
+    get_response(member, "If yes, How often do you volunteer?", params),
 
     # Extra col from Kim
-    if params.key?(:date_range)
-      params[:date_range].first.to_date
-    end
+    start_date,
+
+    # "Role 1
+    volunteering[0],
+    # "Organisation 1
+    volunteering[1],
+    # "Date Started Role 1
+    volunteering[2],
+    # "Role 2
+    volunteering[3],
+    # "Organisation 2
+    volunteering[4],
+    # "Date Started Role 2
+    volunteering[5],
+    # "Role 3
+    volunteering[6],
+    # "Organisation 3
+    volunteering[7],
+    # "Date Started Role 3
+    volunteering[8]
   ]
 end
 
@@ -131,16 +172,29 @@ wb.add_worksheet(name: title) do |sheet|
     "How often do you generally volunteer with other organisations?",
 
     # Extra column added by Kim
-    "Response date if followup"
+    "Response date",
+
+    # Other roles
+    "Role 1",
+    "Organisation 1",
+    "Date Started Role 1",
+    "Role 2",
+    "Organisation 2",
+    "Date Started Role 2",
+    "Role 3",
+    "Organisation 3",
+    "Date Started Role 3"
   ]
   @members.each do |member|
     if !@followup
-      sheet.add_row row(member, { followup: false })
+      # If the user is asking for the initial questionnaire, just give the first answers
+      sheet.add_row row(member, { followup: false, order: "Initial" })
     else
+      # Otherwise, give the responses since their first one, sorted by day
       days = member.response_days.drop(1)
       if days
-        days.each do |date_range|
-          sheet.add_row row(member, { followup: true, date_range: date_range } )
+        days.each_with_index do |date_range, idx|
+          sheet.add_row row(member, { followup: true, date_range: date_range, order: idx + 1 } )
         end
       end
     end
