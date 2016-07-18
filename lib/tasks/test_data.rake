@@ -140,6 +140,21 @@ namespace :test_data do
 
   end
 
+  task destroy: :environment do
+    Arranger.destroy_all
+    Attendance.destroy_all
+    MemberLocation.destroy_all
+    Partner.destroy_all
+    Volunteer.destroy_all
+    QuestionResponse.destroy_all
+    Representative.destroy_all
+    Partner.destroy_all
+    Project.destroy_all
+    Organisation.destroy_all
+    Location.destroy_all
+    Member.destroy_all
+  end
+
   def answer_question(  question = Question.where(category: 0).order("RANDOM()").limit(1).first,
                         responder = Member.order("RANDOM()").limit(1).first,
                         target = false
