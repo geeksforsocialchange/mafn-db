@@ -10,13 +10,15 @@ wb.add_worksheet(name: "Events") do |sheet|
                   "No of attendees"
                 ]
   @events.each do |event|
-    sheet.add_row [ "",
-                    event.name,
-                    event.id,
-                    event.ydm,
-                    event.event_type,
-                    event.event_type_other,
-                    event.attendees
-                  ]
+    if event.project
+      sheet.add_row [ "MMU-" + event.project.id.to_s,
+                      event.name,
+                      "MMU-" + event.id.to_s,
+                      event.ydm,
+                      event.event_type,
+                      event.event_type_other,
+                      event.attendees
+                    ]
+    end
   end
 end

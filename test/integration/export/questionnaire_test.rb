@@ -4,6 +4,7 @@ class ExportQuestionnaireTest < ActionDispatch::IntegrationTest
 
   setup do
     @user = create(:user)
+    @members = create(:member)
     sign_in @user
     @events = create(:event)
   end
@@ -16,7 +17,9 @@ class ExportQuestionnaireTest < ActionDispatch::IntegrationTest
     content = sheet.row(2)
 
     assert_equal head[0], "Participant External ID"
+    assert_equal content[0], "MMU-" + @members.id.to_s
     assert_equal head[1], "Questionnaire Type"
+    assert_equal content[1], "Initial"
     assert_equal head[2], "Have any of the following circumstances changed for you"
     assert_equal head[3], "Postcode"
     assert_equal head[4], "What is your marital status"
@@ -50,7 +53,17 @@ class ExportQuestionnaireTest < ActionDispatch::IntegrationTest
     assert_equal head[32], "How often do you carry out these activities"
     assert_equal head[33], "Do you volunteer with any other organisations, groups or communities not part of Ambition for Ageing?"
     assert_equal head[34], "How often do you generally volunteer with other organisations?"
-    assert_equal head[35], "Response date if followup"
+    assert_equal head[35], "Response date"
+    assert_equal head[36], "Role 1"
+    assert_equal head[37], "Organisation 1"
+    assert_equal head[38], "Date Started Role 1"
+    assert_equal head[39], "Role 2"
+    assert_equal head[40], "Organisation 2"
+    assert_equal head[41], "Date Started Role 2"
+    assert_equal head[42], "Role 3"
+    assert_equal head[43], "Organisation 3"
+    assert_equal head[44], "Date Started Role 3"
+
 
   end
 end

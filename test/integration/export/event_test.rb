@@ -8,6 +8,7 @@ class ExportEventTest < ActionDispatch::IntegrationTest
     @events = create(:event)
     # Add a few members to test the attendee count
     @events.members = create_list(:member, 5)
+    @events.project = create(:project)
   end
 
   test "event spreadsheet export" do
@@ -22,7 +23,7 @@ class ExportEventTest < ActionDispatch::IntegrationTest
 
     # TODO: implement project link
     assert_equal head[0], "Project External ID"
-    # assert_equal content[0], ""
+    assert_equal content[0], "MMU-" + @events.project.id.to_s
 
     #======#
     # DONE #
@@ -33,7 +34,7 @@ class ExportEventTest < ActionDispatch::IntegrationTest
 
     # Our internal ID - can add some arbritrary number to this later if needed
     assert_equal head[2], "Event External ID"
-    assert_equal content[2], @events.id
+    assert_equal content[2], "MMU-" + @events.id.to_s
 
     assert_equal head[3], "Date Of Event"
     assert_equal content[3], "2016-06-04"

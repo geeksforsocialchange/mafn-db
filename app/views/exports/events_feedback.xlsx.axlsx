@@ -14,14 +14,13 @@ wb.add_worksheet(name: "Events Feedback") do |sheet|
     "People can change things in my local area if they work together",
     "Could you tell us why you think this?",
     "Do you have any comments or feedback about the day for us?",
-    # TODO: Remove when handing over
     "Member ID"
   ]
   @events.each do |event|
     event.responders.each do |member|
       sheet.add_row [
         # "Event External ID"
-        event.id,
+        "MMU-" + event.id.to_s,
         # "How Did You Find Out About Today"
         get_response(member, "How did you find out about today?", entity: event.entity_id),
         # "Other How you found out"
@@ -44,7 +43,7 @@ wb.add_worksheet(name: "Events Feedback") do |sheet|
         get_response(member, "Can you tell us what you would do to improve the area?", entity: event.entity_id),
         # "Do you have any comments or feedback about the day for us?"
         get_response(member, "Do you have any comments or feedback about today?", entity: event.entity_id),
-        Member.find(member).id
+        "MMU-" + Member.find(member).id.to_s
       ]
     end
   end
