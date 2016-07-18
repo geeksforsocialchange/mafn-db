@@ -28,6 +28,8 @@ gem 'axlsx_rails'
 # Users
 gem 'devise'
 gem 'will_paginate'
+# Spreadsheet parser for tests and imports
+gem 'roo'
 
 group :production do
   gem 'rails_12factor'
@@ -41,8 +43,6 @@ group :development, :test do
   gem 'spring'
   gem 'quiet_assets'
   gem 'guard'
-  # Spreadsheet parser for tests
-  gem 'roo'
 end
 
 group :development do
