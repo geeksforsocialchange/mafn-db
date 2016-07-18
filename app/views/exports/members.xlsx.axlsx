@@ -2,7 +2,7 @@
 wb = xlsx_package.workbook
 wb.add_worksheet(name: "Members") do |sheet|
   sheet.add_row [
-    "Participant External ID",
+    "Project External ID",
     "Consent Given",
     "Participant External ID Field",
     "First Name",
