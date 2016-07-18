@@ -22,17 +22,24 @@ class ExportProjectsTest < ActionDispatch::IntegrationTest
     assert_equal content[1], @project.name
 
     assert_equal head[2], "Main-Street Address"
+    assert_equal content[2], @project.primary_partner_organisation.location.line1
     assert_equal head[3], "Main-City"
+    assert_equal content[3], @project.primary_partner_organisation.location.city
     assert_equal head[4], "Main-Postal Code"
+    assert_equal content[4], @project.primary_partner_organisation.location.postcode
+
     assert_equal head[5], "Main-Country"
+    assert_equal content[5], "United Kingdom"
     assert_equal head[6], "GM Region"
+    assert_equal content[6], "Manchester"
     assert_equal head[7], "Manchester ward"
+    assert_equal content[7], @project.region
 
     assert_equal head[8], "Project Start Date"
-    assert_equal content[8], @project.start
+    assert_equal content[8], "2016-01-08"
 
     assert_equal head[9], "Project End Date"
-    assert_equal content[9], @project.finish
+    assert_equal content[9], "2016-07-08"
 
     assert_equal head[10], "Type"
     assert_equal head[11], "Purpose"
@@ -46,7 +53,6 @@ class ExportProjectsTest < ActionDispatch::IntegrationTest
     assert_equal head[19], "Ecorys - No of delivery partners"
     assert_equal head[20], "delivery partners- who- how involved"
     assert_equal head[21], "Regular participants"
-
 
   end
 end
