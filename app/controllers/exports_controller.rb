@@ -4,10 +4,9 @@ class ExportsController < ApplicationController
   end
 
   def events
-    @events = Event.all
-    respond_to do |format|
-      format.xlsx
-    end
+    flash[:info] = "Processing export. Results will be emailed to you."
+    GenerateExportJob.perform_later("events", current_user)
+    redirect_to action: "index"
   end
 
   def events_demographics
