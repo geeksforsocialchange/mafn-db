@@ -11,9 +11,10 @@ class EventsController < ApplicationController
   end
 
   def update_calendar
-    flash[:info] = "Import processing. Refresh in a few seconds to see updated results."
+    flash[:notice] = "Import processing. Refresh in a few seconds to see updated results."
     CalendarImportJob.perform_later
-    redirect_to action: "index"
+    @events = Event.all
+    render action: "index"
   end
 
   def demographics

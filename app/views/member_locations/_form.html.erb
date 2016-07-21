@@ -1,33 +1,12 @@
-<%= form_for(@member_location) do |f| %>
-  <% if @member_location.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@member_location.errors.count, "error") %> prohibited this member_location from being saved:</h2>
-
-      <ul>
-      <% @member_location.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+<%= semantic_form_for(@member_location) do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :member %>
+    <%= f.input :location %>
+    <%= f.input :from %>
+    <%= f.input :to %>
   <% end %>
 
-  <div class="field">
-    <%= f.label :member_id %><br>
-    <%= f.text_field :member_id %>
-  </div>
-  <div class="field">
-    <%= f.label :location_id %><br>
-    <%= f.text_field :location_id %>
-  </div>
-  <div class="field">
-    <%= f.label :from %><br>
-    <%= f.date_select :from %>
-  </div>
-  <div class="field">
-    <%= f.label :to %><br>
-    <%= f.date_select :to %>
-  </div>
-  <div class="actions">
+  <%= f.actions do %>
     <%= f.submit %>
-  </div>
+  <% end %>
 <% end %>

@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Listing Question Responses</h1>
+
+<%= link_to 'New Question response', new_question_response_path %>
 
 <%= will_paginate @question_responses, class: "pagination" %>
 
@@ -36,7 +36,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Question response', new_question_response_path %>

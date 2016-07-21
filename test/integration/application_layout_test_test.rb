@@ -10,6 +10,7 @@ class ApplicationLayoutTestTest < ActionDispatch::IntegrationTest
     assert_select '.nav a[href=?]', '/members'
     assert_select '.nav a[href=?]', '/events'
     assert_select '.nav a[href=?]', '/projects'
+    assert_select '.nav a[href=?]', '/arrangers'
     assert_select '.nav a[href=?]', '/volunteers'
     assert_select '.nav a[href=?]', '/organisations'
     assert_select '.nav a[href=?]', '/representatives'

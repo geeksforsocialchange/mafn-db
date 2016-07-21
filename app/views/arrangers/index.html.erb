@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Listing Arrangers</h1>
+
+<%= link_to 'New Arranger', new_arranger_path %>
 
 <table>
   <thead>
@@ -14,8 +14,8 @@
   <tbody>
     <% @arrangers.each do |arranger| %>
       <tr>
-        <td><%= arranger.project %></td>
-        <td><%= arranger.event %></td>
+        <td><%= arranger.project.name %></td>
+        <td><%= arranger.event.name %></td>
         <td><%= link_to 'Show', arranger %></td>
         <td><%= link_to 'Edit', edit_arranger_path(arranger) %></td>
         <td><%= link_to 'Destroy', arranger, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -23,7 +23,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Arranger', new_arranger_path %>
