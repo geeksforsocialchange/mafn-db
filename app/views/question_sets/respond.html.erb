@@ -3,12 +3,12 @@
 <% if @question_set.questions.where(category: 1).exists? %>
   <div class="js-form__needs-entity">
     <p>Some of these questions relate to an event. Select the event to continue.</p>
-    <%= select_tag "Event", options_from_collection_for_select(Event.all, "entity_id", "select_string"), { class: 'js-form__entity-selector' } %>
+    <%= select_tag "Event", options_from_collection_for_select(Event.all, "entity_id", "select_string"), { class: 'js-form__entity-selector', prompt: "Select Event..." } %>
   </div>
 <% elsif @question_set.questions.where(category: 3).exists?  %>
   <div class="js-form__needs-entity">
     <p>Some of these questions relate to a project. Select the project to continue.</p>
-    <%= select_tag "Project", options_from_collection_for_select(Project.all, "entity_id", "select_string"), { class: 'js-form__entity-selector' } %>
+    <%= select_tag "Project", options_from_collection_for_select(Project.all, "entity_id", "select_string"), { class: 'js-form__entity-selector', prompt: "Select Project..." } %>
   </div>
 <% end %>
 

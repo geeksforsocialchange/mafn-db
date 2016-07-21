@@ -31,6 +31,7 @@ $(function(){
       var entity_id = $(".js-form__entity-selector").val();
       // ... and append it to the form method as a GET variable
       $('form').attr('action', function(i, value) {
+          $(".js-form__entity-selector").prop("disabled", true);
           return value + "&subject=" + entity_id;
       });
     })
