@@ -1,6 +1,6 @@
-<%# flash.each do |key, value| %>
-  <!-- <div class="alert alert-<%# key %>"><%# value %></div> -->
-<%# end %>
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%# key %>"><% value %></div>
+<% end %>
 
 <!-- Using Devise config for now -->
 <p class="notice"><%= notice %></p>
