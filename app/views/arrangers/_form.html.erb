@@ -1,7 +1,7 @@
 <%= semantic_form_for @arranger do |f| %>
   <%= f.inputs do %>
-    <%= f.input :project %>
-    <%= f.input :event %>
+    <%= f.input :project, collection: Project.order(:name) %>
+    <%= f.input :event, collection: Event.order(:name) %>
   <% end %>
 
   <%= f.actions do %>

@@ -3,8 +3,8 @@
     <%= f.input :start, :as => :date_picker %>
     <%= f.input :finish, :as => :date_picker %>
     <%= f.input :partner_type %>
-    <%= f.input :organisation %>
-    <%= f.input :project %>
+    <%= f.input :organisation, collection: Organisation.order(:name) %>
+    <%= f.input :project, collection: Project.order(:name) %>
   <% end %>
 
   <%= f.actions do %>

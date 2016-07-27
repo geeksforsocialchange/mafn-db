@@ -1,7 +1,7 @@
 <%= semantic_form_for(@member_location) do |f| %>
   <%= f.inputs do %>
-    <%= f.input :member %>
-    <%= f.input :location %>
+    <%= f.input :member, :collection => Member.order(:last_name) %>
+    <%= f.input :location, :collection => Location.order(:name) %>
     <%= f.input :from, :as => :date_picker %>
     <%= f.input :to, :as => :date_picker %>
   <% end %>

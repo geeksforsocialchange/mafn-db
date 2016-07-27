@@ -3,8 +3,8 @@
     <%= f.input :job_title %>
     <%= f.input :start, :as => :date_picker %>
     <%= f.input :finish, :as => :date_picker %>
-    <%= f.input :member %>
-    <%= f.input :organisation %>
+    <%= f.input :member, collection: Member.order(:last_name) %>
+    <%= f.input :organisation, collection: Organisation.order(:name) %>
   <% end %>
 
   <%= f.actions do %>

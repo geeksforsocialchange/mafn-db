@@ -4,9 +4,9 @@
     <%= f.input :start, :as => :date_picker %>
     <%= f.input :finish, :as => :date_picker %>
     <%= f.input :region %>
-    <%= f.input :primary_partner_organisation %>
-    <%= f.input :resident_champion %>
-    <%= f.input :resident_seconder %>
+    <%= f.input :primary_partner_organisation, :collection => Organisation.order(:name) %>
+    <%= f.input :resident_champion, :collection => Member.order(:last_name) %>
+    <%= f.input :resident_seconder, :collection => Member.order(:last_name) %>
   <% end %>
 
   <%= f.actions do %>

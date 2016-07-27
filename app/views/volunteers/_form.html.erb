@@ -2,10 +2,10 @@
   <%= f.inputs do %>
     <%= f.input :role %>
     <%= f.input :is_leader %>
-    <%= f.input :start %>
-    <%= f.input :finish %>
-    <%= f.input :member %>
-    <%= f.input :project %>
+    <%= f.input :start, :as => :date_picker %>
+    <%= f.input :finish, :as => :date_picker %>
+    <%= f.input :member, collection: Member.order(:last_name) %>
+    <%= f.input :project, collection: Project.order(:name) %>
   <% end %>
 
   <%= f.actions do %>
