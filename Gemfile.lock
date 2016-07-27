@@ -185,6 +185,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    puma (3.6.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
@@ -310,6 +311,7 @@ DEPENDENCIES
   minitest-reporters
   pg
   postgres_ext
+  puma
   quiet_assets
   rack-livereload
   rails (= 4.2.0)
