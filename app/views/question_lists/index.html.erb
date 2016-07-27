@@ -1,5 +1,7 @@
 <h1>Listing Question Lists</h1>
 
+<%= link_to 'New Question list', new_question_list_path %>
+
 <table>
   <thead>
     <tr>
@@ -13,8 +15,8 @@
   <tbody>
     <% @question_lists.each do |question_list| %>
       <tr>
-        <td><%= question_list.question %></td>
-        <td><%= question_list.question_set %></td>
+        <td><%= question_list.question.question %></td>
+        <td><%= question_list.question_set.title %></td>
         <td><%= question_list.weight %></td>
         <td><%= link_to 'Show', question_list %></td>
         <td><%= link_to 'Edit', edit_question_list_path(question_list) %></td>
@@ -23,7 +25,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Question list', new_question_list_path %>

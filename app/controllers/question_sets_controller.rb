@@ -8,7 +8,7 @@ class QuestionSetsController < ApplicationController
 
   # GET /question_sets/1
   def show
-    @questions = @question_set.questions
+    @questions = @question_set.question_lists.order(:weight).map{ |l| { weight: l.weight, question: l.question } }
   end
 
   # GET /question_sets/new
@@ -24,6 +24,7 @@ class QuestionSetsController < ApplicationController
   # Answer a question set
   def respond
     @member = Member.find(params[:member])
+    @questions = @question_set.question_lists.order(:weight).map{ |l| { weight: l.weight, question: l.question } }
   end
 
   # Remove a question from a question set

@@ -1,6 +1,6 @@
 <%= semantic_form_for @question_list do |f| %>
   <%= f.inputs do %>
-    <%= f.input :question %>
+    <%= f.input :question, collection: Question.order(:question).map { |q| [q.question, q.id] } %>
     <%= f.input :question_set %>
     <%= f.input :weight %>
   <% end %>
