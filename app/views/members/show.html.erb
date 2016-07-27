@@ -113,6 +113,6 @@
 <dl class="question-responses">
   <% @member.date_sorted_responses.each do |r| %>
     <dt><strong><%= r.question.question %></strong></dt>
-    <dd><%= link_to r.formatted_response, question_response_path(r.id) %> <em>(<%= time_ago_in_words(r.created_at) %> ago, <%= link_to "edit", edit_question_response_path(r.id) %>)</em></dt>
+    <dd><%= link_to r.formatted_response, question_response_path(r.id) %> <em>(<%= time_ago_in_words(r.created_at) %> ago, <%= link_to "edit", edit_question_response_path(r.id) %>, <%= link_to "delete", r, method: :delete, data: { confirm: 'Are you sure?' } %>)</em></dt>
   <% end %>
 </dl>

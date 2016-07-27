@@ -50,7 +50,11 @@ class QuestionResponsesController < ApplicationController
   # DELETE /question_responses/1
   def destroy
     @question_response.destroy
-    redirect_to question_responses_url, notice: 'Question response was successfully destroyed.'
+    if request.env["HTTP_REFERER"]
+      redirect_to :back, notice: 'Question response was successfully destroyed.'
+    else
+      redirect_to question_responses_url, notice: 'Question response was successfully destroyed.'
+    end
   end
 
   private
