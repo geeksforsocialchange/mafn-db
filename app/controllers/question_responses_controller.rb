@@ -3,7 +3,7 @@ class QuestionResponsesController < ApplicationController
 
   # GET /question_responses
   def index
-    @question_responses = QuestionResponse.paginate(:page => params[:page])
+    @question_responses = QuestionResponse.paginate(:page => params[:page]).order("updated_at DESC")
   end
 
   # GET /question_responses/1

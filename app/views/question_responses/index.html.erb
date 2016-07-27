@@ -11,6 +11,7 @@
       <th>Question</th>
       <th>Response</th>
       <th>Subject</th>
+      <th>Date</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,9 +30,12 @@
               %>
           <% end %>
         </td>
-        <td><%= link_to 'Show', question_response %></td>
-        <td><%= link_to 'Edit', edit_question_response_path(question_response) %></td>
-        <td><%= link_to 'Destroy', question_response, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= question_response.created_at %>
+        <td>
+            <%= link_to 'Show', question_response %>
+            <%= link_to 'Edit', edit_question_response_path(question_response) %>
+            <%= link_to 'Destroy', question_response, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
