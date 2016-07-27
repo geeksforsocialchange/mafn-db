@@ -1,7 +1,7 @@
 <%= semantic_form_for @partner do |f| %>
   <%= f.inputs do %>
-    <%= f.input :start %>
-    <%= f.input :finish %>
+    <%= f.input :start, :as => :date_picker %>
+    <%= f.input :finish, :as => :date_picker %>
     <%= f.input :partner_type %>
     <%= f.input :organisation %>
     <%= f.input :project %>

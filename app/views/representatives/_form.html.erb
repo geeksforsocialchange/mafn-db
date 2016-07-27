@@ -1,8 +1,8 @@
 <%= semantic_form_for @representative do |f| %>
   <%= f.inputs do %>
     <%= f.input :job_title %>
-    <%= f.input :start %>
-    <%= f.input :finish %>
+    <%= f.input :start, :as => :date_picker %>
+    <%= f.input :finish, :as => :date_picker %>
     <%= f.input :member %>
     <%= f.input :organisation %>
   <% end %>
