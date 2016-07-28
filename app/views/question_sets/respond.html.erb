@@ -14,7 +14,7 @@
 
 <div class="form">
   <%= form_for @question_set, :url => {:action => "batch_create", params: {responder: @member.entity_id}}, method: "post" do |f| %>
-    <%= f.fields_for :questions do |question| %>
+    <%= f.fields_for :questions, @sorted_questions do |question| %>
       <h3><%= question.object.question %></h3>
       <%= f.fields_for :question_response do |response| %>
         <%# If there's a string here, then it's an array of acceptable answers %>

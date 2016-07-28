@@ -7,13 +7,13 @@
 <h2>Questions in this set</h2>
 
 <dl>
-  <% @questions.each do |q| %>
+  <% @sorted_questions.each do |q| %>
     <dt class="question">
-      <strong><%= q[:weight] || 0 %>. </strong>
-      <%= q[:question].question %>
+      <strong><%= q.question_lists.where(question_set: @question_set).first.weight || 0 %>. </strong>
+      <%= q.question %>
     </dt>
     <dd>
-      <%= q[:question].response %>
+      <%= q.response %>
     </dd>
   <% end %>
 </dl>

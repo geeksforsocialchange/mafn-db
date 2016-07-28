@@ -1,5 +1,6 @@
 class QuestionSetsController < ApplicationController
   before_action :set_question_set, only: [:show, :edit, :update, :destroy, :respond]
+  before_action :sort_questions, only: [:show, :respond]
 
   # GET /question_sets
   def index
@@ -8,7 +9,6 @@ class QuestionSetsController < ApplicationController
 
   # GET /question_sets/1
   def show
-    @questions = @question_set.question_lists.order(:weight).map{ |l| { weight: l.weight, question: l.question } }
   end
 
   # GET /question_sets/new
@@ -24,7 +24,6 @@ class QuestionSetsController < ApplicationController
   # Answer a question set
   def respond
     @member = Member.find(params[:member])
-    @questions = @question_set.question_lists.order(:weight).map{ |l| { weight: l.weight, question: l.question } }
   end
 
   # Remove a question from a question set
@@ -87,6 +86,11 @@ class QuestionSetsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_question_set
       @question_set = QuestionSet.find(params[:id])
+    end
+
+    def sort_questions
+      # Sort the questions by weight, then map into a new array
+      @sorted_questions = @question_set.question_lists.order(:weight).map{ |l|  l.question }
     end
 
     # Only allow a trusted parameter "white list" through.
