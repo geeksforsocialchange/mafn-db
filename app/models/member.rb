@@ -1,15 +1,18 @@
 class Member < ActiveRecord::Base
   belongs_to :entity
-  
-  has_many :member_locations
+
+  has_many :member_locations, dependent: :destroy
   has_many :locations, through: :member_locations
-  has_many :question_responses
-  has_many :attendances
+  has_many :question_responses, dependent: :destroy
+  has_many :attendances, dependent: :destroy
   has_many :events, through: :attendances
-  has_many :volunteers
+  has_many :volunteers, dependent: :destroy
   has_many :projects, through: :volunteers
-  has_many :representatives
+  has_many :representatives, dependent: :destroy
   has_many :organisations, through: :representatives
+
+  has_many :resident_champions, class_name: :Project, foreign_key: :resident_champion_id, dependent: :nullify
+  has_many :resident_seconders, class_name: :Project, foreign_key: :resident_seconder_id, dependent: :nullify  
 
   validates_presence_of :first_name, :last_name, :dob, :region
 
