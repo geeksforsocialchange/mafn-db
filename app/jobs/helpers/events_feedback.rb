@@ -1,5 +1,5 @@
-def generate_events_feedback
-  @events = Event.all
+def generate_events_feedback(events)
+  @events = events
   array = []
   array << [
     "Event External ID",
@@ -52,7 +52,8 @@ end
 
 def export_events_feedback(wb)
   wb.workbook.add_worksheet(name: "Events Feedback") do |sheet|
-    generate_events_feedback.each do |row|
+    events = Event.all
+    generate_events_feedback(events).each do |row|
       sheet.add_row row
     end
   end

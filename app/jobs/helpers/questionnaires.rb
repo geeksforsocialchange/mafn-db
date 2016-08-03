@@ -204,8 +204,8 @@ end
 def export_questionnaires(wb)
   title = @followup ? "Followup Questionnaire" : "Initial Questionnaire"
   wb.workbook.add_worksheet(name: title) do |sheet|
-    @members = Member.all
-    generate_members(members).each do |row|
+    members = Member.all
+    generate_questionnaires(members).each do |row|
       sheet.add_row row
     end
   end
