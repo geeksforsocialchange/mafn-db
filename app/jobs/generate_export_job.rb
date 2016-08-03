@@ -13,7 +13,6 @@ class GenerateExportJob < ActiveJob::Base
     case type
     # Events export
     when "events"
-      @events = Event.all
       Axlsx::Package.new do |wb|
         require 'helpers/events'
         @wb = export_events(wb)
