@@ -39,13 +39,11 @@ class GenerateExportJob < ActiveJob::Base
         @wb = export_projects(wb)
       end
     when "initial_questionnaire"
-      @members = Member.all
       Axlsx::Package.new do |wb|
         require 'helpers/questionnaires'
         @wb = export_questionnaires(wb)
       end
     when "followup_questionnaire"
-      @members = Member.all
       Axlsx::Package.new do |wb|
         require 'helpers/questionnaires'
         @followup = true
