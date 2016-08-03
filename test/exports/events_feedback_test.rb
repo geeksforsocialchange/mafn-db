@@ -3,7 +3,8 @@ require 'test_helper'
 class ExportEventFeedbackTest < ActionDispatch::IntegrationTest
   test "event feedback spreadsheet export" do
     require "#{Rails.root}/app/jobs/helpers/events_feedback.rb"
-    sheet = generate_events_feedback
+    @events = create_list(:event, 3)
+    sheet = generate_events_feedback(@events)
 
     # Only testing the first row
     head = sheet[0]

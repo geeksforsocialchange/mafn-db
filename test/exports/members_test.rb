@@ -41,6 +41,7 @@ class ExportMembersTest < ActionDispatch::IntegrationTest
     assert_equal head[22], "Any Other Background"
     assert_equal head[23], "Any mixed Background"
     assert_equal head[27], "What do you think makes an age friendly neighbourhood"
+    assert_equal head[28], "Education level"
 
 
     # Our ID

@@ -29,7 +29,8 @@ def generate_members members
     "Religion",
     "Other religion",
     "Sexual Orientation",
-    "What do you think makes an age friendly neighbourhood"
+    "What do you think makes an age friendly neighbourhood",
+    "Education level"
   ]
   @members.each do |member|
     ethnicity = member.export_ethnicity
@@ -49,7 +50,7 @@ def generate_members members
       get_response(member, "Gender"),
       get_response(member, "Gender -- other"),
       get_response(member, "Is this the gender you were assigned at birth?"),
-      member.is_resident?,
+      member.region,
       get_response(member, "How long have you lived in your ward in years?"),
       get_response(member, "What is your current employment status?"),
       # MISTAKE COLUMN: "Prefer not to say"
@@ -68,7 +69,8 @@ def generate_members members
       # "Other religion"
       get_response(member, "Other religion"),
       get_response(member, "Sexual orientation"),
-      get_response(member, "What do you think makes an ‘age friendly neighbourhood’?")
+      get_response(member, "What do you think makes an ‘age friendly neighbourhood’?"),
+      get_response(member, "What is your highest level of education?")
     ]
   end
   return array
