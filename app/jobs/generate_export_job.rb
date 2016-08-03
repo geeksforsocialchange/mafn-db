@@ -20,7 +20,6 @@ class GenerateExportJob < ActiveJob::Base
       end
     # Demographics export
     when "events_demographics"
-      @events = Event.all
       Axlsx::Package.new do |wb|
         require 'helpers/events_demographics'
         @wb = export_events_demographics(wb)
