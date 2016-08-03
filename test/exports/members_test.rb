@@ -2,7 +2,6 @@ require 'test_helper'
 
 class ExportMembersTest < ActionDispatch::IntegrationTest
 
-
   test "member spreadsheet report" do
     require "#{Rails.root}/app/jobs/helpers/members.rb"
     @members = create_list(:member, 3)

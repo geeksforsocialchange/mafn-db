@@ -11,17 +11,8 @@ class ExportEventsTest < ActionDispatch::IntegrationTest
     head = sheet[0]
     content = sheet[1]
 
-    #======#
-    # TODO #
-    #======#
-
-    # TODO: implement project link
     assert_equal head[0], "Project External ID"
     assert_equal content[0], "MMU-" + @events.first.project.id.to_s
-
-    #======#
-    # DONE #
-    #======#
 
     assert_equal head[1], "Event Name"
     assert_equal content[1], "Healthy Relationships"

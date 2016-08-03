@@ -34,7 +34,6 @@ class GenerateExportJob < ActiveJob::Base
         @wb = export_members(wb)
       end
     when "projects"
-      @projects = Project.all
       Axlsx::Package.new do |wb|
         require 'helpers/projects'
         @wb = export_projects(wb)

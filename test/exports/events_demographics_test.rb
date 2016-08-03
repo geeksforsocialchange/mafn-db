@@ -10,11 +10,7 @@ class ExportEventDemographicsTest < ActionDispatch::IntegrationTest
 
     head = sheet[0]
     content = sheet[1]
-
-    #======#
-    # DONE #
-    #======#
-
+    
     assert_equal head[0], "Event External ID"
     assert_equal content[0], "MMU-" + @events.first.id.to_s
 
