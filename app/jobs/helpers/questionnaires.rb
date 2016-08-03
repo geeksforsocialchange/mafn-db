@@ -127,76 +127,86 @@ def row(member, params)
   ]
 end
 
+def generate_questionnaires(members)
+  @members = members
+  array = []
+  array << [
+    # Participant questions
+    "Participant External ID",
+    "Questionnaire Type",
+    "Have any of the following circumstances changed for you",
+    "Postcode",
+    "What is your marital status",
+    "Education level",
+    "Current Employment status",
+    "Anyone Sick or disabled you care for",
+    "Do you have any long standing conditions",
+    "Please name/briefly describe condition",
+    "To what extent do you feel that you live in an age-friendly neighbourhood?",
+    "Do you use a smartphone, computer, tablet?",
+    "Do you belong to any social networking websites or forums?",
+    "Other social network",
+    "Do you use email",
+    "Hours on social media, websites, email",
+    "participant- do you currently volunteer",
+    "participant- Do you want to volunteer?",
+    "friends and family-how often do you meet up ?",
+    "friends and family-speak on the phone",
+    "friends and family- send receive texts",
+    "People can change things in my local area if they work together",
+    "I can influence decisions affecting my local area",
+    "How often do you talk to your neighbours?",
+    "I feel like I belong to this neighbourhood",
+    "The friendships and associations I have with other people in my neighbourhood mean a lot to me",
+    "If I needed advice about something I could go to someone in my neighbourhood",
+    "I borrow things and exchange favours with my neighbours",
+    "I would be willing to work together with others on something to improve my neighbourhood",
+    "I regularly stop and talk with people in my neighbourhood",
+
+    # Volunteer extra questions
+    "what functions do you carry out in your ambition for ageing volunteer role",
+    "Other function",
+    "How often do you carry out these activities",
+    "Do you volunteer with any other organisations, groups or communities not part of Ambition for Ageing?",
+    "How often do you generally volunteer with other organisations?",
+
+    # Extra column added by Kim
+    "Response date",
+
+    # Other roles
+    "Role 1",
+    "Organisation 1",
+    "Date Started Role 1",
+    "Role 2",
+    "Organisation 2",
+    "Date Started Role 2",
+    "Role 3",
+    "Organisation 3",
+    "Date Started Role 3"
+  ]
+  @members.each do |member|
+    if !@followup
+      # If the user is asking for the initial questionnaire, just give the first answers
+      array << row(member, { followup: false, order: "Initial" })
+    else
+      # Otherwise, give the responses since their first one, sorted by day
+      days = member.response_days.drop(1)
+      if days
+        days.each_with_index do |date_range, idx|
+          array << row(member, { followup: true, date_range: date_range, order: idx + 1 } )
+        end
+      end
+    end
+  end
+  return array
+end
+
 def export_questionnaires(wb)
   title = @followup ? "Followup Questionnaire" : "Initial Questionnaire"
   wb.workbook.add_worksheet(name: title) do |sheet|
-    sheet.add_row [
-      # Participant questions
-      "Participant External ID",
-      "Questionnaire Type",
-      "Have any of the following circumstances changed for you",
-      "Postcode",
-      "What is your marital status",
-      "Education level",
-      "Current Employment status",
-      "Anyone Sick or disabled you care for",
-      "Do you have any long standing conditions",
-      "Please name/briefly describe condition",
-      "To what extent do you feel that you live in an age-friendly neighbourhood?",
-      "Do you use a smartphone, computer, tablet?",
-      "Do you belong to any social networking websites or forums?",
-      "Other social network",
-      "Do you use email",
-      "Hours on social media, websites, email",
-      "participant- do you currently volunteer",
-      "participant- Do you want to volunteer?",
-      "friends and family-how often do you meet up ?",
-      "friends and family-speak on the phone",
-      "friends and family- send receive texts",
-      "People can change things in my local area if they work together",
-      "I can influence decisions affecting my local area",
-      "How often do you talk to your neighbours?",
-      "I feel like I belong to this neighbourhood",
-      "The friendships and associations I have with other people in my neighbourhood mean a lot to me",
-      "If I needed advice about something I could go to someone in my neighbourhood",
-      "I borrow things and exchange favours with my neighbours",
-      "I would be willing to work together with others on something to improve my neighbourhood",
-      "I regularly stop and talk with people in my neighbourhood",
-
-      # Volunteer extra questions
-      "what functions do you carry out in your ambition for ageing volunteer role",
-      "Other function",
-      "How often do you carry out these activities",
-      "Do you volunteer with any other organisations, groups or communities not part of Ambition for Ageing?",
-      "How often do you generally volunteer with other organisations?",
-
-      # Extra column added by Kim
-      "Response date",
-
-      # Other roles
-      "Role 1",
-      "Organisation 1",
-      "Date Started Role 1",
-      "Role 2",
-      "Organisation 2",
-      "Date Started Role 2",
-      "Role 3",
-      "Organisation 3",
-      "Date Started Role 3"
-    ]
-    @members.each do |member|
-      if !@followup
-        # If the user is asking for the initial questionnaire, just give the first answers
-        sheet.add_row row(member, { followup: false, order: "Initial" })
-      else
-        # Otherwise, give the responses since their first one, sorted by day
-        days = member.response_days.drop(1)
-        if days
-          days.each_with_index do |date_range, idx|
-            sheet.add_row row(member, { followup: true, date_range: date_range, order: idx + 1 } )
-          end
-        end
-      end
+    @members = Member.all
+    generate_members(members).each do |row|
+      sheet.add_row row
     end
   end
   return wb
