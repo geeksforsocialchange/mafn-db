@@ -15,11 +15,11 @@ Minitest::Reporters.use!
 
 
 class ActiveSupport::TestCase
-
+  include ApplicationHelper
   ActiveRecord::Migration.check_pending!
   include FactoryGirl::Syntax::Methods
   include Capybara::DSL
-  
+
 end
 
 class ActionController::TestCase

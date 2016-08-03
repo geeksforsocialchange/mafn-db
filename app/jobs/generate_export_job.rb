@@ -31,7 +31,6 @@ class GenerateExportJob < ActiveJob::Base
         @wb = export_events_feedback(wb)
       end
     when "members"
-      @members = Member.all
       Axlsx::Package.new do |wb|
         require 'helpers/members'
         @wb = export_members(wb)
