@@ -26,7 +26,6 @@ class GenerateExportJob < ActiveJob::Base
         @wb = export_events_demographics(wb)
       end
     when "events_feedback"
-      @events = Event.all
       Axlsx::Package.new do |wb|
         require 'helpers/events_feedback'
         @wb = export_events_feedback(wb)
