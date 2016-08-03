@@ -39,7 +39,7 @@ def generate_members members
       member.volunteers.pluck(:project_id).map { |p| "MMU-#{p}" }.join(", "),
       # "Consent Given"
       "Yes",
-      member.id,
+      "MMU-" + member.id.to_s,
       member.first_name,
       member.last_name,
       # "Date Engaged with project"

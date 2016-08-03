@@ -46,7 +46,7 @@ class ExportMembersTest < ActionDispatch::IntegrationTest
 
     # Our ID
     assert_equal head[2], "Participant External ID Field"
-    assert_equal content[2], @members.first.id
+    assert_equal content[2], "MMU-" + @members.first.id.to_s
 
     # Member's name
     assert_equal head[3], "First Name"
