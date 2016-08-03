@@ -36,11 +36,11 @@ class QuestionResponsesController < ApplicationController
 
   # PATCH/PUT /question_responses/1
   def update
-    params[:subject] = Entity.find(params[:subject])
-    params[:responder] = Member.find(params[:responder])
-    params[:question] = Question.find(params[:question])
-
-    if @question_response.update(question_response_params)
+    params = question_response_params
+    params[:subject] = Entity.find(params[:subject] || params["question_response"][:subject])
+    params[:responder] = Member.find(params[:responder] || params["question_response"][:responder])
+    params[:question] = Question.find(params[:question] || params["question_response"][:question])
+    if @question_response.update(params)
       redirect_to @question_response, notice: 'Question response was successfully updated.'
     else
       render :edit

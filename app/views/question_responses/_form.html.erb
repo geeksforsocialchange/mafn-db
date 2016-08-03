@@ -26,7 +26,7 @@
   <div class="field">
     <%= f.label :responder %><br>
     <%= f.select :responder do %>
-      <% options_from_collection_for_select Member.all, :entity_id, :full_name %>
+      <% options_from_collection_for_select Member.all, :id, :full_name %>
     <% end %>
   </div>
   <div class="field">
