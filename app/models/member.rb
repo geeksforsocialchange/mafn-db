@@ -12,7 +12,7 @@ class Member < ActiveRecord::Base
   has_many :organisations, through: :representatives
 
   has_many :resident_champions, class_name: :Project, foreign_key: :resident_champion_id, dependent: :nullify
-  has_many :resident_seconders, class_name: :Project, foreign_key: :resident_seconder_id, dependent: :nullify  
+  has_many :resident_seconders, class_name: :Project, foreign_key: :resident_seconder_id, dependent: :nullify
 
   validates_presence_of :first_name, :last_name, :dob, :region
 

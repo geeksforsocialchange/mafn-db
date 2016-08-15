@@ -2,12 +2,12 @@
 
 <p>
   <strong>Member:</strong>
-  <%= @attendance.member %>
+  <%= @attendance.member.name %>
 </p>
 
 <p>
   <strong>Event:</strong>
-  <%= @attendance.event %>
+  <%= @attendance.event.name %>
 </p>
 
 <%= link_to 'Edit', edit_attendance_path(@attendance) %> |
