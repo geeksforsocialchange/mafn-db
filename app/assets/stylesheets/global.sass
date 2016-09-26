@@ -3,6 +3,8 @@ body
 
 main
   margin: 1em
+  @media print
+    margin: 0
 
 header
   padding: 1em
@@ -17,3 +19,5 @@ header
         text-decoration: underline
     &__main
       font-weight: bold
+  @media print
+    display: none
