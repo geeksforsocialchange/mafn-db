@@ -87,13 +87,13 @@ class Member < ActiveRecord::Base
   def region_website
     return case self[:region]
     when 0
-      "agefriendlyhulmeandmossside.wordpress.com"
+      "hulmemossside.afmcr.org"
     when 1
-      "agefriendlyburnage.wordpress.com"
+      "burnage.afmcr.org"
     when 2
-      "agefriendlymostonandnewmoston.wordpress.com"
+      "moston.afmcr.org"
     when 3
-      "agefriendlymilesplatting.wordpress.com"
+      "milesplatting.afmcr.org"
     end
   end
 

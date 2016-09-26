@@ -30,6 +30,7 @@ gem 'devise'
 gem 'will_paginate'
 # Spreadsheet parser for tests and imports
 gem 'roo'
+gem 'rqrcode'
 
 group :production do
   gem 'rails_12factor'

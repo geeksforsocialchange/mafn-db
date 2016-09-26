@@ -11,6 +11,7 @@ class MembersController < ApplicationController
   end
 
   def cards
+    require 'rqrcode'
     @members = Member.all
   end
 
