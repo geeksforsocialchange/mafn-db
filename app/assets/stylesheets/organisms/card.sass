@@ -2,7 +2,11 @@
   color: white
   border: 1px dotted #aaa
   margin-bottom: 1em
-  float: left
+  display: inline-block
+
+  @media print
+    &:nth-of-type(4)
+      page-break-after: always
 
   &__region-0
     background-color: $hulme

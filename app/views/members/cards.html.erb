@@ -1,3 +1,5 @@
+<%= will_paginate @members, class: "pagination" %>
+
 <% @members.each do |member| %>
   <div class="card card__region-<%= member[:region] %>">
     <div class="card__front">
