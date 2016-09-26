@@ -1,0 +1,42 @@
+.card
+  color: white
+  border: 1px dotted #aaa
+  margin-bottom: 1em
+  float: left
+
+  &__region-0
+    background-color: $hulme
+  &__region-1
+    background-color: $burnage
+  &__region-2
+    background-color: $moston
+
+  &__front
+    border-bottom: 1px solid #aaa
+
+  &__front, &__back
+    padding: 1em
+    width: 87mm
+    height: 55mm
+
+  &__back
+    transform: rotate(180deg)
+
+  &__field
+    label
+      width: 5em
+      float: left
+      padding-top: 0.25em
+    span
+      display: block
+      overflow: hidden
+      background-color: white
+      color: black
+      padding: 0.25em
+
+  &__qr
+    float: right
+
+  &__region
+    margin-top: 0
+    line-height: 1.1em

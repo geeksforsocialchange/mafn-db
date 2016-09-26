@@ -18,6 +18,11 @@ class MembersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get membership cards" do
+    get :cards
+    assert_response :success
+  end
+
   test "should create member" do
     assert_difference('Member.count') do
       post :create, member: { first_name: @member.first_name,

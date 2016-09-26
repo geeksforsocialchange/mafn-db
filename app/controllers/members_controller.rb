@@ -10,6 +10,11 @@ class MembersController < ApplicationController
     end
   end
 
+  def cards
+    require 'rqrcode'
+    @members = Member.all
+  end
+
   # GET /members/1
   def show
     @question_sets = QuestionSet.all

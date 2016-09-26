@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   resources :events
   resources :locations
   resources :member_locations
-  resources :members
+  resources :members do
+    collection do
+      get 'cards'
+    end
+  end
   resources :organisations
   resources :partners
   resources :projects
