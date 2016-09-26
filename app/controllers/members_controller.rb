@@ -12,7 +12,7 @@ class MembersController < ApplicationController
 
   def cards
     require 'rqrcode'
-    @members = Member.all
+    @members = Member.paginate(:page => params[:page])
   end
 
   # GET /members/1
