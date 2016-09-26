@@ -1,0 +1,17 @@
+<% @members.each do |member| %>
+  <div class="card">
+    <div class="card__front">
+      <h1>I am Age Friendly!</h1>
+      <p>Name <span class=""><%= member.name %></span></p>
+      <p>Number <span class=""><%= member.membership_code %></span></p>
+      <p>Membership Card</p>
+    </div>
+    <div class="card__back">
+      <h1><%= member.region %> Age Friendly Partnership</h1>
+      <div class="card__qr"></div>
+      <p><%= member.region_email %></p>
+      <p><%= member.region_website %></p>           
+    </div>
+  </div>
+  <d
+<% end %>

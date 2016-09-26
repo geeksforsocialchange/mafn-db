@@ -59,13 +59,41 @@ class Member < ActiveRecord::Base
 
   # Short code for our member's ID
   def region_code
-    return case self.region
-    when "Hulme & Moss Side"
+    return case self[:region]
+    when 0
       'HM'
-    when "Burnage"
+    when 1
       'BU'
-    when "Moston"
+    when 2
       'MO'
+    when 3
+      'MP'
+    end
+  end
+
+  def region_email
+    return case self[:region]
+    when 0
+      "hulmemossside@afmcr.org"
+    when 1
+      "burnage@afmcr.org"
+    when 2
+      "moston@afmcr.org"
+    when 3
+      "milesplatting@afmcr.org"
+    end
+  end
+
+  def region_website
+    return case self[:region]
+    when 0
+      "agefriendlyhulmeandmossside.wordpress.com"
+    when 1
+      "agefriendlyburnage.wordpress.com"
+    when 2
+      "agefriendlymostonandnewmoston.wordpress.com"
+    when 3
+      "agefriendlymilesplatting.wordpress.com"
     end
   end
 
