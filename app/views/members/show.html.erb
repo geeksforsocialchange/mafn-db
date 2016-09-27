@@ -11,7 +11,7 @@
 
 <p class="member__id">
   <strong>ID:</strong>
-  <tt><%= @member.membership_code %></tt>
+  <tt><%= @member.membership_code %> (<%= link_to "Print card", card_member_path(@member) %>)</tt>
 </p>
 
 <p class="member__dob">

@@ -11,6 +11,9 @@ Rails.application.routes.draw do
     collection do
       get 'cards'
     end
+    member do
+      get 'card'
+    end
   end
   resources :organisations
   resources :partners
