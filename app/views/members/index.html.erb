@@ -9,41 +9,27 @@
     <tr>
       <th>ID</th>
       <th>Name</th>
+      <th>Email</th>
       <th>DoB</th>
       <th>Region</th>
       <th>Resident?</th>
       <th>Tel</th>
       <th>Mob</th>
-      <th>Email</th>
       <th>Link</th>
     </tr>
   </thead>
-  <tfoot>
-    <tr>
-      <th class="js-table-sort__searchable">ID</th>
-      <th class="js-table-sort__searchable">Name</th>
-      <th class="js-table-sort__searchable">DoB</th>
-      <th class="js-table-sort__searchable">Region</th>
-      <th class="js-table-sort__searchable">Resident?</th>
-      <th class="js-table-sort__searchable">Tel</th>
-      <th class="js-table-sort__searchable">Mob</th>
-      <th class="js-table-sort__searchable">Email</th>
-      <th>Link</th>
-    </tr>
-  </tfoot>
-
 
   <tbody>
     <% @members.each do |member| %>
       <tr>
         <td><tt><%= member.membership_code %></tt></td>
         <td><%= link_to member.name, member rescue nil %></td>
+        <td><%= member.email %></td>
         <td><%= member.dob %></td>
         <td><%= member.region %></td>
         <td><%= member.is_resident ? "Yes" : "No" %></td>
         <td><%= member.tel %></td>
         <td><%= member.mob %></td>
-        <td><%= member.email %></td>
         <td>
             <%= link_to 'Show', member %>
             <%= link_to 'Edit', edit_member_path(member) %>
@@ -54,4 +40,4 @@
   </tbody>
 </table>
 
-<br>
+<%= will_paginate @members, class: "pagination noprint" %>
