@@ -1,8 +1,10 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Listing Questions</h1>
 
-<table class="js-table-sort">
+<%= will_paginate @questions, class: "pagination noprint" %>
+
+<%= link_to 'New Question', new_question_path %>
+
+<table>
   <thead>
     <tr>
       <th>Category</th>
@@ -36,5 +38,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Question', new_question_path %>

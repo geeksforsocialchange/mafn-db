@@ -1,8 +1,10 @@
 <h1>Listing Members</h1>
 
+<%= will_paginate @members, class: "pagination noprint" %>
+
 <p><%= link_to 'New Member', new_member_path %></p>
 
-<table class="js-table-sort">
+<table>
   <thead>
     <tr>
       <th>ID</th>

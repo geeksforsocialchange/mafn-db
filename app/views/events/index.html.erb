@@ -1,8 +1,10 @@
 <h1>Listing Events</h1>
 
+<%= will_paginate @events, class: "pagination noprint" %>
+
 <p><%= link_to 'Update events now', update_calendar_path, method: :post %></p>
 
-<table class="js-table-sort">
+<table>
   <thead>
     <tr>
       <th>Name</th>

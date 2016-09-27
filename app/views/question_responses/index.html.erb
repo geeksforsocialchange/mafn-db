@@ -1,8 +1,8 @@
 <h1>Listing Question Responses</h1>
 
-<%= link_to 'New Question response', new_question_response_path %>
+<%= will_paginate @question_responses, class: "pagination noprint" %>
 
-<%= will_paginate @question_responses, class: "pagination" %>
+<%= link_to 'New Question response', new_question_response_path %>
 
 <table>
   <thead>

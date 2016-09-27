@@ -3,7 +3,7 @@ class MembersController < ApplicationController
 
   # GET /members
   def index
-    @members = Member.all
+    @members = Member.paginate(:page => params[:page])
     respond_to do |format|
       format.html
       format.xlsx

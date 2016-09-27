@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 
   # GET /events
   def index
-    @events = Event.all
+    @events = Event.paginate(:page => params[:page])
     respond_to do |format|
       format.html
       format.xlsx
