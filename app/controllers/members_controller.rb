@@ -1,5 +1,5 @@
 class MembersController < ApplicationController
-  before_action :set_member, only: [:show, :edit, :update, :destroy]
+  before_action :set_member, only: [:show, :edit, :update, :destroy, :card]
 
   # GET /members
   def index
@@ -19,6 +19,9 @@ class MembersController < ApplicationController
   # GET /members/1
   def show
     @question_sets = QuestionSet.all
+  end
+
+  def card
   end
 
   # GET /members/new
