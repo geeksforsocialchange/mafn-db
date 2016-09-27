@@ -12,7 +12,8 @@ class MembersController < ApplicationController
 
   def cards
     require 'rqrcode'
-    @members = Member.paginate(:page => params[:page])
+    # Keep per_page a multiple of 4 for neater printing
+    @members = Member.paginate(:page => params[:page], :per_page => 24)
   end
 
   # GET /members/1
