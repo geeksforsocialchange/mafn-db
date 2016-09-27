@@ -1,3 +1,5 @@
+$card-spacing: 0.5em
+
 .card
   color: white
   border: 1px dotted #aaa
@@ -21,11 +23,13 @@
     border-bottom: 1px solid #aaa
 
   &__front, &__back
-    padding: 1em
+    padding: $card-spacing
     width: 87mm
     height: 55mm
+    box-sizing: border-box
 
   &__back
+    position: relative
     transform: rotate(180deg)
 
   &__field
@@ -46,3 +50,10 @@
   &__region
     margin-top: 0
     line-height: 1.1em
+
+  &__meta
+    position: absolute
+    bottom: $card-spacing
+    left: $card-spacing
+    right: $card-spacing
+    width: auto

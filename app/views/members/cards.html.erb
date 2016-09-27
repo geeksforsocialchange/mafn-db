@@ -1,4 +1,4 @@
-<%= will_paginate @members, class: "pagination" %>
+<%= will_paginate @members, class: "pagination noprint" %>
 
 <% @members.each do |member| %>
   <div class="card card__region-<%= member[:region] %>">
@@ -29,8 +29,10 @@
 
       <h1 class="card__region"><%= member.region %> Age Friendly Partnership</h1>
 
-      <p class="center h2"><%= member.region_email %></p>
-      <p class="center h2"><%= member.region_website %></p>
+      <div class="card__meta center h2">
+        <%= member.region_email %><br>
+        <%= member.region_website %>
+      </div>
     </div>
   </div>
 <% end %>
