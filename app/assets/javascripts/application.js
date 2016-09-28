@@ -8,6 +8,7 @@
 //= require jquery_ujs
 //  require turbolinks
 //= require cocoon
+//= require smart_listing
 //= require vendor/jquery.dataTables.min
 
 //= require partials/_cocoon

@@ -20,6 +20,15 @@ class Member < ActiveRecord::Base
   accepts_nested_attributes_for :member_locations, allow_destroy: true
   accepts_nested_attributes_for :locations
 
+  # Allows our index controller to search on these fields
+  scope :like, -> (filter) { where("  email like '%#{filter}%'
+                                      OR first_name like '%#{filter}%'
+                                      OR last_name like '%#{filter}%'
+                                      OR tel like '%#{filter}%'
+                                      OR mob like '%#{filter}%'")}
+
+  scope :filter_region, -> (filter_region) { where(:region => filter_region) }
+
   enum region: {
     "Hulme & Moss Side": 0,
     "Burnage": 1,

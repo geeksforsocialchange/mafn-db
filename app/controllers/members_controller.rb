@@ -1,15 +1,21 @@
 class MembersController < ApplicationController
+  include SmartListing::Helper::ControllerExtensions
+  helper  SmartListing::Helper
+
   before_action :set_member, only: [:show, :edit, :update, :destroy, :card]
 
   # GET /members
   def index
-    @members = Member.paginate(:page => params[:page])
+    members_scope = Member.all
+    members_scope = members_scope.filter_region(params[:filter_region]) unless (params[:filter_region]) == ""
+    members_scope = members_scope.like(params[:filter]) if params[:filter]
+    @members = smart_listing_create(:members, members_scope, partial: "members/list")
   end
 
   def cards
     require 'rqrcode'
     # Keep per_page a multiple of 4 for neater printing
-    @members = Member.paginate(:page => params[:page], :per_page => 24)
+    # @members = Member.paginate(:page => params[:page], :per_page => 24)
   end
 
   # GET /members/1

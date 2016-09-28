@@ -1,43 +1,15 @@
 <h1>Listing Members</h1>
 
-<%= will_paginate @members, class: "pagination noprint" %>
-
 <p><%= link_to 'New Member', new_member_path %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Email</th>
-      <th>DoB</th>
-      <th>Region</th>
-      <th>Resident?</th>
-      <th>Tel</th>
-      <th>Mob</th>
-      <th>Link</th>
-    </tr>
-  </thead>
+<%= smart_listing_controls_for(:members) do %>
+  <div class="form-group select autoselect">
+    <%= select_tag :filter_region, options_for_select([[], ['Hulme', 0], ['Burnage', 1], ['Moston', 2], ['Miles Platting', 3]]), class: "search filter_region form-control" %>
+  </div>
+  <div class="form-group filter input-append">
+    <%= text_field_tag :filter, '', class: "search form-control", placeholder: "Search...", autocomplete: :off %>
+  </div>
+<% end %>
 
-  <tbody>
-    <% @members.each do |member| %>
-      <tr>
-        <td><tt><%= member.membership_code %></tt></td>
-        <td><%= link_to member.name, member rescue nil %></td>
-        <td><%= member.email %></td>
-        <td><%= member.dob %></td>
-        <td><%= member.region %></td>
-        <td><%= member.is_resident ? "Yes" : "No" %></td>
-        <td><%= member.tel %></td>
-        <td><%= member.mob %></td>
-        <td>
-            <%= link_to 'Show', member %>
-            <%= link_to 'Edit', edit_member_path(member) %>
-            <%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<%= will_paginate @members, class: "pagination noprint" %>
+<%= smart_listing_render(:members) %>

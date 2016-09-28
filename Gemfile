@@ -27,7 +27,9 @@ gem 'axlsx', '2.1.0.pre'
 gem 'axlsx_rails'
 # Users
 gem 'devise'
-gem 'will_paginate'
+# Pagination / sorting
+gem 'smart_listing'
+# gem 'will_paginate'
 # Spreadsheet parser for tests and imports
 gem 'roo'
 gem 'rqrcode'
