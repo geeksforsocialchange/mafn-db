@@ -5,6 +5,8 @@ class Question < ActiveRecord::Base
   accepts_nested_attributes_for :question_responses, allow_destroy: true
   validates_presence_of :question, :category
 
+  scope :like, -> (filter) { where("question ilike '%#{filter}%'")}
+
   enum category: {
     member: 0,
     event: 1,
