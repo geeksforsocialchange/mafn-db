@@ -1,44 +1,10 @@
 <h1>Listing Events</h1>
 
-<%= will_paginate @events, class: "pagination noprint" %>
-
-
 <p><%= link_to 'New Event', new_event_path %> | <%= link_to 'Update events now', update_calendar_path, method: :post %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Category</th>
-      <th>Start</th>
-      <th>Location</th>
-      <th></th>
-    </tr>
-  </thead>
+<%= smart_listing_controls_for(:events,  {class: "form-inline text-right"}) do %>
+  <%= render "smart_listing/filter" %>
+<% end %>
 
-  <tfoot>
-    <tr>
-      <th class="js-table-sort__searchable">Name</th>
-      <th class="js-table-sort__searchable">Category</th>
-      <th class="js-table-sort__searchable">Start</th>
-      <th class="js-table-sort__searchable">Location</th>
-      <th></th>
-    </tr>
-  </ttfoot>
 
-  <tbody>
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.name %></td>
-        <td><%= event.category %></td>
-        <td><%= event.start %></td>
-        <td><%= event.location %></td>
-        <td><%= link_to 'Show', event %>
-        <%= link_to 'Edit', edit_event_path(event) %>
-        <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<%= will_paginate @events, class: "pagination noprint" %>
+<%= smart_listing_render(:events) %>

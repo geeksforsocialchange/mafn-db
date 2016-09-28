@@ -6,9 +6,7 @@
   <div class="form-group autoselect">
     <%= select_tag :filter_region, options_for_select([[], ['Hulme', 0], ['Burnage', 1], ['Moston', 2], ['Miles Platting', 3]]), class: "search filter_region form-control" %>
   </div>
-  <div class="form-group filter input-append inline">
-    <%= text_field_tag :filter, '', class: "search form-control", placeholder: "Search...", autocomplete: :off %>
-  </div>
+  <%= render "smart_listing/filter" %>
 <% end %>
 
 <%= smart_listing_render(:members) %>

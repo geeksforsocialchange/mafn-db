@@ -1,13 +1,14 @@
 class EventsController < ApplicationController
+  include SmartListing::Helper::ControllerExtensions
+  helper  SmartListing::Helper
+
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   # GET /events
   def index
-    @events = Event.paginate(:page => params[:page])
-    respond_to do |format|
-      format.html
-      format.xlsx
-    end
+    events_scope = Event.all
+    events_scope = events_scope.like(params[:filter]) if params[:filter]
+    @events = smart_listing_create(:events, events_scope, partial: "events/list")
   end
 
   def update_calendar

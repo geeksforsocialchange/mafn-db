@@ -27,6 +27,9 @@ class Event < ActiveRecord::Base
     "Other": 4
   }
 
+  scope :like, -> (filter) { where("  name ilike '%#{filter}%'
+                                      OR location ilike '%#{filter}%'") }
+
   POSTCODE_REGEX = /^\s*((GIR\s*0AA)|((([A-PR-UWYZ][0-9]{1,2})|(([A-PR-UWYZ][A-HK-Y][0-9]{1,2})|(([A-PR-UWYZ][0-9][A-HJKSTUW])|([A-PR-UWYZ][A-HK-Y][0-9][ABEHMNPRVWXY]))))\s*[0-9][ABD-HJLNP-UW-Z]{2}))\s*$/i
 
   def geolocate
