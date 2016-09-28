@@ -57,4 +57,12 @@ module ApplicationHelper
     end
   end
 
+  def display_tick thing_to_check
+    if thing_to_check
+      return "<span class='glyphicon glyphicon-ok'></span>".html_safe
+    else
+      return "<span class='glyphicon glyphicon-remove'></span>".html_safe
+    end
+  end
+
 end

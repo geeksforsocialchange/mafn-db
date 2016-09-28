@@ -2,14 +2,13 @@
 
 <p><%= link_to 'New Member', new_member_path %></p>
 
-<%= smart_listing_controls_for(:members) do %>
-  <div class="form-group select autoselect">
+<%= smart_listing_controls_for(:members,  {class: "form-inline text-right"}) do %>
+  <div class="form-group autoselect">
     <%= select_tag :filter_region, options_for_select([[], ['Hulme', 0], ['Burnage', 1], ['Moston', 2], ['Miles Platting', 3]]), class: "search filter_region form-control" %>
   </div>
-  <div class="form-group filter input-append">
+  <div class="form-group filter input-append inline">
     <%= text_field_tag :filter, '', class: "search form-control", placeholder: "Search...", autocomplete: :off %>
   </div>
 <% end %>
-
 
 <%= smart_listing_render(:members) %>
