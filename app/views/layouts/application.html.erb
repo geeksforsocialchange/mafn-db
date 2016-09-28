@@ -7,13 +7,12 @@
 
     <title>Manchester Age Friendly Neighbourhoods</title>
 
-    <%= stylesheet_link_tag 'application',  media: "all" %>
-     <!-- "https://fonts.googleapis.com/css?family=Roboto:400,900" -->
+    <%= stylesheet_link_tag 'application', "https://fonts.googleapis.com/css?family=Roboto:400,900", media: "all" %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <header>
+    <header class="noprint">
       <%= render 'layouts/navigation' %>
     </header>
     <main>

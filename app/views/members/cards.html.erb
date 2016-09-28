@@ -1,3 +1,3 @@
-<%= will_paginate @members, class: "pagination noprint" %>
+<h1 class="noprint">Membership Cards</h1>
 
-<%= render :partial => "card", :collection => @members, :as => :member %>
+<%= smart_listing_render(:members) %>

@@ -1,0 +1,14 @@
+<% unless smart_listing.empty? %>
+  <div class="noprint">
+    <%= smart_listing.paginate %>
+  </div>
+  <% smart_listing.collection.each do |member| %>
+    <%= render partial: "members/card", locals: { member: member } %>
+  <% end %>
+  <div class="noprint">
+    <%= smart_listing.paginate %>
+    <%= smart_listing.pagination_per_page_links %>
+  </div>
+<% else %>
+  <h2>No records!</h2>
+<% end %>
