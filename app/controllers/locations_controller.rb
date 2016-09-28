@@ -1,9 +1,14 @@
 class LocationsController < ApplicationController
+  include SmartListing::Helper::ControllerExtensions
+  helper  SmartListing::Helper
+
   before_action :set_location, only: [:show, :edit, :update, :destroy]
 
   # GET /locations
   def index
-    @locations = Location.all
+    location_scope = Location.all
+    location_scope = location_scope.like(params[:filter]) if params[:filter]
+    @locations = smart_listing_create(:locations, location_scope, partial: "locations/list")
   end
 
   # GET /locations/1

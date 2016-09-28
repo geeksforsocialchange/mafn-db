@@ -14,7 +14,7 @@ class EventsControllerTest < ActionController::TestCase
     assert_response :success
     assert_not_nil assigns(:events)
     assert_select "th", "Name"
-    assert_select "th", "Start"
+    assert_select "th", "Date"
     assert_select "th", "Location"
     assert_select "th", "Category"
   end

@@ -1,42 +1,11 @@
 <h1>Listing Question Responses</h1>
 
+<p>NB: search only operating on responses for now!</p>
+
 <%= link_to 'New Question response', new_question_response_path %>
 
-<%= will_paginate @question_responses, class: "pagination" %>
+<%= smart_listing_controls_for(:question_responses,  {class: "form-inline text-right"}) do %>
+  <%= render "smart_listing/filter" %>
+<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Responder</th>
-      <th>Question</th>
-      <th>Response</th>
-      <th>Subject</th>
-      <th>Date</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @question_responses.each do |question_response| %>
-      <tr>
-        <td><%= link_to question_response.responder.full_name, question_response.responder %></td>
-        <td><%= link_to question_response.question.question, question_response.question %></td>
-        <td><%= question_response.formatted_response %></td>
-        <td>
-          <% if question_response.subject %>
-            <%= link_to   "#{question_response.subject.parent.model_name.human}:
-                            #{question_response.subject.parent.name}",
-                            question_response.subject.parent
-              %>
-          <% end %>
-        </td>
-        <td><%= question_response.created_at %>
-        <td>
-            <%= link_to 'Show', question_response %>
-            <%= link_to 'Edit', edit_question_response_path(question_response) %>
-            <%= link_to 'Destroy', question_response, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= smart_listing_render(:question_responses) %>

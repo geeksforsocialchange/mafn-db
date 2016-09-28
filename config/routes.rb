@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :members do
     collection do
       get 'cards'
+      get 'export_preview'
     end
     member do
       get 'card'

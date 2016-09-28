@@ -2,54 +2,11 @@
 
 <p><%= link_to 'New Member', new_member_path %></p>
 
-<table class="js-table-sort">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>DoB</th>
-      <th>Region</th>
-      <th>Resident?</th>
-      <th>Tel</th>
-      <th>Mob</th>
-      <th>Email</th>
-      <th>Link</th>
-    </tr>
-  </thead>
-  <tfoot>
-    <tr>
-      <th class="js-table-sort__searchable">ID</th>
-      <th class="js-table-sort__searchable">Name</th>
-      <th class="js-table-sort__searchable">DoB</th>
-      <th class="js-table-sort__searchable">Region</th>
-      <th class="js-table-sort__searchable">Resident?</th>
-      <th class="js-table-sort__searchable">Tel</th>
-      <th class="js-table-sort__searchable">Mob</th>
-      <th class="js-table-sort__searchable">Email</th>
-      <th>Link</th>
-    </tr>
-  </tfoot>
+<%= smart_listing_controls_for(:members,  {class: "form-inline text-right"}) do %>
+  <div class="form-group autoselect">
+    <%= select_tag :filter_region, options_for_select([[], ['Hulme', 0], ['Burnage', 1], ['Moston', 2], ['Miles Platting', 3]]), class: "search filter_region form-control" %>
+  </div>
+  <%= render "smart_listing/filter" %>
+<% end %>
 
-
-  <tbody>
-    <% @members.each do |member| %>
-      <tr>
-        <td><tt><%= member.membership_code %></tt></td>
-        <td><%= link_to member.name, member rescue nil %></td>
-        <td><%= member.dob %></td>
-        <td><%= member.region %></td>
-        <td><%= member.is_resident ? "Yes" : "No" %></td>
-        <td><%= member.tel %></td>
-        <td><%= member.mob %></td>
-        <td><%= member.email %></td>
-        <td>
-            <%= link_to 'Show', member %>
-            <%= link_to 'Edit', edit_member_path(member) %>
-            <%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<%= smart_listing_render(:members) %>

@@ -1,0 +1,41 @@
+<% unless smart_listing.empty? %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th><%= smart_listing.sortable "Name", :name %></th>
+        <th>Category</th>
+        <th><%= smart_listing.sortable "Date", :start %></th>
+        <th>Finished?</th>
+        <th>Location</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @events.each do |event| %>
+        <tr>
+          <td><%= link_to event.name, event %></td>
+          <td><%= event.category %></td>
+          <td><%= event.start.to_date %></td>
+          <td><%= display_tick event.start > Date.today %></td>
+          <td><%= event.location %></td>
+          <td>
+            <%= link_to event do %>
+              <i class="glyphicon glyphicon-eye-open"></i>
+            <% end %>
+            <%= link_to edit_event_path(event) do %>
+              <i class="glyphicon glyphicon-pencil"></i>
+            <% end %>
+            <%= link_to event, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <i class="glyphicon glyphicon-trash"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= smart_listing.paginate %>
+  <%= smart_listing.pagination_per_page_links %>
+<% else %>
+  <h2>No records!</h2>
+<% end %>

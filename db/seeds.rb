@@ -50,8 +50,7 @@ create_question_set(projects, project_questions)
   "s.white@mmu.ac.uk",
   "e.crompton@mmu.ac.uk",
   "m.youngson@mmu.ac.uk",
-  "jude.wells@mmu.ac.uk",
-  "jon-man.cheung@gmcvo.org.uk"
+  "jude.wells@mmu.ac.uk"
 ].each do |email|
   next if User.where(email: email).length > 0
   user = User.new

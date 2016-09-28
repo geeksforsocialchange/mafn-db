@@ -1,36 +1,54 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.0'
+
+# Theming stuff
 gem 'sass-rails', '~> 5.0'
+gem 'bootstrap-sass', '~> 3.3.6'
+
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
+
+# Database
 gem 'pg'
 gem 'postgres_ext'
-gem 'icalendar'
+
+# Fake content
 gem 'faker'
+
 # Nicer forms
 gem 'formtastic', '~> 3.0'
 gem "cocoon"
-# Group responses by date
-# gem 'groupdate'
+
 # To access geolocation API
 gem 'rest-client'
+
 # Nice colours for output
 gem 'colorize'
+
 # Geo maths
 gem 'geokit-rails'
+
 # Excel
 gem 'rubyzip', '~> 1.1.0'
 gem 'axlsx', '2.1.0.pre'
 gem 'axlsx_rails'
-# Users
-gem 'devise'
-gem 'will_paginate'
+
 # Spreadsheet parser for tests and imports
 gem 'roo'
 gem 'rqrcode'
+
+# Calendar parsing
+gem 'icalendar'
+
+# Users
+gem 'devise'
+
+# Pagination / sorting
+gem 'smart_listing'
+# gem 'will_paginate'
 
 group :production do
   gem 'rails_12factor'

@@ -1,9 +1,14 @@
 class QuestionsController < ApplicationController
+  include SmartListing::Helper::ControllerExtensions
+  helper  SmartListing::Helper
+
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 
   # GET /questions
   def index
-    @questions = Question.all
+    question_scope = Question.all
+    question_scope = question_scope.like(params[:filter]) if params[:filter]
+    @questions = smart_listing_create(:questions, question_scope, partial: "questions/list")
   end
 
   # GET /questions/1

@@ -1,0 +1,49 @@
+<% unless smart_listing.empty? %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th><%= smart_listing.sortable "Last Name", :last_name %></th>
+        <th><%= smart_listing.sortable "First Name", :first_name %></th>
+        <th><%= smart_listing.sortable "Email", :email %></th>
+        <th>DoB</th>
+        <th>Region</th>
+        <th>Resident?</th>
+        <th>Tel</th>
+        <th>Mob</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% smart_listing.collection.each do |member| %>
+        <tr>
+          <td><tt><%= link_to member.membership_code, member %></tt></td>
+          <td><%= member.last_name %></td>
+          <td><%= member.first_name %></td>
+          <td><%= member.email %></td>
+          <td><%= member.dob %></td>
+          <td><%= member.region %></td>
+          <td><%= display_tick member.is_resident? %></td>
+          <td><%= member.tel %></td>
+          <td><%= member.mob %></td>
+          <td>
+              <%= link_to member do %>
+                <i class="glyphicon glyphicon-eye-open"></i>
+              <% end %>
+              <%= link_to edit_member_path(member) do %>
+                <i class="glyphicon glyphicon-pencil"></i>
+              <% end %>
+              <%= link_to member, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="glyphicon glyphicon-trash"></i>
+              <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= smart_listing.paginate %>
+  <%= smart_listing.pagination_per_page_links %>
+<% else %>
+  <h2>No records!</h2>
+<% end %>

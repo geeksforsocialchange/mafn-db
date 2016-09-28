@@ -1,41 +1,25 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Manchester Age Friendly Neighbourhoods</title>
-  <%= stylesheet_link_tag 'application',  "https://fonts.googleapis.com/css?family=Roboto:400,900",  media: "all" %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<header class="noprint">
-  <nav class="nav">
-    <%= link_to "Members", members_path, class: "nav__main" %> |
-    <%= link_to "Events", events_path, class: "nav__main" %>
-    <%= link_to "(Attendances)", attendances_path %> |
-    <%= link_to "Projects", projects_path, class: "nav__main" %>
-    (<%= link_to "Volunteers", volunteers_path %>,
-    <%= link_to "Arrangers", arrangers_path %>,
-    <%= link_to "Partners", partners_path %>) |
-    <%= link_to "Organisations", organisations_path, class: "nav__main" %>
-    <%= link_to "(Representatives)", representatives_path %> |
-    <%= link_to "Locations", locations_path, class: "nav__main" %>
-    <%= link_to "(Member Locations)", member_locations_path %> |
-    <%= link_to "Questions", questions_path, class: "nav__main" %>
-    (<%= link_to "Responses", question_responses_path %>,
-    <%= link_to "Lists", question_lists_path %>,
-    <%= link_to "Sets", question_sets_path %>) |
-    <%= link_to "Export", exports_path, class: "nav__main" %>
-    <% if user_signed_in? %>
-      | <%= link_to "Logout #{current_user.email}", destroy_user_session_path, method: :delete %>
-    <% end %>
-  </nav>
-</header>
+    <title>Manchester Age Friendly Neighbourhoods</title>
 
-<main>
-  <%= render 'layouts/messages' %>
-  <%= yield %>
-</main>
-
-</body>
+    <%= stylesheet_link_tag 'application', "https://fonts.googleapis.com/css?family=Roboto:400,900", media: "all" %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header class="noprint">
+      <%= render 'layouts/navigation' %>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <%= render 'layouts/messages' %>
+        <%= yield %>
+      </div>
+    </main>
+  </body>
 </html>
