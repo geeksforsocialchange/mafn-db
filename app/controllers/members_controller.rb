@@ -4,10 +4,6 @@ class MembersController < ApplicationController
   # GET /members
   def index
     @members = Member.paginate(:page => params[:page])
-    respond_to do |format|
-      format.html
-      format.xlsx
-    end
   end
 
   def cards
