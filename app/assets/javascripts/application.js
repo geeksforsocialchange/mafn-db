@@ -6,10 +6,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sprockets
 //  require turbolinks
 //= require cocoon
 //= require smart_listing
-//= require vendor/jquery.dataTables.min
 
 //= require partials/_cocoon
 //= require partials/_tables
