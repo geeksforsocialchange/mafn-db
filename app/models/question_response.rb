@@ -5,6 +5,8 @@ class QuestionResponse < ActiveRecord::Base
 
   validates_presence_of :responder, :question, :response
 
+  scope :like, -> (filter) { where("response ilike '%#{filter}%'") }
+
   def formatted_response
     response_options = self.question.response
     if response_options && response_options.length > 0
