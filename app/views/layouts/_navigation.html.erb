@@ -16,7 +16,7 @@
       <ul class="nav navbar-nav">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Members <span class="caret"></span>
+            <i class='icon icon-member'></i> Members <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             <li><%= link_to "Members", members_path %></li>
@@ -29,7 +29,7 @@
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Events <span class="caret"></span>
+            <i class='icon icon-event'></i> Events <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             <li><%= link_to "Events", events_path %></li>
@@ -40,7 +40,7 @@
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Projects <span class="caret"></span>
+            <i class='icon icon-project'></i> Projects <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             <li><%= link_to "Projects", projects_path %></li>
@@ -52,7 +52,7 @@
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Organisations <span class="caret"></span>
+            <i class='icon icon-organisation'></i> Organisations <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             <li><%= link_to "Organisations", organisations_path %></li>
@@ -63,7 +63,7 @@
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Locations <span class="caret"></span>
+            <i class='icon icon-location'></i> Locations <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             <li><%= link_to "Locations", locations_path %></li>
@@ -73,7 +73,7 @@
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Questions <span class="caret"></span>
+            <i class='icon icon-question'></i> Questions <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             <li><%= link_to "Questions", questions_path %></li>
@@ -83,7 +83,7 @@
             <li><%= link_to "Sets (Survey names)", question_sets_path %></li>
           </ul>
         </li>
-        <li><%= link_to "Export", exports_path %></li>
+        <li><%= link_to "<i class='glyphicon glyphicon-save'></i> Export".html_safe, exports_path %></li>
         <% if user_signed_in? %>
           <li><%= link_to "<i class='glyphicon glyphicon-log-out'></i> Logout #{current_user.email}".html_safe, destroy_user_session_path, method: :delete %></li>
         <% end %>

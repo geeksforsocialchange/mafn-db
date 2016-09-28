@@ -1,0 +1,7 @@
+
+.icon-location:before { content: '\e801'; } /* '' */
+.icon-question:before { content: '\e802'; } /* '' */
+.icon-organisation:before { content: '\f0f2'; } /* '' */
+.icon-event:before { content: '\f133'; } /* '' */
+.icon-project:before { content: '\f135'; } /* '' */
+.icon-member:before { content: '\f1ae'; } /* '' */

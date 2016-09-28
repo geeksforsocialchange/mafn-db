@@ -72,6 +72,7 @@ group :development do
   # gem 'livereload'
   gem 'rack-livereload'
   gem 'guard-livereload'
+  gem 'fontello_rails_converter'
 end
 
 group :test do
