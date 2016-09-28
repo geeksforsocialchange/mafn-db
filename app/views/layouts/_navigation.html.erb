@@ -85,7 +85,7 @@
         </li>
         <li><%= link_to "Export", exports_path %></li>
         <% if user_signed_in? %>
-          <li><i class="glyphicon glyphicon-log-out"></i> <%= link_to "Logout #{current_user.email}", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "<i class='glyphicon glyphicon-log-out'></i> Logout #{current_user.email}".html_safe, destroy_user_session_path, method: :delete %></li>
         <% end %>
       </ul>
   </div>
