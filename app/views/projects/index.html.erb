@@ -21,7 +21,7 @@
         <td><%= link_to project.name, project_path(project) %></td>
         <td><%= project.start %></td>
         <td><%= project.region %></td>
-        <td><%= link_to project.primary_partner_organisation.name, project_path(project.primary_partner_organisation) rescue nil %></td>
+        <td><%= link_to project.primary_partner_organisation.name, organisation_path(project.primary_partner_organisation) rescue nil %></td>
         <td><%= link_to project.resident_champion.full_name, member_path(project.resident_champion) rescue nil %></td>
         <td><%= link_to project.resident_seconder.full_name, member_path(project.resident_seconder) rescue nil %></td>
         <td><%= link_to 'Show', project %></td>
