@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
-# Admin app
-gem 'rails', '4.2.0'
-
 # API app
 gem 'sinatra'
+gem "sinatra-activerecord"
+
+# Admin app
+gem 'rails', '4.2.0'
 
 # Theming stuff
 gem 'sass-rails', '~> 5.0'
