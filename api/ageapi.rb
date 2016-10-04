@@ -5,9 +5,10 @@ require 'json'
 # Database
 require 'sinatra/activerecord'
 require 'pg'
+set :database_file, "database.yml"
 
 # Models
-# require '/models/event'
+require_relative 'models/event'
 
 class AgeAPI < Sinatra::Base
 
