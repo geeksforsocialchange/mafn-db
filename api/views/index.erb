@@ -18,71 +18,61 @@
         <h1>Age Friendly Neighbourhoods API</h1>
       </div>
 
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h2 class="panel-title">Events</h2>
-        </div>
-        <div class="panel-body">
+      <h2>Events</h2>
 
-          <h3>Description</h3>
+      <h3>Description</h3>
 
-          <p>View next 50 upcoming events with various parameters.</p>
+      <p>View next 50 upcoming events with various parameters.</p>
 
-          <h3>Endpoint</h3>
+      <h3>Endpoint</h3>
 
-          <div class="well">
-            <tt>GET https://api.afmcr.org/events</tt>
-          </div>
-
-          <h3>Parameters</h3>
-
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Required</th>
-                <th>Description</th>
-                <th>Default</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Start</td>
-                <td>DateTime</td>
-                <td>No</td>
-                <td>Get events that start on or after this time</td>
-                <td>Time.now</td>
-              </tr>
-              <tr>
-                <td>End</td>
-                <td>DateTime</td>
-                <td>No</td>
-                <td>Get events that start on or after this time</td>
-                <td>nil</td>
-              <tr>
-              <tr>
-                <td>Ward</td>
-                <td>Integer</td>
-                <td>No</td>
-                <td>Get only events for Hulme &amp; Moss Side (0), Burnage (1), Moston (2), or Miles Platting (3)</td>
-                <td>nil</td>
-              </tr>
-              <tr>
-                <td>Page</td>
-                <td>Integer</td>
-                <td>No</td>
-                <td>Get next 50 events</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="well">
+        <tt><strong>GET</strong> https://api.afmcr.org/events</tt>
       </div>
 
+      <h3>Parameters</h3>
 
-
-
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Start</td>
+            <td>DateTime</td>
+            <td>No</td>
+            <td>Get events that start on or after this time</td>
+            <td>Time.now</td>
+          </tr>
+          <tr>
+            <td>End</td>
+            <td>DateTime</td>
+            <td>No</td>
+            <td>Get events that start on or after this time</td>
+            <td>nil</td>
+          <tr>
+          <tr>
+            <td>Ward</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Get only events for Hulme &amp; Moss Side (0), Burnage (1), Moston (2), or Miles Platting (3)</td>
+            <td>nil</td>
+          </tr>
+          <tr>
+            <td>Page</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Get next 50 events</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </body>
 </html>

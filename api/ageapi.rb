@@ -17,8 +17,10 @@ class AgeAPI < Sinatra::Base
     erb :index
   end
 
-  # GET /events/{start}
-  get '/events?start&end&page&category' do
+  # GET /events
+  get '/events' do
+    content_type :json
+    { name: "Test Event", description: "Event description"}.to_json
   end
 
   # GET /events/{id}
