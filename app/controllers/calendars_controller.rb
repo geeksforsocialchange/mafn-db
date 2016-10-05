@@ -53,6 +53,6 @@ class CalendarsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def calendar_params
-      params.require(:calendar).permit(:project_id, :is_funded_default, :url, :region_default)
+      params.require(:calendar).permit(:project_id, :is_funded_default, :url, :region)
     end
 end

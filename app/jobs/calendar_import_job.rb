@@ -1,11 +1,12 @@
+require 'open-uri'
+
 class CalendarImportJob < ActiveJob::Base
   queue_as :default
 
   def perform(*args)
-    `wget -O ./tmp/mafn.ics https://calendar.google.com/calendar/ical/d0ok3oc2trd21adadm3b8qaimg%40group.calendar.google.com/public/basic.ics`
-    f = File.open("./tmp/mafn.ics")
-    # Parse it with the ical gem
-    c = Icalendar.parse(f).first
+    uri = URI.parse("https://calendar.google.com/calendar/ical/d0ok3oc2trd21adadm3b8qaimg%40group.calendar.google.com/public/basic.ics")
+    c = nil
+    uri.open { |f| c = Icalendar.parse(f).first }
     c.events.each do |e|
       # Check if it's already in there
       existing_event = Event.where(google_id: "#{e.uid}").first

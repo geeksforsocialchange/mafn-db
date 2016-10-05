@@ -2,7 +2,7 @@
 
 <p>
   <strong>Project:</strong>
-  <%= @calendar.project %>
+  <%= @calendar.project.name %>
 </p>
 
 <p>
@@ -12,7 +12,7 @@
 
 <p>
   <strong>Url:</strong>
-  <%= @calendar.url %>
+  <%= link_to @calendar.url, @calendar.url %>
 </p>
 
 <p>

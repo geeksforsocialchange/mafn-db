@@ -1,12 +1,10 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Listing Calendars</h1>
 
 <table class="table">
   <thead>
     <tr>
       <th>Project</th>
-      <th>Is funded default</th>
+      <th>Funded?</th>
       <th>Region default</th>
       <th>Url</th>
       <th colspan="3"></th>
@@ -16,8 +14,8 @@
   <tbody>
     <% @calendars.each do |calendar| %>
       <tr>
-        <td><%= calendar.project %></td>
-        <td><%= calendar.is_funded_default %></td>
+        <td><%= calendar.project.name %></td>
+        <td><%= display_tick calendar.is_funded_default %></td>
         <td><%= calendar.region %></td>
         <td><%= calendar.url %></td>
         <td><%= link_to 'Show', calendar %></td>
