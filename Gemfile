@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+# API app
+gem 'sinatra'
+gem "sinatra-activerecord"
+
+# Admin app
 gem 'rails', '4.2.0'
 
 # Theming stuff
