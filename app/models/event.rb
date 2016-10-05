@@ -1,4 +1,6 @@
 class Event < ActiveRecord::Base
+  include HasRegion
+  
   # Can be referenced by questions
   belongs_to :entity
 

@@ -37,7 +37,8 @@ class EventsControllerTest < ActionController::TestCase
                               event_type_other: @event.event_type_other,
                               category: @event.category,
                               google_id: @event.google_id,
-                              is_funded: @event.is_funded
+                              is_funded: @event.is_funded,
+                              region: @event.region
                            }
     end
     assert_redirected_to event_path(assigns(:event))
@@ -79,7 +80,8 @@ class EventsControllerTest < ActionController::TestCase
                                           event_type_other: @event.event_type_other,
                                           category: @event.category,
                                           location: @event.location,
-                                          is_funded: @event.is_funded }
+                                          is_funded: @event.is_funded,
+                                          region: @event.region }
     assert_redirected_to event_path(assigns(:event))
   end
 
