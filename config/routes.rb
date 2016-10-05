@@ -47,7 +47,7 @@ Rails.application.routes.draw do
     end
   end
 
-  post 'update_calendar', to: 'events#update_calendar'
+  post 'update_calendar', to: 'events#update_events'
 
   root 'welcome#index'
 end

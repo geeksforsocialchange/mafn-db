@@ -6,15 +6,17 @@ class EventsController < ApplicationController
 
   # GET /events
   def index
-    events_scope = Event.all
+    events_scope = Event.order(:start)
     events_scope = events_scope.like(params[:filter]) if params[:filter]
     @events = smart_listing_create(:events, events_scope, partial: "events/list")
   end
 
-  def update_calendar
+  def update_events
     flash[:notice] = "Import processing. Refresh in a few seconds to see updated results."
-    CalendarImportJob.perform_later
-    @events = Event.all
+    calendars = Calendar.all
+    calendars.each do |calendar|
+      CalendarImportJob.perform_later(calendar.url)
+    end
     redirect_to action: "index"
   end
 

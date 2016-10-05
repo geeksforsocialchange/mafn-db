@@ -3,8 +3,8 @@ require 'open-uri'
 class CalendarImportJob < ActiveJob::Base
   queue_as :default
 
-  def perform(*args)
-    uri = URI.parse("https://calendar.google.com/calendar/ical/d0ok3oc2trd21adadm3b8qaimg%40group.calendar.google.com/public/basic.ics")
+  def perform(url)
+    uri = URI.parse(url)
     c = nil
     uri.open { |f| c = Icalendar.parse(f).first }
     c.events.each do |e|
