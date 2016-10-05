@@ -21,7 +21,8 @@ class AgeAPI < Sinatra::Base
   # GET /events
   get '/events' do
     content_type :json
-    { name: "Test Event", description: "Event description"}.to_json
+    events = Event.limit(50)
+    events.to_json
   end
 
   # GET /events/{id}
