@@ -4,11 +4,15 @@ class CalendarImportJob < ActiveJob::Base
   queue_as :default
 
   def perform(url)
+    # Parse the URL into a Ruby URI object
     uri = URI.parse(url)
+    # Quit unless this starts with http
     return unless uri.scheme == %w(http https)
     ical = nil
     uri.open { |f| ical = Icalendar.parse(f).first }
+    # If we have something valid
     if ical
+      # Then run through any event object
       ical.events.each do |e|
         # Check if it's already in there
         existing_event = Event.where(google_id: "#{e.uid}").first

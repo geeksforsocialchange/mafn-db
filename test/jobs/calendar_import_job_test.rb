@@ -3,13 +3,13 @@ require 'test_helper'
 class CalendarImportJobTest < ActiveJob::TestCase
 
   setup do
-    @valid_url = "https://calendar.google.com/calendar/ical/d0ok3oc2trd21adadm3b8qaimg%40group.calendar.google.com/public/basic.ics"
-    @invalid_url = "fdsfdsfdsFSDfdsfsd"
+    @calendar = create(:calendar)
+    @calendar_with_bad_url = create(:calendar_with_bad_url)
   end
 
   test "job runs correctly" do
-    CalendarImportJob.perform_now(@valid_url)
-    CalendarImportJob.perform_now(@invalid_url)
+    CalendarImportJob.perform_now(@calendar.url)
+    CalendarImportJob.perform_now(@calendar_with_bad_url.url)
   end
 
 end
