@@ -83,6 +83,7 @@ class EventsController < ApplicationController
                                       :event_type_other,
                                       :description,
                                       :google_id,
+                                      :is_funded,
                                       attendances_attributes: [
                                         :id,
                                         :event_id,

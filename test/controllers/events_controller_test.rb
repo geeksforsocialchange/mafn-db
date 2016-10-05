@@ -36,7 +36,8 @@ class EventsControllerTest < ActionController::TestCase
                               event_type: @event.event_type,
                               event_type_other: @event.event_type_other,
                               category: @event.category,
-                              google_id: @event.google_id
+                              google_id: @event.google_id,
+                              is_funded: @event.is_funded
                            }
     end
     assert_redirected_to event_path(assigns(:event))
@@ -53,6 +54,7 @@ class EventsControllerTest < ActionController::TestCase
     assert_select ".event__event-type-other"
     assert_select ".event__category"
     assert_select ".event__google-id"
+    assert_select ".event__is-funded"
   end
 
   test "should get edit" do
@@ -76,7 +78,8 @@ class EventsControllerTest < ActionController::TestCase
                                           event_type: @event.event_type,
                                           event_type_other: @event.event_type_other,
                                           category: @event.category,
-                                          location: @event.location }
+                                          location: @event.location,
+                                          is_funded: @event.is_funded }
     assert_redirected_to event_path(assigns(:event))
   end
 

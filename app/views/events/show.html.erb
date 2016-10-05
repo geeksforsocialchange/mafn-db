@@ -38,6 +38,11 @@
   <%= @event.google_id %>
 </p>
 
+<p class="event__is-funded">
+  <strong>Funded?:</strong>
+  <%= @event.is_funded %>
+</p>
+
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
 

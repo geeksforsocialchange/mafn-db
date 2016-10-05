@@ -1,0 +1,12 @@
+<%= semantic_form_for @calendar do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :project %>
+    <%= f.input :is_funded_default %>
+    <%= f.input :url %>
+    <%= f.input :region_default %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>
