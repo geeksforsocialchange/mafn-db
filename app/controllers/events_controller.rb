@@ -15,7 +15,7 @@ class EventsController < ApplicationController
     flash[:notice] = "Import processing. Refresh in a few seconds to see updated results."
     calendars = Calendar.all
     calendars.each do |calendar|
-      CalendarImportJob.perform_later(calendar.url)
+      CalendarImportJob.perform_later(calendar)
     end
     redirect_to action: "index"
   end

@@ -8,8 +8,8 @@ class CalendarImportJobTest < ActiveJob::TestCase
   end
 
   test "job runs correctly" do
-    CalendarImportJob.perform_now(@calendar.url)
-    CalendarImportJob.perform_now(@calendar_with_bad_url.url)
+    CalendarImportJob.perform_now(@calendar)
+    CalendarImportJob.perform_now(@calendar_with_bad_url)
   end
 
 end

@@ -3,9 +3,9 @@ require 'open-uri'
 class CalendarImportJob < ActiveJob::Base
   queue_as :default
 
-  def perform(url)
+  def perform(calendar)
     # Parse the URL into a Ruby URI object
-    uri = URI.parse(url)
+    uri = URI.parse(calendar.url)
     # Quit unless this starts with http
     return unless uri.scheme == %w(http https)
     ical = nil
