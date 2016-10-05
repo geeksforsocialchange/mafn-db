@@ -1,18 +1,25 @@
 class Event < ActiveRecord::Base
+  # Can be referenced by questions
   belongs_to :entity
 
+  # Events have attendees (members) and arrangers (projects)
   has_many :attendances
   has_many :members, through: :attendances
   has_one :arranger
   has_one :project, through: :arranger
 
+  # Essential fields
   validates_presence_of :name, :start, :finish, :location
+
+  # Uniquely identify the event using it's Google ID
   validates_uniqueness_of :google_id, :allow_blank => true, :allow_nil => true
 
   accepts_nested_attributes_for :attendances, allow_destroy: true
 
+  # After saving, parse the location for a postcode and geolocate it
   after_save :geolocate, if: :location_changed?
 
+  # After creating, give it an entity ID
   after_create do
     self.update(entity_id: Entity.create.id)
   end
@@ -27,8 +34,7 @@ class Event < ActiveRecord::Base
     "Other": 4
   }
 
-  scope :like, -> (filter) { where("  name ilike '%#{filter}%'
-                                      OR location ilike '%#{filter}%'") }
+  scope :like, -> (filter) { where("  name ilike '%#{filter}%' OR location ilike '%#{filter}%'") }
 
   POSTCODE_REGEX = /^\s*((GIR\s*0AA)|((([A-PR-UWYZ][0-9]{1,2})|(([A-PR-UWYZ][A-HK-Y][0-9]{1,2})|(([A-PR-UWYZ][0-9][A-HJKSTUW])|([A-PR-UWYZ][A-HK-Y][0-9][ABEHMNPRVWXY]))))\s*[0-9][ABD-HJLNP-UW-Z]{2}))\s*$/i
 

@@ -75,6 +75,9 @@
 # this proc.
 # Formtastic::Helpers::FormHelper.default_form_model_class_proc = proc { |model_class_name| model_class_name }
 
+# Use Bootstrap styles
+Formtastic::Helpers::FormHelper.builder = FormtasticBootstrap::FormBuilder
+
 # Allows to set a custom field_error_proc wrapper. By default this wrapper
 # is disabled since `formtastic` already adds an error class to the LI tag
 # containing the input.

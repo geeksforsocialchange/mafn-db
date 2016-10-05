@@ -1,9 +1,9 @@
 <%= semantic_form_for @calendar do |f| %>
   <%= f.inputs do %>
     <%= f.input :project %>
-    <%= f.input :is_funded_default %>
+    <%= f.input :is_funded_default, :as => :boolean, :label => "Should events from this calendar be marked as funded by MAFN?" %>
     <%= f.input :url %>
-    <%= f.input :region_default %>
+    <%= f.input :region_default, :as => :select %>
   <% end %>
 
   <%= f.actions do %>

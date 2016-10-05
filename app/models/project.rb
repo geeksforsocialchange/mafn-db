@@ -1,4 +1,6 @@
 class Project < ActiveRecord::Base
+  include HasRegion
+
   belongs_to :primary_partner_organisation, class_name: :Organisation
   belongs_to :resident_champion, class_name: :Member
   belongs_to :resident_seconder, class_name: :Member
@@ -16,13 +18,6 @@ class Project < ActiveRecord::Base
   after_create do
     self.update(entity_id: Entity.create.id)
   end
-
-  enum region: {
-    "Hulme & Moss Side": 0,
-    "Burnage": 1,
-    "Moston": 2,
-    "Miles Platting": 3,
-  }
 
   def select_string
     "#{self.id}. #{self.name}"

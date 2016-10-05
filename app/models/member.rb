@@ -1,4 +1,6 @@
 class Member < ActiveRecord::Base
+  include HasRegion
+
   belongs_to :entity
 
   has_many :member_locations, dependent: :destroy
@@ -29,13 +31,6 @@ class Member < ActiveRecord::Base
 
   scope :filter_region, -> (filter_region) { where(:region => filter_region) }
 
-  enum region: {
-    "Hulme & Moss Side": 0,
-    "Burnage": 1,
-    "Moston": 2,
-    "Miles Platting": 3,
-  }
-
   enum ethnic_background: {
     # Asian options
     "Bangladeshi": 0, "Chinese": 1, "Indian": 2, "Pakistani": 3, "Any other Asian/ Asian British Background (please state)": 4,
@@ -64,46 +59,6 @@ class Member < ActiveRecord::Base
 
   def initials
     self.first_name.first + self.last_name.first
-  end
-
-  # Short code for our member's ID
-  def region_code
-    return case self[:region]
-    when 0
-      'HM'
-    when 1
-      'BU'
-    when 2
-      'MO'
-    when 3
-      'MP'
-    end
-  end
-
-  def region_email
-    return case self[:region]
-    when 0
-      "hulmemossside@afmcr.org"
-    when 1
-      "burnage@afmcr.org"
-    when 2
-      "moston@afmcr.org"
-    when 3
-      "milesplatting@afmcr.org"
-    end
-  end
-
-  def region_website
-    return case self[:region]
-    when 0
-      "hulmemossside.afmcr.org"
-    when 1
-      "burnage.afmcr.org"
-    when 2
-      "moston.afmcr.org"
-    when 3
-      "milesplatting.afmcr.org"
-    end
   end
 
   def export_ethnicity

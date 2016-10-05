@@ -25,6 +25,7 @@ gem 'faker'
 
 # Nicer forms
 gem 'formtastic', '~> 3.0'
+gem 'formtastic-bootstrap'
 gem "cocoon"
 
 # To access geolocation API
