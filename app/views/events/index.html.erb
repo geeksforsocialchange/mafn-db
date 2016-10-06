@@ -1,6 +1,9 @@
-<h1>Listing Events</h1>
+<div class="page-header">
+  <h1>Listing Events</h1>
+</div>
 
-<p><%= link_to 'New Event', new_event_path %> | <%= link_to 'Update events now', update_calendar_path, method: :post %></p>
+<%= link_to 'New Event', new_event_path, class: "btn btn-default" %>
+<%= link_to 'Update all Events', update_calendar_path, method: :post, class: "btn btn-default" %>
 
 <%= smart_listing_controls_for(:events,  {class: "form-inline text-right"}) do %>
   <%= render "smart_listing/filter" %>

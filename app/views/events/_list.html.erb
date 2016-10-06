@@ -6,6 +6,8 @@
         <th>Category</th>
         <th><%= smart_listing.sortable "Date", :start %></th>
         <th>Finished?</th>
+        <th>Funded?</th>
+        <th>Region</th>
         <th>Location</th>
         <th></th>
       </tr>
@@ -18,6 +20,8 @@
           <td><%= event.category %></td>
           <td><%= event.start.to_date %></td>
           <td><%= display_tick event.start > Date.today %></td>
+          <td><%= display_tick event.is_funded %></td>
+          <td><%= event.region %></td>
           <td><%= event.location %></td>
           <td>
             <%= link_to event do %>

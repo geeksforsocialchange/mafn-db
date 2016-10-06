@@ -1,4 +1,9 @@
-<h1>Listing Calendars</h1>
+<div class="page-header">
+  <h1>Listing Calendars <small>calendars import events</small></h1>
+</div>
+
+<%= link_to 'New Calendar', new_calendar_path, class: "btn btn-default" %>
+<%= link_to 'Update all Calendars', update_calendar_path, method: :post, class: "btn btn-default" %>
 
 <table class="table">
   <thead>
@@ -25,7 +30,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Calendar', new_calendar_path %>
