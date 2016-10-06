@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161005153548) do
+ActiveRecord::Schema.define(version: 20161006103857) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,8 +41,11 @@ ActiveRecord::Schema.define(version: 20161005153548) do
     t.integer  "is_funded_default"
     t.string   "url"
     t.integer  "region"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.datetime "last_imported"
+    t.text     "log"
+    t.boolean  "has_errors",        default: false
   end
 
   add_index "calendars", ["project_id"], name: "index_calendars_on_project_id", using: :btree

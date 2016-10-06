@@ -18,7 +18,14 @@ class CalendarsControllerTest < ActionController::TestCase
 
   test "should create calendar" do
     assert_difference('Calendar.count') do
-      post :create, calendar: { is_funded_default: @calendar.is_funded_default, project_id: @calendar.project_id, region: @calendar.region, url: @calendar.url }
+      post :create, calendar: {   is_funded_default: @calendar.is_funded_default,
+                                  project_id: @calendar.project_id,
+                                  region: @calendar.region,
+                                  url: @calendar.url,
+                                  log: @calendar.log,
+                                  last_imported: @calendar.last_imported,
+                                  has_errors: @calendar.has_errors
+                              }
     end
 
     assert_redirected_to calendar_path(assigns(:calendar))
@@ -35,7 +42,14 @@ class CalendarsControllerTest < ActionController::TestCase
   end
 
   test "should update calendar" do
-    patch :update, id: @calendar, calendar: { is_funded_default: @calendar.is_funded_default, project_id: @calendar.project_id, region: @calendar.region, url: @calendar.url }
+    patch :update, id: @calendar, calendar: { is_funded_default: @calendar.is_funded_default,
+                                              project_id: @calendar.project_id,
+                                              region: @calendar.region,
+                                              url: @calendar.url,
+                                              log: @calendar.log,
+                                              last_imported: @calendar.last_imported,
+                                              has_errors: @calendar.has_errors
+                                          }
     assert_redirected_to calendar_path(assigns(:calendar))
   end
 
