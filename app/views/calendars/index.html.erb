@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Listing Calendars <small>calendars import events</small></h1>
+  <h1>Calendars <small>(import events)</small></h1>
 </div>
 
 <%= link_to 'New Calendar', new_calendar_path, class: "btn btn-default" %>
@@ -9,23 +9,28 @@
   <thead>
     <tr>
       <th>Project</th>
+      <th>Last Import</th>
+      <th>Has errors?</th>
       <th>Funded?</th>
-      <th>Region default</th>
-      <th>Url</th>
-      <th colspan="3"></th>
+      <th>Region</th>
+      <th>Actions</th>
     </tr>
   </thead>
 
   <tbody>
     <% @calendars.each do |calendar| %>
-      <tr>
-        <td><%= calendar.project.name %></td>
+      <!-- This is pretty naughty but the latter styles beat the former ones -->
+      <tr class="success <%= 'warning' unless calendar.last_imported %> <%= 'danger' if calendar.has_errors %>">
+        <td><%= link_to calendar.project.name, calendar.project %></td>
+        <td><%= calendar.last_imported || "Never imported!" %></td>
+        <td><%= display_tick calendar.has_errors %></td>
         <td><%= display_tick calendar.is_funded_default %></td>
         <td><%= calendar.region %></td>
-        <td><%= calendar.url %></td>
-        <td><%= link_to 'Show', calendar %></td>
-        <td><%= link_to 'Edit', edit_calendar_path(calendar) %></td>
-        <td><%= link_to 'Destroy', calendar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'Show', calendar %> |
+          <%= link_to 'Edit', edit_calendar_path(calendar) %> |
+          <%= link_to 'Destroy', calendar, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
