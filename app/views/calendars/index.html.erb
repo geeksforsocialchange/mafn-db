@@ -8,6 +8,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th>ID</th>
       <th>Project</th>
       <th>Last Import</th>
       <th>Has errors?</th>
@@ -21,6 +22,7 @@
     <% @calendars.each do |calendar| %>
       <!-- This is pretty naughty but the latter styles beat the former ones -->
       <tr class="success <%= 'warning' unless calendar.last_imported %> <%= 'danger' if calendar.has_errors %>">
+        <td><%= calendar.id %></td>
         <td><%= link_to calendar.project.name, calendar.project %></td>
         <td><%= calendar.last_imported || "Never imported!" %></td>
         <td><%= display_tick calendar.has_errors %></td>
