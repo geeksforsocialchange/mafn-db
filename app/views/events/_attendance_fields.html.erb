@@ -1,10 +1,14 @@
 <div class="nested-fields">
-  <%= f.inputs do %>
-    <% if f.object.member %>
-      <%= link_to f.object.member.membership_code + " " + f.object.member.full_name, f.object.member  %>
-    <% else %>
-      <%= f.input :member, collection: Member.all.order(:last_name, :first_name) %>
+  <ul>
+    <%= f.inputs do %>
+      <li>
+        <% if f.object.member %>
+          <%= link_to "<strong>#{f.object.member.full_name}</strong> (#{f.object.member.membership_code})".html_safe, f.object.member  %>
+        <% else %>
+          <%= f.input :member, collection: Member.all.order(:last_name, :first_name) %>
+        <% end %>
+        <%= link_to_remove_association "remove", f, class: "btn btn-danger btn-xs" %>
+      </li>
     <% end %>
-    <%= link_to_remove_association "remove attendance", f %>
-  <% end %>
+  </ul>
 </div>

@@ -16,7 +16,6 @@ class EventsControllerTest < ActionController::TestCase
     assert_select "th", "Name"
     assert_select "th", "Date"
     assert_select "th", "Location"
-    assert_select "th", "Category"
   end
 
   test "should get new" do
@@ -38,7 +37,8 @@ class EventsControllerTest < ActionController::TestCase
                               category: @event.category,
                               google_id: @event.google_id,
                               is_funded: @event.is_funded,
-                              region: @event.region
+                              region: @event.region,
+                                calendar: @event.calendar
                            }
     end
     assert_redirected_to event_path(assigns(:event))
@@ -81,7 +81,8 @@ class EventsControllerTest < ActionController::TestCase
                                           category: @event.category,
                                           location: @event.location,
                                           is_funded: @event.is_funded,
-                                          region: @event.region }
+                                          region: @event.region,
+                                          calendar: @event.calendar}
     assert_redirected_to event_path(assigns(:event))
   end
 
