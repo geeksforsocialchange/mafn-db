@@ -22,14 +22,14 @@ class CalendarsController < ApplicationController
     flash[:notice] = "Import processing. Refresh in a few seconds to see updated results."
     calendars = Calendar.all
     calendars.each do |calendar|
-      CalendarImportJob.perform_now(calendar)
+      CalendarImportJob.perform_later(calendar)
     end
     redirect_to action: "index"
   end
 
   def update_event
     flash[:notice] = "Import processing. Refresh in a few seconds to see updated results."
-    CalendarImportJob.perform_now(@calendar)
+    CalendarImportJob.perform_later(@calendar)
     redirect_to action: "show"
   end
 
