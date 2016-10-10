@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161006103857) do
+ActiveRecord::Schema.define(version: 20161010110548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,8 +72,10 @@ ActiveRecord::Schema.define(version: 20161006103857) do
     t.string   "event_type_other"
     t.boolean  "is_funded",        default: false
     t.integer  "region"
+    t.integer  "calendar_id"
   end
 
+  add_index "events", ["calendar_id"], name: "index_events_on_calendar_id", using: :btree
   add_index "events", ["entity_id"], name: "index_events_on_entity_id", using: :btree
 
   create_table "locations", force: :cascade do |t|
@@ -249,6 +251,7 @@ ActiveRecord::Schema.define(version: 20161006103857) do
   add_foreign_key "attendances", "events"
   add_foreign_key "attendances", "members"
   add_foreign_key "calendars", "projects"
+  add_foreign_key "events", "calendars"
   add_foreign_key "events", "entities"
   add_foreign_key "locations", "entities"
   add_foreign_key "member_locations", "locations"

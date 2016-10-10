@@ -8,6 +8,7 @@ class CalendarsController < ApplicationController
 
   # GET /calendars/1
   def show
+    @recent_events = Event.where(calendar: @calendar).order("updated_at DESC").limit(10)
   end
 
   # GET /calendars/new

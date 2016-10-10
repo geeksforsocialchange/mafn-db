@@ -1,8 +1,10 @@
 class Event < ActiveRecord::Base
   include HasRegion
-  
+
   # Can be referenced by questions
   belongs_to :entity
+  # Is imported by a calendar
+  belongs_to :calendar
 
   # Events have attendees (members) and arrangers (projects)
   has_many :attendances

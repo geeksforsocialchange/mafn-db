@@ -31,7 +31,8 @@ class CalendarImportJob < ActiveJob::Base
                         start: e.dtstart,
                         finish: e.dtend,
                         description: e.description,
-                        location: e.location.html_safe
+                        location: e.location.html_safe,
+                        calendar_id: calendar.id
                       )
           if existing_event != existing_event_copy
             updated_events += 1
@@ -46,7 +47,8 @@ class CalendarImportJob < ActiveJob::Base
                         category: :partnership,
                         google_id: e.uid,
                         region: calendar.region,
-                        is_funded: calendar.is_funded_default
+                        is_funded: calendar.is_funded_default,
+                        calendar_id: calendar.id
                       )
           if event.valid?
             Rails.logger.info "Adding event #{e.summary} (#{e.uid})".colorize(:green)
