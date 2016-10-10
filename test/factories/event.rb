@@ -8,5 +8,7 @@ FactoryGirl.define do
       ane Rusholme Manchester M14 5AA"
     start Time.parse("Sat, 04 Jun 2016 16:22:13")
     finish Time.parse("Sat, 04 Jun 2016 18:22:13")
+    is_funded false
+    region 1
   end
 end

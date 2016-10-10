@@ -96,7 +96,7 @@
 
 <ul>
   <% @member.events.each do |e| %>
-    <li><%= "#{e.pretty_start} (#{e.duration}). #{e.name}, #{e.location}." %></li>
+    <li><%= "#{e.pretty_start rescue nil} (#{e.duration rescue nil}). #{e.name rescue nil}, #{e.location rescue nil}." %></li>
   <% end %>
 </ul>
 

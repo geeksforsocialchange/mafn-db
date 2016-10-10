@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160718114703) do
+ActiveRecord::Schema.define(version: 20161010110548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,20 @@ ActiveRecord::Schema.define(version: 20160718114703) do
   add_index "attendances", ["event_id"], name: "index_attendances_on_event_id", using: :btree
   add_index "attendances", ["member_id"], name: "index_attendances_on_member_id", using: :btree
 
+  create_table "calendars", force: :cascade do |t|
+    t.integer  "project_id"
+    t.integer  "is_funded_default"
+    t.string   "url"
+    t.integer  "region"
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.datetime "last_imported"
+    t.text     "log"
+    t.boolean  "has_errors",        default: false
+  end
+
+  add_index "calendars", ["project_id"], name: "index_calendars_on_project_id", using: :btree
+
   create_table "entities", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -46,8 +60,8 @@ ActiveRecord::Schema.define(version: 20160718114703) do
     t.integer  "category"
     t.datetime "start"
     t.string   "description"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.integer  "entity_id"
     t.datetime "finish"
     t.string   "google_id"
@@ -56,8 +70,12 @@ ActiveRecord::Schema.define(version: 20160718114703) do
     t.float    "longitude"
     t.integer  "event_type"
     t.string   "event_type_other"
+    t.boolean  "is_funded",        default: false
+    t.integer  "region"
+    t.integer  "calendar_id"
   end
 
+  add_index "events", ["calendar_id"], name: "index_events_on_calendar_id", using: :btree
   add_index "events", ["entity_id"], name: "index_events_on_entity_id", using: :btree
 
   create_table "locations", force: :cascade do |t|
@@ -208,6 +226,7 @@ ActiveRecord::Schema.define(version: 20160718114703) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "default_ward"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
@@ -231,6 +250,8 @@ ActiveRecord::Schema.define(version: 20160718114703) do
   add_foreign_key "arrangers", "projects"
   add_foreign_key "attendances", "events"
   add_foreign_key "attendances", "members"
+  add_foreign_key "calendars", "projects"
+  add_foreign_key "events", "calendars"
   add_foreign_key "events", "entities"
   add_foreign_key "locations", "entities"
   add_foreign_key "member_locations", "locations"

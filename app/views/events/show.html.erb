@@ -1,45 +1,40 @@
-<h1 class="event__name">
-  <%= @event.name %>
-</h1>
+<div class="page-header">
+  <h1 class="event__name">
+    <%= @event.name %>
+  </h1>
+</div>
 
-<p class="event__category">
-  <strong>Category:</strong>
-  <%= @event.category %>
-</p>
+<%= @event.description %>
 
-<p class="event__event-type">
-  <strong>Type:</strong>
-  <%= @event.event_type %>
-</p>
+<%= link_to 'Edit', edit_event_path(@event), class: "btn btn-default" %>
+<%= link_to 'Back', events_path, class: "btn btn-default" %>
 
-<p class="event__event-type-other">
-  <strong>Type if other:</strong>
-  <%= @event.event_type_other %>
-</p>
+<h2>Properties</h2>
 
-<p class="event__date">
-  <strong>Start:</strong>
-  <%= @event.start %>,
-  <strong>Finish:</strong>
-  <%= @event.finish %>
-</p>
+<% if @event.calendar %>
+  <p class="event__importer">
+    Last updated by <%= link_to "Calendar #{@event.calendar.id.to_s}", calendar_path(@event.calendar) %>, <%= time_ago_in_words @event.updated_at %> ago.
+  <p>
+<% end %>
 
-<p class="event__location">
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
-
-<p class="event__description">
-  <%= @event.description %>
-</p>
-
-<p class="event__google-id">
-  <strong>Google ID:</strong>
-  <%= @event.google_id %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<dl class="dl-horizontal">
+  <dt>Start:</dt>
+    <dd><%= @event.start %></dd>
+  <dt>Finish:</dt>
+    <dd><%= @event.finish %></dd>
+  <dt>Location:</dt>
+    <dd><%= @event.location %></dd>
+  <dt>Category:</dt>
+    <dd><%= @event.category %></dd>
+  <dt>Type:</dt>
+    <dd><%= @event.event_type %></dd>
+  <dt>Type if other:</dt>
+    <dd><%= @event.event_type_other %></dd>
+  <dt>Google ID:</dt>
+    <dd><%= @event.google_id %></dd>
+  <dt>Funded?:</dt>
+    <dd><%= display_tick @event.is_funded %></dd>
+</dl>
 
 <h2>Attendance</h2>
 

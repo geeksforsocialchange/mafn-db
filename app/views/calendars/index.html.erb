@@ -1,0 +1,39 @@
+<div class="page-header">
+  <h1>Calendars <small>(import events)</small></h1>
+</div>
+
+<%= link_to 'New Calendar', new_calendar_path, class: "btn btn-default" %>
+<%= link_to 'Update all Calendars', update_events_calendars_path, class: "btn btn-default" %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Project</th>
+      <th>Last Import</th>
+      <th>Has errors?</th>
+      <th>Funded?</th>
+      <th>Region</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calendars.each do |calendar| %>
+      <!-- This is pretty naughty but the latter styles beat the former ones -->
+      <tr class="success <%= 'warning' unless calendar.last_imported %> <%= 'danger' if calendar.has_errors %>">
+        <td><%= calendar.id %></td>
+        <td><%= link_to calendar.project.name, calendar.project %></td>
+        <td><%= calendar.last_imported ? "#{time_ago_in_words(calendar.last_imported)} ago" : "Never imported!" %></td>
+        <td><%= display_tick calendar.has_errors %></td>
+        <td><%= display_tick calendar.is_funded_default %></td>
+        <td><%= calendar.region %></td>
+        <td>
+          <%= link_to 'Show', calendar %> |
+          <%= link_to 'Edit', edit_calendar_path(calendar) %> |
+          <%= link_to 'Destroy', calendar, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

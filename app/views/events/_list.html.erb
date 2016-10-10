@@ -3,9 +3,10 @@
     <thead>
       <tr>
         <th><%= smart_listing.sortable "Name", :name %></th>
-        <th>Category</th>
         <th><%= smart_listing.sortable "Date", :start %></th>
         <th>Finished?</th>
+        <th>Funded?</th>
+        <th>Region</th>
         <th>Location</th>
         <th></th>
       </tr>
@@ -15,10 +16,11 @@
       <% @events.each do |event| %>
         <tr>
           <td><%= link_to event.name, event %></td>
-          <td><%= event.category %></td>
           <td><%= event.start.to_date %></td>
           <td><%= display_tick event.start > Date.today %></td>
-          <td><%= event.location %></td>
+          <td><%= display_tick event.is_funded %></td>
+          <td><%= event.region %></td>
+          <td><%= truncate(event.location, length: 50, omission: '...') %></td>
           <td>
             <%= link_to event do %>
               <i class="glyphicon glyphicon-eye-open"></i>

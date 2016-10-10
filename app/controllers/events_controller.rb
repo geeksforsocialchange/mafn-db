@@ -6,16 +6,9 @@ class EventsController < ApplicationController
 
   # GET /events
   def index
-    events_scope = Event.all
+    events_scope = Event.order(:start)
     events_scope = events_scope.like(params[:filter]) if params[:filter]
     @events = smart_listing_create(:events, events_scope, partial: "events/list")
-  end
-
-  def update_calendar
-    flash[:notice] = "Import processing. Refresh in a few seconds to see updated results."
-    CalendarImportJob.perform_later
-    @events = Event.all
-    render action: "index"
   end
 
   def demographics
@@ -83,6 +76,9 @@ class EventsController < ApplicationController
                                       :event_type_other,
                                       :description,
                                       :google_id,
+                                      :is_funded,
+                                      :region,
+                                      :calendar,
                                       attendances_attributes: [
                                         :id,
                                         :event_id,

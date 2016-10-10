@@ -1,0 +1,37 @@
+<div class="page-header">
+  <h1>Calendar <%= @calendar.id %></h1>
+</div>
+
+<%= link_to 'Edit', edit_calendar_path(@calendar), class: "btn btn-default" %>
+<%= link_to 'Update', update_event_calendar_path(@calendar), class: "btn btn-default" %>
+<%= link_to 'Back', calendars_path, class: "btn btn-default" %>
+
+<h2>Properties</h2>
+
+<dl class="dl-horizontal">
+  <dt>Associated project</dt>
+    <dd><%= link_to @calendar.project.name, project_path(@calendar.project) %></dd>
+  <dt>Default "funded" status</dt>
+    <dd><%= display_tick @calendar.is_funded_default %></dd>
+  <dt>Url</dt>
+    <dd><%= link_to @calendar.url, @calendar.url %></dd>
+  <dt>Default region</dt>
+    <dd><%= @calendar.region %></dd>
+</dl>
+
+
+<h2>Log</h2>
+
+<pre><%= @calendar.log %></pre>
+
+<h2>Recent events updated</h2>
+
+<ul>
+  <% @recent_events.each do |event| %>
+    <li>
+      <%= link_to event_path(event) do %>
+        <%= event.start.to_date %>. <%= event.name %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

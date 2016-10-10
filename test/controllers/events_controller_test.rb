@@ -16,7 +16,6 @@ class EventsControllerTest < ActionController::TestCase
     assert_select "th", "Name"
     assert_select "th", "Date"
     assert_select "th", "Location"
-    assert_select "th", "Category"
   end
 
   test "should get new" do
@@ -36,7 +35,10 @@ class EventsControllerTest < ActionController::TestCase
                               event_type: @event.event_type,
                               event_type_other: @event.event_type_other,
                               category: @event.category,
-                              google_id: @event.google_id
+                              google_id: @event.google_id,
+                              is_funded: @event.is_funded,
+                              region: @event.region,
+                                calendar: @event.calendar
                            }
     end
     assert_redirected_to event_path(assigns(:event))
@@ -45,14 +47,6 @@ class EventsControllerTest < ActionController::TestCase
   test "should show event" do
     get :show, id: @event
     assert_response :success
-    assert_select ".event__name"
-    assert_select ".event__date"
-    assert_select ".event__location"
-    assert_select ".event__description"
-    assert_select ".event__event-type"
-    assert_select ".event__event-type-other"
-    assert_select ".event__category"
-    assert_select ".event__google-id"
   end
 
   test "should get edit" do
@@ -76,7 +70,10 @@ class EventsControllerTest < ActionController::TestCase
                                           event_type: @event.event_type,
                                           event_type_other: @event.event_type_other,
                                           category: @event.category,
-                                          location: @event.location }
+                                          location: @event.location,
+                                          is_funded: @event.is_funded,
+                                          region: @event.region,
+                                          calendar: @event.calendar}
     assert_redirected_to event_path(assigns(:event))
   end
 
