@@ -64,7 +64,7 @@ class CalendarImportJob < ActiveJob::Base
         # Update the time stamp and save
         log = "#{Time.now} \n\n"
         log += "#{created_events} added \n#{updated_events} updated \n#{events_with_errors} errors \n"
-        if events_with_errors
+        if events_with_errors > 0
           log += error_log
           calendar.has_errors = true
         else
