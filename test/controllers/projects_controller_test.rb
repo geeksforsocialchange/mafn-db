@@ -24,7 +24,8 @@ class ProjectsControllerTest < ActionController::TestCase
                                 resident_seconder_id: @project.resident_seconder_id,
                                 start: @project.start,
                                 finish: @project.finish,
-                                region: @project.region
+                                region: @project.region,
+                                description: @project.description
                               }
     end
 
@@ -47,8 +48,9 @@ class ProjectsControllerTest < ActionController::TestCase
                                             resident_champion_id: @project.resident_champion_id,
                                             resident_seconder_id: @project.resident_seconder_id,
                                             start: @project.start,
-                                            finish: @project.finish, 
-                                            region: @project.region
+                                            finish: @project.finish,
+                                            region: @project.region,
+                                            description: @project.description
                                           }
     assert_redirected_to project_path(assigns(:project))
   end
