@@ -3,7 +3,7 @@
 </div>
 
 <%= link_to 'New Event', new_event_path, class: "btn btn-default" %>
-<%= link_to 'Update all Events', update_calendar_path, method: :post, class: "btn btn-default" %>
+<%= link_to 'Update all Events', update_events_calendars_path, class: "btn btn-default" %>
 
 <%= smart_listing_controls_for(:events,  {class: "form-inline text-right"}) do %>
   <%= render "smart_listing/filter" %>

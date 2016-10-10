@@ -1,12 +1,19 @@
 Rails.application.routes.draw do
 
-  resources :calendars
 
   devise_for :users
 
   resources :arrangers
   resources :attendances
   resources :events
+  resources :calendars do
+    collection do
+      get 'update_events'
+    end
+    member do
+      get 'update_event'
+    end
+  end
   resources :locations
   resources :member_locations
   resources :members do
@@ -46,8 +53,6 @@ Rails.application.routes.draw do
       get 'followup_questionnaire', to: 'exports#questionnaire', defaults: { followup: true }
     end
   end
-
-  post 'update_calendar', to: 'events#update_events'
 
   root 'welcome#index'
 end

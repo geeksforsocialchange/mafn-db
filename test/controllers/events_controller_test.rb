@@ -47,15 +47,6 @@ class EventsControllerTest < ActionController::TestCase
   test "should show event" do
     get :show, id: @event
     assert_response :success
-    assert_select ".event__name"
-    assert_select ".event__date"
-    assert_select ".event__location"
-    assert_select ".event__description"
-    assert_select ".event__event-type"
-    assert_select ".event__event-type-other"
-    assert_select ".event__category"
-    assert_select ".event__google-id"
-    assert_select ".event__is-funded"
   end
 
   test "should get edit" do

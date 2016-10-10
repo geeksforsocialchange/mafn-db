@@ -1,5 +1,5 @@
 class CalendarsController < ApplicationController
-  before_action :set_calendar, only: [:show, :edit, :update, :destroy]
+  before_action :set_calendar, only: [:show, :edit, :update, :destroy, :update_event]
 
   # GET /calendars
   def index
@@ -14,6 +14,23 @@ class CalendarsController < ApplicationController
   # GET /calendars/new
   def new
     @calendar = Calendar.new
+  end
+
+  # GET /
+  # Iterate calendars and update events in each
+  def update_events
+    flash[:notice] = "Import processing. Refresh in a few seconds to see updated results."
+    calendars = Calendar.all
+    calendars.each do |calendar|
+      CalendarImportJob.perform_now(calendar)
+    end
+    redirect_to action: "index"
+  end
+
+  def update_event
+    flash[:notice] = "Import processing. Refresh in a few seconds to see updated results."
+    CalendarImportJob.perform_now(@calendar)
+    redirect_to action: "show"
   end
 
   # GET /calendars/1/edit
@@ -39,6 +56,7 @@ class CalendarsController < ApplicationController
       render :edit
     end
   end
+
 
   # DELETE /calendars/1
   def destroy

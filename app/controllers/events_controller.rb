@@ -11,15 +11,6 @@ class EventsController < ApplicationController
     @events = smart_listing_create(:events, events_scope, partial: "events/list")
   end
 
-  def update_events
-    flash[:notice] = "Import processing. Refresh in a few seconds to see updated results."
-    calendars = Calendar.all
-    calendars.each do |calendar|
-      CalendarImportJob.perform_now(calendar)
-    end
-    redirect_to action: "index"
-  end
-
   def demographics
     @events = Event.all
     respond_to do |format|
