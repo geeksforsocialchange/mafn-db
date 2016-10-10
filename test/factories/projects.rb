@@ -7,5 +7,6 @@ FactoryGirl.define do
     association :primary_partner_organisation, factory: :organisation
     association :resident_champion, factory: :member
     association :resident_seconder, factory: :member
+    description "Description of the project"
   end
 end

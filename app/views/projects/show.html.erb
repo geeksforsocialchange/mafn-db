@@ -1,36 +1,69 @@
-<h1>Project: <%= @project.name %></h1>
+<div class="col-md-12">
+  <div class="page-header">
+    <h1>Project: <%= @project.name %></h1>
+  </div>
 
-<p>
-  <strong>Start:</strong>
-  <%= @project.start %>
-</p>
+  <p><%= @project.description %></p>
 
-<p>
-  <strong>Finish:</strong>
-  <%= @project.finish %>
-</p>
+  <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-default" %>
+  <%= link_to 'Back', projects_path, class: "btn btn-default" %>
+</div>
 
-<p>
-  <strong>Region:</strong>
-  <%= @project.region %>
-</p>
+<div class="col-md-9">
+  <h2>Properties</h2>
+
+  <dl class="dl dl-horizontal">
+    <dt>Start</dt>
+    <dd><%= @project.start %></dd>
+    <dt>Finish</dt>
+    <dd><%= @project.finish %></dd>
+    <dt>Region</dt>
+    <dd><%= @project.region %></dd>
+    <dt>Primary partner</dt>
+    <dd><%= link_to @project.primary_partner_organisation.name, organisations_path(@project.primary_partner_organisation) rescue nil %></dd>
+    <dt>Resident champion</dt>
+    <dd><%= link_to @project.resident_champion.name, member_path(@project.resident_champion) rescue nil %></dd>
+    <dt>Resident seconder</dt>
+    <dd><%= link_to @project.resident_seconder.name, member_path(@project.resident_seconder) rescue nil %></dd>
+  </dl>
 
 
-<p>
-  <strong>Primary partner organisation:</strong>
-  <%= link_to @project.primary_partner_organisation.name, organisations_path(@project.primary_partner_organisation) rescue nil %>
+  <% if @respondees.length > 0 %>
+    <h2>Questions</h2>
 
-</p>
+    <p>Question responses by <%= @respondees.each.map { |m| link_to m.name, member_path(m) }.join(", ").html_safe %></p>
 
-<p>
-  <strong>Resident champion:</strong>
-  <%= link_to @project.resident_champion.name, member_path(@project.resident_champion) rescue nil %>
-</p>
-
-<p>
-  <strong>Resident seconder:</strong>
-  <%= link_to @project.resident_seconder.name, member_path(@project.resident_seconder) rescue nil %>
-</p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+    <dl>
+      <% @project_questions.each do |r| %>
+        <dt><strong><%= r.question.question %></strong></dt>
+        <dd><%= link_to r.formatted_response, question_response_path(r.id) %> <em>(<%= time_ago_in_words(r.created_at) %> ago, <%= link_to "edit", edit_question_response_path(r.id) %>, <%= link_to "delete", r, method: :delete, data: { confirm: 'Are you sure?' } %>)</em></dd>
+      <% end %>
+    </dl>
+  <% end %>
+</div>
+<div class="col-md-3">
+  <% if @project.members.length > 0 %>
+    <h3>Volunteers</h3>
+    <ul class="list-unstyled">
+      <% @project.members.each do |member| %>
+        <li><%= link_to member.name, member_path(member) %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <% if @project.events.length > 0 %>
+    <h3>Events</h3>
+    <ul class="list-unstyled">
+      <% @project.events.each do |event| %>
+        <li><%= link_to event.name, event_path(event) %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <% if @project.organisations.length > 0 %>
+    <h3>Organisations</h3>
+    <ul class="list-unstyled">
+      <% @project.organisations.each do |organisation| %>
+        <li><%= link_to organisation.name, organisation_path(organisation) %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

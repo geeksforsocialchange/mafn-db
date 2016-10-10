@@ -8,6 +8,8 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1
   def show
+    @project_questions = QuestionResponse.where(entity_id: @project.entity_id)
+    @respondees = @project_questions.pluck(:member_id).uniq.map { |m| Member.find(m) }
   end
 
   # GET /projects/new
@@ -53,6 +55,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def project_params
-      params.require(:project).permit(:name, :start, :finish, :region, :primary_partner_organisation_id, :resident_champion_id, :resident_seconder_id)
+      params.require(:project).permit(:name, :start, :finish, :region, :primary_partner_organisation_id, :resident_champion_id, :resident_seconder_id, :description)
     end
 end
