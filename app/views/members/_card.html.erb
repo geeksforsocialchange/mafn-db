@@ -1,9 +1,9 @@
 <div class="card card__region-<%= member[:region] %>">
   <div class="card__front">
-    <h1 class="center">I am Age Friendly!</h1>
-    <p class="card__field h2"><label>Name</label> <span><%= member.name %></span></p>
-    <p class="card__field h2"><label>Number</label> <span><%= member.membership_code %></span></p>
-    <p class="right h2">Membership Card</p>
+    <h1 class="center card__title card__h1">I am Age Friendly!</h1>
+    <p class="card__field"><label>Name</label> <span><%= member.name %></span></p>
+    <p class="card__field"><label>Number</label> <span><%= member.membership_code %></span></p>
+    <p class="right">Membership Card</p>
   </div>
   <div class="card__back">
 
@@ -24,9 +24,9 @@
       </table>
     </div>
 
-    <h1 class="card__region"><%= member.region %> Age Friendly Partnership</h1>
+    <h1 class="card__region card__h1"><%= member.region %> Age Friendly Partnership</h1>
 
-    <div class="card__meta center h2">
+    <div class="card__meta center">
       <%= member.region_email %><br>
       <%= member.region_website %>
     </div>

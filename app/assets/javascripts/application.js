@@ -12,4 +12,3 @@
 //= require smart_listing
 
 //= require partials/_cocoon
-//= require partials/_tables

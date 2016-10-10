@@ -1,4 +1,4 @@
-$card-spacing: 0.5em
+$card-spacing: 1em
 
 .card
   color: white
@@ -6,18 +6,43 @@ $card-spacing: 0.5em
   margin-bottom: 1em
   display: inline-block
 
+  font-size: 1.2em
+  font-weight: bold
+
+  &__h1
+    font-size: 1.75em
+    margin-top: 0.25em
+
+  &__title
+    margin-bottom: 0.9em
+
+  &__region
+    font-size: 1.25em
+
   @media print
     &:nth-of-type(4)
       page-break-after: always
 
   &__region-0
-    background-color: $hulme
+    .card__front
+      background-color: $hulme
+    .card__back
+      background-color: $hulme-light
   &__region-1
-    background-color: $burnage
+    .card__front
+      background-color: $burnage
+    .card__back
+      background-color: $burnage-light
   &__region-2
-    background-color: $moston
+    .card__front
+      background-color: $moston
+    .card__back
+      background-color: $moston-light
   &__region-3
-    background-color: $milesplatting
+    .card__front
+      background-color: $milesplatting
+    .card__back
+      background-color: $milesplatting-light
 
   &__front
     border-bottom: 1px solid #aaa
@@ -29,6 +54,7 @@ $card-spacing: 0.5em
     box-sizing: border-box
 
   &__back
+    color: $card-primary
     position: relative
     transform: rotate(180deg)
 
@@ -41,15 +67,12 @@ $card-spacing: 0.5em
       display: block
       overflow: hidden
       background-color: white
-      color: black
+      color: $card-primary
       padding: 0.25em
 
   &__qr
+    margin-top: 0.25em
     float: right
-
-  &__region
-    margin-top: 0
-    line-height: 1.1em
 
   &__meta
     position: absolute
