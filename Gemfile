@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 # API app
-gem 'sinatra'
-gem "sinatra-activerecord"
+gem 'grape'
+gem 'hashie-forbidden_attributes'
 
 # Admin app
 gem 'rails', '4.2.0'
