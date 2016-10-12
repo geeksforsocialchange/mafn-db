@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # API app
 gem 'grape'
+gem 'grape-swagger'
+gem 'grape-swagger-rails'
 gem 'hashie-forbidden_attributes'
 
 # Admin app
