@@ -9,8 +9,18 @@ class API < Grape::API
   # Rescue all errors and return as JSON instead
   rescue_from :all
 
-  # Just returning events for now
-  mount Placecal::Events
+  resource :events do
+    desc "List of upcoming events"
+    get do
+      @events = Event.limit(20)
+      present @events, with: Entities::Event
+    end
+
+    get ':id' do
+      @event = Event.find(params[:id])
+      present @event, with: Entities::Event
+    end
+  end
 
   # Create documentation
   add_swagger_documentation(
