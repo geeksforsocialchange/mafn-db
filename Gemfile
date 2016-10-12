@@ -1,8 +1,12 @@
 source 'https://rubygems.org'
 
 # API app
-gem 'sinatra'
-gem "sinatra-activerecord"
+gem 'grape'
+gem 'grape-entity'
+gem 'grape-swagger'
+gem 'grape-swagger-entity'
+gem 'grape-swagger-rails'
+gem 'hashie-forbidden_attributes'
 
 # Admin app
 gem 'rails', '4.2.0'
