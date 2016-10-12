@@ -10,12 +10,15 @@ class API < Grape::API
   rescue_from :all
 
   resource :events do
-    desc "List of upcoming events"
+    desc "List of upcoming events" do
+      params Entities::Event.documentation
+    end
     get do
       @events = Event.limit(20)
       present @events, with: Entities::Event
     end
 
+    desc "Details for a single event"
     get ':id' do
       @event = Event.find(params[:id])
       present @event, with: Entities::Event
@@ -24,7 +27,7 @@ class API < Grape::API
 
   # Create documentation
   add_swagger_documentation(
-      base_path: "/api",
+      base_path: "/",
       hide_documentation_path: true
     )
 end

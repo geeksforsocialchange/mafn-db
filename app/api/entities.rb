@@ -8,17 +8,17 @@ module Entities
     #   optional :start, type: DateTime, default: Time.now
     #   optional :region, type: Integer, default: 0
     # end
-    expose :id
+    expose :id, documentation: { type: "Integer", desc: "Unique key for this API" }
     expose :name
     expose :description
-    expose :start
-    expose :finish
+    expose :start, documentation: { type: "DateTime", desc: "Start time" }
+    expose :finish, documentation: { type: "DateTime", desc: "Finish time" }
     expose :created_at
     expose :updated_at
-    expose :google_id
+    expose :google_id, documentation: { type: "String", desc: "Google Calendar ID this is scraped from" }
     expose :location
     expose :latitude
     expose :longitude
-    expose :region
+    expose :region, documentation: { type: "Integer", desc: "Region code" }
   end
 end
