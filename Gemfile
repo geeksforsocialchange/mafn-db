@@ -6,6 +6,7 @@ gem 'grape-entity'
 gem 'grape-swagger'
 gem 'grape-swagger-entity'
 gem 'grape-swagger-rails'
+gem 'rack-cors'
 gem 'hashie-forbidden_attributes'
 
 # Admin app
