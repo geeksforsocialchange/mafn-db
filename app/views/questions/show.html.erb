@@ -1,14 +1,23 @@
-<p id="notice"><%= notice %></p>
-
+<h1>
+  <strong><%= @question.category.humanize %></strong> question:
+  "<%= @question.question %>"
+</h1>
 <p>
-  <strong><%= @question.category %> question:</strong>
-  <%= @question.question %>
+  <strong>Response options:</strong>
+  <code><%= @question.response %></code>
 </p>
 
-<p>
-  <strong>Response:</strong>
-  <%= @question.response %>
-</p>
+<%= link_to 'Edit', edit_question_path(@question), class: "btn btn-default" %>
+<%= link_to 'Back', questions_path, class: "btn btn-default" %>
 
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
+<hr>
+
+<h2>Responses</h2>
+
+<ul>
+  <% @question.question_responses.each do |r| %>
+    <li>
+      <strong><%= link_to r.responder.full_name, r.responder %></strong> responded (<%= r.created_at.to_date %>): <strong><%= link_to r.formatted_response, r %></strong>
+    </li>
+  <% end %>
+</ul>
