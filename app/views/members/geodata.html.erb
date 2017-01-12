@@ -1,0 +1,9 @@
+<h1>Listing Member Geodata</h1>
+
+<p><%= link_to 'Download CSV list', geodata_members_path(format: :csv), class: "btn btn-default" %></p>
+
+<code>
+  <% @geodata.each do |geo| %>
+    <%= geo.first %>,
+  <% end %>
+</code>

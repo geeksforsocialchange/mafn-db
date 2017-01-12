@@ -113,4 +113,13 @@ class Member < ActiveRecord::Base
   def membership_code
     "AFN-#{self.region_code}-#{self.id.to_s.rjust(4, '0')}-#{self.initials}"
   end
+
+  def current_postcode
+    begin
+      postcode = Member.first.member_locations.where(to: nil).last.location.postcode
+    rescue
+      postcode = false
+    end
+    postcode
+  end
 end

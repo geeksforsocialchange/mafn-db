@@ -1,0 +1,5 @@
+<%- headers = ['Postcode'] -%>
+<%= CSV.generate_line headers %>
+<%- @geodata.each do |geo| -%>
+<%= CSV.generate_line([geo[0]]) -%>
+<%- end -%>

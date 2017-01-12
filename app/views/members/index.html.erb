@@ -1,7 +1,8 @@
 <h1>Listing Members</h1>
 
-<%= link_to 'New Member', new_member_path, class: "btn btn-default" %>
-<%= link_to 'Print Cards', cards_members_path, class: "btn btn-default" %>
+<%= link_to 'Add new nember', new_member_path, class: "btn btn-default" %>
+<%= link_to 'Print membership cards', cards_members_path, class: "btn btn-default" %>
+<%= link_to 'Download postcodes', geodata_members_path(format: :csv), class: "btn btn-default" %>
 
 <%= smart_listing_controls_for(:members,  {class: "form-inline text-right"}) do %>
   <div class="form-group autoselect">

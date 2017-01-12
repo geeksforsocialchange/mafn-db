@@ -39,6 +39,18 @@ class MembersController < ApplicationController
     #@questions = QuestionSet.first.questions
   end
 
+  def geodata
+    # Array this for when we add in lat/lng later
+    @geodata = Member.all.map { |m| [m.current_postcode] }
+    respond_to do |format|
+      format.html
+      format.csv do
+        headers['Content-Disposition'] = "attachment; filename=\"member-postcodes\""
+        headers['Content-Type'] ||= 'text/csv'
+      end
+    end
+  end
+
   # POST /members
   def create
     @member = Member.new(member_params)

@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     collection do
       get 'cards'
       get 'export_preview'
+      get 'geodata'
     end
     member do
       get 'card'
