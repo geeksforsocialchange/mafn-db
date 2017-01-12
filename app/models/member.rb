@@ -116,7 +116,7 @@ class Member < ActiveRecord::Base
 
   def current_postcode
     begin
-      postcode = Member.first.member_locations.where(to: nil).last.location.postcode
+      postcode = self.member_locations.where(to: nil).last.location.postcode
     rescue
       postcode = false
     end
