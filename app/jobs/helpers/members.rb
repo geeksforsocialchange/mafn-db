@@ -30,7 +30,8 @@ def generate_members members
     "Other religion",
     "Sexual Orientation",
     "What do you think makes an age friendly neighbourhood",
-    "Education level"
+    "Education level",
+    "Marital Status"
   ]
   @members.each do |member|
     ethnicity = member.export_ethnicity
@@ -70,7 +71,8 @@ def generate_members members
       get_response(member, "Other religion"),
       get_response(member, "Sexual orientation"),
       get_response(member, "What do you think makes an ‘age friendly neighbourhood’?"),
-      get_response(member, "What is your highest level of education?")
+      get_response(member, "What is your highest level of education?"),
+      get_response(member, "What is your marital status?")
     ]
   end
   return array
