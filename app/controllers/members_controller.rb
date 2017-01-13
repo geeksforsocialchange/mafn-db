@@ -47,7 +47,7 @@ class MembersController < ApplicationController
     respond_to do |format|
       format.html
       format.csv do
-        headers['Content-Disposition'] = "attachment; filename=\"member-postcodes\""
+        headers['Content-Disposition'] = "attachment; filename=\"member-postcodes.csv\""
         headers['Content-Type'] ||= 'text/csv'
       end
     end
