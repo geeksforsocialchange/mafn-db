@@ -23,6 +23,7 @@ Rails.application.routes.draw do
       get 'cards'
       get 'export_preview'
       get 'geodata'
+      get 'check_duplicate'
     end
     member do
       get 'card'

@@ -1,0 +1,10 @@
+<div class="panel panel-warning">
+  <div class="panel-heading">Possible duplicate users</div>
+  <div class="panel-body">
+    <ul>
+      <% @members.each do |m| %>
+        <li><%= link_to m.full_name, m %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

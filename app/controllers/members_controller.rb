@@ -53,6 +53,14 @@ class MembersController < ApplicationController
     end
   end
 
+  def check_duplicate
+    @members = Member.where('last_name = ?', params[:last_name])
+    @members = false if @members.length == 0
+    respond_to do |format|
+      format.html { render layout: false }
+    end
+  end
+
   # POST /members
   def create
     @member = Member.new(member_params)
