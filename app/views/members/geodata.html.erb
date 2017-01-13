@@ -2,8 +2,18 @@
 
 <p><%= link_to 'Download CSV list', geodata_members_path(format: :csv), class: "btn btn-default" %></p>
 
-<code>
-  <% @geodata.each do |geo| %>
-    <%= geo.first %>,
-  <% end %>
-</code>
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>Postcode</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @geodata.each do |geo| %>
+      <tr>
+        <td><%= geo.second %></td>
+        <td><%= geo.first %></td>
+      </tr>
+    <% end %>
+</table>

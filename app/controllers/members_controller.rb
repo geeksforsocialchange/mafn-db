@@ -41,7 +41,7 @@ class MembersController < ApplicationController
 
   def geodata
     # Array this for when we add in lat/lng later
-    postcodes = Member.all.map { |m| [m.current_postcode] }
+    postcodes = Member.all.map { |m| [m.current_postcode, m.membership_code] }
     @geodata = postcodes.select { |p| p[0] && p[0].length > 0 }
 
     respond_to do |format|
