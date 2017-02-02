@@ -58,7 +58,7 @@ def row(member, params)
     # "Other social network",
     get_response(member, "Other social networking websites", params),
     # "Do you use email",
-    get_response(member, "How many hours do you spend chatting or interacting with friends or family on social networking websites or email on a normal day?", params),
+    get_response(member, "Do you use email?", params),
     # "Hours on social media, websites, email",
     get_response(member, "How many hours do you spend chatting or interacting with friends or family on social networking websites or email on a normal day?"),
     # "participant- do you currently volunteer",
@@ -76,7 +76,7 @@ def row(member, params)
     # "I can influence decisions affecting my local area",
     get_response(member, "I can influence decisions affecting my local area", params),
     # "How often do you talk to your neighbours?",
-    get_response(member, "On average, how often do you - Talk to your neighbours", params),
+    get_response(member, "How often do you typically talk to your neighbours?", params),
     # "I feel like I belong to this neighbourhood",
     get_response(member, "I feel like I belong to this neighbourhood", params),
     # "The friendships and associations I have with other people in my neighbourhood mean a lot to me",
@@ -88,7 +88,7 @@ def row(member, params)
     # "I would be willing to work together with others on something to improve my neighbourhood",
     get_response(member, "I would be willing to work together with others on something to improve my neighbourhood", params),
     # "I regularly stop and talk with people in my neighbourhood",
-    get_response(member, "On average, how often do you - Talk to your neighbours", params),
+    get_response(member, "I regularly stop and talk to people in my neighbourhood", params),
 
     # Volunteer extra questions
 
@@ -123,7 +123,9 @@ def row(member, params)
     # "Organisation 3
     volunteering[7],
     # "Date Started Role 3
-    volunteering[8]
+    volunteering[8],
+
+    get_response(member, "What is your living situation?", params)
   ]
 end
 
@@ -182,7 +184,10 @@ def generate_questionnaires(members)
     "Date Started Role 2",
     "Role 3",
     "Organisation 3",
-    "Date Started Role 3"
+    "Date Started Role 3",
+
+    # Extra
+    "What is your living situation?"
   ]
   @members.each do |member|
     if !@followup
