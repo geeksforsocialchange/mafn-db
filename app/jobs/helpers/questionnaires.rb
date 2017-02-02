@@ -123,9 +123,7 @@ def row(member, params)
     # "Organisation 3
     volunteering[7],
     # "Date Started Role 3
-    volunteering[8],
-
-    get_response(member, "What is your living situation?", params)
+    volunteering[8]
   ]
 end
 
@@ -184,10 +182,7 @@ def generate_questionnaires(members)
     "Date Started Role 2",
     "Role 3",
     "Organisation 3",
-    "Date Started Role 3",
-
-    # Extra
-    "What is your living situation?"
+    "Date Started Role 3"
   ]
   @members.each do |member|
     if !@followup
