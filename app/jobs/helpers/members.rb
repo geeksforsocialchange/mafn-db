@@ -74,7 +74,7 @@ def generate_members members
       get_response(member, "What do you think makes an ‘age friendly neighbourhood’?"),
       get_response(member, "What is your highest level of education?"),
       get_response(member, "What is your marital status?"),
-      get_response(member, "What is your living situation?", params)
+      get_response(member, "What is your living situation?")
     ]
   end
   return array
