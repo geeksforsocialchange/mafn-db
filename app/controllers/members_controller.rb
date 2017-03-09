@@ -7,7 +7,7 @@ class MembersController < ApplicationController
   # GET /members
   def index
     members_scope = Member.all
-    unless !params[:filter_region] && !params[:filter]
+    unless params && !params[:filter_region] && !params[:filter]
       members_scope = members_scope.filter_region(params[:filter_region]) unless (params[:filter_region]) == ""
       members_scope = members_scope.like(params[:filter]) if params[:filter]
     end

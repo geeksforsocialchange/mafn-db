@@ -8,9 +8,9 @@
     <%= f.input :dob, :as => :date_picker %>
     <%= f.input :ethnic_background, :as => :radio %>
     <%= f.input :ethnic_background_other %>
-    <%= f.input :tel %>
-    <%= f.input :mob %>
-    <%= f.input :email %>
+    <%= f.input :tel, :as => :phone %>
+    <%= f.input :mob, :as => :phone %>
+    <%= f.input :email, :as => :email  %>
     <%= f.input :notes, :as => :text, :input_html => { :class => 'autogrow', :rows => 5 } %>
     <div class="js-member-locations">
       <%= f.semantic_fields_for :member_locations do |member_location| %>
