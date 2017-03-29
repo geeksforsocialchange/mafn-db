@@ -1,0 +1,9 @@
+{
+  "name": "mafn",
+  "description": "Manchester Age Friendly Neighbourhoods' database",
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:migrate"
+    }
+  }
+}
