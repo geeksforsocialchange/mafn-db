@@ -22,4 +22,4 @@ development:
 
 production:
   <<: *default
-  url:  <%= ENV['DATABASE_URL'] %>
+  url:  <%= ENV['POSTGRESQL_URL'] %>
