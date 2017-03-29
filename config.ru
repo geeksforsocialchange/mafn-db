@@ -1,3 +1,4 @@
+#=== API access config ===
 # Let other apps use our API
 require 'rack/cors'
 use Rack::Cors do
