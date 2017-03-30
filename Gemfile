@@ -84,6 +84,7 @@ group :development do
   gem 'rack-livereload'
   gem 'guard-livereload'
   gem 'fontello_rails_converter'
+  gem 'mocha'
 end
 
 group :test do

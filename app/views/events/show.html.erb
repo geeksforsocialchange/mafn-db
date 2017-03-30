@@ -1,4 +1,4 @@
-<div class="page-header">
+  <div class="page-header">
   <h1 class="event__name">
     <%= @event.name %>
   </h1>
@@ -23,7 +23,9 @@
   <dt>Finish:</dt>
     <dd><%= @event.finish %></dd>
   <dt>Location:</dt>
-    <dd><%= @event.location %></dd>
+    <dd><%= @event.location %>
+      (lat: <%= @event.latitude %>, lon: <%= @event.longitude %>)
+    </dd>
   <dt>Category:</dt>
     <dd><%= @event.category %></dd>
   <dt>Type:</dt>
