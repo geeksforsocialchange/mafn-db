@@ -1,1 +1,20 @@
 <h1>Manchester Age Friendly Neighbourhoods</h1>
+
+<script>
+  var mapMarkers = [
+    <% @events.each do |e| %>
+      {
+        name: "<%= e.name %>",
+        lat:  <%= e.latitude %>,
+        lon:  <%= e.longitude %>,
+        i:    <%= e.id %>,
+        href: "<%= event_path(e) %>",
+        region: "<%= e.region.parameterize if e.region %>"
+      },
+    <% end %>
+  ]
+</script>
+
+<h2>Event Map</h2>
+
+<div id="js-event-map" class="map map--event"></div>

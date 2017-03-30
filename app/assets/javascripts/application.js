@@ -8,8 +8,13 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //  require turbolinks
+
 //= require cocoon
 //= require smart_listing
 
+//= require leaflet
+//= require leaflet.markercluster
+
 //= require partials/_cocoon
 //= require partials/_check-name
+//= require partials/_map
