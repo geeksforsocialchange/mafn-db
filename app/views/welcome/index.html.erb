@@ -1,20 +1,36 @@
 <h1>Manchester Age Friendly Neighbourhoods</h1>
 
-<script>
-  var mapMarkers = [
-    <% @events.each do |e| %>
-      {
-        name: "<%= e.name %>",
-        lat:  <%= e.latitude %>,
-        lon:  <%= e.longitude %>,
-        i:    <%= e.id %>,
-        href: "<%= event_path(e) %>",
-        region: "<%= e.region.parameterize if e.region %>"
-      },
-    <% end %>
-  ]
-</script>
+<% cache [@events, @members] do %>
+  <script>
+    var eventMarkers = [
+      <% @events.each do |e| %>
+        {
+          name: "<%= e.name %>",
+          lat:  <%= e.latitude %>,
+          lon:  <%= e.longitude %>,
+          i:    <%= e.id %>,
+          href: "<%= event_path(e) %>",
+          region: "<%= e.region.parameterize if e.region %>"
+        },
+      <% end %>
+    ]
+    var memberMarkers = [
+      <% @members.each do |m| %>
+        <% c = m.current_coords %>
+        <% next unless c %>
+        {
+          name: "<%= m.full_name %>",
+          lat:  <%= c[0] %>,
+          lon:  <%= c[1] %>,
+          i:    <%= m.id %>,
+          href: "<%= member_path(m) %>",
+          region: "<%= m.region.parameterize if m.region %>"
+        },
+      <% end %>
+    ]
+  </script>
+<% end %>
 
-<h2>Event Map</h2>
+<h2>Members</h2>
 
 <div id="js-event-map" class="map map--event"></div>

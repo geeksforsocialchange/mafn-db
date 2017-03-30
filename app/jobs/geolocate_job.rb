@@ -24,6 +24,7 @@ class GeolocateJob < ActiveJob::Base
     puts "Geocoded #{address_string} to #{result['result']['latitude']}, #{result['result']['longitude']}".colorize(:green)
   end
 
+  # Check that this is a legitimate postcode
   def self.extract_postcode(address_string)
     a = address_string.match(POSTCODE_REGEX)
     return a[0].delete(' ') if a

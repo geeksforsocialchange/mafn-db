@@ -5,7 +5,7 @@ $( document ).ready(function() {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-  if ( mapMarkers ) {
+  if ( memberMarkers ) {
     // These are the icon options for the default leaflet marker at the time of
     // writing. I've altered the marker to make space for a number.
     var iconOpts = {
@@ -18,7 +18,7 @@ $( document ).ready(function() {
 
     var cluster = L.markerClusterGroup({maxClusterRadius:20});
 
-    mapMarkers.forEach( function(m) {
+    memberMarkers.forEach( function(m) {
 
         iconOpts.html = '<span class="map__icon map__icon--region-'+m.region+'">'+m.i+'</span>';
         var icon = L.divIcon(iconOpts);

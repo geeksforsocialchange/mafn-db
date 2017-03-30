@@ -31,6 +31,8 @@ class Member < ActiveRecord::Base
 
   scope :filter_region, -> (filter_region) { where(:region => filter_region) }
 
+  scope :with_location, -> { references(:location) }
+
   enum ethnic_background: {
     # Asian options
     "Bangladeshi": 0, "Chinese": 1, "Indian": 2, "Pakistani": 3, "Any other Asian/ Asian British Background (please state)": 4,
@@ -121,5 +123,13 @@ class Member < ActiveRecord::Base
       postcode = false
     end
     postcode
+  end
+
+  def current_coords
+    if locations.last && locations.last.latitude
+      [locations.last.latitude, locations.last.longitude]
+    else
+      false
+    end
   end
 end
