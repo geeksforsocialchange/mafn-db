@@ -13,7 +13,21 @@ class Location < ActiveRecord::Base
     self.update(entity_id: Entity.create.id)
   end
 
+  after_save :geolocate, if: :postcode_changed?
+
+  #=== Class Methods ===#
+  def self.geolocate_all
+    locations = Location.where(latitude: nil).where.not(postcode: nil)
+    locations.each { |e| e.geolocate }
+  end
+
+  #=== Instance Methods ===#
   def full_address
     "#{name}, #{line1}, #{line2}, #{city}, #{postcode}"
   end
+
+  def geolocate
+    GeolocateJob.perform_later(postcode, self)
+  end
+
 end

@@ -5,8 +5,8 @@ class GeolocateJob < ActiveJob::Base
 
   def perform(address_string, object_to_update)
     # Skip if we're testing
-    puts "Starting geocode for #{address_string}".colorize(:blue)
     return false if ENV['RAILS_ENV'] == "test"
+    puts "Starting geocode for #{address_string}".colorize(:blue)
     # Get the postcode from the location string
     postcode = GeolocateJob.extract_postcode(address_string)
     # Return false if we didn't find a postcode

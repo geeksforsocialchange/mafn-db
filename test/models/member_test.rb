@@ -16,7 +16,7 @@ class MemberTest < ActiveSupport::TestCase
   end
 
   test "return age as a year" do
-    assert_equal @member.age, 60
+    assert_equal @member.age, Time.now.year - @member.dob.year
   end
 
   test "return correct shortcodes for region" do
