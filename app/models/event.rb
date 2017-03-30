@@ -40,6 +40,11 @@ class Event < ActiveRecord::Base
 
   scope :like, -> (filter) { where("  name ilike '%#{filter}%' OR location ilike '%#{filter}%'") }
 
+  def self.geolocate_all
+    events = Event.where(latitude: nil)
+    events.each { |e| e.geolocate }
+  end
+
   def geolocate
     GeolocateJob.perform_later(location, self)
   end
