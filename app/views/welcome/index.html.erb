@@ -1,6 +1,6 @@
 <h1>Manchester Age Friendly Neighbourhoods</h1>
 
-<% cache [@events, @members] do %>
+<%# cache [@events, @members] do %>
   <script>
     var eventMarkers = [
       <% @events.each do |e| %>
@@ -29,7 +29,7 @@
       <% end %>
     ]
   </script>
-<% end %>
+<%# end %>
 
 <h2>Members</h2>
 
