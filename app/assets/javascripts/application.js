@@ -13,3 +13,6 @@
 
 //= require partials/_cocoon
 //= require partials/_check-name
+
+//= require leaflet
+//= require leaflet.markercluster
